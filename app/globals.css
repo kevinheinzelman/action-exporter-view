@@ -200,6 +200,19 @@ th {
   color: var(--text);
 }
 
+.control input {
+  min-width: 180px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+  color: var(--text);
+}
+
+.control input::placeholder {
+  color: var(--muted);
+}
+
 .summary-list {
   display: grid;
   gap: 10px;

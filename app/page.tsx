@@ -16,6 +16,13 @@ type BoardMarketRow = {
   row: Record<string, any>;
 };
 
+type BoardGameGroup = {
+  gameKey: string;
+  rows: BoardMarketRow[];
+  strongestSharpCount: number;
+  strongestPickCount: number;
+};
+
 const SPORT_OPTIONS = [
   { label: 'All', value: 'all' },
   { label: 'NCAAB', value: 'Basketball:ncaab' },
@@ -29,6 +36,12 @@ const SORT_OPTIONS = [
   { label: 'Sharp Count Descending', value: 'sharp_desc' },
   { label: 'Pick Count Descending', value: 'pick_desc' }
 ];
+
+const MARKET_ORDER: Record<string, number> = {
+  spread: 0,
+  total: 1,
+  moneyline: 2
+};
 
 function getSharpCount(row: Record<string, any>): number {
   return getPrimarySharpCount(row);
@@ -134,6 +147,7 @@ export default function CurrentBoardPage() {
   });
   const [metadata, setMetadata] = useState<{ generatedAt: string | null }>({ generatedAt: null });
   const [sportFilter, setSportFilter] = useState('all');
+  const [teamFilter, setTeamFilter] = useState('');
   const [sortMode, setSortMode] = useState('sharp_desc');
 
   useEffect(() => {
@@ -185,9 +199,65 @@ export default function CurrentBoardPage() {
       rows = rows.filter(({ game }) => `${String(game.sport ?? '')}:${String(game.leagueSlug ?? '').toLowerCase()}` === sportFilter);
     }
 
+    const normalizedTeamFilter = teamFilter.trim().toLowerCase();
+    if (normalizedTeamFilter.length > 0) {
+      rows = rows.filter(({ game }) => {
+        const awayTeam = String(game.awayTeam ?? '').toLowerCase();
+        const homeTeam = String(game.homeTeam ?? '').toLowerCase();
+        return awayTeam.includes(normalizedTeamFilter) || homeTeam.includes(normalizedTeamFilter);
+      });
+    }
+
+    if (sortMode === 'default') {
+      const groups = new Map<string, BoardGameGroup>();
+
+      for (const row of rows) {
+        const gameKey = String(row.game.gameId ?? `${row.game.awayTeam}:${row.game.homeTeam}`);
+        const sharpCount = getSharpCount(row.row);
+        const pickCount = getPickCount(row.row);
+        const existing = groups.get(gameKey);
+
+        if (!existing) {
+          groups.set(gameKey, {
+            gameKey,
+            rows: [row],
+            strongestSharpCount: sharpCount,
+            strongestPickCount: pickCount
+          });
+          continue;
+        }
+
+        existing.rows.push(row);
+        existing.strongestSharpCount = Math.max(existing.strongestSharpCount, sharpCount);
+        existing.strongestPickCount = Math.max(existing.strongestPickCount, pickCount);
+      }
+
+      return [...groups.values()]
+        .sort((left, right) => {
+          if (right.strongestSharpCount !== left.strongestSharpCount) {
+            return right.strongestSharpCount - left.strongestSharpCount;
+          }
+          if (right.strongestPickCount !== left.strongestPickCount) {
+            return right.strongestPickCount - left.strongestPickCount;
+          }
+          const rightPulledAt = String(right.rows[0]?.row.pulledAt ?? '');
+          const leftPulledAt = String(left.rows[0]?.row.pulledAt ?? '');
+          return rightPulledAt.localeCompare(leftPulledAt);
+        })
+        .flatMap((group) =>
+          [...group.rows].sort((left, right) => {
+            const marketDiff = (MARKET_ORDER[left.market] ?? 99) - (MARKET_ORDER[right.market] ?? 99);
+            if (marketDiff !== 0) {
+              return marketDiff;
+            }
+            return compareRows(left, right, 'sharp_desc');
+          })
+        );
+    }
+
     rows.sort((left, right) => compareRows(left, right, sortMode));
     return rows;
-  }, [marketRows, sportFilter, sortMode]);
+  }, [marketRows, sportFilter, teamFilter, sortMode]);
 
   return (
     <main className="page current-board-page">
@@ -264,6 +334,17 @@ export default function CurrentBoardPage() {
                 <option key={option.value} value={option.value}>{option.label}</option>
               ))}
             </select>
+          </div>
+
+          <div className="control">
+            <label htmlFor="team-filter">Team</label>
+            <input
+              id="team-filter"
+              type="text"
+              value={teamFilter}
+              onChange={(event) => setTeamFilter(event.target.value)}
+              placeholder="Search team"
+            />
           </div>
 
           <div className="control">
