@@ -58,6 +58,10 @@ function getOutcome(row: EvaluationRow): string | null {
   return null;
 }
 
+function isScoredOutcome(outcome: string | null): outcome is 'win' | 'loss' | 'push' {
+  return outcome === 'win' || outcome === 'loss' || outcome === 'push';
+}
+
 function isBettable(row: EvaluationRow): boolean {
   return Boolean(row.hasSharpSignal || row.hasPickSignal);
 }
@@ -71,7 +75,11 @@ function buildAggregateRows(rows: EvaluationRow[], getKey: (row: EvaluationRow) 
 
   for (const row of rows) {
     const key = getKey(row);
+    const outcome = getOutcome(row);
     if (!key) {
+      continue;
+    }
+    if (!isScoredOutcome(outcome)) {
       continue;
     }
 
@@ -88,7 +96,6 @@ function buildAggregateRows(rows: EvaluationRow[], getKey: (row: EvaluationRow) 
     }
 
     const aggregate = groups.get(key)!;
-    const outcome = getOutcome(row);
     aggregate.bets += 1;
 
     if (outcome === 'win') {
@@ -124,6 +131,11 @@ function getSortTimestamp(row: EvaluationRow): string {
   return String(row.gradedAt ?? row.startTimeUtc ?? row.gameDate ?? row.pulledAt ?? '');
 }
 
+function getRoundLabel(row: EvaluationRow): string {
+  const round = String(row.tournamentRound ?? '').trim();
+  return round.length > 0 ? round : 'Unknown Round';
+}
+
 export default function TournamentPage() {
   const [data, setData] = useState<{
     generatedAt: string | null;
@@ -147,7 +159,14 @@ export default function TournamentPage() {
 
   const lastYearRows = useMemo(
     () =>
-      tournamentRows.filter((row) => row.tournamentSeason === 2025 && isCompleted(row) && isBettable(row)),
+      tournamentRows.filter(
+        (row) =>
+          row.tournamentSeason === 2025 &&
+          isCompleted(row) &&
+          isBettable(row) &&
+          getPrimarySide(row) !== null &&
+          isScoredOutcome(getOutcome(row))
+      ),
     [tournamentRows]
   );
 
@@ -159,7 +178,13 @@ export default function TournamentPage() {
   const thisYearRows = useMemo(
     () =>
       tournamentRows
-        .filter((row) => row.tournamentSeason === 2026 && isCompleted(row))
+        .filter(
+          (row) =>
+            row.tournamentSeason === 2026 &&
+            isCompleted(row) &&
+            getPrimarySide(row) !== null &&
+            isScoredOutcome(getOutcome(row))
+        )
         .sort((left, right) => getSortTimestamp(right).localeCompare(getSortTimestamp(left))),
     [tournamentRows]
   );
@@ -170,7 +195,7 @@ export default function TournamentPage() {
   );
 
   const byRound = useMemo(
-    () => buildAggregateRows(lastYearRows, (row) => (row.tournamentRound ? String(row.tournamentRound) : null)),
+    () => buildAggregateRows(lastYearRows, (row) => getRoundLabel(row)),
     [lastYearRows]
   );
 
@@ -317,12 +342,12 @@ export default function TournamentPage() {
             {thisYearRows.map((row) => (
               <tr key={String(row.evaluationKey)}>
                 <td>{row.gameDate ?? 'N/A'}</td>
-                <td>{row.tournamentRound ?? 'N/A'}</td>
+                <td>{getRoundLabel(row)}</td>
                 <td>{formatMatchup(row)}</td>
                 <td>{row.market ?? 'N/A'}</td>
                 <td>{getSignalType(row)}</td>
                 <td>{getPrimarySide(row) ?? 'N/A'}</td>
-                <td>{getOutcome(row) ?? 'unknown'}</td>
+                <td>{getOutcome(row) ?? 'N/A'}</td>
               </tr>
             ))}
             {thisYearRows.length === 0 ? (
