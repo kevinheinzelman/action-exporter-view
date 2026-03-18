@@ -93,6 +93,26 @@ function getTopBetScore(row: Record<string, any>): number {
   return getSharpCount(row) * 3 + getPickCount(row);
 }
 
+function formatTimestamp(value: string | null | undefined): string {
+  if (!value) {
+    return 'N/A';
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZone: 'America/New_York'
+  }).format(date);
+}
+
 function getPrimarySideText(game: Record<string, any>, market: string, row: Record<string, any>): string {
   const preferredSide = getSharpCount(row) > 0 ? getPrimarySignalSide(row, 'sharp') : getPrimarySignalSide(row, 'picks');
 
@@ -381,17 +401,17 @@ export default function CurrentBoardPage() {
         <section className="current-board-hero-panel">
           <div className="current-board-hero-surface">
             <div className="current-board-hero-copy">
-              <div className="current-board-eyebrow">Live Board</div>
-              <h2>Current Board</h2>
+              <div className="current-board-eyebrow">Current Board</div>
+              <h2>Live market board for signal-driven bets</h2>
               <p className="current-board-hero-text">
-                A clean live shortlist for the strongest signal-driven markets on the board right now.
+                Review the strongest sharp and pick activity across the slate in a cleaner, faster board built for quick scanning.
               </p>
             </div>
 
             <div className="current-board-meta-strip">
               <div className="current-board-meta-chip">
                 <span>Last updated</span>
-                <strong>{metadata.generatedAt ?? 'N/A'}</strong>
+                <strong>{formatTimestamp(metadata.generatedAt)}</strong>
               </div>
               <div className="current-board-meta-chip">
                 <span>Games tracked</span>
@@ -405,9 +425,9 @@ export default function CurrentBoardPage() {
           </div>
         </section>
 
-        <section className="current-board-feature-grid">
-          <article className="panel current-board-top-bets current-board-feature-primary">
-            <div className="current-board-section-head">
+        <section className="current-board-top-bets-wrap">
+          <article className="panel current-board-top-bets current-board-top-bets-focused">
+            <div className="current-board-section-head current-board-top-bets-head">
               <div>
                 <div className="current-board-section-kicker">Action shortlist</div>
                 <h3>Top Bets Right Now</h3>
@@ -442,58 +462,58 @@ export default function CurrentBoardPage() {
               {topBetsRightNow.length === 0 ? <div className="subtle">No signal-driven bets available right now.</div> : null}
             </div>
           </article>
+        </section>
 
-          <div className="current-board-summary-stack">
-            <article className="panel current-board-summary">
-              <div className="current-board-section-head current-board-summary-head">
-                <div>
-                  <div className="current-board-section-kicker">Signal volume</div>
-                  <h3>Most Sharp Action</h3>
-                </div>
+        <section className="cards two-up current-board-summary-grid">
+          <article className="panel current-board-summary">
+            <div className="current-board-section-head current-board-summary-head">
+              <div>
+                <div className="current-board-section-kicker">Signal volume</div>
+                <h3>Most Sharp Action</h3>
               </div>
-              <div className="summary-list">
-                {topSharpAction.map(({ game, market, row }) => (
-                  <div className="summary-item current-board-summary-item" key={`sharp:${String(game.gameId)}:${market}`}>
-                    <div className="current-board-summary-copy">
-                      <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
-                        {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
-                      </strong>
-                      <div className="subtle current-board-summary-detail">
-                        {market} | {getPrimarySideText(game, market, row)}
-                      </div>
+            </div>
+            <div className="summary-list">
+              {topSharpAction.map(({ game, market, row }) => (
+                <div className="summary-item current-board-summary-item" key={`sharp:${String(game.gameId)}:${market}`}>
+                  <div className="current-board-summary-copy">
+                    <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
+                      {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
+                    </strong>
+                    <div className="subtle current-board-summary-detail">
+                      {market} | {getPrimarySideText(game, market, row)}
                     </div>
-                    <strong className="current-board-summary-count">{getSharpCount(row)} sharps</strong>
                   </div>
-                ))}
-                {topSharpAction.length === 0 ? <div className="subtle">No sharp activity yet</div> : null}
-              </div>
-            </article>
+                  <strong className="current-board-summary-count">{getSharpCount(row)} sharps</strong>
+                </div>
+              ))}
+              {topSharpAction.length === 0 ? <div className="subtle">No sharp activity yet</div> : null}
+            </div>
+          </article>
 
-            <article className="panel current-board-summary">
-              <div className="current-board-section-head current-board-summary-head">
-                <div>
-                  <div className="current-board-section-kicker">Consensus volume</div>
-                  <h3>Most Picks</h3>
-                </div>
+          <article className="panel current-board-summary">
+            <div className="current-board-section-head current-board-summary-head">
+              <div>
+                <div className="current-board-section-kicker">Consensus volume</div>
+                <h3>Most Picks</h3>
               </div>
-              <div className="summary-list">
-                {topPickAction.map(({ game, market, row }) => (
-                  <div className="summary-item current-board-summary-item" key={`pick:${String(game.gameId)}:${market}`}>
-                    <div className="current-board-summary-copy">
-                      <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
-                        {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
-                      </strong>
-                      <div className="subtle current-board-summary-detail">
-                        {market} | {getPrimarySideText(game, market, row)}
-                      </div>
+            </div>
+            <div className="summary-list">
+              {topPickAction.map(({ game, market, row }) => (
+                <div className="summary-item current-board-summary-item" key={`pick:${String(game.gameId)}:${market}`}>
+                  <div className="current-board-summary-copy">
+                    <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
+                      {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
+                    </strong>
+                    <div className="subtle current-board-summary-detail">
+                      {market} | {getPrimarySideText(game, market, row)}
                     </div>
-                    <strong className="current-board-summary-count">{getPickCount(row)} picks</strong>
                   </div>
-                ))}
-                {topPickAction.length === 0 ? <div className="subtle">No pick activity yet</div> : null}
-              </div>
-            </article>
-          </div>
+                  <strong className="current-board-summary-count">{getPickCount(row)} picks</strong>
+                </div>
+              ))}
+              {topPickAction.length === 0 ? <div className="subtle">No pick activity yet</div> : null}
+            </div>
+          </article>
         </section>
 
         <section className="panel current-board-controls-panel current-board-controls-modern">

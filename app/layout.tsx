@@ -7,25 +7,42 @@ export const metadata = {
   description: 'Read-only strategy and board viewer powered by static JSON exports.'
 };
 
+const NAV_ITEMS = [
+  { href: '/', label: 'Current Board' },
+  { href: '/strategy', label: 'Strategy' },
+  { href: '/tournament', label: 'Tournament' },
+  { href: '/games', label: 'All Games' },
+  { href: '/about-data', label: 'About Data' }
+];
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <div className="shell">
-          <header className="topbar">
-            <div className="brand">
-              <h1>Action Exporter</h1>
-              <p>Read-only strategy, tournament, and board viewer.</p>
+        <div className="app-shell">
+          <aside className="app-sidebar">
+            <div className="app-sidebar-inner">
+              <div className="brand">
+                <div className="brand-mark">AE</div>
+                <div className="brand-copy">
+                  <h1>Action Exporter</h1>
+                  <p>Read-only analytics viewer</p>
+                </div>
+              </div>
+
+              <nav className="nav nav-vertical">
+                {NAV_ITEMS.map((item) => (
+                  <Link key={item.href} href={item.href}>
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
             </div>
-            <nav className="nav">
-              <Link href="/">Current Board</Link>
-              <Link href="/strategy">Strategy</Link>
-              <Link href="/tournament">Tournament</Link>
-              <Link href="/games">All Games</Link>
-              <Link href="/about-data">About Data</Link>
-            </nav>
-          </header>
-          {children}
+          </aside>
+
+          <div className="app-main">
+            <div className="shell">{children}</div>
+          </div>
         </div>
       </body>
     </html>
