@@ -337,7 +337,17 @@ function CurrentBoardLegacyTable({ rows }: { rows: BoardMarketRow[] }) {
               {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : <span className="subtle">-</span>}
             </div>
             <div className="current-board-cell current-board-badge-cell" data-label="View">
-              {getAgreementLabel(row) ? <span className="pill current-board-pill current-board-pill-agreement">{getAgreementLabel(row)}</span> : <span className="subtle">-</span>}
+              {getAgreementLabel(row) ? (
+                <span
+                  className={`pill current-board-pill ${
+                    getAgreementLabel(row) === 'Conflict'
+                      ? 'current-board-pill-conflict'
+                      : 'current-board-pill-agreement'
+                  }`}
+                >
+                  {getAgreementLabel(row)}
+                </span>
+              ) : <span className="subtle">-</span>}
             </div>
           </div>
         ))}
@@ -511,7 +521,17 @@ export default function CurrentBoardPage() {
                     <div className="current-board-top-bet-badges">
                       <span className="pill current-board-pill current-board-pill-signal">{getSignalLabel(row)}</span>
                       {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : null}
-                      {getAgreementLabel(row) ? <span className="pill current-board-pill current-board-pill-agreement">{getAgreementLabel(row)}</span> : null}
+                      {getAgreementLabel(row) ? (
+                        <span
+                          className={`pill current-board-pill ${
+                            getAgreementLabel(row) === 'Conflict'
+                              ? 'current-board-pill-conflict'
+                              : 'current-board-pill-agreement'
+                          }`}
+                        >
+                          {getAgreementLabel(row)}
+                        </span>
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -649,7 +669,17 @@ export default function CurrentBoardPage() {
                   {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : <span className="subtle">-</span>}
                 </div>
                 <div className="current-board-cell current-board-badge-cell" data-label="Alignment">
-                  {getAgreementLabel(row) ? <span className="pill current-board-pill current-board-pill-agreement">{getAgreementLabel(row)}</span> : <span className="subtle">-</span>}
+                  {getAgreementLabel(row) ? (
+                    <span
+                      className={`pill current-board-pill ${
+                        getAgreementLabel(row) === 'Conflict'
+                          ? 'current-board-pill-conflict'
+                          : 'current-board-pill-agreement'
+                      }`}
+                    >
+                      {getAgreementLabel(row)}
+                    </span>
+                  ) : <span className="subtle">-</span>}
                 </div>
               </div>
             ))}

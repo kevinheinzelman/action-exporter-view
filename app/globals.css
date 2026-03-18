@@ -677,6 +677,12 @@ th {
   color: #15803d;
 }
 
+.current-board-pill-conflict {
+  background: #fdecec;
+  border-color: rgba(239, 68, 68, 0.18);
+  color: #b45353;
+}
+
 @media (max-width: 980px) {
   .app-shell {
     grid-template-columns: 1fr;
