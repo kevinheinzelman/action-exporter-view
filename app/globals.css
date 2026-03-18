@@ -1,25 +1,25 @@
 :root {
-  --bg: #0b1020;
-  --bg-elevated: #10172b;
-  --surface: rgba(12, 19, 39, 0.76);
-  --surface-strong: #121a31;
-  --surface-soft: rgba(255, 255, 255, 0.04);
-  --surface-border: rgba(148, 163, 184, 0.18);
-  --surface-border-strong: rgba(148, 163, 184, 0.28);
-  --text: #edf2ff;
-  --text-soft: #c9d4ea;
-  --text-muted: #8b9ab7;
-  --accent: #67e8f9;
-  --accent-strong: #3b82f6;
-  --accent-soft: rgba(103, 232, 249, 0.12);
-  --signal: rgba(96, 165, 250, 0.16);
-  --signal-border: rgba(96, 165, 250, 0.24);
-  --strength: rgba(250, 204, 21, 0.12);
-  --strength-border: rgba(250, 204, 21, 0.24);
-  --agreement: rgba(52, 211, 153, 0.12);
-  --agreement-border: rgba(52, 211, 153, 0.24);
-  --shadow-lg: 0 24px 60px rgba(2, 6, 23, 0.35);
-  --shadow-md: 0 14px 36px rgba(2, 6, 23, 0.22);
+  --bg: #edf2f8;
+  --bg-elevated: #f7f9fc;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #ffffff;
+  --surface-soft: rgba(244, 247, 251, 0.92);
+  --surface-border: rgba(100, 116, 139, 0.16);
+  --surface-border-strong: rgba(100, 116, 139, 0.28);
+  --text: #0f172a;
+  --text-soft: #334155;
+  --text-muted: #64748b;
+  --accent: #2563eb;
+  --accent-strong: #0f766e;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --signal: #e8f0ff;
+  --signal-border: rgba(37, 99, 235, 0.18);
+  --strength: #fff4db;
+  --strength-border: rgba(217, 119, 6, 0.2);
+  --agreement: #e8f7ef;
+  --agreement-border: rgba(22, 163, 74, 0.18);
+  --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 14px 36px rgba(15, 23, 42, 0.06);
   --radius-xl: 28px;
   --radius-lg: 20px;
   --radius-md: 14px;
@@ -36,9 +36,9 @@ body {
   padding: 0;
   min-height: 100%;
   background:
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 30%),
-    radial-gradient(circle at top right, rgba(103, 232, 249, 0.12), transparent 22%),
-    linear-gradient(180deg, #09101f 0%, #0c1427 48%, #0a1120 100%);
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 28%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 22%),
+    linear-gradient(180deg, #f8fbff 0%, #f1f5f9 48%, #eaf0f7 100%);
   color: var(--text);
   font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -74,9 +74,9 @@ a {
   padding: 18px;
   border-right: 1px solid var(--surface-border);
   background:
-    linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(9, 14, 28, 0.94)),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(241, 245, 249, 0.98)),
     var(--surface);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(16px);
 }
 
 .app-main {
@@ -101,8 +101,8 @@ a {
   display: grid;
   place-items: center;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #07111e;
+  background: linear-gradient(135deg, var(--accent), #38bdf8);
+  color: white;
   font-weight: 800;
   letter-spacing: 0.04em;
   box-shadow: var(--shadow-md);
@@ -143,8 +143,8 @@ a {
 }
 
 .nav a:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--surface-border);
+  background: rgba(37, 99, 235, 0.06);
+  border-color: var(--surface-border-strong);
   color: var(--text);
   transform: translateX(2px);
 }
@@ -157,13 +157,13 @@ a {
 .hero,
 .panel {
   background:
-    linear-gradient(180deg, rgba(17, 25, 49, 0.82), rgba(11, 18, 36, 0.92)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98)),
     var(--surface);
-  border: 1px solid var(--surface-border);
+  border: 1px solid var(--surface-border-strong);
   border-radius: var(--radius-lg);
   padding: 18px;
   box-shadow: var(--shadow-md);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(14px);
 }
 
 .hero h2,
@@ -337,9 +337,9 @@ th {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at top right, rgba(103, 232, 249, 0.12), transparent 28%),
-    linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(16, 24, 48, 0.92));
-  border: 1px solid rgba(103, 232, 249, 0.12);
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 28%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(242, 247, 255, 0.98));
+  border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: var(--radius-xl);
   padding: 26px;
   box-shadow: var(--shadow-lg);
@@ -386,8 +386,8 @@ th {
   gap: 4px;
   padding: 14px 15px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--surface-border);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--surface-border-strong);
 }
 
 .current-board-meta-chip span {
@@ -411,7 +411,7 @@ th {
 }
 
 .current-board-top-bets-focused {
-  max-width: 980px;
+  max-width: 840px;
 }
 
 .current-board-section-head {
@@ -561,10 +561,10 @@ th {
 }
 
 .current-board-table-modern {
-  border: 1px solid var(--surface-border);
+  border: 1px solid var(--surface-border-strong);
   border-radius: 20px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .current-board-table-row {
@@ -582,9 +582,9 @@ th {
 .current-board-table-head {
   padding-top: 13px;
   padding-bottom: 13px;
-  border-bottom: 1px solid var(--surface-border);
+  border-bottom: 1px solid var(--surface-border-strong);
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(241, 245, 249, 0.96);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -594,12 +594,12 @@ th {
 .current-board-data-row {
   padding-top: 14px;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
   transition: background-color 160ms ease, transform 160ms ease;
 }
 
 .current-board-data-row:hover {
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(239, 246, 255, 0.86);
 }
 
 .current-board-data-row:last-of-type {
@@ -655,19 +655,19 @@ th {
 .current-board-pill-signal {
   background: var(--signal);
   border-color: var(--signal-border);
-  color: #c7dbff;
+  color: #1d4ed8;
 }
 
 .current-board-pill-strength {
   background: var(--strength);
   border-color: var(--strength-border);
-  color: #ffe08b;
+  color: #b45309;
 }
 
 .current-board-pill-agreement {
   background: var(--agreement);
   border-color: var(--agreement-border);
-  color: #9bf0c9;
+  color: #15803d;
 }
 
 @media (max-width: 980px) {
