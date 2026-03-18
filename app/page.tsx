@@ -89,6 +89,58 @@ function getAgreementLabel(row: Record<string, any>): string | null {
   return getPrimarySignalSide(row, 'sharp') === getPrimarySignalSide(row, 'picks') ? 'Agree' : 'Conflict';
 }
 
+function getSharpViewText(game: Record<string, any>, market: string, row: Record<string, any>): string {
+  const count = getSharpCount(row);
+  if (count <= 0) {
+    return '-';
+  }
+
+  const side = getPrimarySignalSide(row, 'sharp');
+  if (market === 'total') {
+    if (side === 'over') {
+      return `Over, ${count} sharps`;
+    }
+    if (side === 'under') {
+      return `Under, ${count} sharps`;
+    }
+    return `${count} sharps`;
+  }
+
+  if (side === 'away') {
+    return `${game.awayTeam ?? 'Away'}, ${count} sharps`;
+  }
+  if (side === 'home') {
+    return `${game.homeTeam ?? 'Home'}, ${count} sharps`;
+  }
+  return `${count} sharps`;
+}
+
+function getPickViewText(game: Record<string, any>, market: string, row: Record<string, any>): string {
+  const count = getPickCount(row);
+  if (count <= 0) {
+    return '-';
+  }
+
+  const side = getPrimarySignalSide(row, 'picks');
+  if (market === 'total') {
+    if (side === 'over') {
+      return `Over, ${count} picks`;
+    }
+    if (side === 'under') {
+      return `Under, ${count} picks`;
+    }
+    return `${count} picks`;
+  }
+
+  if (side === 'away') {
+    return `${game.awayTeam ?? 'Away'}, ${count} picks`;
+  }
+  if (side === 'home') {
+    return `${game.homeTeam ?? 'Home'}, ${count} picks`;
+  }
+  return `${count} picks`;
+}
+
 function getTopBetScore(row: Record<string, any>): number {
   return getSharpCount(row) * 3 + getPickCount(row);
 }
@@ -328,8 +380,8 @@ export default function CurrentBoardPage() {
     () =>
       [...marketRows]
         .filter(({ game, market, row }) => {
-          const hasSignal = getSharpCount(row) > 0 || getPickCount(row) > 0;
-          if (!hasSignal) {
+          const hasAlignedSignal = getSharpCount(row) > 0 && getPickCount(row) > 0 && getAgreementLabel(row) === 'Agree';
+          if (!hasAlignedSignal) {
             return false;
           }
           return getPrimarySideText(game, market, row).trim().length > 0;
@@ -338,12 +390,6 @@ export default function CurrentBoardPage() {
           const scoreDiff = getTopBetScore(right.row) - getTopBetScore(left.row);
           if (scoreDiff !== 0) {
             return scoreDiff;
-          }
-
-          const leftAgreement = getAgreementLabel(left.row) === 'Agree' ? 1 : 0;
-          const rightAgreement = getAgreementLabel(right.row) === 'Agree' ? 1 : 0;
-          if (rightAgreement !== leftAgreement) {
-            return rightAgreement - leftAgreement;
           }
 
           return String(right.row.pulledAt ?? '').localeCompare(String(left.row.pulledAt ?? ''));
@@ -574,7 +620,7 @@ export default function CurrentBoardPage() {
               <div>Sharps</div>
               <div>Picks</div>
               <div>Strength</div>
-              <div>Agreement</div>
+              <div>Alignment</div>
             </div>
 
             {activeRows.map(({ game, market, row }) => (
@@ -591,12 +637,12 @@ export default function CurrentBoardPage() {
                 <div className="current-board-cell current-board-badge-cell" data-label="Signal">
                   <span className="pill current-board-pill current-board-pill-signal">{getSignalLabel(row)}</span>
                 </div>
-                <div className="current-board-cell current-board-number-cell" data-label="Sharps">{getSharpCount(row)}</div>
-                <div className="current-board-cell current-board-number-cell" data-label="Picks">{getPickCount(row)}</div>
+                <div className="current-board-cell current-board-detail-cell" data-label="Sharps">{getSharpViewText(game, market, row)}</div>
+                <div className="current-board-cell current-board-detail-cell" data-label="Picks">{getPickViewText(game, market, row)}</div>
                 <div className="current-board-cell current-board-badge-cell" data-label="Strength">
                   {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : <span className="subtle">-</span>}
                 </div>
-                <div className="current-board-cell current-board-badge-cell" data-label="Agreement">
+                <div className="current-board-cell current-board-badge-cell" data-label="Alignment">
                   {getAgreementLabel(row) ? <span className="pill current-board-pill current-board-pill-agreement">{getAgreementLabel(row)}</span> : <span className="subtle">-</span>}
                 </div>
               </div>

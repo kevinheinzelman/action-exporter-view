@@ -622,6 +622,13 @@ th {
   color: var(--text);
 }
 
+.current-board-detail-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-soft);
+}
+
 .current-board-game-cell {
   display: grid;
   gap: 3px;
