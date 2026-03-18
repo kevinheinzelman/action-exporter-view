@@ -569,7 +569,7 @@ th {
 
 .current-board-table-row {
   display: grid;
-  grid-template-columns: 80px minmax(176px, 1.1fr) 84px minmax(176px, 1fr) 124px minmax(140px, 1fr) minmax(140px, 1fr) 116px 112px;
+  grid-template-columns: 72px minmax(184px, 1.15fr) 82px minmax(170px, 0.95fr) minmax(150px, 1fr) minmax(150px, 1fr) 112px 112px;
   gap: 12px;
   align-items: center;
 }

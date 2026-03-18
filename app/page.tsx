@@ -98,19 +98,19 @@ function getSharpViewText(game: Record<string, any>, market: string, row: Record
   const side = getPrimarySignalSide(row, 'sharp');
   if (market === 'total') {
     if (side === 'over') {
-      return `Over, ${count} sharps`;
+      return `${count} sharps, Over`;
     }
     if (side === 'under') {
-      return `Under, ${count} sharps`;
+      return `${count} sharps, Under`;
     }
     return `${count} sharps`;
   }
 
   if (side === 'away') {
-    return `${game.awayTeam ?? 'Away'}, ${count} sharps`;
+    return `${count} sharps, ${game.awayTeam ?? 'Away'}`;
   }
   if (side === 'home') {
-    return `${game.homeTeam ?? 'Home'}, ${count} sharps`;
+    return `${count} sharps, ${game.homeTeam ?? 'Home'}`;
   }
   return `${count} sharps`;
 }
@@ -124,19 +124,19 @@ function getPickViewText(game: Record<string, any>, market: string, row: Record<
   const side = getPrimarySignalSide(row, 'picks');
   if (market === 'total') {
     if (side === 'over') {
-      return `Over, ${count} picks`;
+      return `${count} picks, Over`;
     }
     if (side === 'under') {
-      return `Under, ${count} picks`;
+      return `${count} picks, Under`;
     }
     return `${count} picks`;
   }
 
   if (side === 'away') {
-    return `${game.awayTeam ?? 'Away'}, ${count} picks`;
+    return `${count} picks, ${game.awayTeam ?? 'Away'}`;
   }
   if (side === 'home') {
-    return `${game.homeTeam ?? 'Home'}, ${count} picks`;
+    return `${count} picks, ${game.homeTeam ?? 'Home'}`;
   }
   return `${count} picks`;
 }
@@ -626,8 +626,7 @@ export default function CurrentBoardPage() {
               <div>Sport</div>
               <div>Game</div>
               <div>Market</div>
-              <div>Primary Side</div>
-              <div>Signal</div>
+              <div>Bet</div>
               <div>Sharps</div>
               <div>Picks</div>
               <div>Strength</div>
@@ -636,21 +635,17 @@ export default function CurrentBoardPage() {
 
             {activeRows.map(({ game, market, row }) => (
               <div className="current-board-table-row current-board-data-row current-board-table-row-modern" key={`${String(game.gameId)}:${market}`}>
-                <div className="current-board-cell current-board-sport-cell" data-label="Sport">{String(game.leagueSlug ?? game.sport ?? '').toUpperCase()}</div>
-                <div className="current-board-cell current-board-game-cell" data-label="Game">
-                  <strong>{game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}</strong>
-                  <span className="subtle">{game.status ?? 'unknown'}</span>
-                </div>
-                <div className="current-board-cell current-board-market-cell" data-label="Market">{market}</div>
-                <div className="current-board-cell current-board-pick-cell" data-label="Primary Side">
-                  <strong className="current-board-pick-text">{getPrimarySideText(game, market, row)}</strong>
-                </div>
-                <div className="current-board-cell current-board-badge-cell" data-label="Signal">
-                  <span className="pill current-board-pill current-board-pill-signal">{getSignalLabel(row)}</span>
-                </div>
-                <div className="current-board-cell current-board-detail-cell" data-label="Sharps">{getSharpViewText(game, market, row)}</div>
-                <div className="current-board-cell current-board-detail-cell" data-label="Picks">{getPickViewText(game, market, row)}</div>
-                <div className="current-board-cell current-board-badge-cell" data-label="Strength">
+              <div className="current-board-cell current-board-sport-cell" data-label="Sport">{String(game.leagueSlug ?? game.sport ?? '').toUpperCase()}</div>
+              <div className="current-board-cell current-board-game-cell" data-label="Game">
+                <strong>{game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}</strong>
+              </div>
+              <div className="current-board-cell current-board-market-cell" data-label="Market">{market}</div>
+              <div className="current-board-cell current-board-pick-cell" data-label="Bet">
+                <strong className="current-board-pick-text">{getPrimarySideText(game, market, row)}</strong>
+              </div>
+              <div className="current-board-cell current-board-detail-cell" data-label="Sharps">{getSharpViewText(game, market, row)}</div>
+              <div className="current-board-cell current-board-detail-cell" data-label="Picks">{getPickViewText(game, market, row)}</div>
+              <div className="current-board-cell current-board-badge-cell" data-label="Strength">
                   {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : <span className="subtle">-</span>}
                 </div>
                 <div className="current-board-cell current-board-badge-cell" data-label="Alignment">
