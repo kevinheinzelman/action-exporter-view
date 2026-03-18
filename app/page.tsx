@@ -145,6 +145,13 @@ function getTopBetScore(row: Record<string, any>): number {
   return getSharpCount(row) * 3 + getPickCount(row);
 }
 
+function formatLineValue(value: unknown): string {
+  if (typeof value !== 'number') {
+    return '';
+  }
+  return value.toFixed(1).replace(/\.0$/, '.0');
+}
+
 function formatTimestamp(value: string | null | undefined): string {
   if (!value) {
     return 'N/A';
@@ -171,23 +178,27 @@ function getPrimarySideText(game: Record<string, any>, market: string, row: Reco
   if (market === 'total') {
     const totalLine = row.totalLine ?? row.overValue ?? row.underValue;
     if (preferredSide === 'over') {
-      return totalLine == null ? 'Over' : `Over ${totalLine}`;
+      return totalLine == null ? 'Over' : `Over ${formatLineValue(Number(totalLine))}`;
     }
     if (preferredSide === 'under') {
-      return totalLine == null ? 'Under' : `Under ${totalLine}`;
+      return totalLine == null ? 'Under' : `Under ${formatLineValue(Number(totalLine))}`;
     }
-    return totalLine == null ? 'Total' : `Total ${totalLine}`;
+    return totalLine == null ? 'Total' : `Total ${formatLineValue(Number(totalLine))}`;
   }
 
   if (preferredSide === 'away') {
-    return `${game.awayTeam ?? 'Away'} ${row.awayValue == null ? '' : formatSignedNumber(row.awayValue)}`.trim();
+    const displayValue = market === 'spread' ? formatLineValue(Number(row.awayValue)) : formatSignedNumber(row.awayValue);
+    return `${game.awayTeam ?? 'Away'} ${row.awayValue == null ? '' : displayValue}`.trim();
   }
   if (preferredSide === 'home') {
-    return `${game.homeTeam ?? 'Home'} ${row.homeValue == null ? '' : formatSignedNumber(row.homeValue)}`.trim();
+    const displayValue = market === 'spread' ? formatLineValue(Number(row.homeValue)) : formatSignedNumber(row.homeValue);
+    return `${game.homeTeam ?? 'Home'} ${row.homeValue == null ? '' : displayValue}`.trim();
   }
 
-  const awayText = `${game.awayTeam ?? 'Away'} ${row.awayValue == null ? '' : formatSignedNumber(row.awayValue)}`.trim();
-  const homeText = `${game.homeTeam ?? 'Home'} ${row.homeValue == null ? '' : formatSignedNumber(row.homeValue)}`.trim();
+  const awayDisplayValue = market === 'spread' ? formatLineValue(Number(row.awayValue)) : formatSignedNumber(row.awayValue);
+  const homeDisplayValue = market === 'spread' ? formatLineValue(Number(row.homeValue)) : formatSignedNumber(row.homeValue);
+  const awayText = `${game.awayTeam ?? 'Away'} ${row.awayValue == null ? '' : awayDisplayValue}`.trim();
+  const homeText = `${game.homeTeam ?? 'Home'} ${row.homeValue == null ? '' : homeDisplayValue}`.trim();
   return `${awayText} / ${homeText}`;
 }
 

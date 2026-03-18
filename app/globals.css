@@ -569,7 +569,7 @@ th {
 
 .current-board-table-row {
   display: grid;
-  grid-template-columns: 84px minmax(180px, 1.2fr) 92px minmax(220px, 1.45fr) 146px 68px 68px 124px 120px;
+  grid-template-columns: 80px minmax(176px, 1.1fr) 84px minmax(176px, 1fr) 124px minmax(140px, 1fr) minmax(140px, 1fr) 116px 112px;
   gap: 12px;
   align-items: center;
 }
@@ -623,9 +623,9 @@ th {
 }
 
 .current-board-detail-cell {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
   color: var(--text-soft);
 }
 
