@@ -88,6 +88,10 @@ function getAgreementLabel(row: Record<string, any>): string | null {
   return getPrimarySignalSide(row, 'sharp') === getPrimarySignalSide(row, 'picks') ? 'Agree' : 'Conflict';
 }
 
+function getTopBetScore(row: Record<string, any>): number {
+  return getSharpCount(row) * 3 + getPickCount(row);
+}
+
 function getPrimarySideText(game: Record<string, any>, market: string, row: Record<string, any>): string {
   const preferredSide = getSharpCount(row) > 0 ? getPrimarySignalSide(row, 'sharp') : getPrimarySignalSide(row, 'picks');
 
@@ -192,6 +196,35 @@ export default function CurrentBoardPage() {
     [marketRows]
   );
 
+  const topBetsRightNow = useMemo(
+    () =>
+      [...marketRows]
+        .filter(({ game, market, row }) => {
+          const hasSignal = getSharpCount(row) > 0 || getPickCount(row) > 0;
+          if (!hasSignal) {
+            return false;
+          }
+          const primarySide = getPrimarySideText(game, market, row);
+          return primarySide.trim().length > 0;
+        })
+        .sort((left, right) => {
+          const scoreDiff = getTopBetScore(right.row) - getTopBetScore(left.row);
+          if (scoreDiff !== 0) {
+            return scoreDiff;
+          }
+
+          const leftAgreement = getAgreementLabel(left.row) === 'Agree' ? 1 : 0;
+          const rightAgreement = getAgreementLabel(right.row) === 'Agree' ? 1 : 0;
+          if (rightAgreement !== leftAgreement) {
+            return rightAgreement - leftAgreement;
+          }
+
+          return String(right.row.pulledAt ?? '').localeCompare(String(left.row.pulledAt ?? ''));
+        })
+        .slice(0, 5),
+    [marketRows]
+  );
+
   const filteredRows = useMemo(() => {
     let rows = [...marketRows];
 
@@ -286,6 +319,36 @@ export default function CurrentBoardPage() {
             <strong>{marketRows.length}</strong>
           </div>
         </div>
+      </section>
+
+      <section>
+        <article className="panel current-board-top-bets">
+          <h3>Top Bets Right Now</h3>
+          <p className="subtle current-board-top-bets-subtitle">Top signal-driven market rows right now, ranked by sharps first, then picks.</p>
+          <div className="summary-list">
+            {topBetsRightNow.map(({ game, market, row }) => (
+              <div className="summary-item current-board-top-bet-item" key={`top-bet:${String(game.gameId)}:${market}`}>
+                <div className="current-board-top-bet-main">
+                  <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
+                    {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
+                  </strong>
+                  <div className="subtle current-board-summary-detail">
+                    {market} | {getPrimarySideText(game, market, row)}
+                  </div>
+                </div>
+                <div className="current-board-top-bet-meta">
+                  <div className="current-board-top-bet-counts">{`\u{1F525} ${getSharpCount(row)} sharps \u2022 \u{1F4CA} ${getPickCount(row)} picks`}</div>
+                  <div className="current-board-top-bet-badges">
+                    <span className="pill current-board-pill current-board-pill-signal">{getSignalLabel(row)}</span>
+                    {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : null}
+                    {getAgreementLabel(row) ? <span className="pill current-board-pill current-board-pill-agreement">{getAgreementLabel(row)}</span> : null}
+                  </div>
+                </div>
+              </div>
+            ))}
+            {topBetsRightNow.length === 0 ? <div className="subtle">No signal-driven bets available right now.</div> : null}
+          </div>
+        </article>
       </section>
 
       <section className="cards two-up">
