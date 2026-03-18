@@ -7,20 +7,13 @@ import {
   getCloseDeltaSummary,
   getPrimaryPickCount,
   getPrimarySharpCount,
-  getPrimarySignalSide,
-  getPublicSummary
+  getPrimarySignalSide
 } from '../lib/data';
 
 type BoardMarketRow = {
   game: Record<string, any>;
   market: string;
   row: Record<string, any>;
-};
-
-type BoardGameGroup = {
-  gameId: string;
-  game: Record<string, any>;
-  rows: BoardMarketRow[];
 };
 
 const SPORT_OPTIONS = [
@@ -36,12 +29,6 @@ const SORT_OPTIONS = [
   { label: 'Sharp Count Descending', value: 'sharp_desc' },
   { label: 'Pick Count Descending', value: 'pick_desc' }
 ];
-
-const MARKET_ORDER: Record<string, number> = {
-  spread: 0,
-  total: 1,
-  moneyline: 2
-};
 
 function getSharpCount(row: Record<string, any>): number {
   return getPrimarySharpCount(row);
@@ -88,32 +75,28 @@ function getAgreementLabel(row: Record<string, any>): string | null {
   return getPrimarySignalSide(row, 'sharp') === getPrimarySignalSide(row, 'picks') ? 'Agree' : 'Conflict';
 }
 
-function getCountsText(row: Record<string, any>): string {
-  return `${getSharpCount(row)} sharps | ${getPickCount(row)} picks`;
-}
-
 function getPrimarySideText(game: Record<string, any>, market: string, row: Record<string, any>): string {
   const preferredSide = getSharpCount(row) > 0 ? getPrimarySignalSide(row, 'sharp') : getPrimarySignalSide(row, 'picks');
 
   if (market === 'total') {
     const totalLine = row.totalLine ?? row.overValue ?? row.underValue ?? 'N/A';
     if (preferredSide === 'over') {
-      return `Pick: Over ${totalLine}`;
+      return `Over ${totalLine}`;
     }
     if (preferredSide === 'under') {
-      return `Pick: Under ${totalLine}`;
+      return `Under ${totalLine}`;
     }
-    return `Pick: Total ${totalLine}`;
+    return `Total ${totalLine}`;
   }
 
   if (preferredSide === 'away') {
-    return `Pick: ${game.awayTeam ?? 'Away'} ${formatSignedNumber(row.awayValue)}`;
+    return `${game.awayTeam ?? 'Away'} ${formatSignedNumber(row.awayValue)}`;
   }
   if (preferredSide === 'home') {
-    return `Pick: ${game.homeTeam ?? 'Home'} ${formatSignedNumber(row.homeValue)}`;
+    return `${game.homeTeam ?? 'Home'} ${formatSignedNumber(row.homeValue)}`;
   }
 
-  return `Pick: ${game.awayTeam ?? 'Away'} ${formatSignedNumber(row.awayValue)} / ${game.homeTeam ?? 'Home'} ${formatSignedNumber(row.homeValue)}`;
+  return `${game.awayTeam ?? 'Away'} ${formatSignedNumber(row.awayValue)} / ${game.homeTeam ?? 'Home'} ${formatSignedNumber(row.homeValue)}`;
 }
 
 function getMarketSortValue(row: Record<string, any>, sortMode: string): [number, number, string] {
@@ -137,17 +120,6 @@ function compareRows(left: BoardMarketRow, right: BoardMarketRow, sortMode: stri
     return rightSecondary - leftSecondary;
   }
   return rightPulledAt.localeCompare(leftPulledAt);
-}
-
-function compareGroups(left: BoardGameGroup, right: BoardGameGroup, sortMode: string): number {
-  const leftTopRow = [...left.rows].sort((a, b) => compareRows(a, b, sortMode))[0];
-  const rightTopRow = [...right.rows].sort((a, b) => compareRows(a, b, sortMode))[0];
-
-  if (!leftTopRow || !rightTopRow) {
-    return 0;
-  }
-
-  return compareRows(leftTopRow, rightTopRow, sortMode);
 }
 
 export default function CurrentBoardPage() {
@@ -216,35 +188,6 @@ export default function CurrentBoardPage() {
     rows.sort((left, right) => compareRows(left, right, sortMode));
     return rows;
   }, [marketRows, sportFilter, sortMode]);
-
-  const groupedGames = useMemo<BoardGameGroup[]>(() => {
-    const groups = new Map<string, BoardGameGroup>();
-
-    for (const row of filteredRows) {
-      const gameId = String(row.game.gameId ?? `${row.game.awayTeam}:${row.game.homeTeam}`);
-      if (!groups.has(gameId)) {
-        groups.set(gameId, {
-          gameId,
-          game: row.game,
-          rows: []
-        });
-      }
-      groups.get(gameId)?.rows.push(row);
-    }
-
-    return [...groups.values()]
-      .map((group) => ({
-        ...group,
-        rows: [...group.rows].sort((left, right) => {
-          const orderDiff = (MARKET_ORDER[left.market] ?? 99) - (MARKET_ORDER[right.market] ?? 99);
-          if (orderDiff !== 0) {
-            return orderDiff;
-          }
-          return compareRows(left, right, sortMode);
-        })
-      }))
-      .sort((left, right) => compareGroups(left, right, sortMode));
-  }, [filteredRows, sortMode]);
 
   return (
     <main className="page current-board-page">
@@ -335,42 +278,45 @@ export default function CurrentBoardPage() {
       </section>
 
       <section className="panel current-board-panel">
-        <div className="current-board-groups">
-          {groupedGames.map((group) => (
-            <article key={group.gameId} className="current-board-game">
-              <div className="current-board-game-header">
-                <strong className="current-board-game-title">{group.game.awayTeam ?? 'Away'} at {group.game.homeTeam ?? 'Home'}</strong>
-                <div className="subtle current-board-game-meta">{String(group.game.leagueSlug ?? '').toUpperCase()} | {group.game.status ?? 'unknown'} | {board.boardDate ?? 'N/A'}</div>
+        <div className="current-board-table">
+          <div className="current-board-table-head current-board-table-row">
+            <div>Sport</div>
+            <div>Game</div>
+            <div>Market</div>
+            <div>Pick</div>
+            <div>Signal</div>
+            <div>Sharps</div>
+            <div>Picks</div>
+            <div>Strength</div>
+            <div>View</div>
+          </div>
+
+          {filteredRows.map(({ game, market, row }) => (
+            <div className="current-board-table-row current-board-data-row" key={`${String(game.gameId)}:${market}`}>
+              <div className="current-board-cell current-board-sport-cell" data-label="Sport">{String(game.leagueSlug ?? game.sport ?? '').toUpperCase()}</div>
+              <div className="current-board-cell current-board-game-cell" data-label="Game">
+                <strong>{game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}</strong>
+                <span className="subtle">{game.status ?? 'unknown'}</span>
               </div>
-
-              <div className="current-board-market-list">
-                {group.rows.map(({ market, row }) => (
-                  <div key={`${group.gameId}:${market}`} className="current-board-market-row">
-                    <div className="current-board-market-top">
-                      <div className="current-board-market-badges">
-                        <strong className="current-board-market-name">{market}</strong>
-                        <span className="pill current-board-pill current-board-pill-signal">{getSignalLabel(row)}</span>
-                        {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : null}
-                        {getAgreementLabel(row) ? <span className="pill current-board-pill current-board-pill-agreement">{getAgreementLabel(row)}</span> : null}
-                      </div>
-                      <span className="subtle current-board-close-delta">{getCloseDeltaSummary(row)}</span>
-                    </div>
-
-                    <div className="current-board-primary-side">
-                      {getPrimarySideText(group.game, market, row)}
-                    </div>
-
-                    <div className="current-board-market-bottom">
-                      <span className="current-board-counts">{getCountsText(row)}</span>
-                      <span className="subtle current-board-public">{getPublicSummary(row)}</span>
-                    </div>
-                  </div>
-                ))}
+              <div className="current-board-cell current-board-market-cell" data-label="Market">{market}</div>
+              <div className="current-board-cell current-board-pick-cell" data-label="Pick">
+                <strong className="current-board-pick-text">{getPrimarySideText(game, market, row)}</strong>
               </div>
-            </article>
+              <div className="current-board-cell current-board-badge-cell" data-label="Signal">
+                <span className="pill current-board-pill current-board-pill-signal">{getSignalLabel(row)}</span>
+              </div>
+              <div className="current-board-cell" data-label="Sharps">{getSharpCount(row)}</div>
+              <div className="current-board-cell" data-label="Picks">{getPickCount(row)}</div>
+              <div className="current-board-cell current-board-badge-cell" data-label="Strength">
+                {getSignalStrengthLabel(row) ? <span className="pill current-board-pill current-board-pill-strength">{getSignalStrengthLabel(row)}</span> : <span className="subtle">-</span>}
+              </div>
+              <div className="current-board-cell current-board-badge-cell" data-label="View">
+                {getAgreementLabel(row) ? <span className="pill current-board-pill current-board-pill-agreement">{getAgreementLabel(row)}</span> : <span className="subtle">-</span>}
+              </div>
+            </div>
           ))}
 
-          {groupedGames.length === 0 ? <div className="subtle">No board rows match the current sport filter.</div> : null}
+          {filteredRows.length === 0 ? <div className="subtle">No board rows match the current sport filter.</div> : null}
         </div>
       </section>
     </main>
