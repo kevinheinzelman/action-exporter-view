@@ -148,7 +148,7 @@ export default function CurrentBoardPage() {
   const [metadata, setMetadata] = useState<{ generatedAt: string | null }>({ generatedAt: null });
   const [sportFilter, setSportFilter] = useState('all');
   const [teamFilter, setTeamFilter] = useState('');
-  const [sortMode, setSortMode] = useState('sharp_desc');
+  const [sortMode, setSortMode] = useState('default');
 
   useEffect(() => {
     fetchPublicJson('/data/current_board.json', {
