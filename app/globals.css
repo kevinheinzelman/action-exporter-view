@@ -238,6 +238,206 @@ th {
   margin-bottom: 4px;
 }
 
+.current-board-page {
+  gap: 18px;
+}
+
+.current-board-hero {
+  padding: 20px;
+}
+
+.current-board-hero-copy {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.current-board-eyebrow {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.current-board-hero h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.current-board-hero p {
+  max-width: 640px;
+  margin: 0;
+}
+
+.current-board-metrics {
+  gap: 10px;
+}
+
+.current-board-metric {
+  padding: 10px 12px;
+  box-shadow: none;
+}
+
+.current-board-metric strong {
+  font-size: 1rem;
+}
+
+.current-board-summary {
+  padding: 14px 16px;
+}
+
+.current-board-summary h3 {
+  margin-bottom: 10px;
+}
+
+.current-board-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.current-board-summary-copy {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.current-board-summary-game,
+.current-board-summary-detail {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.current-board-summary-count {
+  white-space: nowrap;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.current-board-controls-panel {
+  padding: 14px 16px;
+}
+
+.current-board-panel {
+  padding: 18px;
+}
+
+.current-board-groups {
+  display: grid;
+  gap: 16px;
+}
+
+.current-board-game {
+  display: grid;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.current-board-game:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.current-board-game-header {
+  display: grid;
+  gap: 4px;
+}
+
+.current-board-game-title {
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.current-board-game-meta {
+  font-size: 0.84rem;
+}
+
+.current-board-market-list {
+  display: grid;
+  gap: 10px;
+}
+
+.current-board-market-row {
+  display: grid;
+  gap: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-strong);
+}
+
+.current-board-market-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: 8px 12px;
+}
+
+.current-board-market-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.current-board-market-name {
+  text-transform: capitalize;
+  font-size: 0.92rem;
+}
+
+.current-board-pill {
+  margin: 0;
+  font-size: 0.74rem;
+  padding: 3px 8px;
+}
+
+.current-board-pill-signal {
+  background: #f2dfcd;
+  color: #7e4726;
+}
+
+.current-board-pill-strength {
+  background: #ece6d8;
+  color: #665840;
+}
+
+.current-board-pill-agreement {
+  background: #ddeadd;
+  color: #2d6943;
+}
+
+.current-board-close-delta {
+  white-space: nowrap;
+  font-size: 0.84rem;
+}
+
+.current-board-primary-side {
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.current-board-market-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.current-board-counts {
+  font-size: 0.92rem;
+}
+
+.current-board-public {
+  font-size: 0.86rem;
+}
+
 @media (max-width: 768px) {
   .shell {
     padding: 16px 12px 32px;
@@ -257,5 +457,43 @@ th {
 
   .mobile-only {
     display: grid;
+  }
+
+  .current-board-hero {
+    padding: 16px;
+  }
+
+  .current-board-hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .current-board-summary-item {
+    align-items: start;
+  }
+
+  .current-board-summary-count {
+    font-size: 0.88rem;
+  }
+
+  .current-board-panel {
+    padding: 14px;
+  }
+
+  .current-board-market-row {
+    padding: 11px 12px;
+  }
+
+  .current-board-primary-side {
+    font-size: 1rem;
+  }
+
+  .current-board-market-bottom {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .current-board-close-delta,
+  .current-board-summary-count {
+    white-space: normal;
   }
 }
