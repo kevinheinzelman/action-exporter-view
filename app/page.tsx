@@ -259,6 +259,11 @@ export default function CurrentBoardPage() {
     return rows;
   }, [marketRows, sportFilter, teamFilter, sortMode]);
 
+  const activeRows = useMemo(
+    () => filteredRows.filter(({ row }) => getSharpCount(row) > 0 || getPickCount(row) > 0),
+    [filteredRows]
+  );
+
   return (
     <main className="page current-board-page">
       <section className="hero current-board-hero">
@@ -372,7 +377,7 @@ export default function CurrentBoardPage() {
             <div>View</div>
           </div>
 
-          {filteredRows.map(({ game, market, row }) => (
+          {activeRows.map(({ game, market, row }) => (
             <div className="current-board-table-row current-board-data-row" key={`${String(game.gameId)}:${market}`}>
               <div className="current-board-cell current-board-sport-cell" data-label="Sport">{String(game.leagueSlug ?? game.sport ?? '').toUpperCase()}</div>
               <div className="current-board-cell current-board-game-cell" data-label="Game">
@@ -397,7 +402,7 @@ export default function CurrentBoardPage() {
             </div>
           ))}
 
-          {filteredRows.length === 0 ? <div className="subtle">No board rows match the current sport filter.</div> : null}
+          {activeRows.length === 0 ? <div className="subtle">No board rows match the current filters with signal activity.</div> : null}
         </div>
       </section>
     </main>
