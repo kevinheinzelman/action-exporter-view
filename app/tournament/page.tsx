@@ -136,6 +136,20 @@ function getRoundLabel(row: EvaluationRow): string {
   return round.length > 0 ? round : 'Unknown Round';
 }
 
+function compareLatestRows(left: EvaluationRow, right: EvaluationRow): number {
+  const gradedAtDiff = String(right.gradedAt ?? '').localeCompare(String(left.gradedAt ?? ''));
+  if (gradedAtDiff !== 0) {
+    return gradedAtDiff;
+  }
+
+  const pulledAtDiff = String(right.pulledAt ?? '').localeCompare(String(left.pulledAt ?? ''));
+  if (pulledAtDiff !== 0) {
+    return pulledAtDiff;
+  }
+
+  return Number(right.runId ?? 0) - Number(left.runId ?? 0);
+}
+
 export default function TournamentPage() {
   const [data, setData] = useState<{
     generatedAt: string | null;
@@ -176,16 +190,31 @@ export default function TournamentPage() {
   );
 
   const thisYearRows = useMemo(
-    () =>
-      tournamentRows
-        .filter(
-          (row) =>
-            row.tournamentSeason === 2026 &&
-            isCompleted(row) &&
-            getPrimarySide(row) !== null &&
-            isScoredOutcome(getOutcome(row))
-        )
-        .sort((left, right) => getSortTimestamp(right).localeCompare(getSortTimestamp(left))),
+    () => {
+      // evaluation_rows.json contains historical snapshots across multiple runs, so 2026
+      // tournament results must be deduped to the latest resolved row per gameId+market.
+      const candidates = tournamentRows.filter(
+        (row) =>
+          row.leagueSlug === 'ncaab' &&
+          row.isNcaaTournament === true &&
+          row.tournamentSeason === 2026 &&
+          isCompleted(row) &&
+          getPrimarySide(row) !== null &&
+          isScoredOutcome(getOutcome(row))
+      );
+
+      const deduped = new Map<string, EvaluationRow>();
+
+      for (const row of candidates) {
+        const key = `${String(row.gameId ?? '')}:${String(row.market ?? '')}`;
+        const existing = deduped.get(key);
+        if (!existing || compareLatestRows(row, existing) < 0) {
+          deduped.set(key, row);
+        }
+      }
+
+      return [...deduped.values()].sort((left, right) => compareLatestRows(left, right));
+    },
     [tournamentRows]
   );
 
