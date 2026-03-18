@@ -1,43 +1,197 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { fetchPublicJson, formatPct } from '../../lib/data';
+
+type EvaluationRow = Record<string, any>;
+
+type AggregateRow = {
+  key: string;
+  label: string;
+  bets: number;
+  wins: number;
+  losses: number;
+  pushes: number;
+  winRate: number | null;
+};
+
+function getSignalType(row: EvaluationRow): string {
+  if (row.hasSharpSignal && row.hasPickSignal && row.sharpPickAgree) {
+    return 'Sharps + Picks';
+  }
+  if (row.hasSharpSignal && row.hasPickSignal && !row.sharpPickAgree) {
+    return 'Conflict';
+  }
+  if (row.hasSharpSignal && !row.hasPickSignal) {
+    return 'Sharp Only';
+  }
+  if (!row.hasSharpSignal && row.hasPickSignal) {
+    return 'Pick Majority';
+  }
+  return 'No Signal';
+}
+
+function getPrimarySide(row: EvaluationRow): string | null {
+  if (row.hasSharpSignal) {
+    return row.sharpMajoritySide ?? null;
+  }
+  if (row.hasPickSignal) {
+    return row.pickMajoritySide ?? null;
+  }
+  return null;
+}
+
+function getOutcome(row: EvaluationRow): string | null {
+  const primarySide = getPrimarySide(row);
+  if (primarySide === 'away') {
+    return row.awayResult ?? null;
+  }
+  if (primarySide === 'home') {
+    return row.homeResult ?? null;
+  }
+  if (primarySide === 'over') {
+    return row.overResult ?? null;
+  }
+  if (primarySide === 'under') {
+    return row.underResult ?? null;
+  }
+  return null;
+}
+
+function isBettable(row: EvaluationRow): boolean {
+  return Boolean(row.hasSharpSignal || row.hasPickSignal);
+}
+
+function isCompleted(row: EvaluationRow): boolean {
+  return row.status === 'complete' || Boolean(row.gradedAt);
+}
+
+function buildAggregateRows(rows: EvaluationRow[], getKey: (row: EvaluationRow) => string | null): AggregateRow[] {
+  const groups = new Map<string, AggregateRow>();
+
+  for (const row of rows) {
+    const key = getKey(row);
+    if (!key) {
+      continue;
+    }
+
+    if (!groups.has(key)) {
+      groups.set(key, {
+        key,
+        label: key,
+        bets: 0,
+        wins: 0,
+        losses: 0,
+        pushes: 0,
+        winRate: null
+      });
+    }
+
+    const aggregate = groups.get(key)!;
+    const outcome = getOutcome(row);
+    aggregate.bets += 1;
+
+    if (outcome === 'win') {
+      aggregate.wins += 1;
+    } else if (outcome === 'loss') {
+      aggregate.losses += 1;
+    } else if (outcome === 'push') {
+      aggregate.pushes += 1;
+    }
+  }
+
+  return [...groups.values()]
+    .map((aggregate) => {
+      const decisions = aggregate.wins + aggregate.losses;
+      return {
+        ...aggregate,
+        winRate: decisions > 0 ? aggregate.wins / decisions : null
+      };
+    })
+    .sort((left, right) => {
+      if (right.bets !== left.bets) {
+        return right.bets - left.bets;
+      }
+      return left.label.localeCompare(right.label);
+    });
+}
+
+function formatMatchup(row: EvaluationRow): string {
+  return `${row.awayTeam ?? 'Away'} vs ${row.homeTeam ?? 'Home'}`;
+}
+
+function getSortTimestamp(row: EvaluationRow): string {
+  return String(row.gradedAt ?? row.startTimeUtc ?? row.gameDate ?? row.pulledAt ?? '');
+}
 
 export default function TournamentPage() {
   const [data, setData] = useState<{
     generatedAt: string | null;
-    overall: Array<Record<string, any>>;
-    byRound: Array<Record<string, any>>;
-    byMarket: Array<Record<string, any>>;
+    rows: EvaluationRow[];
   }>({
     generatedAt: null,
-    overall: [],
-    byRound: [],
-    byMarket: []
+    rows: []
   });
 
   useEffect(() => {
-    fetchPublicJson('/data/ncaa_tournament_summary.json', {
+    fetchPublicJson('/data/evaluation_rows.json', {
       generatedAt: null,
-      overall: [] as Array<Record<string, any>>,
-      byRound: [] as Array<Record<string, any>>,
-      byMarket: [] as Array<Record<string, any>>
+      rows: [] as EvaluationRow[]
     }).then(setData);
   }, []);
 
-  const topRows = data.overall
-    .filter((row) => row.signalType === 'sharp' || row.signalType === 'picks' || row.signalType === 'agreement')
-    .filter((row) => row.sport === 'all' && row.market === 'all');
+  const tournamentRows = useMemo(
+    () => data.rows.filter((row) => row.isNcaaTournament === true),
+    [data.rows]
+  );
+
+  const lastYearRows = useMemo(
+    () =>
+      tournamentRows.filter((row) => row.tournamentSeason === 2025 && isCompleted(row) && isBettable(row)),
+    [tournamentRows]
+  );
+
+  const lastYearSignalRows = useMemo(
+    () => lastYearRows.filter((row) => getSignalType(row) !== 'No Signal'),
+    [lastYearRows]
+  );
+
+  const thisYearRows = useMemo(
+    () =>
+      tournamentRows
+        .filter((row) => row.tournamentSeason === 2026 && isCompleted(row))
+        .sort((left, right) => getSortTimestamp(right).localeCompare(getSortTimestamp(left))),
+    [tournamentRows]
+  );
+
+  const bySignalType = useMemo(
+    () => buildAggregateRows(lastYearSignalRows, (row) => getSignalType(row)),
+    [lastYearSignalRows]
+  );
+
+  const byRound = useMemo(
+    () => buildAggregateRows(lastYearRows, (row) => (row.tournamentRound ? String(row.tournamentRound) : null)),
+    [lastYearRows]
+  );
+
+  const byMarket = useMemo(
+    () => buildAggregateRows(lastYearRows, (row) => (row.market ? String(row.market) : null)),
+    [lastYearRows]
+  );
 
   return (
     <main className="page">
       <section className="hero">
         <h2>NCAA Tournament</h2>
-        <p className="subtle">What seems to matter in tournament games, using the same simple signal groups.</p>
+        <p className="subtle">Last year shows historical tournament learnings. This year updates as tournament games complete.</p>
         <div className="metrics">
           <div className="metric">
-            <label>Signal Groups</label>
-            <strong>{topRows.length}</strong>
+            <label>2025 Bettable Rows</label>
+            <strong>{lastYearRows.length}</strong>
+          </div>
+          <div className="metric">
+            <label>2026 Completed Rows</label>
+            <strong>{thisYearRows.length}</strong>
           </div>
           <div className="metric">
             <label>Generated</label>
@@ -47,89 +201,135 @@ export default function TournamentPage() {
       </section>
 
       <section className="panel table-wrap">
-        <h3>Sharps vs Picks</h3>
+        <h3>Last Year by Signal Type (2025)</h3>
         <table>
           <thead>
             <tr>
-              <th>Signal</th>
-              <th>Sample</th>
+              <th>Signal Type</th>
+              <th>Bets</th>
               <th>Wins</th>
               <th>Losses</th>
               <th>Pushes</th>
-              <th>Win %</th>
+              <th>Win Rate</th>
             </tr>
           </thead>
           <tbody>
-            {topRows.map((row) => (
-              <tr key={String(row.cohortKey)}>
-                <td>{row.cohortLabel}</td>
-                <td>{row.sampleSize}</td>
+            {bySignalType.map((row) => (
+              <tr key={row.key}>
+                <td>{row.label}</td>
+                <td>{row.bets}</td>
                 <td className="good">{row.wins}</td>
                 <td className="bad">{row.losses}</td>
                 <td>{row.pushes}</td>
-                <td>{formatPct(row.winPct)}</td>
+                <td>{formatPct(row.winRate)}</td>
               </tr>
             ))}
+            {bySignalType.length === 0 ? (
+              <tr>
+                <td colSpan={6} className="subtle">No completed 2025 tournament rows were found.</td>
+              </tr>
+            ) : null}
           </tbody>
         </table>
       </section>
 
       <section className="panel table-wrap">
-        <h3>By Round</h3>
+        <h3>Last Year by Round</h3>
         <table>
           <thead>
             <tr>
               <th>Round</th>
-              <th>Signal</th>
-              <th>Market</th>
-              <th>Sample</th>
-              <th>Win %</th>
+              <th>Bets</th>
+              <th>Wins</th>
+              <th>Losses</th>
+              <th>Pushes</th>
+              <th>Win Rate</th>
             </tr>
           </thead>
           <tbody>
-            {data.byRound.flatMap((entry) =>
-              (entry.cohorts as Array<Record<string, any>>)
-                .filter((row) => row.signalType === 'sharp' || row.signalType === 'picks' || row.signalType === 'agreement')
-                .filter((row) => row.sport === 'all' && row.market !== 'all')
-                .map((row) => (
-                  <tr key={`${String(entry.round)}:${String(row.cohortKey)}`}>
-                    <td>{entry.round}</td>
-                    <td>{row.cohortLabel}</td>
-                    <td>{row.market}</td>
-                    <td>{row.sampleSize}</td>
-                    <td>{formatPct(row.winPct)}</td>
-                  </tr>
-                ))
-            )}
+            {byRound.map((row) => (
+              <tr key={row.key}>
+                <td>{row.label}</td>
+                <td>{row.bets}</td>
+                <td className="good">{row.wins}</td>
+                <td className="bad">{row.losses}</td>
+                <td>{row.pushes}</td>
+                <td>{formatPct(row.winRate)}</td>
+              </tr>
+            ))}
+            {byRound.length === 0 ? (
+              <tr>
+                <td colSpan={6} className="subtle">No completed 2025 tournament rows were found.</td>
+              </tr>
+            ) : null}
           </tbody>
         </table>
       </section>
 
       <section className="panel table-wrap">
-        <h3>By Market</h3>
+        <h3>Last Year by Market</h3>
         <table>
           <thead>
             <tr>
               <th>Market</th>
-              <th>Signal</th>
-              <th>Sample</th>
-              <th>Win %</th>
+              <th>Bets</th>
+              <th>Wins</th>
+              <th>Losses</th>
+              <th>Pushes</th>
+              <th>Win Rate</th>
             </tr>
           </thead>
           <tbody>
-            {data.byMarket.flatMap((entry) =>
-              (entry.cohorts as Array<Record<string, any>>)
-                .filter((row) => row.signalType === 'sharp' || row.signalType === 'picks' || row.signalType === 'agreement')
-                .filter((row) => row.sport === 'all' && row.market !== 'all')
-                .map((row) => (
-                  <tr key={`${String(entry.market)}:${String(row.cohortKey)}`}>
-                    <td>{entry.market}</td>
-                    <td>{row.cohortLabel}</td>
-                    <td>{row.sampleSize}</td>
-                    <td>{formatPct(row.winPct)}</td>
-                  </tr>
-                ))
-            )}
+            {byMarket.map((row) => (
+              <tr key={row.key}>
+                <td>{row.label}</td>
+                <td>{row.bets}</td>
+                <td className="good">{row.wins}</td>
+                <td className="bad">{row.losses}</td>
+                <td>{row.pushes}</td>
+                <td>{formatPct(row.winRate)}</td>
+              </tr>
+            ))}
+            {byMarket.length === 0 ? (
+              <tr>
+                <td colSpan={6} className="subtle">No completed 2025 tournament rows were found.</td>
+              </tr>
+            ) : null}
+          </tbody>
+        </table>
+      </section>
+
+      <section className="panel table-wrap">
+        <h3>2026 Tournament Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Round</th>
+              <th>Matchup</th>
+              <th>Market</th>
+              <th>Signal Type</th>
+              <th>Primary Side</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {thisYearRows.map((row) => (
+              <tr key={String(row.evaluationKey)}>
+                <td>{row.gameDate ?? 'N/A'}</td>
+                <td>{row.tournamentRound ?? 'N/A'}</td>
+                <td>{formatMatchup(row)}</td>
+                <td>{row.market ?? 'N/A'}</td>
+                <td>{getSignalType(row)}</td>
+                <td>{getPrimarySide(row) ?? 'N/A'}</td>
+                <td>{getOutcome(row) ?? 'unknown'}</td>
+              </tr>
+            ))}
+            {thisYearRows.length === 0 ? (
+              <tr>
+                <td colSpan={7} className="subtle">No completed 2026 tournament rows are available yet.</td>
+              </tr>
+            ) : null}
           </tbody>
         </table>
       </section>
