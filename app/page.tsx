@@ -32,6 +32,13 @@ const SPORT_OPTIONS = [
   { label: 'MLB', value: 'Baseball:mlb' }
 ];
 
+const MARKET_OPTIONS = [
+  { label: 'All', value: 'all' },
+  { label: 'Spread', value: 'spread' },
+  { label: 'Total', value: 'total' },
+  { label: 'Moneyline', value: 'moneyline' }
+];
+
 const SORT_OPTIONS = [
   { label: 'Default / Current', value: 'default' },
   { label: 'Start Time', value: 'start_time' },
@@ -157,6 +164,20 @@ function formatLineValue(value: unknown): string {
   return value.toFixed(1).replace(/\.0$/, '.0');
 }
 
+function formatSignedLineValue(value: unknown): string {
+  if (typeof value !== 'number') {
+    return '';
+  }
+  const absolute = Math.abs(value).toFixed(1).replace(/\.0$/, '.0');
+  if (value > 0) {
+    return `+${absolute}`;
+  }
+  if (value < 0) {
+    return `-${absolute}`;
+  }
+  return absolute;
+}
+
 function formatTimestamp(value: string | null | undefined): string {
   if (!value) {
     return 'N/A';
@@ -212,16 +233,16 @@ function getPrimarySideText(game: Record<string, any>, market: string, row: Reco
   }
 
   if (preferredSide === 'away') {
-    const displayValue = market === 'spread' ? formatLineValue(Number(row.awayValue)) : formatSignedNumber(row.awayValue);
+    const displayValue = market === 'spread' ? formatSignedLineValue(row.awayValue) : formatSignedNumber(row.awayValue);
     return `${game.awayTeam ?? 'Away'} ${row.awayValue == null ? '' : displayValue}`.trim();
   }
   if (preferredSide === 'home') {
-    const displayValue = market === 'spread' ? formatLineValue(Number(row.homeValue)) : formatSignedNumber(row.homeValue);
+    const displayValue = market === 'spread' ? formatSignedLineValue(row.homeValue) : formatSignedNumber(row.homeValue);
     return `${game.homeTeam ?? 'Home'} ${row.homeValue == null ? '' : displayValue}`.trim();
   }
 
-  const awayDisplayValue = market === 'spread' ? formatLineValue(Number(row.awayValue)) : formatSignedNumber(row.awayValue);
-  const homeDisplayValue = market === 'spread' ? formatLineValue(Number(row.homeValue)) : formatSignedNumber(row.homeValue);
+  const awayDisplayValue = market === 'spread' ? formatSignedLineValue(row.awayValue) : formatSignedNumber(row.awayValue);
+  const homeDisplayValue = market === 'spread' ? formatSignedLineValue(row.homeValue) : formatSignedNumber(row.homeValue);
   const awayText = `${game.awayTeam ?? 'Away'} ${row.awayValue == null ? '' : awayDisplayValue}`.trim();
   const homeText = `${game.homeTeam ?? 'Home'} ${row.homeValue == null ? '' : homeDisplayValue}`.trim();
   return `${awayText} / ${homeText}`;
@@ -262,6 +283,7 @@ function getSortableStartTime(value: unknown): number {
 function buildFilteredRows(
   marketRows: BoardMarketRow[],
   sportFilter: string,
+  marketFilter: string,
   teamFilter: string,
   sortMode: string
 ): BoardMarketRow[] {
@@ -278,6 +300,10 @@ function buildFilteredRows(
       const homeTeam = String(game.homeTeam ?? '').toLowerCase();
       return awayTeam.includes(normalizedTeamFilter) || homeTeam.includes(normalizedTeamFilter);
     });
+  }
+
+  if (marketFilter !== 'all') {
+    rows = rows.filter(({ market }) => market === marketFilter);
   }
 
   if (sortMode === 'default' || sortMode === 'start_time') {
@@ -407,8 +433,9 @@ export default function CurrentBoardPage() {
   });
   const [metadata, setMetadata] = useState<{ generatedAt: string | null }>({ generatedAt: null });
   const [sportFilter, setSportFilter] = useState('all');
+  const [marketFilter, setMarketFilter] = useState('all');
   const [teamFilter, setTeamFilter] = useState('');
-  const [sortMode, setSortMode] = useState('default');
+  const [sortMode, setSortMode] = useState('start_time');
 
   useEffect(() => {
     fetchPublicJson('/data/current_board.json', {
@@ -475,13 +502,18 @@ export default function CurrentBoardPage() {
   );
 
   const filteredRows = useMemo(
-    () => buildFilteredRows(marketRows, sportFilter, teamFilter, sortMode),
-    [marketRows, sportFilter, teamFilter, sortMode]
+    () => buildFilteredRows(marketRows, sportFilter, marketFilter, teamFilter, sortMode),
+    [marketRows, sportFilter, marketFilter, teamFilter, sortMode]
   );
 
   const activeRows = useMemo(
     () => filteredRows.filter(({ row }) => getSharpCount(row) > 0 || getPickCount(row) > 0),
     [filteredRows]
+  );
+
+  const topBetKeys = useMemo(
+    () => new Set(topBetsRightNow.map(({ game, market }) => `${String(game.gameId)}:${market}`)),
+    [topBetsRightNow]
   );
 
   if (USE_LEGACY_CURRENT_BOARD) {
@@ -660,6 +692,15 @@ export default function CurrentBoardPage() {
             </div>
 
             <div className="control">
+              <label htmlFor="market-filter">Market</label>
+              <select id="market-filter" value={marketFilter} onChange={(event) => setMarketFilter(event.target.value)}>
+                {MARKET_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>{option.label}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="control">
               <label htmlFor="sort-mode">Sort</label>
               <select id="sort-mode" value={sortMode} onChange={(event) => setSortMode(event.target.value)}>
                 {SORT_OPTIONS.map((option) => (
@@ -683,6 +724,7 @@ export default function CurrentBoardPage() {
 
           <div className="current-board-table current-board-table-modern">
             <div className="current-board-table-head current-board-table-row current-board-table-row-modern">
+              <div>Top</div>
               <div>Sport</div>
               <div>Game</div>
               <div>Start</div>
@@ -696,6 +738,9 @@ export default function CurrentBoardPage() {
 
             {activeRows.map(({ game, market, row }) => (
               <div className="current-board-table-row current-board-data-row current-board-table-row-modern" key={`${String(game.gameId)}:${market}`}>
+              <div className="current-board-cell current-board-top-cell" data-label="Top">
+                {topBetKeys.has(`${String(game.gameId)}:${market}`) ? <span className="current-board-top-flag">🔥</span> : <span className="subtle">-</span>}
+              </div>
               <div className="current-board-cell current-board-sport-cell" data-label="Sport">{String(game.leagueSlug ?? game.sport ?? '').toUpperCase()}</div>
               <div className="current-board-cell current-board-game-cell" data-label="Game">
                 <strong>{game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}</strong>

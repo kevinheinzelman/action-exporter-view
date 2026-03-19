@@ -570,7 +570,7 @@ th {
 
 .current-board-table-row {
   display: grid;
-  grid-template-columns: 72px minmax(184px, 1.1fr) 118px 82px minmax(170px, 0.9fr) minmax(170px, 1fr) minmax(170px, 1fr) 112px 112px;
+  grid-template-columns: 48px 72px minmax(184px, 1.1fr) 118px 82px minmax(170px, 0.9fr) minmax(190px, 1fr) minmax(190px, 1fr) 112px 112px;
   gap: 12px;
   align-items: center;
 }
@@ -616,6 +616,18 @@ th {
 .current-board-market-cell {
   font-weight: 700;
   color: var(--text-muted);
+}
+
+.current-board-top-cell {
+  text-align: center;
+}
+
+.current-board-top-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .current-board-number-cell {
@@ -685,9 +697,10 @@ th {
 }
 
 .current-board-pill-conflict {
-  background: #fee2e2;
-  border-color: rgba(239, 68, 68, 0.3);
-  color: #b91c1c;
+  background: #fecaca;
+  border-color: rgba(220, 38, 38, 0.45);
+  color: #991b1b;
+  box-shadow: inset 0 0 0 1px rgba(220, 38, 38, 0.12);
 }
 
 @media (max-width: 980px) {
