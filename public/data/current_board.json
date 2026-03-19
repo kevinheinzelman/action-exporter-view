@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:20:49.141Z",
+  "generatedAt": "2026-03-19T16:25:47.531Z",
   "boardDate": "2026-03-19",
   "rowCount": 147,
   "games": [
@@ -114,6 +114,11 @@
             "betsPct": 21,
             "moneyPct": 33,
             "moneyMinusBetsPct": 12
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ picks · money over bets +12"
           }
         },
         "spread": {
@@ -213,6 +218,11 @@
             "betsPct": 46,
             "moneyPct": 52,
             "moneyMinusBetsPct": 6
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "4+ picks · money over bets +6"
           }
         },
         "total": {
@@ -312,6 +322,11 @@
             "betsPct": 8,
             "moneyPct": 11,
             "moneyMinusBetsPct": 3
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps"
           }
         }
       }
@@ -427,6 +442,11 @@
             "betsPct": 9,
             "moneyPct": 49,
             "moneyMinusBetsPct": 40
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ picks · money over bets +40"
           }
         },
         "spread": {
@@ -526,6 +546,11 @@
             "betsPct": 73,
             "moneyPct": 79,
             "moneyMinusBetsPct": 6
+          },
+          "recommendation": {
+            "signalScore": 8,
+            "recommendationTier": "Strong",
+            "recommendationReason": "3+ sharps · 4+ picks · sharp + pick agreement"
           }
         },
         "total": {
@@ -625,6 +650,11 @@
             "betsPct": 10,
             "moneyPct": 17,
             "moneyMinusBetsPct": 7
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps · money over bets +7"
           }
         }
       }
@@ -740,6 +770,11 @@
             "betsPct": 36,
             "moneyPct": 38,
             "moneyMinusBetsPct": 2
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -833,6 +868,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -926,6 +966,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -1035,6 +1080,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -1128,6 +1178,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -1221,6 +1276,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -1336,6 +1396,11 @@
             "betsPct": 24,
             "moneyPct": 34,
             "moneyMinusBetsPct": 10
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps · money over bets +10"
           }
         },
         "spread": {
@@ -1429,6 +1494,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -1522,6 +1592,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -1631,6 +1706,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -1724,6 +1804,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -1817,6 +1902,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -1932,6 +2022,11 @@
             "betsPct": 27,
             "moneyPct": 61,
             "moneyMinusBetsPct": 34
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "4+ picks · money over bets +34"
           }
         },
         "spread": {
@@ -2031,6 +2126,11 @@
             "betsPct": 70,
             "moneyPct": 81,
             "moneyMinusBetsPct": 11
+          },
+          "recommendation": {
+            "signalScore": 8,
+            "recommendationTier": "Strong",
+            "recommendationReason": "3+ sharps · 4+ picks · sharp + pick agreement"
           }
         },
         "total": {
@@ -2130,6 +2230,11 @@
             "betsPct": 34,
             "moneyPct": 50,
             "moneyMinusBetsPct": 16
+          },
+          "recommendation": {
+            "signalScore": 5,
+            "recommendationTier": "Interesting",
+            "recommendationReason": "3+ sharps · money over bets +16"
           }
         }
       }
@@ -2239,6 +2344,11 @@
             "betsPct": 7,
             "moneyPct": 5,
             "moneyMinusBetsPct": -2
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -2338,6 +2448,11 @@
             "betsPct": 29,
             "moneyPct": 33,
             "moneyMinusBetsPct": 4
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -2437,6 +2552,11 @@
             "betsPct": 28,
             "moneyPct": 38,
             "moneyMinusBetsPct": 10
+          },
+          "recommendation": {
+            "signalScore": 8,
+            "recommendationTier": "Strong",
+            "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
           }
         }
       }
@@ -2546,6 +2666,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -2645,6 +2770,11 @@
             "betsPct": 87,
             "moneyPct": 84,
             "moneyMinusBetsPct": -3
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -2744,6 +2874,11 @@
             "betsPct": 7,
             "moneyPct": 17,
             "moneyMinusBetsPct": 10
+          },
+          "recommendation": {
+            "signalScore": 8,
+            "recommendationTier": "Strong",
+            "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
           }
         }
       }
@@ -2859,6 +2994,11 @@
             "betsPct": 6,
             "moneyPct": 19,
             "moneyMinusBetsPct": 13
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -2958,6 +3098,11 @@
             "betsPct": 70,
             "moneyPct": 72,
             "moneyMinusBetsPct": 2
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ sharps · 2+ picks"
           }
         },
         "total": {
@@ -3057,6 +3202,11 @@
             "betsPct": 15,
             "moneyPct": 33,
             "moneyMinusBetsPct": 18
+          },
+          "recommendation": {
+            "signalScore": 5,
+            "recommendationTier": "Interesting",
+            "recommendationReason": "3+ sharps · money over bets +18"
           }
         }
       }
@@ -3166,6 +3316,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -3265,6 +3420,11 @@
             "betsPct": 22,
             "moneyPct": 30,
             "moneyMinusBetsPct": 8
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -3364,6 +3524,11 @@
             "betsPct": 9,
             "moneyPct": 14,
             "moneyMinusBetsPct": 5
+          },
+          "recommendation": {
+            "signalScore": 5,
+            "recommendationTier": "Interesting",
+            "recommendationReason": "2+ sharps · sharp + pick agreement · money over bets +5"
           }
         }
       }
@@ -3473,6 +3638,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -3572,6 +3742,11 @@
             "betsPct": 78,
             "moneyPct": 78,
             "moneyMinusBetsPct": 0
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -3671,6 +3846,11 @@
             "betsPct": 8,
             "moneyPct": 50,
             "moneyMinusBetsPct": 42
+          },
+          "recommendation": {
+            "signalScore": 8,
+            "recommendationTier": "Strong",
+            "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
           }
         }
       }
@@ -3780,6 +3960,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -3873,6 +4058,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -3966,6 +4156,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -4075,6 +4270,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -4168,6 +4368,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -4261,6 +4466,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -4376,6 +4586,11 @@
             "betsPct": 22,
             "moneyPct": 23,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -4469,6 +4684,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -4562,6 +4782,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -4677,6 +4902,11 @@
             "betsPct": 33,
             "moneyPct": 44,
             "moneyMinusBetsPct": 11
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ picks · money over bets +11"
           }
         },
         "spread": {
@@ -4776,6 +5006,11 @@
             "betsPct": 52,
             "moneyPct": 62,
             "moneyMinusBetsPct": 10
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "4+ picks · money over bets +10"
           }
         },
         "total": {
@@ -4875,6 +5110,11 @@
             "betsPct": 8,
             "moneyPct": 16,
             "moneyMinusBetsPct": 8
+          },
+          "recommendation": {
+            "signalScore": 6,
+            "recommendationTier": "Interesting",
+            "recommendationReason": "3+ sharps · sharp + pick agreement · money over bets +8"
           }
         }
       }
@@ -4984,6 +5224,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -5083,6 +5328,11 @@
             "betsPct": 29,
             "moneyPct": 35,
             "moneyMinusBetsPct": 6
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps · money over bets +6"
           }
         },
         "total": {
@@ -5182,6 +5432,11 @@
             "betsPct": 7,
             "moneyPct": 11,
             "moneyMinusBetsPct": 4
+          },
+          "recommendation": {
+            "signalScore": 5,
+            "recommendationTier": "Interesting",
+            "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
           }
         }
       }
@@ -5291,6 +5546,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -5390,6 +5650,11 @@
             "betsPct": 34,
             "moneyPct": 64,
             "moneyMinusBetsPct": 30
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps · money over bets +30"
           }
         },
         "total": {
@@ -5489,6 +5754,11 @@
             "betsPct": 11,
             "moneyPct": 6,
             "moneyMinusBetsPct": -5
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps"
           }
         }
       }
@@ -5604,6 +5874,11 @@
             "betsPct": 52,
             "moneyPct": 78,
             "moneyMinusBetsPct": 26
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ picks · money over bets +26"
           }
         },
         "spread": {
@@ -5697,6 +5972,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -5790,6 +6070,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -5899,6 +6184,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -5992,6 +6282,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -6085,6 +6380,11 @@
             "betsPct": 8,
             "moneyPct": 10,
             "moneyMinusBetsPct": 2
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -6194,6 +6494,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -6287,6 +6592,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -6380,6 +6690,11 @@
             "betsPct": 93,
             "moneyPct": 93,
             "moneyMinusBetsPct": 0
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -6495,6 +6810,11 @@
             "betsPct": 87,
             "moneyPct": 98,
             "moneyMinusBetsPct": 11
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -6594,6 +6914,11 @@
             "betsPct": 0,
             "moneyPct": 0,
             "moneyMinusBetsPct": 0
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -6687,6 +7012,11 @@
             "betsPct": 7,
             "moneyPct": 4,
             "moneyMinusBetsPct": -3
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -6796,6 +7126,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -6895,6 +7230,11 @@
             "betsPct": 5,
             "moneyPct": 4,
             "moneyMinusBetsPct": -1
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -6988,6 +7328,11 @@
             "betsPct": 74,
             "moneyPct": 71,
             "moneyMinusBetsPct": -3
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -7103,6 +7448,11 @@
             "betsPct": 22,
             "moneyPct": 27,
             "moneyMinusBetsPct": 5
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -7202,6 +7552,11 @@
             "betsPct": 35,
             "moneyPct": 21,
             "moneyMinusBetsPct": -14
+          },
+          "recommendation": {
+            "signalScore": 1,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -7295,6 +7650,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -7404,6 +7764,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -7497,6 +7862,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -7596,6 +7966,11 @@
             "betsPct": 8,
             "moneyPct": 5,
             "moneyMinusBetsPct": -3
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -7705,6 +8080,11 @@
             "betsPct": 30,
             "moneyPct": 31,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -7804,6 +8184,11 @@
             "betsPct": 41,
             "moneyPct": 50,
             "moneyMinusBetsPct": 9
+          },
+          "recommendation": {
+            "signalScore": 6,
+            "recommendationTier": "Interesting",
+            "recommendationReason": "2+ sharps · 2+ picks · sharp + pick agreement"
           }
         },
         "total": {
@@ -7903,6 +8288,11 @@
             "betsPct": 26,
             "moneyPct": 26,
             "moneyMinusBetsPct": 0
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps"
           }
         }
       }
@@ -8012,6 +8402,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -8111,6 +8506,11 @@
             "betsPct": 32,
             "moneyPct": 37,
             "moneyMinusBetsPct": 5
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ sharps · money over bets +5"
           }
         },
         "total": {
@@ -8210,6 +8610,11 @@
             "betsPct": 83,
             "moneyPct": 82,
             "moneyMinusBetsPct": -1
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps"
           }
         }
       }
@@ -8319,6 +8724,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -8418,6 +8828,11 @@
             "betsPct": 37,
             "moneyPct": 43,
             "moneyMinusBetsPct": 6
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ sharps · money over bets +6"
           }
         },
         "total": {
@@ -8517,6 +8932,11 @@
             "betsPct": 8,
             "moneyPct": 14,
             "moneyMinusBetsPct": 6
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ sharps · money over bets +6"
           }
         }
       }
@@ -8632,6 +9052,11 @@
             "betsPct": 38,
             "moneyPct": 44,
             "moneyMinusBetsPct": 6
+          },
+          "recommendation": {
+            "signalScore": 1,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -8731,6 +9156,11 @@
             "betsPct": 22,
             "moneyPct": 17,
             "moneyMinusBetsPct": -5
+          },
+          "recommendation": {
+            "signalScore": 5,
+            "recommendationTier": "Interesting",
+            "recommendationReason": "3+ sharps · sharp + pick agreement"
           }
         },
         "total": {
@@ -8830,6 +9260,11 @@
             "betsPct": 16,
             "moneyPct": 23,
             "moneyMinusBetsPct": 7
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps · money over bets +7"
           }
         }
       }
@@ -8939,6 +9374,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -9038,6 +9478,11 @@
             "betsPct": 18,
             "moneyPct": 17,
             "moneyMinusBetsPct": -1
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps · sharp + pick agreement"
           }
         },
         "total": {
@@ -9131,6 +9576,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -9240,6 +9690,11 @@
             "betsPct": 68,
             "moneyPct": 47,
             "moneyMinusBetsPct": -21
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -9333,6 +9788,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -9426,6 +9886,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -9535,6 +10000,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -9634,6 +10104,11 @@
             "betsPct": 30,
             "moneyPct": 31,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -9733,6 +10208,11 @@
             "betsPct": 14,
             "moneyPct": 11,
             "moneyMinusBetsPct": -3
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -9848,6 +10328,11 @@
             "betsPct": 18,
             "moneyPct": 14,
             "moneyMinusBetsPct": -4
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -9941,6 +10426,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -10034,6 +10524,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -10143,6 +10638,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -10236,6 +10736,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -10329,6 +10834,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -10438,6 +10948,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -10531,6 +11046,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -10624,6 +11144,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -10733,6 +11258,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -10826,6 +11356,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -10919,6 +11454,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -11028,6 +11568,11 @@
             "betsPct": 15,
             "moneyPct": 10,
             "moneyMinusBetsPct": -5
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -11121,6 +11666,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -11214,6 +11764,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -11329,6 +11884,11 @@
             "betsPct": 40,
             "moneyPct": 46,
             "moneyMinusBetsPct": 6
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ sharps · money over bets +6"
           }
         },
         "spread": {
@@ -11422,6 +11982,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -11515,6 +12080,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -11624,6 +12194,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -11717,6 +12292,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -11810,6 +12390,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -11919,6 +12504,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -12012,6 +12602,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -12105,6 +12700,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -12220,6 +12820,11 @@
             "betsPct": 7,
             "moneyPct": 17,
             "moneyMinusBetsPct": 10
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -12319,6 +12924,11 @@
             "betsPct": 5,
             "moneyPct": 16,
             "moneyMinusBetsPct": 11
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "4+ picks · money over bets +11"
           }
         },
         "total": {
@@ -12418,6 +13028,11 @@
             "betsPct": 94,
             "moneyPct": 95,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps"
           }
         }
       }
@@ -12533,6 +13148,11 @@
             "betsPct": 25,
             "moneyPct": 34,
             "moneyMinusBetsPct": 9
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -12632,6 +13252,11 @@
             "betsPct": 36,
             "moneyPct": 48,
             "moneyMinusBetsPct": 12
+          },
+          "recommendation": {
+            "signalScore": 8,
+            "recommendationTier": "Strong",
+            "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
           }
         },
         "total": {
@@ -12731,6 +13356,11 @@
             "betsPct": 23,
             "moneyPct": 25,
             "moneyMinusBetsPct": 2
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps"
           }
         }
       }
@@ -12840,6 +13470,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -12939,6 +13574,11 @@
             "betsPct": 9,
             "moneyPct": 16,
             "moneyMinusBetsPct": 7
+          },
+          "recommendation": {
+            "signalScore": 1,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -13038,6 +13678,11 @@
             "betsPct": 24,
             "moneyPct": 25,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -13147,6 +13792,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -13246,6 +13896,11 @@
             "betsPct": 65,
             "moneyPct": 66,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -13345,6 +14000,11 @@
             "betsPct": 12,
             "moneyPct": 17,
             "moneyMinusBetsPct": 5
+          },
+          "recommendation": {
+            "signalScore": 4,
+            "recommendationTier": "Watch",
+            "recommendationReason": "3+ sharps · money over bets +5"
           }
         }
       }
@@ -13460,6 +14120,11 @@
             "betsPct": 91,
             "moneyPct": 91,
             "moneyMinusBetsPct": 0
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -13559,6 +14224,11 @@
             "betsPct": 86,
             "moneyPct": 87,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -13652,6 +14322,11 @@
             "betsPct": 6,
             "moneyPct": 4,
             "moneyMinusBetsPct": -2
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -13761,6 +14436,11 @@
             "betsPct": 18,
             "moneyPct": 15,
             "moneyMinusBetsPct": -3
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -13854,6 +14534,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -13953,6 +14638,11 @@
             "betsPct": 81,
             "moneyPct": 82,
             "moneyMinusBetsPct": 1
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -14062,6 +14752,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -14155,6 +14850,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -14254,6 +14954,11 @@
             "betsPct": 23,
             "moneyPct": 18,
             "moneyMinusBetsPct": -5
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -14363,6 +15068,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -14462,6 +15172,11 @@
             "betsPct": 9,
             "moneyPct": 16,
             "moneyMinusBetsPct": 7
+          },
+          "recommendation": {
+            "signalScore": 3,
+            "recommendationTier": "Watch",
+            "recommendationReason": "2+ sharps · money over bets +7"
           }
         },
         "total": {
@@ -14555,6 +15270,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
@@ -14664,6 +15384,11 @@
             "betsPct": 16,
             "moneyPct": 2,
             "moneyMinusBetsPct": -14
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "spread": {
@@ -14757,6 +15482,11 @@
             "betsPct": null,
             "moneyPct": null,
             "moneyMinusBetsPct": null
+          },
+          "recommendation": {
+            "signalScore": 0,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         },
         "total": {
@@ -14856,6 +15586,11 @@
             "betsPct": 11,
             "moneyPct": 11,
             "moneyMinusBetsPct": 0
+          },
+          "recommendation": {
+            "signalScore": 2,
+            "recommendationTier": null,
+            "recommendationReason": null
           }
         }
       }
