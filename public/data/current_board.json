@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:10:52.142Z",
+  "generatedAt": "2026-03-19T16:15:50.527Z",
   "boardDate": "2026-03-19",
   "rowCount": 147,
   "games": [
@@ -108,6 +108,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": 0.7
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 21,
+            "moneyPct": 33,
+            "moneyMinusBetsPct": 12
           }
         },
         "spread": {
@@ -201,6 +207,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 46,
+            "moneyPct": 52,
+            "moneyMinusBetsPct": 6
           }
         },
         "total": {
@@ -294,6 +306,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 8,
+            "moneyPct": 11,
+            "moneyMinusBetsPct": 3
           }
         }
       }
@@ -403,6 +421,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": 0.7
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 9,
+            "moneyPct": 49,
+            "moneyMinusBetsPct": 40
           }
         },
         "spread": {
@@ -496,6 +520,12 @@
             "sampleSize": 11,
             "winRate": 0.36363636363636365,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 73,
+            "moneyPct": 79,
+            "moneyMinusBetsPct": 6
           }
         },
         "total": {
@@ -589,6 +619,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 10,
+            "moneyPct": 17,
+            "moneyMinusBetsPct": 7
           }
         }
       }
@@ -698,6 +734,12 @@
             "sampleSize": 5,
             "winRate": 0.6,
             "roi": 0.2739999999999999
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 36,
+            "moneyPct": 38,
+            "moneyMinusBetsPct": 2
           }
         },
         "spread": {
@@ -785,7 +827,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285343|2369|total",
@@ -872,7 +920,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -975,7 +1029,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285341|2369|spread",
@@ -1062,7 +1122,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285341|2369|total",
@@ -1149,7 +1215,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -1258,6 +1330,12 @@
             "sampleSize": 5,
             "winRate": 0.6,
             "roi": 0.2739999999999999
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 24,
+            "moneyPct": 34,
+            "moneyMinusBetsPct": 10
           }
         },
         "spread": {
@@ -1345,7 +1423,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285342|2369|total",
@@ -1432,7 +1516,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -1535,7 +1625,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285344|2369|spread",
@@ -1622,7 +1718,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285344|2369|total",
@@ -1709,7 +1811,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -1818,6 +1926,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": 0.7
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 27,
+            "moneyPct": 61,
+            "moneyMinusBetsPct": 34
           }
         },
         "spread": {
@@ -1911,6 +2025,12 @@
             "sampleSize": 11,
             "winRate": 0.36363636363636365,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 70,
+            "moneyPct": 81,
+            "moneyMinusBetsPct": 11
           }
         },
         "total": {
@@ -2004,6 +2124,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 34,
+            "moneyPct": 50,
+            "moneyMinusBetsPct": 16
           }
         }
       }
@@ -2107,7 +2233,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "away",
+            "betsPct": 7,
+            "moneyPct": 5,
+            "moneyMinusBetsPct": -2
+          }
         },
         "spread": {
           "evaluationKey": "287164|253|spread",
@@ -2200,6 +2332,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 29,
+            "moneyPct": 33,
+            "moneyMinusBetsPct": 4
           }
         },
         "total": {
@@ -2293,6 +2431,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 28,
+            "moneyPct": 38,
+            "moneyMinusBetsPct": 10
           }
         }
       }
@@ -2396,7 +2540,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "287156|253|spread",
@@ -2489,6 +2639,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 87,
+            "moneyPct": 84,
+            "moneyMinusBetsPct": -3
           }
         },
         "total": {
@@ -2582,6 +2738,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 7,
+            "moneyPct": 17,
+            "moneyMinusBetsPct": 10
           }
         }
       }
@@ -2691,6 +2853,12 @@
             "sampleSize": 12,
             "winRate": 0.5,
             "roi": 0.20972222222222217
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 6,
+            "moneyPct": 19,
+            "moneyMinusBetsPct": 13
           }
         },
         "spread": {
@@ -2784,6 +2952,12 @@
             "sampleSize": 11,
             "winRate": 0.36363636363636365,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 70,
+            "moneyPct": 72,
+            "moneyMinusBetsPct": 2
           }
         },
         "total": {
@@ -2877,6 +3051,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 15,
+            "moneyPct": 33,
+            "moneyMinusBetsPct": 18
           }
         }
       }
@@ -2980,7 +3160,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "287161|253|spread",
@@ -3073,6 +3259,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 22,
+            "moneyPct": 30,
+            "moneyMinusBetsPct": 8
           }
         },
         "total": {
@@ -3166,6 +3358,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 9,
+            "moneyPct": 14,
+            "moneyMinusBetsPct": 5
           }
         }
       }
@@ -3269,7 +3467,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "287165|253|spread",
@@ -3362,6 +3566,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 78,
+            "moneyPct": 78,
+            "moneyMinusBetsPct": 0
           }
         },
         "total": {
@@ -3455,6 +3665,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 8,
+            "moneyPct": 50,
+            "moneyMinusBetsPct": 42
           }
         }
       }
@@ -3558,7 +3774,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285347|2369|spread",
@@ -3645,7 +3867,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285347|2369|total",
@@ -3732,7 +3960,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -3835,7 +4069,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285348|2369|spread",
@@ -3922,7 +4162,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285348|2369|total",
@@ -4009,7 +4255,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -4118,6 +4370,12 @@
             "sampleSize": 5,
             "winRate": 0.6,
             "roi": 0.2739999999999999
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 22,
+            "moneyPct": 23,
+            "moneyMinusBetsPct": 1
           }
         },
         "spread": {
@@ -4205,7 +4463,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285349|2369|total",
@@ -4292,7 +4556,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -4401,6 +4671,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": 0.7
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 33,
+            "moneyPct": 44,
+            "moneyMinusBetsPct": 11
           }
         },
         "spread": {
@@ -4494,6 +4770,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 52,
+            "moneyPct": 62,
+            "moneyMinusBetsPct": 10
           }
         },
         "total": {
@@ -4587,6 +4869,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 8,
+            "moneyPct": 16,
+            "moneyMinusBetsPct": 8
           }
         }
       }
@@ -4690,7 +4978,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "281339|251|spread",
@@ -4783,6 +5077,12 @@
             "sampleSize": 7,
             "winRate": 0.2857142857142857,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 29,
+            "moneyPct": 35,
+            "moneyMinusBetsPct": 6
           }
         },
         "total": {
@@ -4876,6 +5176,12 @@
             "sampleSize": 1,
             "winRate": 0,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 7,
+            "moneyPct": 11,
+            "moneyMinusBetsPct": 4
           }
         }
       }
@@ -4979,7 +5285,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "281340|251|spread",
@@ -5072,6 +5384,12 @@
             "sampleSize": 7,
             "winRate": 0.2857142857142857,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 34,
+            "moneyPct": 64,
+            "moneyMinusBetsPct": 30
           }
         },
         "total": {
@@ -5165,6 +5483,12 @@
             "sampleSize": 9,
             "winRate": 0.1111111111111111,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 11,
+            "moneyPct": 6,
+            "moneyMinusBetsPct": -5
           }
         }
       }
@@ -5274,6 +5598,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": 0.10499999999999998
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 52,
+            "moneyPct": 78,
+            "moneyMinusBetsPct": 26
           }
         },
         "spread": {
@@ -5361,7 +5691,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265777|247|total",
@@ -5448,7 +5784,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -5551,7 +5893,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "265775|247|spread",
@@ -5638,7 +5986,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265775|247|total",
@@ -5725,7 +6079,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "under",
+            "betsPct": 8,
+            "moneyPct": 10,
+            "moneyMinusBetsPct": 2
+          }
         }
       }
     },
@@ -5828,7 +6188,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "265776|247|spread",
@@ -5915,7 +6281,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265776|247|total",
@@ -6002,7 +6374,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "over",
+            "betsPct": 93,
+            "moneyPct": 93,
+            "moneyMinusBetsPct": 0
+          }
         }
       }
     },
@@ -6111,6 +6489,12 @@
             "sampleSize": 9,
             "winRate": 0.3333333333333333,
             "roi": -0.31740740740740736
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 87,
+            "moneyPct": 98,
+            "moneyMinusBetsPct": 11
           }
         },
         "spread": {
@@ -6204,6 +6588,12 @@
             "sampleSize": 20,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 0,
+            "moneyPct": 0,
+            "moneyMinusBetsPct": 0
           }
         },
         "total": {
@@ -6291,7 +6681,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "under",
+            "betsPct": 7,
+            "moneyPct": 4,
+            "moneyMinusBetsPct": -3
+          }
         }
       }
     },
@@ -6394,7 +6790,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "287354|253|spread",
@@ -6487,6 +6889,12 @@
             "sampleSize": 11,
             "winRate": 0.36363636363636365,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 5,
+            "moneyPct": 4,
+            "moneyMinusBetsPct": -1
           }
         },
         "total": {
@@ -6574,7 +6982,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "over",
+            "betsPct": 74,
+            "moneyPct": 71,
+            "moneyMinusBetsPct": -3
+          }
         }
       }
     },
@@ -6683,6 +7097,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": 0.7
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 22,
+            "moneyPct": 27,
+            "moneyMinusBetsPct": 5
           }
         },
         "spread": {
@@ -6776,6 +7196,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 35,
+            "moneyPct": 21,
+            "moneyMinusBetsPct": -14
           }
         },
         "total": {
@@ -6863,7 +7289,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -6966,7 +7398,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "265779|247|spread",
@@ -7053,7 +7491,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265779|247|total",
@@ -7146,6 +7590,12 @@
             "sampleSize": 7,
             "winRate": 0.42857142857142855,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 8,
+            "moneyPct": 5,
+            "moneyMinusBetsPct": -3
           }
         }
       }
@@ -7249,7 +7699,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "away",
+            "betsPct": 30,
+            "moneyPct": 31,
+            "moneyMinusBetsPct": 1
+          }
         },
         "spread": {
           "evaluationKey": "287177|253|spread",
@@ -7342,6 +7798,12 @@
             "sampleSize": 11,
             "winRate": 0.36363636363636365,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 41,
+            "moneyPct": 50,
+            "moneyMinusBetsPct": 9
           }
         },
         "total": {
@@ -7435,6 +7897,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 26,
+            "moneyPct": 26,
+            "moneyMinusBetsPct": 0
           }
         }
       }
@@ -7538,7 +8006,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "281344|251|spread",
@@ -7631,6 +8105,12 @@
             "sampleSize": 7,
             "winRate": 0.2857142857142857,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 32,
+            "moneyPct": 37,
+            "moneyMinusBetsPct": 5
           }
         },
         "total": {
@@ -7724,6 +8204,12 @@
             "sampleSize": 9,
             "winRate": 0.1111111111111111,
             "roi": null
+          },
+          "publicContext": {
+            "side": "over",
+            "betsPct": 83,
+            "moneyPct": 82,
+            "moneyMinusBetsPct": -1
           }
         }
       }
@@ -7827,7 +8313,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "281343|251|spread",
@@ -7920,6 +8412,12 @@
             "sampleSize": 7,
             "winRate": 0.2857142857142857,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 37,
+            "moneyPct": 43,
+            "moneyMinusBetsPct": 6
           }
         },
         "total": {
@@ -8013,6 +8511,12 @@
             "sampleSize": 9,
             "winRate": 0.1111111111111111,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 8,
+            "moneyPct": 14,
+            "moneyMinusBetsPct": 6
           }
         }
       }
@@ -8122,6 +8626,12 @@
             "sampleSize": 5,
             "winRate": 0.4,
             "roi": -0.3514285714285714
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 38,
+            "moneyPct": 44,
+            "moneyMinusBetsPct": 6
           }
         },
         "spread": {
@@ -8215,6 +8725,12 @@
             "sampleSize": 7,
             "winRate": 0.2857142857142857,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 22,
+            "moneyPct": 17,
+            "moneyMinusBetsPct": -5
           }
         },
         "total": {
@@ -8308,6 +8824,12 @@
             "sampleSize": 9,
             "winRate": 0.1111111111111111,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 16,
+            "moneyPct": 23,
+            "moneyMinusBetsPct": 7
           }
         }
       }
@@ -8411,7 +8933,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "281341|251|spread",
@@ -8504,6 +9032,12 @@
             "sampleSize": 7,
             "winRate": 0.2857142857142857,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 18,
+            "moneyPct": 17,
+            "moneyMinusBetsPct": -1
           }
         },
         "total": {
@@ -8591,7 +9125,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -8694,7 +9234,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "home",
+            "betsPct": 68,
+            "moneyPct": 47,
+            "moneyMinusBetsPct": -21
+          }
         },
         "spread": {
           "evaluationKey": "265780|247|spread",
@@ -8781,7 +9327,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265780|247|total",
@@ -8868,7 +9420,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -8971,7 +9529,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "281345|251|spread",
@@ -9064,6 +9628,12 @@
             "sampleSize": 7,
             "winRate": 0.2857142857142857,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 30,
+            "moneyPct": 31,
+            "moneyMinusBetsPct": 1
           }
         },
         "total": {
@@ -9157,6 +9727,12 @@
             "sampleSize": 9,
             "winRate": 0.1111111111111111,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 14,
+            "moneyPct": 11,
+            "moneyMinusBetsPct": -3
           }
         }
       }
@@ -9266,6 +9842,12 @@
             "sampleSize": 4,
             "winRate": 0.25,
             "roi": -0.4475
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 18,
+            "moneyPct": 14,
+            "moneyMinusBetsPct": -4
           }
         },
         "spread": {
@@ -9353,7 +9935,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265781|247|total",
@@ -9440,7 +10028,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -9543,7 +10137,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285345|2369|spread",
@@ -9630,7 +10230,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285345|2369|total",
@@ -9717,7 +10323,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -9820,7 +10432,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285350|2369|spread",
@@ -9907,7 +10525,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285350|2369|total",
@@ -9994,7 +10618,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -10097,7 +10727,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285351|2369|spread",
@@ -10184,7 +10820,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285351|2369|total",
@@ -10271,7 +10913,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -10374,7 +11022,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "home",
+            "betsPct": 15,
+            "moneyPct": 10,
+            "moneyMinusBetsPct": -5
+          }
         },
         "spread": {
           "evaluationKey": "285346|2369|spread",
@@ -10461,7 +11115,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285346|2369|total",
@@ -10548,7 +11208,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -10657,6 +11323,12 @@
             "sampleSize": 5,
             "winRate": 0.6,
             "roi": 0.2739999999999999
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 40,
+            "moneyPct": 46,
+            "moneyMinusBetsPct": 6
           }
         },
         "spread": {
@@ -10744,7 +11416,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285353|2369|total",
@@ -10831,7 +11509,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -10934,7 +11618,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285352|2369|spread",
@@ -11021,7 +11711,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285352|2369|total",
@@ -11108,7 +11804,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -11211,7 +11913,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "285354|2369|spread",
@@ -11298,7 +12006,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "285354|2369|total",
@@ -11385,7 +12099,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -11494,6 +12214,12 @@
             "sampleSize": 12,
             "winRate": 0.5,
             "roi": 0.20972222222222217
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 7,
+            "moneyPct": 17,
+            "moneyMinusBetsPct": 10
           }
         },
         "spread": {
@@ -11587,6 +12313,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 5,
+            "moneyPct": 16,
+            "moneyMinusBetsPct": 11
           }
         },
         "total": {
@@ -11680,6 +12412,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "over",
+            "betsPct": 94,
+            "moneyPct": 95,
+            "moneyMinusBetsPct": 1
           }
         }
       }
@@ -11789,6 +12527,12 @@
             "sampleSize": 2,
             "winRate": 0.5,
             "roi": 0.7
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 25,
+            "moneyPct": 34,
+            "moneyMinusBetsPct": 9
           }
         },
         "spread": {
@@ -11882,6 +12626,12 @@
             "sampleSize": 11,
             "winRate": 0.36363636363636365,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 36,
+            "moneyPct": 48,
+            "moneyMinusBetsPct": 12
           }
         },
         "total": {
@@ -11975,6 +12725,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "over",
+            "betsPct": 23,
+            "moneyPct": 25,
+            "moneyMinusBetsPct": 2
           }
         }
       }
@@ -12078,7 +12834,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "287167|253|spread",
@@ -12171,6 +12933,12 @@
             "sampleSize": 13,
             "winRate": 0.5384615384615384,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 9,
+            "moneyPct": 16,
+            "moneyMinusBetsPct": 7
           }
         },
         "total": {
@@ -12264,6 +13032,12 @@
             "sampleSize": 14,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 24,
+            "moneyPct": 25,
+            "moneyMinusBetsPct": 1
           }
         }
       }
@@ -12367,7 +13141,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "281346|251|spread",
@@ -12460,6 +13240,12 @@
             "sampleSize": 4,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 65,
+            "moneyPct": 66,
+            "moneyMinusBetsPct": 1
           }
         },
         "total": {
@@ -12553,6 +13339,12 @@
             "sampleSize": 9,
             "winRate": 0.1111111111111111,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 12,
+            "moneyPct": 17,
+            "moneyMinusBetsPct": 5
           }
         }
       }
@@ -12662,6 +13454,12 @@
             "sampleSize": 4,
             "winRate": 0.25,
             "roi": -0.4475
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 91,
+            "moneyPct": 91,
+            "moneyMinusBetsPct": 0
           }
         },
         "spread": {
@@ -12755,6 +13553,12 @@
             "sampleSize": 20,
             "winRate": 0.5,
             "roi": null
+          },
+          "publicContext": {
+            "side": "away",
+            "betsPct": 86,
+            "moneyPct": 87,
+            "moneyMinusBetsPct": 1
           }
         },
         "total": {
@@ -12842,7 +13646,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "under",
+            "betsPct": 6,
+            "moneyPct": 4,
+            "moneyMinusBetsPct": -2
+          }
         }
       }
     },
@@ -12945,7 +13755,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "home",
+            "betsPct": 18,
+            "moneyPct": 15,
+            "moneyMinusBetsPct": -3
+          }
         },
         "spread": {
           "evaluationKey": "265784|247|spread",
@@ -13032,7 +13848,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265784|247|total",
@@ -13125,6 +13947,12 @@
             "sampleSize": 7,
             "winRate": 0.42857142857142855,
             "roi": null
+          },
+          "publicContext": {
+            "side": "over",
+            "betsPct": 81,
+            "moneyPct": 82,
+            "moneyMinusBetsPct": 1
           }
         }
       }
@@ -13228,7 +14056,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "265782|247|spread",
@@ -13315,7 +14149,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265782|247|total",
@@ -13408,6 +14248,12 @@
             "sampleSize": 7,
             "winRate": 0.42857142857142855,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 23,
+            "moneyPct": 18,
+            "moneyMinusBetsPct": -5
           }
         }
       }
@@ -13511,7 +14357,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "spread": {
           "evaluationKey": "287178|253|spread",
@@ -13604,6 +14456,12 @@
             "sampleSize": 11,
             "winRate": 0.36363636363636365,
             "roi": null
+          },
+          "publicContext": {
+            "side": "home",
+            "betsPct": 9,
+            "moneyPct": 16,
+            "moneyMinusBetsPct": 7
           }
         },
         "total": {
@@ -13691,7 +14549,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         }
       }
     },
@@ -13794,7 +14658,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": "away",
+            "betsPct": 16,
+            "moneyPct": 2,
+            "moneyMinusBetsPct": -14
+          }
         },
         "spread": {
           "evaluationKey": "265785|247|spread",
@@ -13881,7 +14751,13 @@
           "isNcaaTournament": false,
           "tournamentSeason": null,
           "tournamentRound": null,
-          "historicalSupport": null
+          "historicalSupport": null,
+          "publicContext": {
+            "side": null,
+            "betsPct": null,
+            "moneyPct": null,
+            "moneyMinusBetsPct": null
+          }
         },
         "total": {
           "evaluationKey": "265785|247|total",
@@ -13974,6 +14850,12 @@
             "sampleSize": 7,
             "winRate": 0.42857142857142855,
             "roi": null
+          },
+          "publicContext": {
+            "side": "under",
+            "betsPct": 11,
+            "moneyPct": 11,
+            "moneyMinusBetsPct": 0
           }
         }
       }
