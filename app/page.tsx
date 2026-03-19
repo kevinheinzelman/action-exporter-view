@@ -147,7 +147,7 @@ function getPickViewText(game: Record<string, any>, market: string, row: Record<
 }
 
 function getTopBetScore(row: Record<string, any>): number {
-  return getSharpCount(row) * 3 + getPickCount(row);
+  return getSharpCount(row) + getPickCount(row);
 }
 
 function formatLineValue(value: unknown): string {
@@ -537,7 +537,7 @@ export default function CurrentBoardPage() {
                 <h3>Top Bets Right Now</h3>
               </div>
               <p className="subtle current-board-top-bets-subtitle">
-                Top signal-driven market rows right now, ranked by sharps first, then picks.
+                Top aligned market rows right now, ranked by combined sharps and picks.
               </p>
             </div>
 
