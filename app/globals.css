@@ -100,12 +100,8 @@ a {
   height: 46px;
   display: grid;
   place-items: center;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent), #38bdf8);
-  color: white;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  box-shadow: var(--shadow-md);
+  font-size: 1.4rem;
+  line-height: 1;
 }
 
 .brand-copy h1 {
@@ -689,9 +685,9 @@ th {
 }
 
 .current-board-pill-conflict {
-  background: #fdecec;
-  border-color: rgba(239, 68, 68, 0.18);
-  color: #b45353;
+  background: #fee2e2;
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #b91c1c;
 }
 
 @media (max-width: 980px) {
