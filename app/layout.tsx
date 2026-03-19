@@ -10,7 +10,6 @@ export const metadata = {
 const NAV_ITEMS = [
   { href: '/', label: 'Current Board' },
   { href: '/analysis', label: 'Analysis' },
-  { href: '/strategy', label: 'Strategy' },
   { href: '/about-data', label: 'About Data' }
 ];
 
