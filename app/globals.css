@@ -677,9 +677,9 @@ th {
 }
 
 .current-board-pill-strength {
-  background: var(--strength);
-  border-color: var(--strength-border);
-  color: #b45309;
+  background: #ecfdf3;
+  border-color: rgba(34, 197, 94, 0.18);
+  color: #15803d;
 }
 
 .current-board-pill-agreement {

@@ -121,6 +121,10 @@ function getPickViewText(game: Record<string, any>, market: string, row: Record<
     return '-';
   }
 
+  if (row.pickIsTie) {
+    return `${count} picks, (tied)`;
+  }
+
   const side = getPrimarySignalSide(row, 'picks');
   if (market === 'total') {
     if (side === 'over') {
