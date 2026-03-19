@@ -1,0 +1,1581 @@
+{
+  "generatedAt": "2026-03-19T16:03:30.291Z",
+  "basis": "analysis_rows_latest_pregame",
+  "rowCount": 62,
+  "rows": [
+    {
+      "angleId": "mlb:moneyline:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "mlb",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 8,
+      "wins": 5,
+      "losses": 3,
+      "pushes": 0,
+      "winRate": 0.625,
+      "roi": 0.23499643874643875,
+      "averagePublicMoneyMinusBetsPct": 7.625,
+      "averageSharpCount": 1.375,
+      "averagePickCount": 0.25
+    },
+    {
+      "angleId": "mlb:moneyline:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "mlb",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 5,
+      "wins": 3,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.6,
+      "roi": 0.2739999999999999,
+      "averagePublicMoneyMinusBetsPct": 7.8,
+      "averageSharpCount": 2.6,
+      "averagePickCount": 0.6
+    },
+    {
+      "angleId": "mlb:moneyline:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "mlb",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 3,
+      "wins": 3,
+      "losses": 0,
+      "pushes": 0,
+      "winRate": 1,
+      "roi": 1.1233333333333333,
+      "averagePublicMoneyMinusBetsPct": 7.666666666666667,
+      "averageSharpCount": 3,
+      "averagePickCount": 0.3333333333333333
+    },
+    {
+      "angleId": "mlb:moneyline:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "mlb",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.07999999999999996,
+      "averagePublicMoneyMinusBetsPct": 12.5,
+      "averageSharpCount": 2.5,
+      "averagePickCount": 0.5
+    },
+    {
+      "angleId": "mlb:spread:spread-short-favorite-range",
+      "angleLabel": "Spread sides with abs(line) under 5",
+      "league": "mlb",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": "<5"
+        }
+      ],
+      "sampleSize": 22,
+      "wins": 11,
+      "losses": 11,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "mlb:total:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "mlb",
+      "market": "total",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 7,
+      "wins": 1,
+      "losses": 6,
+      "pushes": 0,
+      "winRate": 0.14285714285714285,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 22.285714285714285,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "mlb:total:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "mlb",
+      "market": "total",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 6,
+      "wins": 1,
+      "losses": 5,
+      "pushes": 0,
+      "winRate": 0.16666666666666666,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 24.666666666666668,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nba:moneyline:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "nba",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 5,
+      "wins": 2,
+      "losses": 3,
+      "pushes": 0,
+      "winRate": 0.4,
+      "roi": -0.3514285714285714,
+      "averagePublicMoneyMinusBetsPct": 11.2,
+      "averageSharpCount": 0,
+      "averagePickCount": 0.4
+    },
+    {
+      "angleId": "nba:moneyline:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "nba",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.050000000000000044,
+      "averagePublicMoneyMinusBetsPct": 20,
+      "averageSharpCount": 0,
+      "averagePickCount": 0.5
+    },
+    {
+      "angleId": "nba:spread:spread-big-number",
+      "angleLabel": "Spread sides with abs(line) over 10",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": ">10"
+        }
+      ],
+      "sampleSize": 14,
+      "wins": 7,
+      "losses": 7,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 0.9285714285714286,
+      "averagePickCount": 0.35714285714285715
+    },
+    {
+      "angleId": "nba:spread:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 7,
+      "wins": 2,
+      "losses": 5,
+      "pushes": 0,
+      "winRate": 0.2857142857142857,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -1.1428571428571428,
+      "averageSharpCount": 4,
+      "averagePickCount": 1.1428571428571428
+    },
+    {
+      "angleId": "nba:spread:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 5,
+      "wins": 2,
+      "losses": 3,
+      "pushes": 0,
+      "winRate": 0.4,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -0.4,
+      "averageSharpCount": 4.8,
+      "averagePickCount": 1.6
+    },
+    {
+      "angleId": "nba:spread:spread-middle-range",
+      "angleLabel": "Spread sides with abs(line) 5 to 10",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": "5-10"
+        }
+      ],
+      "sampleSize": 4,
+      "wins": 2,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 2.25,
+      "averagePickCount": 0.75
+    },
+    {
+      "angleId": "nba:spread:spread-short-favorite-range",
+      "angleLabel": "Spread sides with abs(line) under 5",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": "<5"
+        }
+      ],
+      "sampleSize": 4,
+      "wins": 2,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 1.75,
+      "averagePickCount": 1.5
+    },
+    {
+      "angleId": "nba:spread:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 3,
+      "wins": 1,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.3333333333333333,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 8.333333333333334,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nba:spread:pick-majority-2plus",
+      "angleLabel": "Pick majority, 2+ picks",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 3,
+      "wins": 0,
+      "losses": 3,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0.3333333333333333,
+      "averageSharpCount": 3.3333333333333335,
+      "averagePickCount": 2.6666666666666665
+    },
+    {
+      "angleId": "nba:spread:agreement-2-2",
+      "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 0,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0.5,
+      "averageSharpCount": 5,
+      "averagePickCount": 3
+    },
+    {
+      "angleId": "nba:spread:agreement-3-3",
+      "angleLabel": "Sharp + Pick agreement, 3+ sharps and 3+ picks",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -2,
+      "averageSharpCount": 7,
+      "averagePickCount": 4
+    },
+    {
+      "angleId": "nba:spread:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 15,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nba:spread:pick-majority-3plus",
+      "angleLabel": "Pick majority, 3+ picks",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -2,
+      "averageSharpCount": 7,
+      "averagePickCount": 4
+    },
+    {
+      "angleId": "nba:total:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "nba",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 9,
+      "wins": 1,
+      "losses": 8,
+      "pushes": 0,
+      "winRate": 0.1111111111111111,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 1.7777777777777777,
+      "averageSharpCount": 5.888888888888889,
+      "averagePickCount": 0.6666666666666666
+    },
+    {
+      "angleId": "nba:total:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "nba",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 9,
+      "wins": 1,
+      "losses": 8,
+      "pushes": 0,
+      "winRate": 0.1111111111111111,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 1.7777777777777777,
+      "averageSharpCount": 5.888888888888889,
+      "averagePickCount": 0.6666666666666666
+    },
+    {
+      "angleId": "nba:total:agreement-2-2",
+      "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+      "league": "nba",
+      "market": "total",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 6,
+      "averagePickCount": 2
+    },
+    {
+      "angleId": "nba:total:pick-majority-2plus",
+      "angleLabel": "Pick majority, 2+ picks",
+      "league": "nba",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 6,
+      "averagePickCount": 2
+    },
+    {
+      "angleId": "ncaab:moneyline:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "ncaab",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 12,
+      "wins": 6,
+      "losses": 6,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.20972222222222217,
+      "averagePublicMoneyMinusBetsPct": 18.916666666666668,
+      "averageSharpCount": 0,
+      "averagePickCount": 1
+    },
+    {
+      "angleId": "ncaab:moneyline:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "ncaab",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 8,
+      "wins": 4,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.13958333333333328,
+      "averagePublicMoneyMinusBetsPct": 24.125,
+      "averageSharpCount": 0,
+      "averagePickCount": 1.5
+    },
+    {
+      "angleId": "ncaab:moneyline:pick-majority-2plus",
+      "angleLabel": "Pick majority, 2+ picks",
+      "league": "ncaab",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.7,
+      "averagePublicMoneyMinusBetsPct": 24.5,
+      "averageSharpCount": 0,
+      "averagePickCount": 3.5
+    },
+    {
+      "angleId": "ncaab:moneyline:pick-majority-3plus",
+      "angleLabel": "Pick majority, 3+ picks",
+      "league": "ncaab",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": -1,
+      "averagePublicMoneyMinusBetsPct": 21,
+      "averageSharpCount": 0,
+      "averagePickCount": 5
+    },
+    {
+      "angleId": "ncaab:spread:spread-middle-range",
+      "angleLabel": "Spread sides with abs(line) 5 to 10",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": "5-10"
+        }
+      ],
+      "sampleSize": 18,
+      "wins": 9,
+      "losses": 9,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 1.1111111111111112,
+      "averagePickCount": 0.8333333333333334
+    },
+    {
+      "angleId": "ncaab:spread:spread-short-favorite-range",
+      "angleLabel": "Spread sides with abs(line) under 5",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": "<5"
+        }
+      ],
+      "sampleSize": 18,
+      "wins": 9,
+      "losses": 9,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 0.7222222222222222,
+      "averagePickCount": 0.9444444444444444
+    },
+    {
+      "angleId": "ncaab:spread:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 13,
+      "wins": 7,
+      "losses": 6,
+      "pushes": 0,
+      "winRate": 0.5384615384615384,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 12.153846153846153,
+      "averageSharpCount": 0.8461538461538461,
+      "averagePickCount": 0.38461538461538464
+    },
+    {
+      "angleId": "ncaab:spread:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 11,
+      "wins": 4,
+      "losses": 7,
+      "pushes": 0,
+      "winRate": 0.36363636363636365,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0.8181818181818182,
+      "averageSharpCount": 3.090909090909091,
+      "averagePickCount": 0.45454545454545453
+    },
+    {
+      "angleId": "ncaab:spread:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 8,
+      "wins": 3,
+      "losses": 5,
+      "pushes": 0,
+      "winRate": 0.375,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 15.75,
+      "averageSharpCount": 1.125,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "ncaab:spread:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 7,
+      "wins": 2,
+      "losses": 5,
+      "pushes": 0,
+      "winRate": 0.2857142857142857,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 2.857142857142857,
+      "averageSharpCount": 3.7142857142857144,
+      "averagePickCount": 0.7142857142857143
+    },
+    {
+      "angleId": "ncaab:spread:pick-majority-2plus",
+      "angleLabel": "Pick majority, 2+ picks",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 4,
+      "wins": 2,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 2.75,
+      "averageSharpCount": 0,
+      "averagePickCount": 5.75
+    },
+    {
+      "angleId": "ncaab:spread:spread-big-number",
+      "angleLabel": "Spread sides with abs(line) over 10",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": ">10"
+        }
+      ],
+      "sampleSize": 4,
+      "wins": 2,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 1,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "ncaab:spread:pick-majority-3plus",
+      "angleLabel": "Pick majority, 3+ picks",
+      "league": "ncaab",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 3,
+      "wins": 2,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.6666666666666666,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 2.6666666666666665,
+      "averageSharpCount": 0,
+      "averagePickCount": 7
+    },
+    {
+      "angleId": "ncaab:total:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 14,
+      "wins": 7,
+      "losses": 7,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -0.42857142857142855,
+      "averageSharpCount": 7.928571428571429,
+      "averagePickCount": 0.6428571428571429
+    },
+    {
+      "angleId": "ncaab:total:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 14,
+      "wins": 7,
+      "losses": 7,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -0.42857142857142855,
+      "averageSharpCount": 7.928571428571429,
+      "averagePickCount": 0.6428571428571429
+    },
+    {
+      "angleId": "ncaab:total:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 6,
+      "wins": 3,
+      "losses": 3,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 7.666666666666667,
+      "averageSharpCount": 1.6666666666666667,
+      "averagePickCount": 0.6666666666666666
+    },
+    {
+      "angleId": "ncaab:total:agreement-2-2",
+      "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 9.5,
+      "averagePickCount": 2.5
+    },
+    {
+      "angleId": "ncaab:total:pick-majority-2plus",
+      "angleLabel": "Pick majority, 2+ picks",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 9.5,
+      "averagePickCount": 2.5
+    },
+    {
+      "angleId": "ncaab:total:agreement-3-3",
+      "angleLabel": "Sharp + Pick agreement, 3+ sharps and 3+ picks",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -1,
+      "averageSharpCount": 8,
+      "averagePickCount": 3
+    },
+    {
+      "angleId": "ncaab:total:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 12,
+      "averageSharpCount": 0,
+      "averagePickCount": 2
+    },
+    {
+      "angleId": "ncaab:total:pick-majority-3plus",
+      "angleLabel": "Pick majority, 3+ picks",
+      "league": "ncaab",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -1,
+      "averageSharpCount": 8,
+      "averagePickCount": 3
+    },
+    {
+      "angleId": "nhl:moneyline:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 9,
+      "wins": 3,
+      "losses": 6,
+      "pushes": 0,
+      "winRate": 0.3333333333333333,
+      "roi": -0.31740740740740736,
+      "averagePublicMoneyMinusBetsPct": 21.333333333333332,
+      "averageSharpCount": 1.7777777777777777,
+      "averagePickCount": 1
+    },
+    {
+      "angleId": "nhl:moneyline:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 6,
+      "wins": 2,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.3333333333333333,
+      "roi": -0.2816666666666667,
+      "averagePublicMoneyMinusBetsPct": 27.666666666666668,
+      "averageSharpCount": 2.5,
+      "averagePickCount": 1.3333333333333333
+    },
+    {
+      "angleId": "nhl:moneyline:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 4,
+      "wins": 1,
+      "losses": 3,
+      "pushes": 0,
+      "winRate": 0.25,
+      "roi": -0.4475,
+      "averagePublicMoneyMinusBetsPct": 16.25,
+      "averageSharpCount": 4,
+      "averagePickCount": 1.75
+    },
+    {
+      "angleId": "nhl:moneyline:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 3,
+      "wins": 1,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.3333333333333333,
+      "roi": -0.26333333333333336,
+      "averagePublicMoneyMinusBetsPct": 33.333333333333336,
+      "averageSharpCount": 4.666666666666667,
+      "averagePickCount": 2.3333333333333335
+    },
+    {
+      "angleId": "nhl:moneyline:agreement-2-2",
+      "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.10499999999999998,
+      "averagePublicMoneyMinusBetsPct": 34.5,
+      "averageSharpCount": 4.5,
+      "averagePickCount": 3
+    },
+    {
+      "angleId": "nhl:moneyline:agreement-3-3",
+      "angleLabel": "Sharp + Pick agreement, 3+ sharps and 3+ picks",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.10499999999999998,
+      "averagePublicMoneyMinusBetsPct": 34.5,
+      "averageSharpCount": 4.5,
+      "averagePickCount": 3
+    },
+    {
+      "angleId": "nhl:moneyline:pick-majority-2plus",
+      "angleLabel": "Pick majority, 2+ picks",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.10499999999999998,
+      "averagePublicMoneyMinusBetsPct": 34.5,
+      "averageSharpCount": 4.5,
+      "averagePickCount": 3
+    },
+    {
+      "angleId": "nhl:moneyline:pick-majority-3plus",
+      "angleLabel": "Pick majority, 3+ picks",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": 0.10499999999999998,
+      "averagePublicMoneyMinusBetsPct": 34.5,
+      "averageSharpCount": 4.5,
+      "averagePickCount": 3
+    },
+    {
+      "angleId": "nhl:spread:spread-short-favorite-range",
+      "angleLabel": "Spread sides with abs(line) under 5",
+      "league": "nhl",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": "<5"
+        }
+      ],
+      "sampleSize": 20,
+      "wins": 10,
+      "losses": 10,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 0,
+      "averagePickCount": 0.05
+    },
+    {
+      "angleId": "nhl:spread:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "nhl",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 9,
+      "wins": 4,
+      "losses": 5,
+      "pushes": 0,
+      "winRate": 0.4444444444444444,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 15.555555555555555,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nhl:spread:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "nhl",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 6,
+      "wins": 2,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.3333333333333333,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 19.833333333333332,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nhl:total:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "nhl",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 7,
+      "wins": 3,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.42857142857142855,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -4.428571428571429,
+      "averageSharpCount": 3.7142857142857144,
+      "averagePickCount": 0.5714285714285714
+    },
+    {
+      "angleId": "nhl:total:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "nhl",
+      "market": "total",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 5,
+      "wins": 1,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.2,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 7.2,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nhl:total:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "nhl",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 5,
+      "wins": 3,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.6,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -5.2,
+      "averageSharpCount": 4.4,
+      "averagePickCount": 0.8
+    },
+    {
+      "angleId": "nhl:total:agreement-2-2",
+      "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+      "league": "nhl",
+      "market": "total",
+      "filters": [
+        {
+          "field": "hasSharpPickAgreement",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "winRate": 1,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -6,
+      "averageSharpCount": 5,
+      "averagePickCount": 2
+    },
+    {
+      "angleId": "nhl:total:money-minus-bets-10",
+      "angleLabel": "Public money exceeds bets by 10+ pts",
+      "league": "nhl",
+      "market": "total",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 10
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 10,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nhl:total:pick-majority-2plus",
+      "angleLabel": "Pick majority, 2+ picks",
+      "league": "nhl",
+      "market": "total",
+      "filters": [
+        {
+          "field": "isPickMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "pickCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "winRate": 1,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -6,
+      "averageSharpCount": 5,
+      "averagePickCount": 2
+    }
+  ]
+}
