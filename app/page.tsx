@@ -34,6 +34,7 @@ const SPORT_OPTIONS = [
 
 const SORT_OPTIONS = [
   { label: 'Default / Current', value: 'default' },
+  { label: 'Start Time', value: 'start_time' },
   { label: 'Sharp Count Descending', value: 'sharp_desc' },
   { label: 'Pick Count Descending', value: 'pick_desc' }
 ];
@@ -253,6 +254,11 @@ function compareRows(left: BoardMarketRow, right: BoardMarketRow, sortMode: stri
   return rightPulledAt.localeCompare(leftPulledAt);
 }
 
+function getSortableStartTime(value: unknown): number {
+  const timestamp = new Date(String(value ?? '')).getTime();
+  return Number.isNaN(timestamp) ? Number.MAX_SAFE_INTEGER : timestamp;
+}
+
 function buildFilteredRows(
   marketRows: BoardMarketRow[],
   sportFilter: string,
@@ -274,7 +280,7 @@ function buildFilteredRows(
     });
   }
 
-  if (sortMode === 'default') {
+  if (sortMode === 'default' || sortMode === 'start_time') {
     const groups = new Map<string, BoardGameGroup>();
 
     for (const row of rows) {
@@ -300,6 +306,13 @@ function buildFilteredRows(
 
     return [...groups.values()]
       .sort((left, right) => {
+        if (sortMode === 'start_time') {
+          const leftStart = getSortableStartTime(left.rows[0]?.game.startTimeUtc);
+          const rightStart = getSortableStartTime(right.rows[0]?.game.startTimeUtc);
+          if (leftStart !== rightStart) {
+            return leftStart - rightStart;
+          }
+        }
         if (right.strongestSharpCount !== left.strongestSharpCount) {
           return right.strongestSharpCount - left.strongestSharpCount;
         }

@@ -23,10 +23,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <aside className="app-sidebar">
             <div className="app-sidebar-inner">
               <div className="brand">
-                <div className="brand-mark">AE</div>
+                <div className="brand-mark" aria-hidden="true">🟣🟣</div>
                 <div className="brand-copy">
                   <h1>Action Exporter</h1>
-                  <p>Read-only analytics viewer</p>
+                  <p>powered by The Plums Model™</p>
                 </div>
               </div>
 
