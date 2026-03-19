@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:06:06.506Z",
+  "generatedAt": "2026-03-19T16:10:52.142Z",
   "boardDate": "2026-03-19",
   "rowCount": 147,
   "games": [
@@ -101,7 +101,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": 0.7
+          }
         },
         "spread": {
           "evaluationKey": "287157|253|spread",
@@ -187,7 +194,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287157|253|total",
@@ -273,7 +287,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -375,7 +396,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": 0.7
+          }
         },
         "spread": {
           "evaluationKey": "287179|253|spread",
@@ -461,7 +489,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 11,
+            "winRate": 0.36363636363636365,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287179|253|total",
@@ -547,7 +582,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -560,17 +602,17 @@
       "awayTeam": "Nationals",
       "homeTeam": "Cardinals",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285343|2367|moneyline",
+          "evaluationKey": "285343|2369|moneyline",
           "gameId": "285343",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -649,14 +691,21 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "mlb:moneyline:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 5,
+            "winRate": 0.6,
+            "roi": 0.2739999999999999
+          }
         },
         "spread": {
-          "evaluationKey": "285343|2367|spread",
+          "evaluationKey": "285343|2369|spread",
           "gameId": "285343",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -735,14 +784,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285343|2367|total",
+          "evaluationKey": "285343|2369|total",
           "gameId": "285343",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -821,7 +871,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -834,17 +885,17 @@
       "awayTeam": "Orioles",
       "homeTeam": "Yankees",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285341|2367|moneyline",
+          "evaluationKey": "285341|2369|moneyline",
           "gameId": "285341",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -923,14 +974,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285341|2367|spread",
+          "evaluationKey": "285341|2369|spread",
           "gameId": "285341",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1009,14 +1061,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285341|2367|total",
+          "evaluationKey": "285341|2369|total",
           "gameId": "285341",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1095,7 +1148,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -1108,17 +1162,17 @@
       "awayTeam": "Rays",
       "homeTeam": "Phillies",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285342|2367|moneyline",
+          "evaluationKey": "285342|2369|moneyline",
           "gameId": "285342",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1197,14 +1251,21 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "mlb:moneyline:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 5,
+            "winRate": 0.6,
+            "roi": 0.2739999999999999
+          }
         },
         "spread": {
-          "evaluationKey": "285342|2367|spread",
+          "evaluationKey": "285342|2369|spread",
           "gameId": "285342",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1283,14 +1344,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285342|2367|total",
+          "evaluationKey": "285342|2369|total",
           "gameId": "285342",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1369,7 +1431,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -1382,17 +1445,17 @@
       "awayTeam": "Yankees",
       "homeTeam": "Blue Jays",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285344|2367|moneyline",
+          "evaluationKey": "285344|2369|moneyline",
           "gameId": "285344",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1471,14 +1534,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285344|2367|spread",
+          "evaluationKey": "285344|2369|spread",
           "gameId": "285344",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1557,14 +1621,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285344|2367|total",
+          "evaluationKey": "285344|2369|total",
           "gameId": "285344",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -1643,7 +1708,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -1745,7 +1811,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": 0.7
+          }
         },
         "spread": {
           "evaluationKey": "287160|253|spread",
@@ -1831,7 +1904,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 11,
+            "winRate": 0.36363636363636365,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287160|253|total",
@@ -1917,7 +1997,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -2019,7 +2106,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287164|253|spread",
@@ -2105,7 +2193,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287164|253|total",
@@ -2191,7 +2286,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:agreement-2-2",
+            "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -2293,7 +2395,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287156|253|spread",
@@ -2379,7 +2482,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287156|253|total",
@@ -2465,7 +2575,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:agreement-2-2",
+            "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -2567,7 +2684,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:money-minus-bets-5",
+            "angleLabel": "Public money exceeds bets by 5+ pts",
+            "sampleSize": 12,
+            "winRate": 0.5,
+            "roi": 0.20972222222222217
+          }
         },
         "spread": {
           "evaluationKey": "287181|253|spread",
@@ -2653,7 +2777,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 11,
+            "winRate": 0.36363636363636365,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287181|253|total",
@@ -2739,7 +2870,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -2841,7 +2979,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287161|253|spread",
@@ -2927,7 +3066,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287161|253|total",
@@ -3013,7 +3159,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -3115,7 +3268,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287165|253|spread",
@@ -3201,7 +3355,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287165|253|total",
@@ -3287,7 +3448,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:agreement-2-2",
+            "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -3300,17 +3468,17 @@
       "awayTeam": "Mets",
       "homeTeam": "Astros",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285347|2367|moneyline",
+          "evaluationKey": "285347|2369|moneyline",
           "gameId": "285347",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -3389,14 +3557,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285347|2367|spread",
+          "evaluationKey": "285347|2369|spread",
           "gameId": "285347",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -3475,14 +3644,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285347|2367|total",
+          "evaluationKey": "285347|2369|total",
           "gameId": "285347",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -3561,7 +3731,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -3574,17 +3745,17 @@
       "awayTeam": "Pirates",
       "homeTeam": "Orioles",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285348|2367|moneyline",
+          "evaluationKey": "285348|2369|moneyline",
           "gameId": "285348",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -3663,14 +3834,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285348|2367|spread",
+          "evaluationKey": "285348|2369|spread",
           "gameId": "285348",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -3749,14 +3921,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285348|2367|total",
+          "evaluationKey": "285348|2369|total",
           "gameId": "285348",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -3835,7 +4008,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -3848,17 +4022,17 @@
       "awayTeam": "Twins",
       "homeTeam": "Red Sox",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285349|2367|moneyline",
+          "evaluationKey": "285349|2369|moneyline",
           "gameId": "285349",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -3937,14 +4111,21 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "mlb:moneyline:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 5,
+            "winRate": 0.6,
+            "roi": 0.2739999999999999
+          }
         },
         "spread": {
-          "evaluationKey": "285349|2367|spread",
+          "evaluationKey": "285349|2369|spread",
           "gameId": "285349",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -4023,14 +4204,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285349|2367|total",
+          "evaluationKey": "285349|2369|total",
           "gameId": "285349",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -4109,7 +4291,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -4211,7 +4394,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": 0.7
+          }
         },
         "spread": {
           "evaluationKey": "287180|253|spread",
@@ -4297,7 +4487,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287180|253|total",
@@ -4383,7 +4580,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -4485,7 +4689,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "281339|251|spread",
@@ -4571,7 +4776,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.2857142857142857,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281339|251|total",
@@ -4657,7 +4869,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:total:agreement-2-2",
+            "angleLabel": "Sharp + Pick agreement, 2+ sharps and 2+ picks",
+            "sampleSize": 1,
+            "winRate": 0,
+            "roi": null
+          }
         }
       }
     },
@@ -4759,7 +4978,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "281340|251|spread",
@@ -4845,7 +5065,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.2857142857142857,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281340|251|total",
@@ -4931,7 +5158,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 9,
+            "winRate": 0.1111111111111111,
+            "roi": null
+          }
         }
       }
     },
@@ -5033,7 +5267,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:moneyline:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": 0.10499999999999998
+          }
         },
         "spread": {
           "evaluationKey": "265777|247|spread",
@@ -5119,7 +5360,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265777|247|total",
@@ -5205,7 +5447,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -5307,7 +5550,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "265775|247|spread",
@@ -5393,7 +5637,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265775|247|total",
@@ -5479,7 +5724,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -5581,7 +5827,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "265776|247|spread",
@@ -5667,7 +5914,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265776|247|total",
@@ -5753,7 +6001,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -5855,7 +6104,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:moneyline:money-minus-bets-5",
+            "angleLabel": "Public money exceeds bets by 5+ pts",
+            "sampleSize": 9,
+            "winRate": 0.3333333333333333,
+            "roi": -0.31740740740740736
+          }
         },
         "spread": {
           "evaluationKey": "265778|247|spread",
@@ -5941,7 +6197,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:spread:spread-short-favorite-range",
+            "angleLabel": "Spread sides with abs(line) under 5",
+            "sampleSize": 20,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "265778|247|total",
@@ -6027,7 +6290,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -6129,7 +6393,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287354|253|spread",
@@ -6215,7 +6480,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 11,
+            "winRate": 0.36363636363636365,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287354|253|total",
@@ -6301,7 +6573,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -6403,7 +6676,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": 0.7
+          }
         },
         "spread": {
           "evaluationKey": "287356|253|spread",
@@ -6489,7 +6769,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287356|253|total",
@@ -6575,7 +6862,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -6677,7 +6965,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "265779|247|spread",
@@ -6763,7 +7052,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265779|247|total",
@@ -6849,7 +7139,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.42857142857142855,
+            "roi": null
+          }
         }
       }
     },
@@ -6951,7 +7248,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287177|253|spread",
@@ -7037,7 +7335,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 11,
+            "winRate": 0.36363636363636365,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287177|253|total",
@@ -7123,7 +7428,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -7225,7 +7537,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "281344|251|spread",
@@ -7311,7 +7624,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.2857142857142857,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281344|251|total",
@@ -7397,7 +7717,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 9,
+            "winRate": 0.1111111111111111,
+            "roi": null
+          }
         }
       }
     },
@@ -7499,7 +7826,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "281343|251|spread",
@@ -7585,7 +7913,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.2857142857142857,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281343|251|total",
@@ -7671,7 +8006,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 9,
+            "winRate": 0.1111111111111111,
+            "roi": null
+          }
         }
       }
     },
@@ -7773,7 +8115,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:moneyline:money-minus-bets-5",
+            "angleLabel": "Public money exceeds bets by 5+ pts",
+            "sampleSize": 5,
+            "winRate": 0.4,
+            "roi": -0.3514285714285714
+          }
         },
         "spread": {
           "evaluationKey": "281342|251|spread",
@@ -7859,7 +8208,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.2857142857142857,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281342|251|total",
@@ -7945,7 +8301,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 9,
+            "winRate": 0.1111111111111111,
+            "roi": null
+          }
         }
       }
     },
@@ -8047,7 +8410,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "281341|251|spread",
@@ -8133,7 +8497,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.2857142857142857,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281341|251|total",
@@ -8219,7 +8590,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -8321,7 +8693,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "265780|247|spread",
@@ -8407,7 +8780,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265780|247|total",
@@ -8493,7 +8867,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -8595,7 +8970,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "281345|251|spread",
@@ -8681,7 +9057,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.2857142857142857,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281345|251|total",
@@ -8767,7 +9150,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 9,
+            "winRate": 0.1111111111111111,
+            "roi": null
+          }
         }
       }
     },
@@ -8869,7 +9259,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:moneyline:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 4,
+            "winRate": 0.25,
+            "roi": -0.4475
+          }
         },
         "spread": {
           "evaluationKey": "265781|247|spread",
@@ -8955,7 +9352,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265781|247|total",
@@ -9041,7 +9439,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -9054,17 +9453,17 @@
       "awayTeam": "Angels",
       "homeTeam": "Royals",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285345|2367|moneyline",
+          "evaluationKey": "285345|2369|moneyline",
           "gameId": "285345",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9143,14 +9542,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285345|2367|spread",
+          "evaluationKey": "285345|2369|spread",
           "gameId": "285345",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9229,14 +9629,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285345|2367|total",
+          "evaluationKey": "285345|2369|total",
           "gameId": "285345",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9315,7 +9716,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -9328,17 +9730,17 @@
       "awayTeam": "Diamondbacks",
       "homeTeam": "White Sox",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285350|2367|moneyline",
+          "evaluationKey": "285350|2369|moneyline",
           "gameId": "285350",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9417,14 +9819,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285350|2367|spread",
+          "evaluationKey": "285350|2369|spread",
           "gameId": "285350",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9503,14 +9906,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285350|2367|total",
+          "evaluationKey": "285350|2369|total",
           "gameId": "285350",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9589,7 +9993,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -9602,17 +10007,17 @@
       "awayTeam": "Royals",
       "homeTeam": "Guardians",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285351|2367|moneyline",
+          "evaluationKey": "285351|2369|moneyline",
           "gameId": "285351",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9691,14 +10096,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285351|2367|spread",
+          "evaluationKey": "285351|2369|spread",
           "gameId": "285351",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9777,14 +10183,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285351|2367|total",
+          "evaluationKey": "285351|2369|total",
           "gameId": "285351",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9863,7 +10270,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -9876,17 +10284,17 @@
       "awayTeam": "Giants",
       "homeTeam": "Rockies",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285346|2367|moneyline",
+          "evaluationKey": "285346|2369|moneyline",
           "gameId": "285346",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -9965,14 +10373,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285346|2367|spread",
+          "evaluationKey": "285346|2369|spread",
           "gameId": "285346",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10051,14 +10460,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285346|2367|total",
+          "evaluationKey": "285346|2369|total",
           "gameId": "285346",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10137,7 +10547,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -10150,17 +10561,17 @@
       "awayTeam": "Mariners",
       "homeTeam": "Athletics",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285353|2367|moneyline",
+          "evaluationKey": "285353|2369|moneyline",
           "gameId": "285353",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10239,14 +10650,21 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "mlb:moneyline:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 5,
+            "winRate": 0.6,
+            "roi": 0.2739999999999999
+          }
         },
         "spread": {
-          "evaluationKey": "285353|2367|spread",
+          "evaluationKey": "285353|2369|spread",
           "gameId": "285353",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10325,14 +10743,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285353|2367|total",
+          "evaluationKey": "285353|2369|total",
           "gameId": "285353",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10411,7 +10830,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -10424,17 +10844,17 @@
       "awayTeam": "Rangers",
       "homeTeam": "Brewers",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285352|2367|moneyline",
+          "evaluationKey": "285352|2369|moneyline",
           "gameId": "285352",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10513,14 +10933,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285352|2367|spread",
+          "evaluationKey": "285352|2369|spread",
           "gameId": "285352",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10599,14 +11020,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285352|2367|total",
+          "evaluationKey": "285352|2369|total",
           "gameId": "285352",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10685,7 +11107,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -10698,17 +11121,17 @@
       "awayTeam": "White Sox",
       "homeTeam": "Padres",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-19T15:58:19.823Z",
+      "latestPulledAt": "2026-03-19T16:07:30.492Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "285354|2367|moneyline",
+          "evaluationKey": "285354|2369|moneyline",
           "gameId": "285354",
-          "runId": 2367,
+          "runId": 2369,
           "market": "moneyline",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10787,14 +11210,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
-          "evaluationKey": "285354|2367|spread",
+          "evaluationKey": "285354|2369|spread",
           "gameId": "285354",
-          "runId": 2367,
+          "runId": 2369,
           "market": "spread",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10873,14 +11297,15 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
-          "evaluationKey": "285354|2367|total",
+          "evaluationKey": "285354|2369|total",
           "gameId": "285354",
-          "runId": 2367,
+          "runId": 2369,
           "market": "total",
-          "pulledAt": "2026-03-19T15:58:19.823Z",
+          "pulledAt": "2026-03-19T16:07:30.492Z",
           "leagueSlug": "mlb",
           "sport": "Baseball",
           "gameDate": "2026-03-19",
@@ -10959,7 +11384,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -11061,7 +11487,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:money-minus-bets-5",
+            "angleLabel": "Public money exceeds bets by 5+ pts",
+            "sampleSize": 12,
+            "winRate": 0.5,
+            "roi": 0.20972222222222217
+          }
         },
         "spread": {
           "evaluationKey": "287182|253|spread",
@@ -11147,7 +11580,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287182|253|total",
@@ -11233,7 +11673,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -11335,7 +11782,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:moneyline:pick-majority-2plus",
+            "angleLabel": "Pick majority, 2+ picks",
+            "sampleSize": 2,
+            "winRate": 0.5,
+            "roi": 0.7
+          }
         },
         "spread": {
           "evaluationKey": "287166|253|spread",
@@ -11421,7 +11875,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 11,
+            "winRate": 0.36363636363636365,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287166|253|total",
@@ -11507,7 +11968,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -11609,7 +12077,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287167|253|spread",
@@ -11695,7 +12164,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:money-minus-bets-5",
+            "angleLabel": "Public money exceeds bets by 5+ pts",
+            "sampleSize": 13,
+            "winRate": 0.5384615384615384,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287167|253|total",
@@ -11781,7 +12257,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 14,
+            "winRate": 0.5,
+            "roi": null
+          }
         }
       }
     },
@@ -11883,7 +12366,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "281346|251|spread",
@@ -11969,7 +12453,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:spread:spread-short-favorite-range",
+            "angleLabel": "Spread sides with abs(line) under 5",
+            "sampleSize": 4,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "281346|251|total",
@@ -12055,7 +12546,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nba:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 9,
+            "winRate": 0.1111111111111111,
+            "roi": null
+          }
         }
       }
     },
@@ -12157,7 +12655,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:moneyline:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 4,
+            "winRate": 0.25,
+            "roi": -0.4475
+          }
         },
         "spread": {
           "evaluationKey": "265783|247|spread",
@@ -12243,7 +12748,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:spread:spread-short-favorite-range",
+            "angleLabel": "Spread sides with abs(line) under 5",
+            "sampleSize": 20,
+            "winRate": 0.5,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "265783|247|total",
@@ -12329,7 +12841,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -12431,7 +12944,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "265784|247|spread",
@@ -12517,7 +13031,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265784|247|total",
@@ -12603,7 +13118,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.42857142857142855,
+            "roi": null
+          }
         }
       }
     },
@@ -12705,7 +13227,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "265782|247|spread",
@@ -12791,7 +13314,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265782|247|total",
@@ -12877,7 +13401,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.42857142857142855,
+            "roi": null
+          }
         }
       }
     },
@@ -12979,7 +13510,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "287178|253|spread",
@@ -13065,7 +13597,14 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "ncaab:spread:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 11,
+            "winRate": 0.36363636363636365,
+            "roi": null
+          }
         },
         "total": {
           "evaluationKey": "287178|253|total",
@@ -13151,7 +13690,8 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         }
       }
     },
@@ -13253,7 +13793,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "spread": {
           "evaluationKey": "265785|247|spread",
@@ -13339,7 +13880,8 @@
           "totalCloseDelta": null,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": null
         },
         "total": {
           "evaluationKey": "265785|247|total",
@@ -13425,7 +13967,14 @@
           "totalCloseDelta": 0,
           "isNcaaTournament": false,
           "tournamentSeason": null,
-          "tournamentRound": null
+          "tournamentRound": null,
+          "historicalSupport": {
+            "angleId": "nhl:total:sharp-majority-2plus",
+            "angleLabel": "Sharp majority, 2+ sharps",
+            "sampleSize": 7,
+            "winRate": 0.42857142857142855,
+            "roi": null
+          }
         }
       }
     }
