@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T00:31:29.266Z",
+  "generatedAt": "2026-03-19T00:46:05.190Z",
   "rowCount": 12,
   "rows": [
     {
-      "evaluationKey": "287187|194|moneyline",
+      "evaluationKey": "287187|203|moneyline",
       "gameId": "287187",
-      "runId": 194,
+      "runId": 203,
       "market": "moneyline",
-      "pulledAt": "2026-03-19T00:27:18.849Z",
+      "pulledAt": "2026-03-19T00:36:39.306Z",
       "leagueSlug": "ncaab",
       "sport": "Basketball",
       "gameDate": "2026-03-18",
@@ -15,11 +15,11 @@
       "awayTeam": "Miami (OH)",
       "homeTeam": "SMU",
       "status": "scheduled",
-      "awayValue": 245,
+      "awayValue": 240,
       "homeValue": -310,
       "awayOpenValue": null,
       "homeOpenValue": null,
-      "awayCurrentValue": 245,
+      "awayCurrentValue": 240,
       "homeCurrentValue": -310,
       "awayMoveValue": null,
       "homeMoveValue": null,
@@ -76,7 +76,7 @@
       "overMargin": null,
       "underMargin": null,
       "gradedAt": null,
-      "awayClosingValue": 245,
+      "awayClosingValue": 240,
       "homeClosingValue": -310,
       "overClosingValue": null,
       "underClosingValue": null,
@@ -89,11 +89,11 @@
       "tournamentRound": "First Four"
     },
     {
-      "evaluationKey": "287187|194|spread",
+      "evaluationKey": "287187|203|spread",
       "gameId": "287187",
-      "runId": 194,
+      "runId": 203,
       "market": "spread",
-      "pulledAt": "2026-03-19T00:27:18.849Z",
+      "pulledAt": "2026-03-19T00:36:39.306Z",
       "leagueSlug": "ncaab",
       "sport": "Basketball",
       "gameDate": "2026-03-18",
@@ -128,7 +128,7 @@
       "underPublicBetsPct": null,
       "overPublicMoneyPct": null,
       "underPublicMoneyPct": null,
-      "awayPickCount": 11,
+      "awayPickCount": 12,
       "homePickCount": 3,
       "overPickCount": 0,
       "underPickCount": 0,
@@ -147,7 +147,7 @@
       "sharpIsTie": false,
       "pickIsTie": false,
       "sharpMargin": 6,
-      "pickMargin": 8,
+      "pickMargin": 9,
       "sharpPickAgree": false,
       "sharpPickAgreeSide": null,
       "hasSharpSignal": true,
@@ -175,11 +175,11 @@
       "tournamentRound": "First Four"
     },
     {
-      "evaluationKey": "287187|194|total",
+      "evaluationKey": "287187|203|total",
       "gameId": "287187",
-      "runId": 194,
+      "runId": 203,
       "market": "total",
-      "pulledAt": "2026-03-19T00:27:18.849Z",
+      "pulledAt": "2026-03-19T00:36:39.306Z",
       "leagueSlug": "ncaab",
       "sport": "Basketball",
       "gameDate": "2026-03-18",
@@ -335,12 +335,12 @@
       "underMargin": null,
       "gradedAt": null,
       "awayClosingValue": 140,
-      "homeClosingValue": 475,
+      "homeClosingValue": 1600,
       "overClosingValue": null,
       "underClosingValue": null,
       "totalClosingLine": null,
       "awayCloseDelta": 5,
-      "homeCloseDelta": 640,
+      "homeCloseDelta": 1765,
       "totalCloseDelta": null,
       "isNcaaTournament": true,
       "tournamentSeason": 2026,
@@ -420,12 +420,12 @@
       "overMargin": null,
       "underMargin": null,
       "gradedAt": null,
-      "awayClosingValue": -7.5,
+      "awayClosingValue": -11.5,
       "homeClosingValue": -0.5,
       "overClosingValue": null,
       "underClosingValue": null,
       "totalClosingLine": null,
-      "awayCloseDelta": -10,
+      "awayCloseDelta": -14,
       "homeCloseDelta": 2,
       "totalCloseDelta": null,
       "isNcaaTournament": true,
@@ -503,8 +503,8 @@
       "underResult": "unknown",
       "awayMargin": null,
       "homeMargin": null,
-      "overMargin": -39.5,
-      "underMargin": 39.5,
+      "overMargin": -25.5,
+      "underMargin": 25.5,
       "gradedAt": null,
       "awayClosingValue": null,
       "homeClosingValue": null,
@@ -591,7 +591,7 @@
       "homeMargin": -1,
       "overMargin": null,
       "underMargin": null,
-      "gradedAt": "2026-03-19T00:27:42.301Z",
+      "gradedAt": "2026-03-19T00:37:26.403Z",
       "awayClosingValue": 100,
       "homeClosingValue": -120,
       "overClosingValue": null,
@@ -677,7 +677,7 @@
       "homeMargin": -3.5,
       "overMargin": null,
       "underMargin": null,
-      "gradedAt": "2026-03-19T00:27:42.301Z",
+      "gradedAt": "2026-03-19T00:37:26.403Z",
       "awayClosingValue": 1.5,
       "homeClosingValue": -1.5,
       "overClosingValue": null,
@@ -763,7 +763,7 @@
       "homeMargin": null,
       "overMargin": -23.5,
       "underMargin": 23.5,
-      "gradedAt": "2026-03-19T00:27:42.301Z",
+      "gradedAt": "2026-03-19T00:37:26.403Z",
       "awayClosingValue": null,
       "homeClosingValue": null,
       "overClosingValue": 157.5,
@@ -849,7 +849,7 @@
       "homeMargin": 1,
       "overMargin": null,
       "underMargin": null,
-      "gradedAt": "2026-03-19T00:27:42.301Z",
+      "gradedAt": "2026-03-19T00:37:26.403Z",
       "awayClosingValue": -105,
       "homeClosingValue": -115,
       "overClosingValue": null,
@@ -935,7 +935,7 @@
       "homeMargin": 1.5,
       "overMargin": null,
       "underMargin": null,
-      "gradedAt": "2026-03-19T00:27:42.301Z",
+      "gradedAt": "2026-03-19T00:37:26.403Z",
       "awayClosingValue": 1.5,
       "homeClosingValue": -1.5,
       "overClosingValue": null,
@@ -1021,7 +1021,7 @@
       "homeMargin": null,
       "overMargin": 25,
       "underMargin": -25,
-      "gradedAt": "2026-03-19T00:27:42.301Z",
+      "gradedAt": "2026-03-19T00:37:26.403Z",
       "awayClosingValue": null,
       "homeClosingValue": null,
       "overClosingValue": 143.5,
@@ -1048,8 +1048,8 @@
       "pushes": 0,
       "unknowns": 4,
       "winPct": 0.2,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
-      "avgCloseDelta": -0.5,
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
+      "avgCloseDelta": -0.9444444444444444,
       "positiveCloseDeltaPct": 0.2222222222222222
     },
     {
@@ -1064,8 +1064,8 @@
       "pushes": 0,
       "unknowns": 4,
       "winPct": 0.2,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
-      "avgCloseDelta": -0.5,
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
+      "avgCloseDelta": -0.9444444444444444,
       "positiveCloseDeltaPct": 0.2222222222222222
     },
     {
@@ -1080,7 +1080,7 @@
       "pushes": 0,
       "unknowns": 4,
       "winPct": 0.6666666666666666,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": -0.07142857142857142,
       "positiveCloseDeltaPct": 0.14285714285714285
     },
@@ -1096,7 +1096,7 @@
       "pushes": 0,
       "unknowns": 4,
       "winPct": 0.6666666666666666,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": -0.07142857142857142,
       "positiveCloseDeltaPct": 0.14285714285714285
     },
@@ -1112,8 +1112,8 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 0,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
-      "avgCloseDelta": -2.5,
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
+      "avgCloseDelta": -3.5,
       "positiveCloseDeltaPct": 0
     },
     {
@@ -1128,8 +1128,8 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 0,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
-      "avgCloseDelta": -2.5,
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
+      "avgCloseDelta": -3.5,
       "positiveCloseDeltaPct": 0
     },
     {
@@ -1144,7 +1144,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 0.5,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": -0.625,
       "positiveCloseDeltaPct": 0
     },
@@ -1160,7 +1160,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 0.5,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": -0.625,
       "positiveCloseDeltaPct": 0
     },
@@ -1176,7 +1176,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 0,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 2,
       "positiveCloseDeltaPct": 0.6666666666666666
     },
@@ -1192,7 +1192,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 0,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 2,
       "positiveCloseDeltaPct": 0.6666666666666666
     },
@@ -1208,7 +1208,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 1,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 0.6666666666666666,
       "positiveCloseDeltaPct": 0.3333333333333333
     },
@@ -1224,7 +1224,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 1,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 0.6666666666666666,
       "positiveCloseDeltaPct": 0.3333333333333333
     },
@@ -1336,7 +1336,7 @@
       "pushes": 0,
       "unknowns": 1,
       "winPct": 1,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
@@ -1352,7 +1352,7 @@
       "pushes": 0,
       "unknowns": 1,
       "winPct": 1,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
@@ -1368,7 +1368,7 @@
       "pushes": 0,
       "unknowns": 1,
       "winPct": 1,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
@@ -1384,7 +1384,7 @@
       "pushes": 0,
       "unknowns": 1,
       "winPct": 1,
-      "latestPulledAt": "2026-03-19T00:27:18.849Z",
+      "latestPulledAt": "2026-03-19T00:36:39.306Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     }
@@ -1405,8 +1405,8 @@
           "pushes": 0,
           "unknowns": 4,
           "winPct": 0.2,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -0.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -0.9444444444444444,
           "positiveCloseDeltaPct": 0.2222222222222222
         },
         {
@@ -1421,8 +1421,8 @@
           "pushes": 0,
           "unknowns": 4,
           "winPct": 0.2,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -0.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -0.9444444444444444,
           "positiveCloseDeltaPct": 0.2222222222222222
         },
         {
@@ -1437,7 +1437,7 @@
           "pushes": 0,
           "unknowns": 4,
           "winPct": 0.6666666666666666,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.07142857142857142,
           "positiveCloseDeltaPct": 0.14285714285714285
         },
@@ -1453,7 +1453,7 @@
           "pushes": 0,
           "unknowns": 4,
           "winPct": 0.6666666666666666,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.07142857142857142,
           "positiveCloseDeltaPct": 0.14285714285714285
         },
@@ -1469,8 +1469,8 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -2.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -3.5,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -1485,8 +1485,8 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -2.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -3.5,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -1501,7 +1501,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -1517,7 +1517,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -1533,7 +1533,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2,
           "positiveCloseDeltaPct": 0.6666666666666666
         },
@@ -1549,7 +1549,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2,
           "positiveCloseDeltaPct": 0.6666666666666666
         },
@@ -1565,7 +1565,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0.6666666666666666,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -1581,7 +1581,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0.6666666666666666,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -1693,7 +1693,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -1709,7 +1709,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -1725,7 +1725,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -1741,7 +1741,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         }
@@ -1764,8 +1764,8 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -2.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -3.5,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -1780,8 +1780,8 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -2.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -3.5,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -1796,8 +1796,8 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -2.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -3.5,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -1812,8 +1812,8 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
-          "avgCloseDelta": -2.5,
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
+          "avgCloseDelta": -3.5,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -1828,7 +1828,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0.6666666666666666,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -1844,7 +1844,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0.6666666666666666,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -1860,7 +1860,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0.6666666666666666,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -1876,7 +1876,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0.6666666666666666,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -1892,7 +1892,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -1908,7 +1908,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -1924,7 +1924,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -1940,7 +1940,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": 1,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         }
@@ -1961,7 +1961,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2,
           "positiveCloseDeltaPct": 0.6666666666666666
         },
@@ -1977,7 +1977,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2,
           "positiveCloseDeltaPct": 0.6666666666666666
         },
@@ -1993,7 +1993,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2,
           "positiveCloseDeltaPct": 0.6666666666666666
         },
@@ -2009,7 +2009,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2,
           "positiveCloseDeltaPct": 0.6666666666666666
         }
@@ -2030,7 +2030,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -2046,7 +2046,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -2062,7 +2062,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -2078,7 +2078,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -2229,7 +2229,7 @@
           "pushes": 0,
           "unknowns": 3,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 1.6666666666666667,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -2245,7 +2245,7 @@
           "pushes": 0,
           "unknowns": 3,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 1.6666666666666667,
           "positiveCloseDeltaPct": 0.3333333333333333
         },
@@ -2261,7 +2261,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2.5,
           "positiveCloseDeltaPct": 0.5
         },
@@ -2277,7 +2277,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 2.5,
           "positiveCloseDeltaPct": 0.5
         },
@@ -2293,7 +2293,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2309,7 +2309,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2325,7 +2325,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2341,7 +2341,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2357,7 +2357,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2373,7 +2373,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2389,7 +2389,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2405,7 +2405,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2421,7 +2421,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         },
@@ -2437,7 +2437,7 @@
           "pushes": 0,
           "unknowns": 1,
           "winPct": null,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": 0,
           "positiveCloseDeltaPct": 0
         }
@@ -2459,7 +2459,7 @@
           "unknowns": 1,
           "winPct": 0,
           "latestPulledAt": "2026-03-18T21:45:35.967Z",
-          "avgCloseDelta": -2.25,
+          "avgCloseDelta": -3.25,
           "positiveCloseDeltaPct": 0.25
         },
         {
@@ -2475,7 +2475,7 @@
           "unknowns": 1,
           "winPct": 0,
           "latestPulledAt": "2026-03-18T21:45:35.967Z",
-          "avgCloseDelta": -2.25,
+          "avgCloseDelta": -3.25,
           "positiveCloseDeltaPct": 0.25
         },
         {
@@ -2491,7 +2491,7 @@
           "unknowns": 1,
           "winPct": 0,
           "latestPulledAt": "2026-03-18T21:45:35.967Z",
-          "avgCloseDelta": -3.3333333333333335,
+          "avgCloseDelta": -4.666666666666667,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -2507,7 +2507,7 @@
           "unknowns": 1,
           "winPct": 0,
           "latestPulledAt": "2026-03-18T21:45:35.967Z",
-          "avgCloseDelta": -3.3333333333333335,
+          "avgCloseDelta": -4.666666666666667,
           "positiveCloseDeltaPct": 0
         },
         {
@@ -2687,7 +2687,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -2703,7 +2703,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -2719,7 +2719,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
@@ -2735,7 +2735,7 @@
           "pushes": 0,
           "unknowns": 2,
           "winPct": 0.5,
-          "latestPulledAt": "2026-03-19T00:27:18.849Z",
+          "latestPulledAt": "2026-03-19T00:36:39.306Z",
           "avgCloseDelta": -0.625,
           "positiveCloseDeltaPct": 0
         },
