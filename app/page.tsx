@@ -165,9 +165,29 @@ function formatTimestamp(value: string | null | undefined): string {
   return new Intl.DateTimeFormat('en-US', {
     month: 'short',
     day: 'numeric',
-    year: 'numeric',
     hour: 'numeric',
     minute: '2-digit',
+    timeZoneName: 'short',
+    timeZone: 'America/New_York'
+  }).format(date);
+}
+
+function formatStartTime(value: string | null | undefined): string {
+  if (!value) {
+    return 'TBD';
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZoneName: 'short',
     timeZone: 'America/New_York'
   }).format(date);
 }
@@ -511,10 +531,11 @@ export default function CurrentBoardPage() {
                     <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
                       {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
                     </strong>
-                    <div className="current-board-summary-detail-row">
+                  <div className="current-board-summary-detail-row">
                       <span className="current-board-summary-market">{market}</span>
                       <span className="current-board-summary-detail">{getPrimarySideText(game, market, row)}</span>
                     </div>
+                    <div className="subtle current-board-summary-time">{formatStartTime(String(game.startTimeUtc ?? ''))}</div>
                   </div>
                   <div className="current-board-top-bet-meta">
                     <div className="current-board-top-bet-counts">{getCountsText(row)}</div>
@@ -556,9 +577,10 @@ export default function CurrentBoardPage() {
                     <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
                       {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
                     </strong>
-                    <div className="subtle current-board-summary-detail">
+                  <div className="subtle current-board-summary-detail">
                       {market} | {getPrimarySideText(game, market, row)}
                     </div>
+                    <div className="subtle current-board-summary-time">{formatStartTime(String(game.startTimeUtc ?? ''))}</div>
                   </div>
                   <strong className="current-board-summary-count">{getSharpCount(row)} sharps</strong>
                 </div>
@@ -581,9 +603,10 @@ export default function CurrentBoardPage() {
                     <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
                       {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
                     </strong>
-                    <div className="subtle current-board-summary-detail">
+                  <div className="subtle current-board-summary-detail">
                       {market} | {getPrimarySideText(game, market, row)}
                     </div>
+                    <div className="subtle current-board-summary-time">{formatStartTime(String(game.startTimeUtc ?? ''))}</div>
                   </div>
                   <strong className="current-board-summary-count">{getPickCount(row)} picks</strong>
                 </div>
@@ -645,6 +668,7 @@ export default function CurrentBoardPage() {
             <div className="current-board-table-head current-board-table-row current-board-table-row-modern">
               <div>Sport</div>
               <div>Game</div>
+              <div>Start</div>
               <div>Market</div>
               <div>Bet</div>
               <div>Sharps</div>
@@ -658,6 +682,9 @@ export default function CurrentBoardPage() {
               <div className="current-board-cell current-board-sport-cell" data-label="Sport">{String(game.leagueSlug ?? game.sport ?? '').toUpperCase()}</div>
               <div className="current-board-cell current-board-game-cell" data-label="Game">
                 <strong>{game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}</strong>
+              </div>
+              <div className="current-board-cell current-board-start-cell" data-label="Start">
+                {formatStartTime(String(game.startTimeUtc ?? ''))}
               </div>
               <div className="current-board-cell current-board-market-cell" data-label="Market">{market}</div>
               <div className="current-board-cell current-board-pick-cell" data-label="Bet">
