@@ -9,9 +9,8 @@ export const metadata = {
 
 const NAV_ITEMS = [
   { href: '/', label: 'Current Board' },
+  { href: '/analysis', label: 'Analysis' },
   { href: '/strategy', label: 'Strategy' },
-  { href: '/tournament', label: 'Tournament' },
-  { href: '/games', label: 'All Games' },
   { href: '/about-data', label: 'About Data' }
 ];
 
@@ -23,10 +22,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <aside className="app-sidebar">
             <div className="app-sidebar-inner">
               <div className="brand">
-                <div className="brand-mark" aria-hidden="true">🍒🍒</div>
+                <div className="brand-mark" aria-hidden="true">&#127826;&#127826;</div>
                 <div className="brand-copy">
                   <h1>Action Exporter</h1>
-                  <p>powered by The Plums Model™</p>
+                  <p>powered by The Plums Model&trade;</p>
                 </div>
               </div>
 
