@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T01:35:45.931Z",
+  "generatedAt": "2026-03-20T01:40:44.529Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 5,
   "rows": [
@@ -54,7 +54,7 @@
       "sharpsBucket": null,
       "picksBucket": "1-3",
       "moneyDeltaBucket": null,
-      "label": "Underdogs with 1-3 picks are working",
+      "label": "Spread underdogs with 1-3 picks are working",
       "sampleSize": 14,
       "wins": 10,
       "losses": 4,
@@ -134,7 +134,7 @@
       "sharpsBucket": null,
       "picksBucket": "1-3",
       "moneyDeltaBucket": null,
-      "label": "Favorites with 1-3 picks are working",
+      "label": "Moneyline favorites with 1-3 picks are working",
       "sampleSize": 46,
       "wins": 26,
       "losses": 20,
@@ -174,7 +174,7 @@
       "sharpsBucket": null,
       "picksBucket": null,
       "moneyDeltaBucket": null,
-      "label": "Underdogs have been strong",
+      "label": "Moneyline underdogs have been strong",
       "sampleSize": 51,
       "wins": 22,
       "losses": 29,
