@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-20T01:25:46.692Z",
+  "generatedAt": "2026-03-20T01:31:03.118Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
-  "rowCount": 3,
+  "rowCount": 5,
   "rows": [
     {
       "insightId": "ncaab:7:total:under:all-sharps:all-picks:5 to <10",
@@ -44,46 +44,6 @@
       }
     },
     {
-      "insightId": "ncaab:7:total:under:8-11:all-picks:all-money",
-      "league": "ncaab",
-      "timeframeDays": 7,
-      "startDate": "2026-03-13",
-      "endDate": "2026-03-19",
-      "market": "total",
-      "marketSide": "under",
-      "sharpsBucket": "8-11",
-      "picksBucket": null,
-      "moneyDeltaBucket": null,
-      "label": "Unders with 8-11 sharps are working",
-      "sampleSize": 17,
-      "wins": 13,
-      "losses": 4,
-      "pushes": 0,
-      "winRate": 0.7647058823529411,
-      "roi": null,
-      "summaryText": "NCAAB | last 7 days | 76.5% | 13-4 | across 17 plays",
-      "score": 29.171,
-      "scoreComponents": {
-        "sample": 1.7,
-        "edge": 24.471,
-        "roi": 0,
-        "recency": 3
-      },
-      "dimensionType": "sharps",
-      "angleCardId": "sharps-8-11",
-      "drilldown": {
-        "league": "ncaab",
-        "market": "total",
-        "marketSide": "under",
-        "startDate": "2026-03-13",
-        "endDate": "2026-03-19",
-        "sharpsBucket": "8-11",
-        "picksBucket": null,
-        "moneyDeltaBucket": null,
-        "angleCardId": "sharps-8-11"
-      }
-    },
-    {
       "insightId": "ncaab:7:spread:underdog:all-sharps:1-3:all-money",
       "league": "ncaab",
       "timeframeDays": 7,
@@ -121,6 +81,126 @@
         "picksBucket": "1-3",
         "moneyDeltaBucket": null,
         "angleCardId": "picks-1-3"
+      }
+    },
+    {
+      "insightId": "ncaab:14:total:over:all-sharps:all-picks:0 to <5",
+      "league": "ncaab",
+      "timeframeDays": 14,
+      "startDate": "2026-03-06",
+      "endDate": "2026-03-19",
+      "market": "total",
+      "marketSide": "over",
+      "sharpsBucket": null,
+      "picksBucket": null,
+      "moneyDeltaBucket": "0 to <5",
+      "label": "Overs with money > bets slightly are working",
+      "sampleSize": 29,
+      "wins": 17,
+      "losses": 12,
+      "pushes": 0,
+      "winRate": 0.5862068965517241,
+      "roi": null,
+      "summaryText": "NCAAB | last 14 days | 58.6% | 17-12 | across 29 plays",
+      "score": 11.521,
+      "scoreComponents": {
+        "sample": 2.9,
+        "edge": 6.621,
+        "roi": 0,
+        "recency": 2
+      },
+      "dimensionType": "moneyDelta",
+      "angleCardId": "money-0-5",
+      "drilldown": {
+        "league": "ncaab",
+        "market": "total",
+        "marketSide": "over",
+        "startDate": "2026-03-06",
+        "endDate": "2026-03-19",
+        "sharpsBucket": null,
+        "picksBucket": null,
+        "moneyDeltaBucket": "0 to <5",
+        "angleCardId": "money-0-5"
+      }
+    },
+    {
+      "insightId": "ncaab:14:moneyline:favorite:all-sharps:1-3:all-money",
+      "league": "ncaab",
+      "timeframeDays": 14,
+      "startDate": "2026-03-06",
+      "endDate": "2026-03-19",
+      "market": "moneyline",
+      "marketSide": "favorite",
+      "sharpsBucket": null,
+      "picksBucket": "1-3",
+      "moneyDeltaBucket": null,
+      "label": "Favorites with 1-3 picks are working",
+      "sampleSize": 46,
+      "wins": 26,
+      "losses": 20,
+      "pushes": 0,
+      "winRate": 0.5652173913043478,
+      "roi": -0.09667629733094997,
+      "summaryText": "NCAAB | last 14 days | 56.5% | 26-20 | across 46 plays",
+      "score": 11.122,
+      "scoreComponents": {
+        "sample": 4.6,
+        "edge": 4.522,
+        "roi": 0,
+        "recency": 2
+      },
+      "dimensionType": "picks",
+      "angleCardId": "picks-1-3",
+      "drilldown": {
+        "league": "ncaab",
+        "market": "moneyline",
+        "marketSide": "favorite",
+        "startDate": "2026-03-06",
+        "endDate": "2026-03-19",
+        "sharpsBucket": null,
+        "picksBucket": "1-3",
+        "moneyDeltaBucket": null,
+        "angleCardId": "picks-1-3"
+      }
+    },
+    {
+      "insightId": "ncaab:14:moneyline:underdog:all-sharps:all-picks:all-money",
+      "league": "ncaab",
+      "timeframeDays": 14,
+      "startDate": "2026-03-06",
+      "endDate": "2026-03-19",
+      "market": "moneyline",
+      "marketSide": "underdog",
+      "sharpsBucket": null,
+      "picksBucket": null,
+      "moneyDeltaBucket": null,
+      "label": "Underdogs have been strong",
+      "sampleSize": 51,
+      "wins": 22,
+      "losses": 29,
+      "pushes": 0,
+      "winRate": 0.43137254901960786,
+      "roi": 0.38529411764705884,
+      "summaryText": "NCAAB | last 14 days | 43.1% | 22-29 | across 51 plays | ROI 38.5%",
+      "score": 9.1,
+      "scoreComponents": {
+        "sample": 5.1,
+        "edge": 0,
+        "roi": 2,
+        "recency": 2
+      },
+      "dimensionType": "baseline",
+      "angleCardId": null,
+      "drilldown": {
+        "league": "ncaab",
+        "market": "moneyline",
+        "marketSide": "underdog",
+        "startDate": "2026-03-06",
+        "endDate": "2026-03-19",
+        "sharpsBucket": null,
+        "picksBucket": null,
+        "moneyDeltaBucket": null,
+        "angleCardId": null
       }
     }
   ]
