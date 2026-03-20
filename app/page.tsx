@@ -8,6 +8,7 @@ import {
   getPrimarySharpCount,
   getPrimarySignalSide
 } from '../lib/data';
+import type { TrendInsightRow } from '../lib/trends';
 
 type BoardMarketRow = {
   game: Record<string, any>;
@@ -36,17 +37,10 @@ type PickDetailRow = {
   classifiedSide: string | null;
 };
 
-type TrendInsightRow = {
-  insightId: string;
-  league: 'mlb' | 'nba' | 'nhl' | 'ncaab';
-  timeframeDays: 7 | 14 | 30;
-  market: 'spread' | 'moneyline' | 'total';
-  marketSide: 'favorite' | 'underdog' | 'over' | 'under';
-  label: string;
-  sampleSize: number;
-  winRate: number | null;
-  summaryText: string;
+type RowSignalInfo = {
   score: number;
+  matchedInsight: TrendInsightRow | null;
+  level: 'none' | 'moderate' | 'strong' | 'trend';
 };
 
 const USE_LEGACY_CURRENT_BOARD = false;
@@ -182,6 +176,35 @@ function getPickViewText(game: Record<string, any>, market: string, row: Record<
 
 function getTopBetScore(row: Record<string, any>): number {
   return getSharpCount(row) + getPickCount(row);
+}
+
+function getSignalBucketScore(count: number): number {
+  if (count >= 12) return 5;
+  if (count >= 8) return 4;
+  if (count >= 6) return 3;
+  if (count >= 4) return 2;
+  if (count >= 1) return 1;
+  return 0;
+}
+
+function getCountBucketLabel(count: number): string | null {
+  if (count >= 12) return '12+';
+  if (count >= 8) return '8-11';
+  if (count >= 6) return '6-7';
+  if (count >= 4) return '4-5';
+  if (count >= 1) return '1-3';
+  return null;
+}
+
+function getMoneyDeltaBucketLabel(value: number | null | undefined): string | null {
+  if (typeof value !== 'number') {
+    return null;
+  }
+  if (value >= 15) return '15+';
+  if (value >= 10) return '10 to <15';
+  if (value >= 5) return '5 to <10';
+  if (value >= 0) return '0 to <5';
+  return null;
 }
 
 function formatLineValue(value: unknown): string {
@@ -531,6 +554,102 @@ function hasGameStarted(game: Record<string, any>): boolean {
   return !Number.isNaN(startTime) && startTime < Date.now();
 }
 
+function getTrendMarketSideForRow(market: string, row: Record<string, any>): TrendInsightRow['marketSide'] | null {
+  const side = getActionableSide(row);
+  if (!side) {
+    return null;
+  }
+
+  if (market === 'total') {
+    return side === 'over' || side === 'under' ? side : null;
+  }
+
+  const line =
+    side === 'away' ? row.awayValue :
+    side === 'home' ? row.homeValue :
+    null;
+
+  if (typeof line !== 'number') {
+    return null;
+  }
+
+  if (line < 0) {
+    return 'favorite';
+  }
+  if (line > 0) {
+    return 'underdog';
+  }
+  return null;
+}
+
+function findMatchingTrendInsight(
+  game: Record<string, any>,
+  market: string,
+  row: Record<string, any>,
+  trendInsights: TrendInsightRow[]
+): TrendInsightRow | null {
+  const marketSide = getTrendMarketSideForRow(market, row);
+  if (!marketSide) {
+    return null;
+  }
+
+  const sharpBucket = getCountBucketLabel(getSharpCount(row));
+  const pickBucket = getCountBucketLabel(getPickCount(row));
+  const moneyBucket = getMoneyDeltaBucketLabel(
+    (row.publicContext as { moneyMinusBetsPct?: number | null } | undefined)?.moneyMinusBetsPct
+  );
+
+  const matches = trendInsights.filter((insight) => {
+    if (insight.league !== String(game.leagueSlug ?? '').toLowerCase()) {
+      return false;
+    }
+    if (insight.market !== market || insight.marketSide !== marketSide) {
+      return false;
+    }
+    if (insight.sharpsBucket && insight.sharpsBucket !== sharpBucket) {
+      return false;
+    }
+    if (insight.picksBucket && insight.picksBucket !== pickBucket) {
+      return false;
+    }
+    if (insight.moneyDeltaBucket && insight.moneyDeltaBucket !== moneyBucket) {
+      return false;
+    }
+    return true;
+  });
+
+  return matches.sort((left, right) => right.score - left.score || left.insightId.localeCompare(right.insightId))[0] ?? null;
+}
+
+function getRowSignalInfo(
+  game: Record<string, any>,
+  market: string,
+  row: Record<string, any>,
+  trendInsights: TrendInsightRow[]
+): RowSignalInfo {
+  const sharpsScore = getSignalBucketScore(getSharpCount(row));
+  const picksScore = getSignalBucketScore(getPickCount(row));
+  const agreementBonus = getAgreementLabel(row) === 'Agree' ? 1 : 0;
+  const matchedInsight = findMatchingTrendInsight(game, market, row, trendInsights);
+  const trendBonus = matchedInsight ? 3 : 0;
+  const score = sharpsScore + picksScore + agreementBonus + trendBonus;
+
+  let level: RowSignalInfo['level'] = 'none';
+  if (score >= 8 && matchedInsight) {
+    level = 'trend';
+  } else if (score >= 6) {
+    level = 'strong';
+  } else if (score >= 4) {
+    level = 'moderate';
+  }
+
+  return {
+    score,
+    matchedInsight,
+    level
+  };
+}
+
 function getMarketSortValue(row: Record<string, any>, sortMode: string): [number, number, string] {
   const sharpCount = getSharpCount(row);
   const pickCount = getPickCount(row);
@@ -729,6 +848,7 @@ export default function CurrentBoardPage() {
   const [hideStartedGamesInSummaries, setHideStartedGamesInSummaries] = useState(false);
   const [hideStartedGames, setHideStartedGames] = useState(true);
   const [expandedRowKey, setExpandedRowKey] = useState<string | null>(null);
+  const [activeSignalKey, setActiveSignalKey] = useState<string | null>(null);
 
   useEffect(() => {
     fetchPublicJson('/data/current_board.json', {
@@ -786,27 +906,41 @@ export default function CurrentBoardPage() {
     return latestValue;
   }, [marketRows]);
 
+  const signalInfoByRowKey = useMemo(() => {
+    const mapped = new Map<string, RowSignalInfo>();
+    for (const { game, market, row } of marketRows) {
+      const rowKey = `${String(game.gameId)}:${market}`;
+      mapped.set(rowKey, getRowSignalInfo(game, market, row, trendInsights));
+    }
+    return mapped;
+  }, [marketRows, trendInsights]);
+
   const topBetsRightNow = useMemo(
     () =>
       [...marketRows]
         .filter(({ game }) => !hideStartedGamesInSummaries || !hasGameStarted(game))
         .filter(({ game, market, row }) => {
-          const hasAlignedSignal = getSharpCount(row) > 0 && getPickCount(row) > 0 && getAgreementLabel(row) === 'Agree';
-          if (!hasAlignedSignal) {
+          const info = signalInfoByRowKey.get(`${String(game.gameId)}:${market}`);
+          if (!info || info.level === 'none') {
             return false;
           }
           return getPrimarySideText(game, market, row).trim().length > 0;
         })
         .sort((left, right) => {
-          const scoreDiff = getTopBetScore(right.row) - getTopBetScore(left.row);
+          const leftInfo = signalInfoByRowKey.get(`${String(left.game.gameId)}:${left.market}`)?.score ?? 0;
+          const rightInfo = signalInfoByRowKey.get(`${String(right.game.gameId)}:${right.market}`)?.score ?? 0;
+          const scoreDiff = rightInfo - leftInfo;
           if (scoreDiff !== 0) {
             return scoreDiff;
           }
-
+          const baseDiff = getTopBetScore(right.row) - getTopBetScore(left.row);
+          if (baseDiff !== 0) {
+            return baseDiff;
+          }
           return String(right.row.pulledAt ?? '').localeCompare(String(left.row.pulledAt ?? ''));
         })
         .slice(0, 5),
-    [hideStartedGamesInSummaries, marketRows]
+    [hideStartedGamesInSummaries, marketRows, signalInfoByRowKey]
   );
 
   const topSharpAction = useMemo(
@@ -839,11 +973,6 @@ export default function CurrentBoardPage() {
     [filteredRows]
   );
 
-  const topBetKeys = useMemo(
-    () => new Set(topBetsRightNow.map(({ game, market }) => `${String(game.gameId)}:${market}`)),
-    [topBetsRightNow]
-  );
-
   const topTrendInsights = useMemo(() => {
     return [...trendInsights]
       .sort((left, right) => {
@@ -852,8 +981,25 @@ export default function CurrentBoardPage() {
         }
         return left.insightId.localeCompare(right.insightId);
       })
-      .slice(0, 6);
+      .slice(0, 7);
   }, [trendInsights]);
+
+  const topBetKeys = useMemo(
+    () => new Set(topBetsRightNow.map(({ game, market }) => `${String(game.gameId)}:${market}`)),
+    [topBetsRightNow]
+  );
+
+  const visibleTrendMatchByRowKey = useMemo(() => {
+    const mapped = new Map<string, TrendInsightRow>();
+    for (const { game, market, row } of marketRows) {
+      const rowKey = `${String(game.gameId)}:${market}`;
+      const matched = findMatchingTrendInsight(game, market, row, topTrendInsights);
+      if (matched) {
+        mapped.set(rowKey, matched);
+      }
+    }
+    return mapped;
+  }, [marketRows, topTrendInsights]);
 
   const pickDetailsByEvaluationKey = useMemo(() => {
     const grouped = new Map<string, PickDetailRow[]>();
@@ -930,10 +1076,10 @@ export default function CurrentBoardPage() {
             <div className="current-board-section-head current-board-summary-head">
               <div>
                 <div className="current-board-section-kicker">Recent edge</div>
-                <h3>What&apos;s Working</h3>
+                <h3><span className="current-board-header-icon" aria-hidden="true">&#128200;</span>What&apos;s Working</h3>
               </div>
               <p className="subtle current-board-top-bets-subtitle">
-                The 6 most important recent trends across the board, ranked globally.
+                The 7 most important recent trends across the board, ranked globally.
               </p>
             </div>
 
@@ -957,10 +1103,10 @@ export default function CurrentBoardPage() {
             <div className="current-board-section-head current-board-top-bets-head">
               <div>
                 <div className="current-board-section-kicker">Action shortlist</div>
-                <h3>Best Bets</h3>
+                <h3><span className="current-board-header-icon" aria-hidden="true">&#128293;</span>Best Bets</h3>
               </div>
               <p className="subtle current-board-top-bets-subtitle">
-                Aligned board rows ranked by combined sharp and pick strength.
+                Board rows ranked by combined sharps, picks, and recent trend alignment.
               </p>
             </div>
 
@@ -978,7 +1124,16 @@ export default function CurrentBoardPage() {
                     <div className="subtle current-board-summary-time">{formatStartTime(String(game.startTimeUtc ?? ''))}</div>
                   </div>
                   <div className="current-board-top-bet-meta">
-                    <div className="current-board-top-bet-counts">{getCountsText(row)}</div>
+                    <div className="current-board-top-bet-counts">
+                      Sharps: {getSharpCount(row)} · Picks: {getPickCount(row)}
+                    </div>
+                    <div className="subtle current-board-summary-detail">
+                      {signalInfoByRowKey.get(`${String(game.gameId)}:${market}`)?.matchedInsight
+                        ? `🔥 ${signalInfoByRowKey.get(`${String(game.gameId)}:${market}`)?.matchedInsight?.label}`
+                        : getAgreementLabel(row) === 'Agree'
+                          ? 'Sharps and picks agree'
+                          : getSignalLabel(row)}
+                    </div>
                     <div className="current-board-top-bet-badges">
                       <span className="pill current-board-pill current-board-pill-signal">{getSignalLabel(row)}</span>
                       {getAgreementLabel(row) ? (
@@ -1111,9 +1266,13 @@ export default function CurrentBoardPage() {
 
         <section className="panel current-board-panel current-board-workspace">
           <div className="current-board-workspace-head">
-            <div>
+            <div className="current-board-workspace-title">
               <div className="current-board-section-kicker">Live market board</div>
               <h3>Board Watchlist</h3>
+            </div>
+            <div className="current-board-signal-legend current-board-signal-legend-centered" aria-label="Board signal key">
+              <span className="current-board-signal-legend-item"><span className="current-board-legend-icon">&#128293;</span> Best Bet</span>
+              <span className="current-board-signal-legend-item"><span className="current-board-legend-icon">&#128200;</span> Matches trend</span>
             </div>
             <p className="subtle current-board-workspace-note">
               Default rows keep sharps, picks, public, and history separate. Expand a market for the full board read and picker detail.
@@ -1135,6 +1294,9 @@ export default function CurrentBoardPage() {
 
             {activeRows.map(({ game, market, row }) => {
               const rowKey = `${String(game.gameId)}:${market}`;
+              const signalInfo = signalInfoByRowKey.get(rowKey) ?? { score: 0, matchedInsight: null, level: 'none' as const };
+              const isBestBet = topBetKeys.has(rowKey);
+              const matchedVisibleTrend = visibleTrendMatchByRowKey.get(rowKey) ?? null;
               const relatedPicks = row.evaluationKey ? pickDetailsByEvaluationKey.get(String(row.evaluationKey)) ?? [] : [];
               const pickMajoritySide = getPickMajoritySide(row);
               const pickMinoritySide = pickMajoritySide ? getOppositeSide(market, pickMajoritySide) : null;
@@ -1150,7 +1312,43 @@ export default function CurrentBoardPage() {
                   <div className="current-board-table-row current-board-data-row current-board-table-row-modern">
                     <div className="current-board-cell current-board-game-cell" data-label="Game">
                       <strong>
-                        {topBetKeys.has(rowKey) ? <span className="current-board-game-flag" aria-hidden="true">&#128293;</span> : null}
+                        {(isBestBet || matchedVisibleTrend) ? (
+                          <span
+                            className="current-board-signal-indicator-wrap"
+                            onMouseEnter={() => setActiveSignalKey(rowKey)}
+                            onMouseLeave={() => setActiveSignalKey((current) => current === rowKey ? null : current)}
+                          >
+                            {isBestBet ? (
+                              <button
+                                type="button"
+                                className="current-board-signal-indicator current-board-signal-indicator-best"
+                                aria-label="Best Bet"
+                                onClick={() => setActiveSignalKey((current) => current === rowKey ? null : rowKey)}
+                              >
+                                &#128293;
+                              </button>
+                            ) : null}
+                            {matchedVisibleTrend ? (
+                              <button
+                                type="button"
+                                className="current-board-signal-indicator current-board-signal-indicator-trend"
+                                aria-label="Matches trend"
+                                onClick={() => setActiveSignalKey((current) => current === rowKey ? null : rowKey)}
+                              >
+                                &#128200;
+                              </button>
+                            ) : null}
+                            {activeSignalKey === rowKey ? (
+                              <div className="current-board-signal-tooltip">
+                                <div>Sharps: {getSharpCount(row)}</div>
+                                <div>Picks: {getPickCount(row)}</div>
+                                <div>Best Bet: {isBestBet ? 'Yes' : 'No'}</div>
+                                <div>Matches trend: {matchedVisibleTrend ? 'Yes' : 'No'}</div>
+                                {matchedVisibleTrend ? <div>{matchedVisibleTrend.label}</div> : null}
+                              </div>
+                            ) : null}
+                          </span>
+                        ) : null}
                         {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
                       </strong>
                       <span className="subtle">{String(game.leagueSlug ?? game.sport ?? '').toUpperCase()}</span>

@@ -456,6 +456,12 @@ th {
   font-size: 1.28rem;
 }
 
+.current-board-header-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
 .current-board-top-bets-head {
   align-items: start;
 }
@@ -596,10 +602,9 @@ th {
 }
 
 .current-board-workspace-head {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px 16px;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto minmax(320px, 1fr);
+  gap: 16px;
   align-items: end;
   margin-bottom: 16px;
 }
@@ -608,12 +613,44 @@ th {
   margin: 4px 0 0;
 }
 
+.current-board-workspace-title {
+  min-width: 0;
+}
+
 .current-board-workspace-note {
   margin: 0;
   max-width: 380px;
   font-size: 0.92rem;
   line-height: 1.45;
   text-align: right;
+  justify-self: end;
+}
+
+.current-board-signal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 14px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.current-board-signal-legend-centered {
+  justify-self: center;
+}
+
+.current-board-signal-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.current-board-legend-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
 }
 
 .current-board-table {
@@ -701,6 +738,50 @@ th {
 
 .current-board-game-flag {
   margin-right: 8px;
+}
+
+.current-board-signal-indicator-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.current-board-signal-indicator {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.current-board-signal-indicator-best {
+  color: #dc2626;
+}
+
+.current-board-signal-indicator-trend {
+  color: #0f766e;
+}
+
+.current-board-signal-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  min-width: 200px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--surface-border-strong);
+  background: rgba(15, 23, 42, 0.96);
+  color: #f8fafc;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  gap: 4px;
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
 .current-board-number-cell {
@@ -1060,6 +1141,11 @@ th {
     align-items: start;
   }
 
+  .current-board-workspace-head {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
   .current-board-top-bet-item,
   .current-board-summary-item {
     flex-direction: column;
@@ -1076,6 +1162,10 @@ th {
   .current-board-workspace-note {
     text-align: left;
     max-width: none;
+  }
+
+  .current-board-signal-legend {
+    justify-content: flex-start;
   }
 
   .current-board-table-head {

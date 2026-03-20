@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { fetchPublicJson, formatPct, formatSignedNumber } from '../../lib/data';
+import type { TrendInsightRow } from '../../lib/trends';
 import {
   formatTimeframe,
   summarizeDecisionRows,
@@ -29,40 +30,6 @@ type AngleStats = {
   pushes: number;
   winRate: number | null;
   roi: number | null;
-};
-
-type TrendInsightRow = {
-  insightId: string;
-  league: 'mlb' | 'nba' | 'nhl' | 'ncaab';
-  timeframeDays: 7 | 14 | 30;
-  startDate: string;
-  endDate: string;
-  market: 'spread' | 'moneyline' | 'total';
-  marketSide: 'favorite' | 'underdog' | 'over' | 'under';
-  sharpsBucket: string | null;
-  picksBucket: string | null;
-  moneyDeltaBucket: string | null;
-  label: string;
-  sampleSize: number;
-  wins: number;
-  losses: number;
-  pushes: number;
-  winRate: number | null;
-  roi: number | null;
-  summaryText: string;
-  score: number;
-  angleCardId: string | null;
-  drilldown: {
-    league: 'mlb' | 'nba' | 'nhl' | 'ncaab';
-    market: 'spread' | 'moneyline' | 'total';
-    marketSide: 'favorite' | 'underdog' | 'over' | 'under';
-    startDate: string;
-    endDate: string;
-    sharpsBucket: string | null;
-    picksBucket: string | null;
-    moneyDeltaBucket: string | null;
-    angleCardId: string | null;
-  };
 };
 
 const GROUP_ORDER: Array<{ id: Exclude<AngleGroup, 'all'>; label: string }> = [
@@ -333,6 +300,9 @@ export default function AnalysisPage() {
               type="button"
               className={`analysis-angle-card ${selectedTrendInsightId === insight.insightId ? 'analysis-angle-card-active' : ''}`}
               onClick={() => {
+                if (!insight.drilldown) {
+                  return;
+                }
                 setSelectedTrendInsightId(insight.insightId);
                 setLeague(insight.drilldown.league);
                 setMarket(insight.drilldown.market);
@@ -341,6 +311,7 @@ export default function AnalysisPage() {
                 setEndDate(insight.drilldown.endDate);
                 setSelectedAngleId(insight.drilldown.angleCardId ?? 'all');
               }}
+              disabled={!insight.drilldown}
             >
               <div className="analysis-angle-group">
                 {insight.league.toUpperCase()} · last {insight.timeframeDays} days
