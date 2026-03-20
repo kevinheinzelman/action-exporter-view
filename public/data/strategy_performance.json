@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T02:25:03.700Z",
+  "generatedAt": "2026-03-20T02:36:41.620Z",
   "basis": "latest_pregame",
   "rowCount": 336,
   "cohorts": [
@@ -16,7 +16,7 @@
       "unknowns": 42,
       "winPct": 0.40476190476190477,
       "latestPulledAt": "2026-03-20T01:52:55.000Z",
-      "avgCloseDelta": -0.4798387096774194,
+      "avgCloseDelta": -3.504032258064516,
       "positiveCloseDeltaPct": 0.18548387096774194
     },
     {
@@ -48,7 +48,7 @@
       "unknowns": 32,
       "winPct": 0.4,
       "latestPulledAt": "2026-03-20T01:52:55.000Z",
-      "avgCloseDelta": -0.5402298850574713,
+      "avgCloseDelta": -4.850574712643678,
       "positiveCloseDeltaPct": 0.22988505747126436
     },
     {
@@ -336,7 +336,7 @@
       "unknowns": 9,
       "winPct": 0.3333333333333333,
       "latestPulledAt": "2026-03-20T00:16:37.253Z",
-      "avgCloseDelta": -1.5833333333333333,
+      "avgCloseDelta": -17.208333333333332,
       "positiveCloseDeltaPct": 0.16666666666666666
     },
     {
@@ -416,7 +416,7 @@
       "unknowns": 6,
       "winPct": 0.36363636363636365,
       "latestPulledAt": "2026-03-20T00:16:37.253Z",
-      "avgCloseDelta": -1.9411764705882353,
+      "avgCloseDelta": -24,
       "positiveCloseDeltaPct": 0.23529411764705882
     },
     {
@@ -480,7 +480,7 @@
       "unknowns": 4,
       "winPct": 0.5454545454545454,
       "latestPulledAt": "2026-03-20T00:16:37.253Z",
-      "avgCloseDelta": -1.2666666666666666,
+      "avgCloseDelta": -26.266666666666666,
       "positiveCloseDeltaPct": 0.26666666666666666
     },
     {
@@ -496,7 +496,7 @@
       "unknowns": 4,
       "winPct": 0.5,
       "latestPulledAt": "2026-03-20T00:16:37.253Z",
-      "avgCloseDelta": -1.3571428571428572,
+      "avgCloseDelta": -28.142857142857142,
       "positiveCloseDeltaPct": 0.2857142857142857
     },
     {
@@ -576,7 +576,7 @@
       "unknowns": 3,
       "winPct": 0.4444444444444444,
       "latestPulledAt": "2026-03-20T00:16:37.253Z",
-      "avgCloseDelta": -1.5,
+      "avgCloseDelta": -32.75,
       "positiveCloseDeltaPct": 0.3333333333333333
     },
     {
@@ -608,7 +608,7 @@
       "unknowns": 3,
       "winPct": 0.375,
       "latestPulledAt": "2026-03-20T00:16:37.253Z",
-      "avgCloseDelta": -1.6363636363636365,
+      "avgCloseDelta": -35.72727272727273,
       "positiveCloseDeltaPct": 0.36363636363636365
     },
     {
