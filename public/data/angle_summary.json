@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T01:40:44.528Z",
+  "generatedAt": "2026-03-20T01:46:59.005Z",
   "basis": "analysis_rows_latest_pregame",
   "rowCount": 64,
   "rows": [
@@ -42,15 +42,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 7,
+      "sampleSize": 8,
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "pushes": 0,
-      "winRate": 0.42857142857142855,
-      "roi": -0.09000000000000001,
-      "averagePublicMoneyMinusBetsPct": 7.285714285714286,
-      "averageSharpCount": 2.5714285714285716,
-      "averagePickCount": 0.42857142857142855
+      "winRate": 0.375,
+      "roi": -0.20375000000000001,
+      "averagePublicMoneyMinusBetsPct": 6.5,
+      "averageSharpCount": 2.5,
+      "averagePickCount": 0.375
     },
     {
       "angleId": "mlb:moneyline:sharp-majority-3plus",
