@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T01:16:34.863Z",
+  "generatedAt": "2026-03-20T01:20:47.487Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 3,
   "rows": [
@@ -21,7 +21,7 @@
       "pushes": 0,
       "winRate": 0.7857142857142857,
       "roi": null,
-      "summaryText": "NCAAB · last 7 days · 78.6% · 11-3 · across 14 plays",
+      "summaryText": "NCAAB | last 7 days | 78.6% | 11-3 | across 14 plays",
       "score": 30.971,
       "scoreComponents": {
         "sample": 1.4,
@@ -61,7 +61,7 @@
       "pushes": 0,
       "winRate": 0.7647058823529411,
       "roi": null,
-      "summaryText": "NCAAB · last 7 days · 76.5% · 13-4 · across 17 plays",
+      "summaryText": "NCAAB | last 7 days | 76.5% | 13-4 | across 17 plays",
       "score": 29.171,
       "scoreComponents": {
         "sample": 1.7,
@@ -101,7 +101,7 @@
       "pushes": 0,
       "winRate": 0.7142857142857143,
       "roi": null,
-      "summaryText": "NCAAB · last 7 days · 71.4% · 10-4 · across 14 plays",
+      "summaryText": "NCAAB | last 7 days | 71.4% | 10-4 | across 14 plays",
       "score": 23.829,
       "scoreComponents": {
         "sample": 1.4,
