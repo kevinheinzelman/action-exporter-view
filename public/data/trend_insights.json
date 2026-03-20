@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T04:06:14.912Z",
+  "generatedAt": "2026-03-20T04:36:07.484Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 6,
   "rows": [
@@ -215,16 +215,16 @@
       "picksBucket": null,
       "moneyDeltaBucket": null,
       "label": "Moneyline underdogs have been strong",
-      "sampleSize": 54,
+      "sampleSize": 55,
       "wins": 25,
-      "losses": 29,
+      "losses": 30,
       "pushes": 0,
-      "winRate": 0.46296296296296297,
-      "roi": 0.4314814814814816,
-      "summaryText": "NCAAB | last 14 days | 46.3% | 25-29 | across 54 plays | ROI 43.1%",
-      "score": 9.4,
+      "winRate": 0.45454545454545453,
+      "roi": 0.4054545454545455,
+      "summaryText": "NCAAB | last 14 days | 45.5% | 25-30 | across 55 plays | ROI 40.5%",
+      "score": 9.5,
       "scoreComponents": {
-        "sample": 5.4,
+        "sample": 5.5,
         "edge": 0,
         "roi": 2,
         "recency": 2
