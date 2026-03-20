@@ -83,6 +83,7 @@ export default function AnalysisPage() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [selectedAngleId, setSelectedAngleId] = useState<string>('all');
+  const [selectedTrendInsightId, setSelectedTrendInsightId] = useState<string>('all');
 
   useEffect(() => {
     fetchPublicJson('/data/analysis_rows.json', EMPTY_DATA).then((payload) => {
@@ -111,6 +112,17 @@ export default function AnalysisPage() {
     () => ['all', ...Array.from(new Set(decisionRows.map((row) => row.league))).sort()],
     [decisionRows]
   );
+
+  const defaultDateRange = useMemo(() => {
+    const dates = decisionRows
+      .map((row) => row.date)
+      .filter((value): value is string => Boolean(value))
+      .sort();
+    return {
+      startDate: dates[0] ?? '',
+      endDate: dates[dates.length - 1] ?? ''
+    };
+  }, [decisionRows]);
 
   const filteredRows = useMemo(
     () =>
@@ -188,6 +200,16 @@ export default function AnalysisPage() {
     }
   }, [selectedAngleId, visibleAngles]);
 
+  function resetAnalysisFilters(): void {
+    setLeague('all');
+    setMarket('all');
+    setSideFilter('all');
+    setStartDate(defaultDateRange.startDate);
+    setEndDate(defaultDateRange.endDate);
+    setSelectedAngleId('all');
+    setSelectedTrendInsightId('all');
+  }
+
   return (
     <main className="page">
       <section className="hero">
@@ -219,7 +241,10 @@ export default function AnalysisPage() {
         <div className="controls">
           <div className="control">
             <label>League</label>
-            <select value={league} onChange={(event) => setLeague(event.target.value)}>
+            <select value={league} onChange={(event) => {
+              setLeague(event.target.value);
+              setSelectedTrendInsightId('all');
+            }}>
               {leagues.map((value) => (
                 <option key={value} value={value}>
                   {value === 'all' ? 'All leagues' : value.toUpperCase()}
@@ -237,6 +262,7 @@ export default function AnalysisPage() {
                 setMarket(nextMarket);
                 setSideFilter('all');
                 setSelectedAngleId('all');
+                setSelectedTrendInsightId('all');
               }}
             >
               <option value="all">All markets</option>
@@ -248,12 +274,18 @@ export default function AnalysisPage() {
 
           <div className="control">
             <label>Start Date</label>
-            <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)} />
+            <input type="date" value={startDate} onChange={(event) => {
+              setStartDate(event.target.value);
+              setSelectedTrendInsightId('all');
+            }} />
           </div>
 
           <div className="control">
             <label>End Date</label>
-            <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)} />
+            <input type="date" value={endDate} onChange={(event) => {
+              setEndDate(event.target.value);
+              setSelectedTrendInsightId('all');
+            }} />
           </div>
         </div>
 
@@ -267,6 +299,7 @@ export default function AnalysisPage() {
                 onClick={() => {
                   setSideFilter(option);
                   setSelectedAngleId('all');
+                  setSelectedTrendInsightId('all');
                 }}
               >
                 {option === 'all' ? 'All' : capitalize(option)}
@@ -284,6 +317,13 @@ export default function AnalysisPage() {
               Recent trends ranked with sample size, edge, and recency in balance. Click one to jump the page into that exact slice.
             </p>
           </div>
+          <button
+            type="button"
+            className={`history-chip ${selectedTrendInsightId === 'all' ? 'history-chip-active analysis-chip-active' : ''}`}
+            onClick={resetAnalysisFilters}
+          >
+            All
+          </button>
         </div>
 
         <div className="analysis-angle-grid">
@@ -291,8 +331,9 @@ export default function AnalysisPage() {
             <button
               key={insight.insightId}
               type="button"
-              className="analysis-angle-card"
+              className={`analysis-angle-card ${selectedTrendInsightId === insight.insightId ? 'analysis-angle-card-active' : ''}`}
               onClick={() => {
+                setSelectedTrendInsightId(insight.insightId);
                 setLeague(insight.drilldown.league);
                 setMarket(insight.drilldown.market);
                 setSideFilter(insight.drilldown.marketSide);

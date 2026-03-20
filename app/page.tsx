@@ -526,6 +526,11 @@ function formatPctValue(value: number | null | undefined): string {
   return typeof value === 'number' ? `${(value * 100).toFixed(1)}%` : 'N/A';
 }
 
+function hasGameStarted(game: Record<string, any>): boolean {
+  const startTime = typeof game.startTimeUtc === 'string' ? new Date(game.startTimeUtc).getTime() : Number.NaN;
+  return !Number.isNaN(startTime) && startTime < Date.now();
+}
+
 function getMarketSortValue(row: Record<string, any>, sortMode: string): [number, number, string] {
   const sharpCount = getSharpCount(row);
   const pickCount = getPickCount(row);
@@ -721,6 +726,7 @@ export default function CurrentBoardPage() {
   const [marketFilter, setMarketFilter] = useState('all');
   const [teamFilter, setTeamFilter] = useState('');
   const [sortMode, setSortMode] = useState('start_time');
+  const [hideStartedGamesInSummaries, setHideStartedGamesInSummaries] = useState(false);
   const [hideStartedGames, setHideStartedGames] = useState(true);
   const [expandedRowKey, setExpandedRowKey] = useState<string | null>(null);
 
@@ -783,6 +789,7 @@ export default function CurrentBoardPage() {
   const topBetsRightNow = useMemo(
     () =>
       [...marketRows]
+        .filter(({ game }) => !hideStartedGamesInSummaries || !hasGameStarted(game))
         .filter(({ game, market, row }) => {
           const hasAlignedSignal = getSharpCount(row) > 0 && getPickCount(row) > 0 && getAgreementLabel(row) === 'Agree';
           if (!hasAlignedSignal) {
@@ -799,25 +806,27 @@ export default function CurrentBoardPage() {
           return String(right.row.pulledAt ?? '').localeCompare(String(left.row.pulledAt ?? ''));
         })
         .slice(0, 5),
-    [marketRows]
+    [hideStartedGamesInSummaries, marketRows]
   );
 
   const topSharpAction = useMemo(
     () =>
       [...marketRows]
+        .filter(({ game }) => !hideStartedGamesInSummaries || !hasGameStarted(game))
         .filter(({ row }) => getSharpCount(row) > 0)
         .sort((left, right) => compareRows(left, right, 'sharp_desc'))
         .slice(0, 5),
-    [marketRows]
+    [hideStartedGamesInSummaries, marketRows]
   );
 
   const topPickAction = useMemo(
     () =>
       [...marketRows]
+        .filter(({ game }) => !hideStartedGamesInSummaries || !hasGameStarted(game))
         .filter(({ row }) => getPickCount(row) > 0)
         .sort((left, right) => compareRows(left, right, 'pick_desc'))
         .slice(0, 5),
-    [marketRows]
+    [hideStartedGamesInSummaries, marketRows]
   );
 
   const filteredRows = useMemo(
@@ -905,6 +914,18 @@ export default function CurrentBoardPage() {
         </section>
 
         <section className="cards current-board-summary-grid current-board-summary-grid-four">
+          <div className="current-board-summary-toolbar">
+            <label className="current-board-checkbox-control" htmlFor="hide-started-games-summaries">
+              <input
+                id="hide-started-games-summaries"
+                type="checkbox"
+                checked={hideStartedGamesInSummaries}
+                onChange={(event) => setHideStartedGamesInSummaries(event.target.checked)}
+              />
+              <span>Hide started games</span>
+            </label>
+          </div>
+
           <article className="panel current-board-trends-panel">
             <div className="current-board-section-head current-board-summary-head">
               <div>

@@ -515,6 +515,12 @@ th {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.current-board-summary-toolbar {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .current-board-summary {
   padding: 16px;
   height: 100%;
