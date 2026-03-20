@@ -31,6 +31,40 @@ type AngleStats = {
   roi: number | null;
 };
 
+type TrendInsightRow = {
+  insightId: string;
+  league: 'mlb' | 'nba' | 'nhl' | 'ncaab';
+  timeframeDays: 7 | 14 | 30;
+  startDate: string;
+  endDate: string;
+  market: 'spread' | 'moneyline' | 'total';
+  marketSide: 'favorite' | 'underdog' | 'over' | 'under';
+  sharpsBucket: string | null;
+  picksBucket: string | null;
+  moneyDeltaBucket: string | null;
+  label: string;
+  sampleSize: number;
+  wins: number;
+  losses: number;
+  pushes: number;
+  winRate: number | null;
+  roi: number | null;
+  summaryText: string;
+  score: number;
+  angleCardId: string | null;
+  drilldown: {
+    league: 'mlb' | 'nba' | 'nhl' | 'ncaab';
+    market: 'spread' | 'moneyline' | 'total';
+    marketSide: 'favorite' | 'underdog' | 'over' | 'under';
+    startDate: string;
+    endDate: string;
+    sharpsBucket: string | null;
+    picksBucket: string | null;
+    moneyDeltaBucket: string | null;
+    angleCardId: string | null;
+  };
+};
+
 const GROUP_ORDER: Array<{ id: Exclude<AngleGroup, 'all'>; label: string }> = [
   { id: 'sharps', label: 'Sharps' },
   { id: 'picks', label: 'Picks' },
@@ -42,6 +76,7 @@ const EMPTY_DATA = { generatedAt: null, rows: [] as AnalysisRow[] };
 
 export default function AnalysisPage() {
   const [data, setData] = useState<{ generatedAt: string | null; rows: AnalysisRow[] }>(EMPTY_DATA);
+  const [trendInsights, setTrendInsights] = useState<TrendInsightRow[]>([]);
   const [league, setLeague] = useState('all');
   const [market, setMarket] = useState<MarketFilter>('all');
   const [sideFilter, setSideFilter] = useState<SideFilter>('all');
@@ -61,6 +96,10 @@ export default function AnalysisPage() {
       setStartDate(dates[0] ?? '');
       setEndDate(dates[dates.length - 1] ?? '');
     });
+
+    fetchPublicJson('/data/trend_insights.json', {
+      rows: [] as TrendInsightRow[]
+    }).then((payload) => setTrendInsights(payload.rows ?? []));
   }, []);
 
   const decisionRows = useMemo(
@@ -117,6 +156,23 @@ export default function AnalysisPage() {
   const selectedRows = useMemo(
     () => (selectedAngle ? filteredRows.filter((row) => selectedAngle.match(row)) : filteredRows),
     [filteredRows, selectedAngle]
+  );
+
+  const visibleTrendInsights = useMemo(
+    () =>
+      trendInsights.filter((insight) => {
+        if (league !== 'all' && insight.league !== league) {
+          return false;
+        }
+        if (market !== 'all' && insight.market !== market) {
+          return false;
+        }
+        if (sideFilter !== 'all' && insight.marketSide !== sideFilter) {
+          return false;
+        }
+        return true;
+      }),
+    [league, market, sideFilter, trendInsights]
   );
 
   const summary = summarizeDecisionRows(selectedRows);
@@ -218,6 +274,46 @@ export default function AnalysisPage() {
             ))}
           </div>
         ) : null}
+      </section>
+
+      <section className="panel">
+        <div className="analysis-panel-head">
+          <div>
+            <h3>What&apos;s Working</h3>
+            <p className="subtle">
+              Recent trends ranked with sample size, edge, and recency in balance. Click one to jump the page into that exact slice.
+            </p>
+          </div>
+        </div>
+
+        <div className="analysis-angle-grid">
+          {visibleTrendInsights.map((insight) => (
+            <button
+              key={insight.insightId}
+              type="button"
+              className="analysis-angle-card"
+              onClick={() => {
+                setLeague(insight.drilldown.league);
+                setMarket(insight.drilldown.market);
+                setSideFilter(insight.drilldown.marketSide);
+                setStartDate(insight.drilldown.startDate);
+                setEndDate(insight.drilldown.endDate);
+                setSelectedAngleId(insight.drilldown.angleCardId ?? 'all');
+              }}
+            >
+              <div className="analysis-angle-group">
+                {insight.league.toUpperCase()} · last {insight.timeframeDays} days
+              </div>
+              <strong>{insight.label}</strong>
+              <div className="subtle">{insight.summaryText}</div>
+              <div className="analysis-angle-metrics">
+                <span>{insight.sampleSize} plays</span>
+                <span>{formatPct(insight.winRate)} win rate</span>
+              </div>
+            </button>
+          ))}
+          {!visibleTrendInsights.length ? <div className="subtle">No recent insights match the current league, market, and side filters.</div> : null}
+        </div>
       </section>
 
       <section className="cards analysis-layout">

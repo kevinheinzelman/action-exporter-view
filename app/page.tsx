@@ -36,6 +36,19 @@ type PickDetailRow = {
   classifiedSide: string | null;
 };
 
+type TrendInsightRow = {
+  insightId: string;
+  league: 'mlb' | 'nba' | 'nhl' | 'ncaab';
+  timeframeDays: 7 | 14 | 30;
+  market: 'spread' | 'moneyline' | 'total';
+  marketSide: 'favorite' | 'underdog' | 'over' | 'under';
+  label: string;
+  sampleSize: number;
+  winRate: number | null;
+  summaryText: string;
+  score: number;
+};
+
 const USE_LEGACY_CURRENT_BOARD = false;
 
 const SPORT_OPTIONS = [
@@ -509,6 +522,10 @@ function formatExpertSnapshot(pick: PickDetailRow): string {
   return [record, units, windowLabel].filter(Boolean).join(' • ') || 'No performance snapshot';
 }
 
+function formatPctValue(value: number | null | undefined): string {
+  return typeof value === 'number' ? `${(value * 100).toFixed(1)}%` : 'N/A';
+}
+
 function getMarketSortValue(row: Record<string, any>, sortMode: string): [number, number, string] {
   const sharpCount = getSharpCount(row);
   const pickCount = getPickCount(row);
@@ -542,9 +559,18 @@ function buildFilteredRows(
   sportFilter: string,
   marketFilter: string,
   teamFilter: string,
-  sortMode: string
+  sortMode: string,
+  hideStartedGames: boolean
 ): BoardMarketRow[] {
   let rows = [...marketRows];
+
+  if (hideStartedGames) {
+    const now = Date.now();
+    rows = rows.filter(({ game }) => {
+      const startTime = typeof game.startTimeUtc === 'string' ? new Date(game.startTimeUtc).getTime() : Number.NaN;
+      return Number.isNaN(startTime) || startTime >= now;
+    });
+  }
 
   if (sportFilter !== 'all') {
     rows = rows.filter(({ game }) => `${String(game.sport ?? '')}:${String(game.leagueSlug ?? '').toLowerCase()}` === sportFilter);
@@ -690,10 +716,12 @@ export default function CurrentBoardPage() {
   });
   const [metadata, setMetadata] = useState<{ generatedAt: string | null }>({ generatedAt: null });
   const [pickDetails, setPickDetails] = useState<PickDetailRow[]>([]);
+  const [trendInsights, setTrendInsights] = useState<TrendInsightRow[]>([]);
   const [sportFilter, setSportFilter] = useState('all');
   const [marketFilter, setMarketFilter] = useState('all');
   const [teamFilter, setTeamFilter] = useState('');
   const [sortMode, setSortMode] = useState('start_time');
+  const [hideStartedGames, setHideStartedGames] = useState(true);
   const [expandedRowKey, setExpandedRowKey] = useState<string | null>(null);
 
   useEffect(() => {
@@ -710,6 +738,10 @@ export default function CurrentBoardPage() {
     fetchPublicJson('/data/pick_rows.json', {
       rows: [] as PickDetailRow[]
     }).then((payload) => setPickDetails(payload.rows ?? []));
+
+    fetchPublicJson('/data/trend_insights.json', {
+      rows: [] as TrendInsightRow[]
+    }).then((payload) => setTrendInsights(payload.rows ?? []));
   }, []);
 
   const marketRows = useMemo<BoardMarketRow[]>(
@@ -788,28 +820,9 @@ export default function CurrentBoardPage() {
     [marketRows]
   );
 
-  const topMoneyDelta = useMemo(
-    () =>
-      [...marketRows]
-        .filter(({ row }) => {
-          const context = row.publicContext as { moneyMinusBetsPct?: number | null } | undefined;
-          return typeof context?.moneyMinusBetsPct === 'number' && context.moneyMinusBetsPct > 0;
-        })
-        .sort((left, right) => {
-          const leftDelta = Number((left.row.publicContext as { moneyMinusBetsPct?: number | null } | undefined)?.moneyMinusBetsPct ?? Number.NEGATIVE_INFINITY);
-          const rightDelta = Number((right.row.publicContext as { moneyMinusBetsPct?: number | null } | undefined)?.moneyMinusBetsPct ?? Number.NEGATIVE_INFINITY);
-          if (rightDelta !== leftDelta) {
-            return rightDelta - leftDelta;
-          }
-          return String(right.row.pulledAt ?? '').localeCompare(String(left.row.pulledAt ?? ''));
-        })
-        .slice(0, 5),
-    [marketRows]
-  );
-
   const filteredRows = useMemo(
-    () => buildFilteredRows(marketRows, sportFilter, marketFilter, teamFilter, sortMode),
-    [marketRows, sportFilter, marketFilter, teamFilter, sortMode]
+    () => buildFilteredRows(marketRows, sportFilter, marketFilter, teamFilter, sortMode, hideStartedGames),
+    [marketRows, sportFilter, marketFilter, teamFilter, sortMode, hideStartedGames]
   );
 
   const activeRows = useMemo(
@@ -821,6 +834,17 @@ export default function CurrentBoardPage() {
     () => new Set(topBetsRightNow.map(({ game, market }) => `${String(game.gameId)}:${market}`)),
     [topBetsRightNow]
   );
+
+  const topTrendInsights = useMemo(() => {
+    return [...trendInsights]
+      .sort((left, right) => {
+        if (right.score !== left.score) {
+          return right.score - left.score;
+        }
+        return left.insightId.localeCompare(right.insightId);
+      })
+      .slice(0, 6);
+  }, [trendInsights]);
 
   const pickDetailsByEvaluationKey = useMemo(() => {
     const grouped = new Map<string, PickDetailRow[]>();
@@ -881,11 +905,38 @@ export default function CurrentBoardPage() {
         </section>
 
         <section className="cards current-board-summary-grid current-board-summary-grid-four">
+          <article className="panel current-board-trends-panel">
+            <div className="current-board-section-head current-board-summary-head">
+              <div>
+                <div className="current-board-section-kicker">Recent edge</div>
+                <h3>What&apos;s Working</h3>
+              </div>
+              <p className="subtle current-board-top-bets-subtitle">
+                The 6 most important recent trends across the board, ranked globally.
+              </p>
+            </div>
+
+            <div className="summary-list current-board-trend-list">
+              {topTrendInsights.map((insight) => (
+                <div className="summary-item current-board-summary-item" key={insight.insightId}>
+                  <div className="current-board-summary-copy">
+                    <strong className="current-board-summary-game">
+                      {insight.league.toUpperCase()} · {insight.label}
+                    </strong>
+                    <div className="subtle current-board-summary-detail">{insight.summaryText}</div>
+                  </div>
+                  <strong className="current-board-summary-count">{formatPctValue(insight.winRate)}</strong>
+                </div>
+              ))}
+              {topTrendInsights.length === 0 ? <div className="subtle">No recent trend insights available yet.</div> : null}
+            </div>
+          </article>
+
           <article className="panel current-board-summary current-board-summary-lead">
             <div className="current-board-section-head current-board-top-bets-head">
               <div>
                 <div className="current-board-section-kicker">Action shortlist</div>
-                <h3>Top Bets Right Now</h3>
+                <h3>Best Bets</h3>
               </div>
               <p className="subtle current-board-top-bets-subtitle">
                 Aligned board rows ranked by combined sharp and pick strength.
@@ -979,36 +1030,6 @@ export default function CurrentBoardPage() {
             </div>
           </article>
 
-          <article className="panel current-board-summary">
-            <div className="current-board-section-head current-board-summary-head">
-              <div>
-                <div className="current-board-section-kicker">Public money edge</div>
-                <h3>Biggest Money &gt; Bets</h3>
-              </div>
-            </div>
-            <div className="summary-list">
-              {topMoneyDelta.map(({ game, market, row }) => (
-                <div className="summary-item current-board-summary-item" key={`delta:${String(game.gameId)}:${market}`}>
-                  <div className="current-board-summary-copy">
-                    <strong className="current-board-summary-game" title={`${game.awayTeam ?? 'Away'} at ${game.homeTeam ?? 'Home'}`}>
-                      {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
-                    </strong>
-                    <div className="subtle current-board-summary-detail">
-                      {market} | {getPrimarySideText(game, market, row)}
-                    </div>
-                    <div className="subtle current-board-summary-time">{getPublicContextText(row)}</div>
-                  </div>
-                  <strong className="current-board-summary-count">
-                    {(() => {
-                      const delta = (row.publicContext as { moneyMinusBetsPct?: number | null } | undefined)?.moneyMinusBetsPct;
-                      return typeof delta === 'number' ? `${delta > 0 ? '+' : ''}${delta.toFixed(0)}` : 'N/A';
-                    })()}
-                  </strong>
-                </div>
-              ))}
-              {topMoneyDelta.length === 0 ? <div className="subtle">No positive money-over-bets deltas yet</div> : null}
-            </div>
-          </article>
         </section>
 
         <section className="panel current-board-controls-panel current-board-controls-modern">
@@ -1054,6 +1075,16 @@ export default function CurrentBoardPage() {
                 ))}
               </select>
             </div>
+
+            <label className="current-board-checkbox-control" htmlFor="hide-started-games">
+              <input
+                id="hide-started-games"
+                type="checkbox"
+                checked={hideStartedGames}
+                onChange={(event) => setHideStartedGames(event.target.checked)}
+              />
+              <span>Hide started games</span>
+            </label>
           </div>
         </section>
 
