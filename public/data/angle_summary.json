@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-21T23:04:57.976Z",
+  "generatedAt": "2026-03-21T23:34:57.256Z",
   "basis": "analysis_rows_latest_pregame",
-  "rowCount": 17,
+  "rowCount": 18,
   "rows": [
     {
       "angleId": "mlb:moneyline:money-minus-bets-10",
@@ -125,15 +125,15 @@
           "value": 5
         }
       ],
-      "sampleSize": 3,
-      "wins": 1,
+      "sampleSize": 4,
+      "wins": 2,
       "losses": 2,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
-      "roi": -0.39999999999999997,
-      "averagePublicMoneyMinusBetsPct": 16,
-      "averageSharpCount": 1,
-      "averagePickCount": 1.6666666666666667
+      "winRate": 0.5,
+      "roi": -0.16338797814207648,
+      "averagePublicMoneyMinusBetsPct": 14.25,
+      "averageSharpCount": 0.75,
+      "averagePickCount": 1.5
     },
     {
       "angleId": "nhl:moneyline:money-minus-bets-10",
@@ -341,9 +341,9 @@
           "value": "<5"
         }
       ],
-      "sampleSize": 6,
-      "wins": 3,
-      "losses": 3,
+      "sampleSize": 8,
+      "wins": 4,
+      "losses": 4,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
@@ -363,13 +363,13 @@
           "value": 10
         }
       ],
-      "sampleSize": 2,
-      "wins": 0,
+      "sampleSize": 3,
+      "wins": 1,
       "losses": 2,
       "pushes": 0,
-      "winRate": 0,
+      "winRate": 0.3333333333333333,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 20.5,
+      "averagePublicMoneyMinusBetsPct": 20.333333333333332,
       "averageSharpCount": 0,
       "averagePickCount": 0
     },
@@ -385,13 +385,13 @@
           "value": 5
         }
       ],
-      "sampleSize": 2,
-      "wins": 0,
+      "sampleSize": 3,
+      "wins": 1,
       "losses": 2,
       "pushes": 0,
-      "winRate": 0,
+      "winRate": 0.3333333333333333,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 20.5,
+      "averagePublicMoneyMinusBetsPct": 20.333333333333332,
       "averageSharpCount": 0,
       "averagePickCount": 0
     },
@@ -412,14 +412,36 @@
           "value": 2
         }
       ],
-      "sampleSize": 2,
+      "sampleSize": 3,
       "wins": 2,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.6666666666666666,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": -2,
+      "averageSharpCount": 2,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nhl:total:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "nhl",
+      "market": "total",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 1,
       "losses": 0,
       "pushes": 0,
       "winRate": 1,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 1,
-      "averageSharpCount": 2,
+      "averagePublicMoneyMinusBetsPct": 8,
+      "averageSharpCount": 0,
       "averagePickCount": 0
     }
   ]
