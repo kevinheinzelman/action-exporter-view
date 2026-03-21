@@ -258,6 +258,41 @@ th {
   color: var(--text-muted);
 }
 
+.kenpom-table-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.kenpom-table {
+  min-width: 1250px;
+}
+
+.table-sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.table-sort-button-active {
+  color: var(--accent);
+}
+
+.kenpom-recommendation-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: rgba(37, 99, 235, 0.24);
+}
+
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -1117,6 +1152,10 @@ th {
 @media (max-width: 768px) {
   .shell {
     padding: 18px 14px 32px;
+  }
+
+  .kenpom-table {
+    min-width: 980px;
   }
 
   .current-board-stage {

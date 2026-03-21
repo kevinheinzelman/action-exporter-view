@@ -9,6 +9,7 @@ export const metadata = {
 
 const NAV_ITEMS = [
   { href: '/', label: 'Current Board' },
+  { href: '/kenpom', label: 'KenPom Board' },
   { href: '/analysis', label: 'Analysis' },
   { href: '/about-data', label: 'About Data' }
 ];
