@@ -918,12 +918,13 @@ export default function CurrentBoardPage() {
   const topBetsRightNow = useMemo(
     () =>
       [...marketRows]
-        .filter(({ game }) => !hideStartedGamesInSummaries || !hasGameStarted(game))
-        .filter(({ game, market, row }) => {
-          const info = signalInfoByRowKey.get(`${String(game.gameId)}:${market}`);
-          if (!info || info.level === 'none') {
-            return false;
-          }
+       .filter(({ game, market, row }) => {
+  if (getAgreementLabel(row) === 'Conflict') return false;
+
+  const info = signalInfoByRowKey.get(`${String(game.gameId)}:${market}`);
+  if (!info || info.level === 'none') {
+    return false;
+  }
           return getPrimarySideText(game, market, row).trim().length > 0;
         })
         .sort((left, right) => {
