@@ -73,6 +73,7 @@ export default function KenPomPage() {
   const rows = useMemo<JoinedKenPomRow[]>(() => {
     const boardIndex = new Map<string, BoardGame>();
     const boardDebugKeys: Array<{ key: string; awayTeam: string; homeTeam: string }> = [];
+
     for (const game of boardData.games) {
       const key = getMatchupKey(game.awayTeam, game.homeTeam);
       if (key && !boardIndex.has(key)) {
@@ -97,10 +98,9 @@ export default function KenPomPage() {
       const teamASide = getTeamSideForGame(boardGame, row.team_a);
       const spreadMarket = boardGame?.markets?.spread ?? null;
       const totalMarket = boardGame?.markets?.total ?? null;
-      const marketSpread = spreadMarket && teamASide ? getTeamSpreadLine(spreadMarket, teamASide) : null;
-      const marketImpliedMargin = marketSpread === null ? null : -marketSpread;
+      const marketSpread = spreadMarket && teamASide ? getTeamASpreadMarket(spreadMarket, teamASide) : null;
       const marketTotal = getTotalLine(totalMarket);
-      const spreadDelta = marketImpliedMargin === null ? null : row.projected_spread - marketImpliedMargin;
+      const spreadDelta = marketSpread === null ? null : row.projected_spread - marketSpread;
       const totalDelta = marketTotal === null ? null : row.projected_total - marketTotal;
       const spreadRecommendation = getSpreadRecommendation(row, spreadDelta);
       const totalRecommendation = getTotalRecommendation(totalDelta);
@@ -111,7 +111,7 @@ export default function KenPomPage() {
         marketSpread,
         marketTotal,
         spreadRecommendation,
-        spreadEdge: getDisplayEdge(spreadDelta, spreadRecommendation === 'No play'),
+        spreadEdge: getSpreadEdge(spreadDelta),
         totalRecommendation,
         totalEdge: getDisplayEdge(totalDelta, totalRecommendation === 'No play'),
         normalizedTeamA,
@@ -230,12 +230,6 @@ export default function KenPomPage() {
               <tr key={`${row.matchupIndex}:${row.team_a}:${row.team_b}`}>
                 <td>
                   <strong>{row.matchup}</strong>
-                  {!row.boardMatchFound ? (
-                    <div className="subtle">
-                      no board match · a=`{row.normalizedTeamA}` · b=`{row.normalizedTeamB}` · key=`{row.attemptedMatchupKey}`
-                      {row.likelyBoardMatch ? ` · likely=${row.likelyBoardMatch}` : ''}
-                    </div>
-                  ) : null}
                 </td>
                 <td>{row.team_a}</td>
                 <td>{row.team_b}</td>
@@ -322,6 +316,13 @@ function getSpreadRecommendation(row: KenPomModelRow, spreadDelta: number | null
   return 'No play';
 }
 
+function getSpreadEdge(delta: number | null): number | null {
+  if (delta === null) {
+    return null;
+  }
+  return Math.abs(delta);
+}
+
 function getTotalRecommendation(totalDelta: number | null): string {
   if (totalDelta === null) {
     return 'No play';
@@ -382,12 +383,24 @@ function normalizeTeamName(value: string | null | undefined): string {
   const normalized = String(value ?? '')
     .toLowerCase()
     .replace(/&/g, ' and ')
-    .replace(/['’]/g, '')
+    .replace(/['â€™]/g, '')
     .replace(/[().,/-]/g, ' ')
     .replace(/[^a-z0-9\s]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-  return TEAM_NAME_ALIASES[normalized] ?? normalized;
+
+  const canonical = normalized
+    .split(' ')
+    .filter(Boolean)
+    .map((token, index, allTokens) => {
+      if (token !== 'st') {
+        return token;
+      }
+      return index === allTokens.length - 1 ? 'state' : 'saint';
+    })
+    .join(' ');
+
+  return TEAM_NAME_ALIASES[canonical] ?? canonical;
 }
 
 const TEAM_NAME_ALIASES: Record<string, string> = {
@@ -404,12 +417,25 @@ const TEAM_NAME_ALIASES: Record<string, string> = {
   'miami ohioh': 'miami ohio',
   'miami o h': 'miami ohio',
   'miami oh ': 'miami ohio',
+  uconn: 'connecticut',
+  connecticut: 'connecticut',
   'saint louis': 'saint louis',
   'st louis': 'saint louis',
   'saint marys': 'saint marys',
   'st marys': 'saint marys',
+  'saint josephs': 'saint josephs',
+  'saint joes': 'saint josephs',
+  'st joes': 'saint josephs',
+  'george washington': 'george washington',
+  'g washington': 'george washington',
   'michigan st': 'michigan state',
   'michigan state': 'michigan state',
+  'iowa st': 'iowa state',
+  'iowa state': 'iowa state',
+  'utah st': 'utah state',
+  'utah state': 'utah state',
+  'wichita st': 'wichita state',
+  'wichita state': 'wichita state',
   'unc wilmington': 'unc wilmington',
   'north carolina wilmington': 'unc wilmington',
   'st johns': 'saint johns',
@@ -469,7 +495,7 @@ function sharedTokenCount(left: string, right: string): number {
   return count;
 }
 
-function getTeamSpreadLine(row: BoardMarket, side: 'away' | 'home'): number | null {
+function getTeamASpreadMarket(row: BoardMarket, side: 'away' | 'home'): number | null {
   const value = side === 'away' ? row.awayValue : row.homeValue;
   return typeof value === 'number' ? value : null;
 }
