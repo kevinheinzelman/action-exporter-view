@@ -42,6 +42,7 @@ type JoinedKenPomRow = KenPomModelRow & {
   normalizedTeamB: string;
   attemptedMatchupKey: string;
   boardMatchFound: boolean;
+  likelyBoardMatch: string | null;
   matchedLineSource: 'current_board' | null;
 };
 
@@ -71,10 +72,18 @@ export default function KenPomPage() {
 
   const rows = useMemo<JoinedKenPomRow[]>(() => {
     const boardIndex = new Map<string, BoardGame>();
+    const boardDebugKeys: Array<{ key: string; awayTeam: string; homeTeam: string }> = [];
     for (const game of boardData.games) {
       const key = getMatchupKey(game.awayTeam, game.homeTeam);
       if (key && !boardIndex.has(key)) {
         boardIndex.set(key, game);
+      }
+      if (key) {
+        boardDebugKeys.push({
+          key,
+          awayTeam: String(game.awayTeam ?? ''),
+          homeTeam: String(game.homeTeam ?? '')
+        });
       }
     }
 
@@ -84,6 +93,7 @@ export default function KenPomPage() {
       const normalizedTeamB = normalizeTeamName(row.team_b);
       const attemptedMatchupKey = getMatchupKey(row.team_a, row.team_b);
       const boardGame = boardIndex.get(attemptedMatchupKey);
+      const likelyBoardMatch = boardGame ? null : findLikelyBoardMatch(normalizedTeamA, normalizedTeamB, boardDebugKeys);
       const teamASide = getTeamSideForGame(boardGame, row.team_a);
       const spreadMarket = boardGame?.markets?.spread ?? null;
       const totalMarket = boardGame?.markets?.total ?? null;
@@ -108,6 +118,7 @@ export default function KenPomPage() {
         normalizedTeamB,
         attemptedMatchupKey,
         boardMatchFound: Boolean(boardGame),
+        likelyBoardMatch,
         matchedLineSource: boardGame ? 'current_board' : null
       };
     });
@@ -222,6 +233,7 @@ export default function KenPomPage() {
                   {!row.boardMatchFound ? (
                     <div className="subtle">
                       no board match · a=`{row.normalizedTeamA}` · b=`{row.normalizedTeamB}` · key=`{row.attemptedMatchupKey}`
+                      {row.likelyBoardMatch ? ` · likely=${row.likelyBoardMatch}` : ''}
                     </div>
                   ) : null}
                 </td>
@@ -367,20 +379,94 @@ function getTeamSideForGame(game: BoardGame | undefined, teamName: string): 'awa
 }
 
 function normalizeTeamName(value: string | null | undefined): string {
-  return String(value ?? '')
+  const normalized = String(value ?? '')
     .toLowerCase()
     .replace(/&/g, ' and ')
     .replace(/['’]/g, '')
     .replace(/[().,/-]/g, ' ')
-    .replace(/\bmiami\s+oh\b/g, 'miami ohio')
-    .replace(/\bmiami\s+ohio\b/g, 'miami ohio')
-    .replace(/\bst\b/g, 'saint')
-    .replace(/\bsaint\b/g, 'saint')
-    .replace(/\bn\s*c\b/g, 'nc')
-    .replace(/\bnorth\s+carolina\b/g, 'nc')
     .replace(/[^a-z0-9\s]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+  return TEAM_NAME_ALIASES[normalized] ?? normalized;
+}
+
+const TEAM_NAME_ALIASES: Record<string, string> = {
+  smu: 'southern methodist',
+  'southern methodist': 'southern methodist',
+  'prairie view a m': 'prairie view',
+  'prairie view a and m': 'prairie view',
+  'prairie view': 'prairie view',
+  'nc state': 'nc state',
+  'n c state': 'nc state',
+  'north carolina state': 'nc state',
+  'miami oh': 'miami ohio',
+  'miami ohio': 'miami ohio',
+  'miami ohioh': 'miami ohio',
+  'miami o h': 'miami ohio',
+  'miami oh ': 'miami ohio',
+  'saint louis': 'saint louis',
+  'st louis': 'saint louis',
+  'saint marys': 'saint marys',
+  'st marys': 'saint marys',
+  'michigan st': 'michigan state',
+  'michigan state': 'michigan state',
+  'unc wilmington': 'unc wilmington',
+  'north carolina wilmington': 'unc wilmington',
+  'st johns': 'saint johns',
+  'saint johns': 'saint johns'
+};
+
+function findLikelyBoardMatch(
+  normalizedTeamA: string,
+  normalizedTeamB: string,
+  boardKeys: Array<{ key: string; awayTeam: string; homeTeam: string }>
+): string | null {
+  let bestMatch: { label: string; score: number } | null = null;
+
+  for (const board of boardKeys) {
+    const score = scoreNearMatch(normalizedTeamA, normalizedTeamB, board.key);
+    if (!bestMatch || score > bestMatch.score) {
+      bestMatch = {
+        label: `${board.awayTeam} vs ${board.homeTeam} [${board.key}]`,
+        score
+      };
+    }
+  }
+
+  return bestMatch && bestMatch.score > 0 ? bestMatch.label : null;
+}
+
+function scoreNearMatch(normalizedTeamA: string, normalizedTeamB: string, boardKey: string): number {
+  const boardTeams = boardKey.split('|');
+  const kenPomTeams = [normalizedTeamA, normalizedTeamB];
+  let score = 0;
+
+  for (const team of kenPomTeams) {
+    for (const boardTeam of boardTeams) {
+      if (team === boardTeam) {
+        score += 10;
+      } else if (team.includes(boardTeam) || boardTeam.includes(team)) {
+        score += 4;
+      } else {
+        const overlap = sharedTokenCount(team, boardTeam);
+        score += overlap;
+      }
+    }
+  }
+
+  return score;
+}
+
+function sharedTokenCount(left: string, right: string): number {
+  const leftTokens = new Set(left.split(' ').filter(Boolean));
+  const rightTokens = new Set(right.split(' ').filter(Boolean));
+  let count = 0;
+  for (const token of leftTokens) {
+    if (rightTokens.has(token)) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 function getTeamSpreadLine(row: BoardMarket, side: 'away' | 'home'): number | null {
