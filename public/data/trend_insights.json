@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T04:05:15.754Z",
+  "generatedAt": "2026-03-22T04:35:15.530Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 3,
   "rows": [
@@ -44,7 +44,7 @@
       }
     },
     {
-      "insightId": "nba:7:total:under:all-sharps:all-picks:all-money",
+      "insightId": "nba:7:total:under:all-sharps:all-picks:0 to <5",
       "league": "nba",
       "timeframeDays": 7,
       "startDate": "2026-03-15",
@@ -53,24 +53,24 @@
       "marketSide": "under",
       "sharpsBucket": null,
       "picksBucket": null,
-      "moneyDeltaBucket": null,
-      "label": "Unders have been strong",
-      "sampleSize": 13,
-      "wins": 8,
-      "losses": 5,
+      "moneyDeltaBucket": "0 to <5",
+      "label": "Unders with money > bets slightly are working",
+      "sampleSize": 10,
+      "wins": 7,
+      "losses": 3,
       "pushes": 0,
-      "winRate": 0.6153846153846154,
+      "winRate": 0.7,
       "roi": null,
-      "summaryText": "NBA | last 7 days | 61.5% | 8-5 | across 13 plays",
-      "score": 13.838,
+      "summaryText": "NBA | last 7 days | 70.0% | 7-3 | across 10 plays",
+      "score": 22,
       "scoreComponents": {
-        "sample": 1.3,
-        "edge": 9.538,
+        "sample": 1,
+        "edge": 18,
         "roi": 0,
         "recency": 3
       },
-      "dimensionType": "baseline",
-      "angleCardId": null,
+      "dimensionType": "moneyDelta",
+      "angleCardId": "money-0-5",
       "drilldown": {
         "league": "nba",
         "market": "total",
@@ -79,8 +79,8 @@
         "endDate": "2026-03-21",
         "sharpsBucket": null,
         "picksBucket": null,
-        "moneyDeltaBucket": null,
-        "angleCardId": null
+        "moneyDeltaBucket": "0 to <5",
+        "angleCardId": "money-0-5"
       }
     },
     {
