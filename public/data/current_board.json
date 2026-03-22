@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-22T21:34:27.327Z",
+  "generatedAt": "2026-03-22T21:40:37.022Z",
   "boardDate": "2026-03-22",
-  "rowCount": 123,
+  "rowCount": 41,
   "games": [
     {
       "gameId": "265942",
@@ -119,7 +119,8 @@
             "signalScore": 4,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps · money over bets +42"
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "265942|723|spread",
@@ -217,7 +218,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "265942|723|total",
@@ -315,9 +317,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285476",
@@ -429,7 +433,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285476|713|spread",
@@ -527,7 +532,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285476|713|total",
@@ -625,9 +631,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "287501",
@@ -739,7 +747,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "287501|717|spread",
@@ -843,7 +852,8 @@
             "signalScore": 4,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · 4+ picks"
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "287501|717|total",
@@ -947,9 +957,11 @@
             "signalScore": 6,
             "recommendationTier": "Interesting",
             "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "265943",
@@ -1067,7 +1079,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "265943|723|spread",
@@ -1165,7 +1178,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "265943|723|total",
@@ -1269,9 +1283,11 @@
             "signalScore": 6,
             "recommendationTier": "Interesting",
             "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285477",
@@ -1389,7 +1405,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285477|713|spread",
@@ -1487,7 +1504,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285477|713|total",
@@ -1591,9 +1609,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285479",
@@ -1705,7 +1725,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285479|713|spread",
@@ -1803,7 +1824,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285479|713|total",
@@ -1901,9 +1923,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285478",
@@ -2021,7 +2045,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · money over bets +7"
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285478|713|spread",
@@ -2119,7 +2144,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285478|713|total",
@@ -2217,9 +2243,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285480",
@@ -2331,7 +2359,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285480|713|spread",
@@ -2429,7 +2458,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285480|713|total",
@@ -2527,9 +2557,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285481",
@@ -2647,7 +2679,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285481|713|spread",
@@ -2745,7 +2778,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285481|713|total",
@@ -2843,9 +2877,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285482",
@@ -2963,7 +2999,8 @@
             "signalScore": 4,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps · money over bets +13"
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285482|713|spread",
@@ -3061,7 +3098,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285482|713|total",
@@ -3159,9 +3197,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "287473",
@@ -3273,7 +3313,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "287473|717|spread",
@@ -3377,7 +3418,8 @@
             "signalScore": 7,
             "recommendationTier": "Strong",
             "recommendationReason": "3+ sharps · 4+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "287473|717|total",
@@ -3481,9 +3523,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "265945",
@@ -3601,7 +3645,8 @@
             "signalScore": 1,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "265945|723|spread",
@@ -3699,7 +3744,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "265945|723|total",
@@ -3797,9 +3843,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "265944",
@@ -3917,7 +3965,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "265944|723|spread",
@@ -4015,7 +4064,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "265944|723|total",
@@ -4119,9 +4169,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285484",
@@ -4239,7 +4291,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · money over bets +8"
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285484|713|spread",
@@ -4337,7 +4390,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285484|713|total",
@@ -4435,9 +4489,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285483",
@@ -4555,7 +4611,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285483|713|spread",
@@ -4653,7 +4710,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285483|713|total",
@@ -4757,9 +4815,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "285487",
@@ -4871,7 +4931,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "285487|713|spread",
@@ -4969,7 +5030,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "285487|713|total",
@@ -5067,9 +5129,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "287389",
@@ -5181,7 +5245,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "287389|717|spread",
@@ -5285,7 +5350,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "287389|717|total",
@@ -5383,9 +5449,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "281410",
@@ -5497,7 +5565,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "281410|715|spread",
@@ -5601,7 +5670,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "281410|715|total",
@@ -5705,9 +5775,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "287500",
@@ -5825,7 +5897,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "287500|717|spread",
@@ -5929,7 +6002,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "287500|717|total",
@@ -6033,9 +6107,11 @@
             "signalScore": 6,
             "recommendationTier": "Interesting",
             "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": true
         }
-      }
+      },
+      "marketLockedAtStart": true
     },
     {
       "gameId": "281411",
@@ -6147,7 +6223,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "281411|715|spread",
@@ -6251,7 +6328,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "281411|715|total",
@@ -6355,9 +6433,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · money over bets +5"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287476",
@@ -6475,7 +6555,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287476|717|spread",
@@ -6579,7 +6660,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287476|717|total",
@@ -6683,9 +6765,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · money over bets +7"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287357",
@@ -6797,7 +6881,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287357|717|spread",
@@ -6901,7 +6986,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287357|717|total",
@@ -7005,9 +7091,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "265946",
@@ -7125,7 +7213,8 @@
             "signalScore": 8,
             "recommendationTier": "Strong",
             "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "265946|723|spread",
@@ -7223,7 +7312,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "265946|723|total",
@@ -7327,9 +7417,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "265947",
@@ -7447,7 +7539,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps · money over bets +7"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "265947|723|spread",
@@ -7545,7 +7638,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "265947|723|total",
@@ -7649,9 +7743,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287369",
@@ -7763,7 +7859,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287369|717|spread",
@@ -7867,7 +7964,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287369|717|total",
@@ -7971,9 +8069,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287484",
@@ -8085,7 +8185,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287484|717|spread",
@@ -8189,7 +8290,8 @@
             "signalScore": 7,
             "recommendationTier": "Strong",
             "recommendationReason": "3+ sharps · 4+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287484|717|total",
@@ -8293,9 +8395,11 @@
             "signalScore": 7,
             "recommendationTier": "Strong",
             "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "281412",
@@ -8407,7 +8511,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "281412|715|spread",
@@ -8511,7 +8616,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "281412|715|total",
@@ -8615,9 +8721,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287475",
@@ -8729,7 +8837,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287475|717|spread",
@@ -8833,7 +8942,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps · 2+ picks"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287475|717|total",
@@ -8937,9 +9047,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "265948",
@@ -9057,7 +9169,8 @@
             "signalScore": 4,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps · money over bets +21"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "265948|723|spread",
@@ -9161,7 +9274,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "265948|723|total",
@@ -9265,9 +9379,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "265949",
@@ -9385,7 +9501,8 @@
             "signalScore": 4,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "265949|723|spread",
@@ -9483,7 +9600,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "265949|723|total",
@@ -9587,9 +9705,11 @@
             "signalScore": 1,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287390",
@@ -9701,7 +9821,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287390|717|spread",
@@ -9799,7 +9920,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287390|717|total",
@@ -9897,9 +10019,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "281413",
@@ -10011,7 +10135,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "281413|715|spread",
@@ -10109,7 +10234,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "281413|715|total",
@@ -10213,9 +10339,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287355",
@@ -10327,7 +10455,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287355|717|spread",
@@ -10431,7 +10560,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287355|717|total",
@@ -10535,9 +10665,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287502",
@@ -10649,7 +10781,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287502|717|spread",
@@ -10753,7 +10886,8 @@
             "signalScore": 1,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287502|717|total",
@@ -10857,9 +10991,11 @@
             "signalScore": 6,
             "recommendationTier": "Interesting",
             "recommendationReason": "3+ sharps · 2+ picks · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "265950",
@@ -10977,7 +11113,8 @@
             "signalScore": 4,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · money over bets +21"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "265950|723|spread",
@@ -11075,7 +11212,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "265950|723|total",
@@ -11179,9 +11317,11 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287415",
@@ -11293,7 +11433,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287415|717|spread",
@@ -11391,7 +11532,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287415|717|total",
@@ -11495,9 +11637,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "281414",
@@ -11609,7 +11753,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "281414|715|spread",
@@ -11713,7 +11858,8 @@
             "signalScore": 5,
             "recommendationTier": "Interesting",
             "recommendationReason": "3+ sharps · sharp + pick agreement"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "281414|715|total",
@@ -11817,9 +11963,11 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "285485",
@@ -11937,7 +12085,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "2+ sharps · money over bets +5"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "285485|713|spread",
@@ -12035,7 +12184,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "285485|713|total",
@@ -12133,9 +12283,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "285488",
@@ -12253,7 +12405,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "285488|713|spread",
@@ -12351,7 +12504,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "285488|713|total",
@@ -12449,9 +12603,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "285486",
@@ -12569,7 +12725,8 @@
             "signalScore": 2,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "285486|713|spread",
@@ -12667,7 +12824,8 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "285486|713|total",
@@ -12765,9 +12923,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     },
     {
       "gameId": "287474",
@@ -12885,7 +13045,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "4+ picks · money over bets +9"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "spread": {
           "evaluationKey": "287474|717|spread",
@@ -12989,7 +13150,8 @@
             "signalScore": 3,
             "recommendationTier": "Watch",
             "recommendationReason": "4+ picks · money over bets +8"
-          }
+          },
+          "marketLockedAtStart": false
         },
         "total": {
           "evaluationKey": "287474|717|total",
@@ -13087,9 +13249,11 @@
             "signalScore": 0,
             "recommendationTier": null,
             "recommendationReason": null
-          }
+          },
+          "marketLockedAtStart": false
         }
-      }
+      },
+      "marketLockedAtStart": false
     }
   ]
 }
