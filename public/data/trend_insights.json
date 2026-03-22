@@ -1,34 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generatedAt": "2026-03-22T12:06:03.548Z",
-  "basis": "analysis_rows_latest_available_actionable_recent_windows",
-  "rowCount": 2,
-  "rows": [
-    {
-      "insightId": "ncaab:7:spread:favorite:all-sharps:all-picks:all-money",
-      "league": "ncaab",
-      "timeframeDays": 7,
-      "startDate": "2026-03-15",
-      "endDate": "2026-03-21",
-      "market": "spread",
-      "marketSide": "favorite",
-      "sharpsBucket": null,
-      "picksBucket": null,
-      "moneyDeltaBucket": null,
-      "label": "Spread favorites have been strong",
-      "sampleSize": 15,
-      "wins": 11,
-      "losses": 4,
-      "pushes": 0,
-      "winRate": 0.7333333333333333,
-      "roi": null,
-      "summaryText": "NCAAB | last 7 days | 73.3% | 11-4 | across 15 plays",
-      "score": 25.833,
-      "scoreComponents": {
-        "sample": 1.5,
-        "edge": 21.333,
-=======
-  "generatedAt": "2026-03-21T23:37:51.489Z",
+  "generatedAt": "2026-03-22T12:45:19.173Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 6,
   "rows": [
@@ -175,26 +146,17 @@
       "scoreComponents": {
         "sample": 1.7,
         "edge": 6.824,
->>>>>>> Stashed changes
         "roi": 0,
         "recency": 3
       },
       "dimensionType": "baseline",
       "angleCardId": null,
       "drilldown": {
-<<<<<<< Updated upstream
-        "league": "ncaab",
-        "market": "spread",
-        "marketSide": "favorite",
-        "startDate": "2026-03-15",
-        "endDate": "2026-03-21",
-=======
         "league": "nhl",
         "market": "total",
         "marketSide": "under",
         "startDate": "2026-03-14",
         "endDate": "2026-03-20",
->>>>>>> Stashed changes
         "sharpsBucket": null,
         "picksBucket": null,
         "moneyDeltaBucket": null,
@@ -202,32 +164,6 @@
       }
     },
     {
-<<<<<<< Updated upstream
-      "insightId": "nba:7:total:under:all-sharps:all-picks:0 to <5",
-      "league": "nba",
-      "timeframeDays": 7,
-      "startDate": "2026-03-15",
-      "endDate": "2026-03-21",
-      "market": "total",
-      "marketSide": "under",
-      "sharpsBucket": null,
-      "picksBucket": null,
-      "moneyDeltaBucket": "0 to <5",
-      "label": "Unders with money > bets slightly are working",
-      "sampleSize": 10,
-      "wins": 7,
-      "losses": 3,
-      "pushes": 0,
-      "winRate": 0.7,
-      "roi": null,
-      "summaryText": "NBA | last 7 days | 70.0% | 7-3 | across 10 plays",
-      "score": 22,
-      "scoreComponents": {
-        "sample": 1,
-        "edge": 18,
-        "roi": 0,
-        "recency": 3
-=======
       "insightId": "ncaab:14:moneyline:underdog:all-sharps:all-picks:all-money",
       "league": "ncaab",
       "timeframeDays": 14,
@@ -292,24 +228,15 @@
         "edge": 2.054,
         "roi": 0,
         "recency": 1
->>>>>>> Stashed changes
       },
       "dimensionType": "moneyDelta",
       "angleCardId": "money-0-5",
       "drilldown": {
-<<<<<<< Updated upstream
-        "league": "nba",
-        "market": "total",
-        "marketSide": "under",
-        "startDate": "2026-03-15",
-        "endDate": "2026-03-21",
-=======
         "league": "ncaab",
         "market": "total",
         "marketSide": "over",
         "startDate": "2026-02-19",
         "endDate": "2026-03-20",
->>>>>>> Stashed changes
         "sharpsBucket": null,
         "picksBucket": null,
         "moneyDeltaBucket": "0 to <5",

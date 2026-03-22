@@ -1,21 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generatedAt": "2026-03-22T12:06:03.548Z",
-  "totalRows": 20547,
-  "sports": [
-    {
-      "sport": "Baseball",
-      "earliestLoadedDate": "2026-03-20",
-      "latestLoadedDate": "2026-03-22",
-      "rowCount": 3444
-    },
-    {
-      "sport": "Basketball",
-      "earliestLoadedDate": "2026-03-20",
-      "latestLoadedDate": "2026-03-22",
-      "rowCount": 4635
-=======
-  "generatedAt": "2026-03-21T23:37:51.489Z",
+  "generatedAt": "2026-03-22T12:45:19.173Z",
   "totalRows": 22128,
   "sports": [
     {
@@ -29,21 +13,11 @@
       "earliestLoadedDate": "2025-03-15",
       "latestLoadedDate": "2026-03-21",
       "rowCount": 7707
->>>>>>> Stashed changes
     },
     {
       "sport": "Football",
       "earliestLoadedDate": "2025-12-13",
       "latestLoadedDate": "2026-02-08",
-<<<<<<< Updated upstream
-      "rowCount": 10440
-    },
-    {
-      "sport": "Hockey",
-      "earliestLoadedDate": "2026-03-20",
-      "latestLoadedDate": "2026-03-22",
-      "rowCount": 2028
-=======
       "rowCount": 3246
     },
     {
@@ -51,29 +25,11 @@
       "earliestLoadedDate": "2025-03-20",
       "latestLoadedDate": "2026-03-21",
       "rowCount": 1929
->>>>>>> Stashed changes
     }
   ],
   "byMarket": [
     {
       "market": "spread",
-<<<<<<< Updated upstream
-      "rowCount": 6849,
-      "gradedPercent": 0.8582274784640094,
-      "closingLinePercent": 0.9321068769163382
-    },
-    {
-      "market": "moneyline",
-      "rowCount": 6849,
-      "gradedPercent": 0.8896189224704336,
-      "closingLinePercent": 0.9643743612206161
-    },
-    {
-      "market": "total",
-      "rowCount": 6849,
-      "gradedPercent": 0.8582274784640094,
-      "closingLinePercent": 0.9321068769163382
-=======
       "rowCount": 7376,
       "gradedPercent": 0.8668655097613883,
       "closingLinePercent": 0.9247559652928417
@@ -89,7 +45,6 @@
       "rowCount": 7376,
       "gradedPercent": 0.8674078091106291,
       "closingLinePercent": 0.9248915401301518
->>>>>>> Stashed changes
     }
   ]
 }
