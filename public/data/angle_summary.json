@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-22T20:04:24.901Z",
+  "generatedAt": "2026-03-22T20:34:24.364Z",
   "basis": "analysis_rows_latest_pregame",
-  "rowCount": 60,
+  "rowCount": 61,
   "rows": [
     {
       "angleId": "mlb:moneyline:money-minus-bets-5",
@@ -15,15 +15,15 @@
           "value": 5
         }
       ],
-      "sampleSize": 5,
+      "sampleSize": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "pushes": 0,
-      "winRate": 0.4,
-      "roi": -0.17952380952380956,
-      "averagePublicMoneyMinusBetsPct": 10.2,
-      "averageSharpCount": 0.4,
-      "averagePickCount": 0.2
+      "winRate": 0.3333333333333333,
+      "roi": -0.3162698412698413,
+      "averagePublicMoneyMinusBetsPct": 10.666666666666666,
+      "averageSharpCount": 0.8333333333333334,
+      "averagePickCount": 0.16666666666666666
     },
     {
       "angleId": "mlb:moneyline:money-minus-bets-10",
@@ -37,15 +37,15 @@
           "value": 10
         }
       ],
-      "sampleSize": 3,
+      "sampleSize": 4,
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
-      "roi": -0.2833333333333334,
-      "averagePublicMoneyMinusBetsPct": 12.666666666666666,
-      "averageSharpCount": 0,
-      "averagePickCount": 0.3333333333333333
+      "winRate": 0.25,
+      "roi": -0.4625,
+      "averagePublicMoneyMinusBetsPct": 12.75,
+      "averageSharpCount": 0.75,
+      "averagePickCount": 0.25
     },
     {
       "angleId": "mlb:moneyline:sharp-majority-2plus",
@@ -64,14 +64,41 @@
           "value": 2
         }
       ],
-      "sampleSize": 2,
+      "sampleSize": 3,
       "wins": 1,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.3333333333333333,
+      "roi": -0.34920634920634924,
+      "averagePublicMoneyMinusBetsPct": 7,
+      "averageSharpCount": 2.3333333333333335,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "mlb:moneyline:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "mlb",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 0,
       "losses": 1,
       "pushes": 0,
-      "winRate": 0.5,
-      "roi": -0.023809523809523836,
-      "averagePublicMoneyMinusBetsPct": 4,
-      "averageSharpCount": 2,
+      "winRate": 0,
+      "roi": -1,
+      "averagePublicMoneyMinusBetsPct": 13,
+      "averageSharpCount": 3,
       "averagePickCount": 0
     },
     {
@@ -86,9 +113,9 @@
           "value": "<5"
         }
       ],
-      "sampleSize": 24,
-      "wins": 12,
-      "losses": 12,
+      "sampleSize": 26,
+      "wins": 13,
+      "losses": 13,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
