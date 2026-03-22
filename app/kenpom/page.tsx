@@ -19,6 +19,7 @@ type BoardMarket = Record<string, any>;
 type BoardGame = {
   gameId: string | number;
   leagueSlug?: string | null;
+  startTimeUtc?: string | null;
   awayTeam?: string | null;
   homeTeam?: string | null;
   markets?: {
@@ -27,11 +28,12 @@ type BoardGame = {
   } | null;
 };
 
-type SortKey = 'projected_spread' | 'projected_total' | 'spread_edge' | 'total_edge';
+type SortKey = 'game_time' | 'projected_spread' | 'projected_total' | 'spread_edge' | 'total_edge';
 type SortDirection = 'asc' | 'desc';
 
 type JoinedKenPomRow = KenPomModelRow & {
   matchup: string;
+  startTimeUtc: string | null;
   marketSpread: number | null;
   marketTotal: number | null;
   spreadRecommendation: string;
@@ -62,8 +64,8 @@ const TOTAL_EDGE_THRESHOLD = 4;
 export default function KenPomPage() {
   const [kenPomData, setKenPomData] = useState<{ generatedAt: string | null; rows: KenPomModelRow[] }>(EMPTY_KENPOM);
   const [boardData, setBoardData] = useState<{ generatedAt: string | null; games: BoardGame[] }>(EMPTY_BOARD);
-  const [sortKey, setSortKey] = useState<SortKey>('spread_edge');
-  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+  const [sortKey, setSortKey] = useState<SortKey>('game_time');
+  const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
 
   useEffect(() => {
     fetchPublicJson('/data/kenpom_model_rows.json', EMPTY_KENPOM).then(setKenPomData);
@@ -108,6 +110,7 @@ export default function KenPomPage() {
       return {
         ...row,
         matchup,
+        startTimeUtc: typeof boardGame?.startTimeUtc === 'string' ? boardGame.startTimeUtc : null,
         marketSpread,
         marketTotal,
         spreadRecommendation,
@@ -179,6 +182,7 @@ export default function KenPomPage() {
           <thead>
             <tr>
               <th>Matchup</th>
+              <th>Game Time (ET)</th>
               <th>Team A</th>
               <th>Team B</th>
               <th>Team A Projected Score</th>
@@ -231,6 +235,7 @@ export default function KenPomPage() {
                 <td>
                   <strong>{row.matchup}</strong>
                 </td>
+                <td>{formatEtTime(row.startTimeUtc)}</td>
                 <td>{row.team_a}</td>
                 <td>{row.team_b}</td>
                 <td>{formatScore(row.team_a_projected_score)}</td>
@@ -255,7 +260,7 @@ export default function KenPomPage() {
             ))}
             {sortedRows.length === 0 ? (
               <tr>
-                <td colSpan={13} className="subtle">
+                <td colSpan={14} className="subtle">
                   No KenPom model rows were found. Export `kenpom_model_rows.json` and reload this page.
                 </td>
               </tr>
@@ -344,6 +349,9 @@ function getDisplayEdge(delta: number | null, isNoPlay: boolean): number | null 
 }
 
 function getSortMetric(row: JoinedKenPomRow, sortKey: SortKey): number {
+  if (sortKey === 'game_time') {
+    return getStartTimeSortValue(row.startTimeUtc);
+  }
   if (sortKey === 'projected_spread') {
     return row.projected_spread;
   }
@@ -509,6 +517,28 @@ function getTotalLine(row: BoardMarket | null): number | null {
 
 function formatScore(value: number): string {
   return value.toFixed(1).replace(/\.0$/, '');
+}
+
+function formatEtTime(value: string | null | undefined): string {
+  const timestamp = getStartTimeSortValue(value);
+  if (!Number.isFinite(timestamp)) {
+    return '—';
+  }
+
+  return new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+    timeZone: 'America/New_York'
+  }).format(new Date(timestamp));
+}
+
+function getStartTimeSortValue(value: string | null | undefined): number {
+  if (!value) {
+    return Number.POSITIVE_INFINITY;
+  }
+  const timestamp = Date.parse(value);
+  return Number.isFinite(timestamp) ? timestamp : Number.POSITIVE_INFINITY;
 }
 
 function getEdgeClassName(edge: number | null): string {
