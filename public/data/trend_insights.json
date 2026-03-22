@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-22T01:35:01.850Z",
+  "generatedAt": "2026-03-22T02:05:12.253Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
-  "rowCount": 1,
+  "rowCount": 2,
   "rows": [
     {
       "insightId": "ncaab:7:spread:favorite:all-sharps:all-picks:all-money",
@@ -35,6 +35,46 @@
         "league": "ncaab",
         "market": "spread",
         "marketSide": "favorite",
+        "startDate": "2026-03-15",
+        "endDate": "2026-03-21",
+        "sharpsBucket": null,
+        "picksBucket": null,
+        "moneyDeltaBucket": null,
+        "angleCardId": null
+      }
+    },
+    {
+      "insightId": "nhl:7:total:under:all-sharps:all-picks:all-money",
+      "league": "nhl",
+      "timeframeDays": 7,
+      "startDate": "2026-03-15",
+      "endDate": "2026-03-21",
+      "market": "total",
+      "marketSide": "under",
+      "sharpsBucket": null,
+      "picksBucket": null,
+      "moneyDeltaBucket": null,
+      "label": "Unders have been strong",
+      "sampleSize": 13,
+      "wins": 8,
+      "losses": 5,
+      "pushes": 0,
+      "winRate": 0.6153846153846154,
+      "roi": null,
+      "summaryText": "NHL | last 7 days | 61.5% | 8-5 | across 13 plays",
+      "score": 13.838,
+      "scoreComponents": {
+        "sample": 1.3,
+        "edge": 9.538,
+        "roi": 0,
+        "recency": 3
+      },
+      "dimensionType": "baseline",
+      "angleCardId": null,
+      "drilldown": {
+        "league": "nhl",
+        "market": "total",
+        "marketSide": "under",
         "startDate": "2026-03-15",
         "endDate": "2026-03-21",
         "sharpsBucket": null,

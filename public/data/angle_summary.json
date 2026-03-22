@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-22T01:35:01.850Z",
+  "generatedAt": "2026-03-22T02:05:12.253Z",
   "basis": "analysis_rows_latest_pregame",
-  "rowCount": 51,
+  "rowCount": 53,
   "rows": [
     {
       "angleId": "mlb:moneyline:money-minus-bets-10",
@@ -114,6 +114,55 @@
       "averagePickCount": 0
     },
     {
+      "angleId": "nba:moneyline:money-minus-bets-5",
+      "angleLabel": "Public money exceeds bets by 5+ pts",
+      "league": "nba",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "publicMoneyMinusBetsPct",
+          "operator": ">=",
+          "value": 5
+        }
+      ],
+      "sampleSize": 1,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "winRate": 1,
+      "roi": 0.5952380952380952,
+      "averagePublicMoneyMinusBetsPct": 5,
+      "averageSharpCount": 0,
+      "averagePickCount": 0
+    },
+    {
+      "angleId": "nba:spread:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 4,
+      "wins": 2,
+      "losses": 1,
+      "pushes": 1,
+      "winRate": 0.6666666666666666,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 2.75,
+      "averageSharpCount": 5.75,
+      "averagePickCount": 1.75
+    },
+    {
       "angleId": "nba:spread:spread-big-number",
       "angleLabel": "Spread sides with abs(line) over 10",
       "league": "nba",
@@ -158,33 +207,6 @@
       "averagePickCount": 1.3333333333333333
     },
     {
-      "angleId": "nba:spread:sharp-majority-2plus",
-      "angleLabel": "Sharp majority, 2+ sharps",
-      "league": "nba",
-      "market": "spread",
-      "filters": [
-        {
-          "field": "isSharpMajority",
-          "operator": "=",
-          "value": true
-        },
-        {
-          "field": "sharpCount",
-          "operator": ">=",
-          "value": 2
-        }
-      ],
-      "sampleSize": 3,
-      "wins": 1,
-      "losses": 1,
-      "pushes": 1,
-      "winRate": 0.5,
-      "roi": null,
-      "averagePublicMoneyMinusBetsPct": 2.3333333333333335,
-      "averageSharpCount": 3.6666666666666665,
-      "averagePickCount": 1.6666666666666667
-    },
-    {
       "angleId": "nba:spread:sharp-majority-3plus",
       "angleLabel": "Sharp majority, 3+ sharps",
       "league": "nba",
@@ -201,14 +223,14 @@
           "value": 3
         }
       ],
-      "sampleSize": 2,
-      "wins": 1,
+      "sampleSize": 3,
+      "wins": 2,
       "losses": 0,
       "pushes": 1,
       "winRate": 1,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 1,
-      "averageSharpCount": 4.5,
+      "averagePublicMoneyMinusBetsPct": 2,
+      "averageSharpCount": 7,
       "averagePickCount": 2
     },
     {
@@ -232,6 +254,28 @@
       "averagePublicMoneyMinusBetsPct": 0,
       "averageSharpCount": 2.5,
       "averagePickCount": 2.5
+    },
+    {
+      "angleId": "nba:spread:spread-short-favorite-range",
+      "angleLabel": "Spread sides with abs(line) under 5",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": "<5"
+        }
+      ],
+      "sampleSize": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 6,
+      "averagePickCount": 2
     },
     {
       "angleId": "nba:spread:agreement-2-2",
@@ -390,15 +434,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 3,
-      "wins": 1,
+      "sampleSize": 4,
+      "wins": 2,
       "losses": 2,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
+      "winRate": 0.5,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 0,
-      "averageSharpCount": 5,
-      "averagePickCount": 0.3333333333333333
+      "averageSharpCount": 5.5,
+      "averagePickCount": 0.25
     },
     {
       "angleId": "nba:total:sharp-majority-3plus",
@@ -417,15 +461,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 3,
-      "wins": 1,
+      "sampleSize": 4,
+      "wins": 2,
       "losses": 2,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
+      "winRate": 0.5,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 0,
-      "averageSharpCount": 5,
-      "averagePickCount": 0.3333333333333333
+      "averageSharpCount": 5.5,
+      "averagePickCount": 0.25
     },
     {
       "angleId": "nba:total:money-minus-bets-5",
@@ -971,15 +1015,69 @@
           "value": 5
         }
       ],
+      "sampleSize": 6,
+      "wins": 3,
+      "losses": 3,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": -0.16521670948986114,
+      "averagePublicMoneyMinusBetsPct": 14.166666666666666,
+      "averageSharpCount": 0.8333333333333334,
+      "averagePickCount": 1
+    },
+    {
+      "angleId": "nhl:moneyline:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 5,
+      "wins": 3,
+      "losses": 2,
+      "pushes": 0,
+      "winRate": 0.6,
+      "roi": 0.009790398465895179,
+      "averagePublicMoneyMinusBetsPct": -4,
+      "averageSharpCount": 3.2,
+      "averagePickCount": 0.8
+    },
+    {
+      "angleId": "nhl:moneyline:sharp-majority-3plus",
+      "angleLabel": "Sharp majority, 3+ sharps",
+      "league": "nhl",
+      "market": "moneyline",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
       "sampleSize": 4,
       "wins": 2,
       "losses": 2,
       "pushes": 0,
       "winRate": 0.5,
-      "roi": -0.16338797814207648,
-      "averagePublicMoneyMinusBetsPct": 14.25,
-      "averageSharpCount": 0.75,
-      "averagePickCount": 1.5
+      "roi": -0.1533249158249158,
+      "averagePublicMoneyMinusBetsPct": -7,
+      "averageSharpCount": 3.5,
+      "averagePickCount": 1
     },
     {
       "angleId": "nhl:moneyline:money-minus-bets-10",
@@ -993,15 +1091,15 @@
           "value": 10
         }
       ],
-      "sampleSize": 2,
+      "sampleSize": 3,
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "pushes": 0,
-      "winRate": 0.5,
-      "roi": -0.09999999999999998,
-      "averagePublicMoneyMinusBetsPct": 19.5,
+      "winRate": 0.3333333333333333,
+      "roi": -0.39999999999999997,
+      "averagePublicMoneyMinusBetsPct": 19.666666666666668,
       "averageSharpCount": 0,
-      "averagePickCount": 1
+      "averagePickCount": 0.6666666666666666
     },
     {
       "angleId": "nhl:moneyline:pick-majority-2plus",
@@ -1029,60 +1127,6 @@
       "averagePublicMoneyMinusBetsPct": 14,
       "averageSharpCount": 1.5,
       "averagePickCount": 2.5
-    },
-    {
-      "angleId": "nhl:moneyline:sharp-majority-2plus",
-      "angleLabel": "Sharp majority, 2+ sharps",
-      "league": "nhl",
-      "market": "moneyline",
-      "filters": [
-        {
-          "field": "isSharpMajority",
-          "operator": "=",
-          "value": true
-        },
-        {
-          "field": "sharpCount",
-          "operator": ">=",
-          "value": 2
-        }
-      ],
-      "sampleSize": 2,
-      "wins": 1,
-      "losses": 1,
-      "pushes": 0,
-      "winRate": 0.5,
-      "roi": 0.025000000000000022,
-      "averagePublicMoneyMinusBetsPct": -5.5,
-      "averageSharpCount": 3,
-      "averagePickCount": 2
-    },
-    {
-      "angleId": "nhl:moneyline:sharp-majority-3plus",
-      "angleLabel": "Sharp majority, 3+ sharps",
-      "league": "nhl",
-      "market": "moneyline",
-      "filters": [
-        {
-          "field": "isSharpMajority",
-          "operator": "=",
-          "value": true
-        },
-        {
-          "field": "sharpCount",
-          "operator": ">=",
-          "value": 3
-        }
-      ],
-      "sampleSize": 2,
-      "wins": 1,
-      "losses": 1,
-      "pushes": 0,
-      "winRate": 0.5,
-      "roi": 0.025000000000000022,
-      "averagePublicMoneyMinusBetsPct": -5.5,
-      "averageSharpCount": 3,
-      "averagePickCount": 2
     },
     {
       "angleId": "nhl:moneyline:agreement-2-2",
@@ -1187,9 +1231,9 @@
           "value": "<5"
         }
       ],
-      "sampleSize": 8,
-      "wins": 4,
-      "losses": 4,
+      "sampleSize": 14,
+      "wins": 7,
+      "losses": 7,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
@@ -1209,13 +1253,13 @@
           "value": 10
         }
       ],
-      "sampleSize": 3,
-      "wins": 1,
-      "losses": 2,
+      "sampleSize": 5,
+      "wins": 2,
+      "losses": 3,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
+      "winRate": 0.4,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 20.333333333333332,
+      "averagePublicMoneyMinusBetsPct": 22.4,
       "averageSharpCount": 0,
       "averagePickCount": 0
     },
@@ -1231,13 +1275,13 @@
           "value": 5
         }
       ],
-      "sampleSize": 3,
-      "wins": 1,
-      "losses": 2,
+      "sampleSize": 5,
+      "wins": 2,
+      "losses": 3,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
+      "winRate": 0.4,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 20.333333333333332,
+      "averagePublicMoneyMinusBetsPct": 22.4,
       "averageSharpCount": 0,
       "averagePickCount": 0
     },
@@ -1258,15 +1302,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 3,
-      "wins": 2,
-      "losses": 1,
+      "sampleSize": 6,
+      "wins": 3,
+      "losses": 3,
       "pushes": 0,
-      "winRate": 0.6666666666666666,
+      "winRate": 0.5,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": -2,
+      "averagePublicMoneyMinusBetsPct": -1.1666666666666667,
       "averageSharpCount": 2,
-      "averagePickCount": 0
+      "averagePickCount": 0.3333333333333333
     },
     {
       "angleId": "nhl:total:money-minus-bets-5",
