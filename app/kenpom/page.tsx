@@ -143,7 +143,7 @@ export default function KenPomPage() {
       <section className="hero">
         <h2>KenPom Model Board</h2>
         <p className="subtle">
-          This board mirrors the KenPom workbook output and joins in current market lines when a matchup match is found. Spread values are shown from the <strong>team_a</strong> perspective, and spread versus total recommendations are shown independently.
+          This board shows projected matchup scores generated from the KenPom model export and joins in current market lines when a matchup match is found. Spread values are shown from the <strong>team_a</strong> perspective, and spread versus total recommendations are shown independently.
         </p>
         <div className="metrics">
           <div className="metric">
@@ -170,7 +170,7 @@ export default function KenPomPage() {
           <div>
             <h3>Matchup Table</h3>
             <p className="subtle">
-              If no matching board line is found, market and edge stay blank and the recommendation stays <strong>No play</strong>.
+              If no matching board line is found, market and edge stay blank and the recommendation stays <strong>No play</strong>. Displayed scores and totals are model projections, not raw KenPom efficiency inputs.
             </p>
           </div>
         </div>
@@ -181,8 +181,8 @@ export default function KenPomPage() {
               <th>Matchup</th>
               <th>Team A</th>
               <th>Team B</th>
-              <th>Team A Score</th>
-              <th>Team B Score</th>
+              <th>Team A Projected Score</th>
+              <th>Team B Projected Score</th>
               <th>
                 <SortButton
                   label="Projected Spread"
