@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-23T02:34:23.630Z",
+  "generatedAt": "2026-03-23T03:04:26.152Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
-  "rowCount": 4,
+  "rowCount": 5,
   "rows": [
     {
       "insightId": "ncaab:7:spread:favorite:all-sharps:all-picks:all-money",
@@ -15,17 +15,17 @@
       "picksBucket": null,
       "moneyDeltaBucket": null,
       "label": "Spread favorites have been strong",
-      "sampleSize": 18,
-      "wins": 13,
+      "sampleSize": 19,
+      "wins": 14,
       "losses": 5,
       "pushes": 0,
-      "winRate": 0.7222222222222222,
+      "winRate": 0.7368421052631579,
       "roi": null,
-      "summaryText": "NCAAB | last 7 days | 72.2% | 13-5 | across 18 plays",
-      "score": 25.022,
+      "summaryText": "NCAAB | last 7 days | 73.7% | 14-5 | across 19 plays",
+      "score": 26.584,
       "scoreComponents": {
-        "sample": 1.8,
-        "edge": 20.222,
+        "sample": 1.9,
+        "edge": 21.684,
         "roi": 0,
         "recency": 3
       },
@@ -84,46 +84,6 @@
       }
     },
     {
-      "insightId": "nhl:7:moneyline:favorite:all-sharps:all-picks:all-money",
-      "league": "nhl",
-      "timeframeDays": 7,
-      "startDate": "2026-03-16",
-      "endDate": "2026-03-22",
-      "market": "moneyline",
-      "marketSide": "favorite",
-      "sharpsBucket": null,
-      "picksBucket": null,
-      "moneyDeltaBucket": null,
-      "label": "Moneyline favorites have been strong",
-      "sampleSize": 15,
-      "wins": 10,
-      "losses": 5,
-      "pushes": 0,
-      "winRate": 0.6666666666666666,
-      "roi": 0.07244977698261007,
-      "summaryText": "NHL | last 7 days | 66.7% | 10-5 | across 15 plays | ROI 7.2%",
-      "score": 20.978,
-      "scoreComponents": {
-        "sample": 1.5,
-        "edge": 14.667,
-        "roi": 1.811,
-        "recency": 3
-      },
-      "dimensionType": "baseline",
-      "angleCardId": null,
-      "drilldown": {
-        "league": "nhl",
-        "market": "moneyline",
-        "marketSide": "favorite",
-        "startDate": "2026-03-16",
-        "endDate": "2026-03-22",
-        "sharpsBucket": null,
-        "picksBucket": null,
-        "moneyDeltaBucket": null,
-        "angleCardId": null
-      }
-    },
-    {
       "insightId": "nhl:7:total:under:all-sharps:all-picks:all-money",
       "league": "nhl",
       "timeframeDays": 7,
@@ -161,6 +121,86 @@
         "picksBucket": null,
         "moneyDeltaBucket": null,
         "angleCardId": null
+      }
+    },
+    {
+      "insightId": "nhl:7:moneyline:favorite:all-sharps:all-picks:all-money",
+      "league": "nhl",
+      "timeframeDays": 7,
+      "startDate": "2026-03-16",
+      "endDate": "2026-03-22",
+      "market": "moneyline",
+      "marketSide": "favorite",
+      "sharpsBucket": null,
+      "picksBucket": null,
+      "moneyDeltaBucket": null,
+      "label": "Moneyline favorites have been strong",
+      "sampleSize": 16,
+      "wins": 10,
+      "losses": 6,
+      "pushes": 0,
+      "winRate": 0.625,
+      "roi": 0.005421665921196944,
+      "summaryText": "NHL | last 7 days | 62.5% | 10-6 | across 16 plays | ROI 0.5%",
+      "score": 15.236,
+      "scoreComponents": {
+        "sample": 1.6,
+        "edge": 10.5,
+        "roi": 0.136,
+        "recency": 3
+      },
+      "dimensionType": "baseline",
+      "angleCardId": null,
+      "drilldown": {
+        "league": "nhl",
+        "market": "moneyline",
+        "marketSide": "favorite",
+        "startDate": "2026-03-16",
+        "endDate": "2026-03-22",
+        "sharpsBucket": null,
+        "picksBucket": null,
+        "moneyDeltaBucket": null,
+        "angleCardId": null
+      }
+    },
+    {
+      "insightId": "ncaab:7:total:under:all-sharps:all-picks:0 to <5",
+      "league": "ncaab",
+      "timeframeDays": 7,
+      "startDate": "2026-03-16",
+      "endDate": "2026-03-22",
+      "market": "total",
+      "marketSide": "under",
+      "sharpsBucket": null,
+      "picksBucket": null,
+      "moneyDeltaBucket": "0 to <5",
+      "label": "Unders with money > bets slightly are working",
+      "sampleSize": 10,
+      "wins": 6,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.6,
+      "roi": null,
+      "summaryText": "NCAAB | last 7 days | 60.0% | 6-4 | across 10 plays",
+      "score": 12,
+      "scoreComponents": {
+        "sample": 1,
+        "edge": 8,
+        "roi": 0,
+        "recency": 3
+      },
+      "dimensionType": "moneyDelta",
+      "angleCardId": "money-0-5",
+      "drilldown": {
+        "league": "ncaab",
+        "market": "total",
+        "marketSide": "under",
+        "startDate": "2026-03-16",
+        "endDate": "2026-03-22",
+        "sharpsBucket": null,
+        "picksBucket": null,
+        "moneyDeltaBucket": "0 to <5",
+        "angleCardId": "money-0-5"
       }
     }
   ]
