@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T02:04:22.723Z",
+  "generatedAt": "2026-03-23T02:34:23.630Z",
   "basis": "analysis_rows_latest_pregame",
   "rowCount": 62,
   "rows": [
@@ -212,6 +212,28 @@
       "averagePickCount": 0
     },
     {
+      "angleId": "nba:spread:spread-big-number",
+      "angleLabel": "Spread sides with abs(line) over 10",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "absLineBucket",
+          "operator": "bucket",
+          "value": ">10"
+        }
+      ],
+      "sampleSize": 12,
+      "wins": 6,
+      "losses": 6,
+      "pushes": 0,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 0,
+      "averageSharpCount": 1,
+      "averagePickCount": 0.25
+    },
+    {
       "angleId": "nba:spread:spread-middle-range",
       "angleLabel": "Spread sides with abs(line) 5 to 10",
       "league": "nba",
@@ -232,6 +254,33 @@
       "averagePublicMoneyMinusBetsPct": 0,
       "averageSharpCount": 2.1666666666666665,
       "averagePickCount": 1.1666666666666667
+    },
+    {
+      "angleId": "nba:spread:sharp-majority-2plus",
+      "angleLabel": "Sharp majority, 2+ sharps",
+      "league": "nba",
+      "market": "spread",
+      "filters": [
+        {
+          "field": "isSharpMajority",
+          "operator": "=",
+          "value": true
+        },
+        {
+          "field": "sharpCount",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
+      "sampleSize": 11,
+      "wins": 5,
+      "losses": 5,
+      "pushes": 1,
+      "winRate": 0.5,
+      "roi": null,
+      "averagePublicMoneyMinusBetsPct": 2.8181818181818183,
+      "averageSharpCount": 5.090909090909091,
+      "averagePickCount": 0.9090909090909091
     },
     {
       "angleId": "nba:spread:money-minus-bets-5",
@@ -256,55 +305,6 @@
       "averagePickCount": 0.6
     },
     {
-      "angleId": "nba:spread:sharp-majority-2plus",
-      "angleLabel": "Sharp majority, 2+ sharps",
-      "league": "nba",
-      "market": "spread",
-      "filters": [
-        {
-          "field": "isSharpMajority",
-          "operator": "=",
-          "value": true
-        },
-        {
-          "field": "sharpCount",
-          "operator": ">=",
-          "value": 2
-        }
-      ],
-      "sampleSize": 10,
-      "wins": 4,
-      "losses": 5,
-      "pushes": 1,
-      "winRate": 0.4444444444444444,
-      "roi": null,
-      "averagePublicMoneyMinusBetsPct": 3.2,
-      "averageSharpCount": 5.2,
-      "averagePickCount": 1
-    },
-    {
-      "angleId": "nba:spread:spread-big-number",
-      "angleLabel": "Spread sides with abs(line) over 10",
-      "league": "nba",
-      "market": "spread",
-      "filters": [
-        {
-          "field": "absLineBucket",
-          "operator": "bucket",
-          "value": ">10"
-        }
-      ],
-      "sampleSize": 10,
-      "wins": 5,
-      "losses": 5,
-      "pushes": 0,
-      "winRate": 0.5,
-      "roi": null,
-      "averagePublicMoneyMinusBetsPct": 0,
-      "averageSharpCount": 0.8,
-      "averagePickCount": 0.3
-    },
-    {
       "angleId": "nba:spread:sharp-majority-3plus",
       "angleLabel": "Sharp majority, 3+ sharps",
       "league": "nba",
@@ -321,15 +321,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 8,
-      "wins": 3,
+      "sampleSize": 9,
+      "wins": 4,
       "losses": 4,
       "pushes": 1,
-      "winRate": 0.42857142857142855,
+      "winRate": 0.5,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 0.625,
-      "averageSharpCount": 6,
-      "averagePickCount": 1.125
+      "averagePublicMoneyMinusBetsPct": 0.4444444444444444,
+      "averageSharpCount": 5.777777777777778,
+      "averagePickCount": 1
     },
     {
       "angleId": "nba:spread:money-minus-bets-10",
@@ -510,15 +510,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 11,
-      "wins": 3,
+      "sampleSize": 12,
+      "wins": 4,
       "losses": 8,
       "pushes": 0,
-      "winRate": 0.2727272727272727,
+      "winRate": 0.3333333333333333,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 1.2727272727272727,
-      "averageSharpCount": 5.7272727272727275,
-      "averagePickCount": 0.2727272727272727
+      "averagePublicMoneyMinusBetsPct": 1.1666666666666667,
+      "averageSharpCount": 5.583333333333333,
+      "averagePickCount": 0.25
     },
     {
       "angleId": "nba:total:sharp-majority-3plus",
@@ -537,15 +537,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 10,
-      "wins": 3,
+      "sampleSize": 11,
+      "wins": 4,
       "losses": 7,
       "pushes": 0,
-      "winRate": 0.3,
+      "winRate": 0.36363636363636365,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 0.9,
-      "averageSharpCount": 6.1,
-      "averagePickCount": 0.3
+      "averagePublicMoneyMinusBetsPct": 0.8181818181818182,
+      "averageSharpCount": 5.909090909090909,
+      "averagePickCount": 0.2727272727272727
     },
     {
       "angleId": "nba:total:money-minus-bets-5",
