@@ -1,50 +1,50 @@
 {
-  "generatedAt": "2026-03-23T01:04:28.034Z",
-  "totalRows": 36249,
+  "generatedAt": "2026-03-23T01:34:25.121Z",
+  "totalRows": 36792,
   "sports": [
     {
       "sport": "Baseball",
       "earliestLoadedDate": "2026-03-20",
       "latestLoadedDate": "2026-03-22",
-      "rowCount": 5880
+      "rowCount": 5964
     },
     {
       "sport": "Basketball",
       "earliestLoadedDate": "2026-03-20",
       "latestLoadedDate": "2026-03-22",
-      "rowCount": 7983
+      "rowCount": 8100
     },
     {
       "sport": "Football",
       "earliestLoadedDate": "2025-12-13",
       "latestLoadedDate": "2026-02-08",
-      "rowCount": 18618
+      "rowCount": 18900
     },
     {
       "sport": "Hockey",
       "earliestLoadedDate": "2026-03-20",
       "latestLoadedDate": "2026-03-22",
-      "rowCount": 3768
+      "rowCount": 3828
     }
   ],
   "byMarket": [
     {
       "market": "spread",
-      "rowCount": 12083,
-      "gradedPercent": 0.8813208640238351,
-      "closingLinePercent": 0.9750062070677812
+      "rowCount": 12264,
+      "gradedPercent": 0.8890247879973907,
+      "closingLinePercent": 0.9752120026092629
     },
     {
       "market": "moneyline",
-      "rowCount": 12083,
-      "gradedPercent": 0.9206322933046429,
-      "closingLinePercent": 0.9750062070677812
+      "rowCount": 12264,
+      "gradedPercent": 0.9278375733855186,
+      "closingLinePercent": 0.9752120026092629
     },
     {
       "market": "total",
-      "rowCount": 12083,
-      "gradedPercent": 0.8815691467350824,
-      "closingLinePercent": 0.9750062070677812
+      "rowCount": 12264,
+      "gradedPercent": 0.889269406392694,
+      "closingLinePercent": 0.9752120026092629
     }
   ]
 }
