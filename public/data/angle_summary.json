@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T18:35:06.065Z",
+  "generatedAt": "2026-03-24T18:56:54.805Z",
   "basis": "analysis_rows_latest_pregame",
   "rowCount": 66,
   "rows": [
@@ -113,9 +113,9 @@
           "value": "<5"
         }
       ],
-      "sampleSize": 62,
-      "wins": 31,
-      "losses": 31,
+      "sampleSize": 64,
+      "wins": 32,
+      "losses": 32,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
