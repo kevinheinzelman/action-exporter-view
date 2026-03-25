@@ -340,7 +340,16 @@ function getTotalRecommendationDisplay(row: KenPomBoardRow): string {
   if (typeof row.totalEdge !== 'number' || row.totalEdge < 1) {
     return 'No play';
   }
-  return row.totalRecommendation ?? 'No play';
+  if (typeof row.projectedTotal !== 'number' || typeof row.totalMarketLine !== 'number') {
+    return 'No play';
+  }
+  if (row.projectedTotal > row.totalMarketLine) {
+    return 'Over';
+  }
+  if (row.projectedTotal < row.totalMarketLine) {
+    return 'Under';
+  }
+  return 'No play';
 }
 
 function getEdgeBubbleStyle(edge: number | null): CSSProperties {
@@ -377,4 +386,5 @@ function getTodayEtDateString(): string {
     day: '2-digit'
   }).format(new Date());
 }
+
 
