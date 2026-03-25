@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import type { CSSProperties } from 'react';
 import { fetchPublicJson, formatNumber, formatSignedNumber } from '../../lib/data';
 
 type KenPomBoardRow = {
@@ -192,13 +193,19 @@ export default function KenPomPage() {
                 <td>{formatNullableSigned(row.spreadMarketAway)}</td>
                 <td>{formatNullableNumber(row.totalMarketLine)}</td>
                 <td>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRecommendationBubbleClasses(row.spreadEdge ?? row.spreadRecommendation ?? '')}`}>
+                  <span
+                    className="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium"
+                    style={getRecommendationBubbleStyle(row.spreadEdge ?? row.spreadRecommendation ?? '')}
+                  >
                     {row.spreadRecommendation ?? ''}
                   </span>
                 </td>
                 <td className={getEdgeClassName(row.spreadEdge)}>{formatNullableSigned(row.spreadEdge)}</td>
                 <td>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRecommendationBubbleClasses(row.totalEdge ?? row.totalRecommendation ?? '')}`}>
+                  <span
+                    className="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium"
+                    style={getRecommendationBubbleStyle(row.totalEdge ?? row.totalRecommendation ?? '')}
+                  >
                     {row.totalRecommendation ?? ''}
                   </span>
                 </td>
@@ -308,27 +315,45 @@ function formatNullableNumber(value: number | null): string {
   return typeof value === 'number' ? formatNumber(value) : '';
 }
 
-function getRecommendationBubbleClasses(value: string | number): string {
+function getRecommendationBubbleStyle(value: string | number): CSSProperties {
   if (value === null || value === undefined) {
-    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
+    return {
+      backgroundColor: '#f1f5f9',
+      color: '#475569'
+    };
   }
 
   if (typeof value === 'string' && value.trim().toLowerCase() === 'no play') {
-    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-red-100 text-red-800';
+    return {
+      backgroundColor: '#fee2e2',
+      color: '#991b1b'
+    };
   }
 
   const numericValue = typeof value === 'number' ? value : Number(value);
   if (Number.isNaN(numericValue)) {
-    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
+    return {
+      backgroundColor: '#f1f5f9',
+      color: '#475569'
+    };
   }
 
   if (numericValue < 1) {
-    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-red-100 text-red-800';
+    return {
+      backgroundColor: '#fee2e2',
+      color: '#991b1b'
+    };
   }
   if (numericValue < 4) {
-    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800';
+    return {
+      backgroundColor: '#fef3c7',
+      color: '#92400e'
+    };
   }
-  return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-green-100 text-green-800';
+  return {
+    backgroundColor: '#dcfce7',
+    color: '#166534'
+  };
 }
 
 function getEdgeClassName(edge: number | null): string {
