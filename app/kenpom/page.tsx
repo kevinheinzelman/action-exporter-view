@@ -192,13 +192,13 @@ export default function KenPomPage() {
                 <td>{formatNullableSigned(row.spreadMarketAway)}</td>
                 <td>{formatNullableNumber(row.totalMarketLine)}</td>
                 <td>
-                  <span className={`pill ${row.spreadRecommendation && row.spreadRecommendation !== 'No play' ? 'kenpom-recommendation-pill' : ''}`}>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRecommendationBubbleClasses(row.spreadEdge ?? row.spreadRecommendation ?? '')}`}>
                     {row.spreadRecommendation ?? ''}
                   </span>
                 </td>
                 <td className={getEdgeClassName(row.spreadEdge)}>{formatNullableSigned(row.spreadEdge)}</td>
                 <td>
-                  <span className={`pill ${row.totalRecommendation && row.totalRecommendation !== 'No play' ? 'kenpom-recommendation-pill' : ''}`}>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRecommendationBubbleClasses(row.totalEdge ?? row.totalRecommendation ?? '')}`}>
                     {row.totalRecommendation ?? ''}
                   </span>
                 </td>
@@ -306,6 +306,29 @@ function formatNullableSigned(value: number | null): string {
 
 function formatNullableNumber(value: number | null): string {
   return typeof value === 'number' ? formatNumber(value) : '';
+}
+
+function getRecommendationBubbleClasses(value: string | number): string {
+  if (value === null || value === undefined) {
+    return '';
+  }
+
+  if (typeof value === 'string' && value.trim().toLowerCase() === 'no play') {
+    return 'bg-red-100 text-red-700';
+  }
+
+  const numericValue = typeof value === 'number' ? value : Number(value);
+  if (Number.isNaN(numericValue)) {
+    return '';
+  }
+
+  if (numericValue < 1) {
+    return 'bg-red-100 text-red-700';
+  }
+  if (numericValue < 4) {
+    return 'bg-yellow-100 text-yellow-700';
+  }
+  return 'bg-green-100 text-green-700';
 }
 
 function getEdgeClassName(edge: number | null): string {
