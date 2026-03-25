@@ -195,21 +195,35 @@ export default function KenPomPage() {
                 <td>
                   <span
                     className="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium"
-                    style={getRecommendationBubbleStyle(row.spreadEdge ?? row.spreadRecommendation ?? '')}
+                    style={getEdgeBubbleStyle(row.spreadEdge)}
                   >
-                    {row.spreadRecommendation ?? ''}
+                    {getSpreadRecommendationDisplay(row)}
                   </span>
                 </td>
-                <td className={getEdgeClassName(row.spreadEdge)}>{formatNullableSigned(row.spreadEdge)}</td>
                 <td>
                   <span
                     className="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium"
-                    style={getRecommendationBubbleStyle(row.totalEdge ?? row.totalRecommendation ?? '')}
+                    style={getEdgeBubbleStyle(row.spreadEdge)}
                   >
-                    {row.totalRecommendation ?? ''}
+                    {formatNullableSigned(row.spreadEdge)}
                   </span>
                 </td>
-                <td className={getEdgeClassName(row.totalEdge)}>{formatNullableSigned(row.totalEdge)}</td>
+                <td>
+                  <span
+                    className="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium"
+                    style={getEdgeBubbleStyle(row.totalEdge)}
+                  >
+                    {getTotalRecommendationDisplay(row)}
+                  </span>
+                </td>
+                <td>
+                  <span
+                    className="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium"
+                    style={getEdgeBubbleStyle(row.totalEdge)}
+                  >
+                    {formatNullableSigned(row.totalEdge)}
+                  </span>
+                </td>
               </tr>
             ))}
             {sortedRows.length === 0 ? (
@@ -280,7 +294,7 @@ function getSortMetric(row: KenPomBoardRow, sortKey: SortKey): number {
 
 function formatScore(value: number | null): string {
   if (typeof value !== 'number') {
-    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
+    return '';
   }
   return value.toFixed(1).replace(/\.0$/, '');
 }
@@ -308,43 +322,42 @@ function getStartTimeSortValue(value: string | null | undefined): number {
 }
 
 function formatNullableSigned(value: number | null): string {
-  return typeof value === 'number' ? formatSignedNumber(value) : '';
+  return typeof value === 'number' ? formatSignedNumber(value) : '—';
 }
 
 function formatNullableNumber(value: number | null): string {
   return typeof value === 'number' ? formatNumber(value) : '';
 }
 
-function getRecommendationBubbleStyle(value: string | number): CSSProperties {
-  if (value === null || value === undefined) {
+function getSpreadRecommendationDisplay(row: KenPomBoardRow): string {
+  if (typeof row.spreadEdge !== 'number' || row.spreadEdge < 1) {
+    return 'No play';
+  }
+  return row.spreadRecommendation ?? 'No play';
+}
+
+function getTotalRecommendationDisplay(row: KenPomBoardRow): string {
+  if (typeof row.totalEdge !== 'number' || row.totalEdge < 1) {
+    return 'No play';
+  }
+  return row.totalRecommendation ?? 'No play';
+}
+
+function getEdgeBubbleStyle(edge: number | null): CSSProperties {
+  if (typeof edge !== 'number') {
     return {
       backgroundColor: '#f1f5f9',
       color: '#475569'
     };
   }
 
-  if (typeof value === 'string' && value.trim().toLowerCase() === 'no play') {
+  if (edge < 1) {
     return {
       backgroundColor: '#fee2e2',
       color: '#991b1b'
     };
   }
-
-  const numericValue = typeof value === 'number' ? value : Number(value);
-  if (Number.isNaN(numericValue)) {
-    return {
-      backgroundColor: '#f1f5f9',
-      color: '#475569'
-    };
-  }
-
-  if (numericValue < 1) {
-    return {
-      backgroundColor: '#fee2e2',
-      color: '#991b1b'
-    };
-  }
-  if (numericValue < 4) {
+  if (edge < 4) {
     return {
       backgroundColor: '#fef3c7',
       color: '#92400e'
@@ -354,13 +367,6 @@ function getRecommendationBubbleStyle(value: string | number): CSSProperties {
     backgroundColor: '#dcfce7',
     color: '#166534'
   };
-}
-
-function getEdgeClassName(edge: number | null): string {
-  if (edge === null) {
-    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
-  }
-  return edge >= 0 ? 'good' : 'bad';
 }
 
 function getTodayEtDateString(): string {
