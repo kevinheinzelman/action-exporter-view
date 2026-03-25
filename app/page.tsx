@@ -268,8 +268,18 @@ function formatStartTime(value: string | null | undefined): string {
   }).format(date);
 }
 
-function getPrimarySideText(game: Record<string, any>, market: string, row: Record<string, any>): string {
-  const preferredSide = getSharpCount(row) > 0 ? getPrimarySignalSide(row, 'sharp') : getPrimarySignalSide(row, 'picks');
+function getPrimarySideText(
+  game: Record<string, any>,
+  market: string,
+  row: Record<string, any>,
+  signalPreference: 'auto' | 'sharp' | 'picks' = 'auto'
+): string {
+  const preferredSide =
+    signalPreference === 'auto'
+      ? getSharpCount(row) > 0
+        ? getPrimarySignalSide(row, 'sharp')
+        : getPrimarySignalSide(row, 'picks')
+      : getPrimarySignalSide(row, signalPreference);
 
   if (market === 'total') {
     const totalLine = row.totalLine ?? row.overValue ?? row.underValue;
@@ -1170,7 +1180,7 @@ export default function CurrentBoardPage() {
                       {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
                     </strong>
                   <div className="subtle current-board-summary-detail">
-                      {market} | {getPrimarySideText(game, market, row)}
+                      {market} | {getPrimarySideText(game, market, row, 'sharp')}
                     </div>
                     <div className="subtle current-board-summary-time">{formatStartTime(String(game.startTimeUtc ?? ''))}</div>
                   </div>
@@ -1196,7 +1206,7 @@ export default function CurrentBoardPage() {
                       {game.awayTeam ?? 'Away'} at {game.homeTeam ?? 'Home'}
                     </strong>
                   <div className="subtle current-board-summary-detail">
-                      {market} | {getPrimarySideText(game, market, row)}
+                      {market} | {getPrimarySideText(game, market, row, 'picks')}
                     </div>
                     <div className="subtle current-board-summary-time">{formatStartTime(String(game.startTimeUtc ?? ''))}</div>
                   </div>
