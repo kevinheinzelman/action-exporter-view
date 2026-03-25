@@ -273,7 +273,7 @@ function getSortMetric(row: KenPomBoardRow, sortKey: SortKey): number {
 
 function formatScore(value: number | null): string {
   if (typeof value !== 'number') {
-    return '';
+    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
   }
   return value.toFixed(1).replace(/\.0$/, '');
 }
@@ -310,30 +310,30 @@ function formatNullableNumber(value: number | null): string {
 
 function getRecommendationBubbleClasses(value: string | number): string {
   if (value === null || value === undefined) {
-    return '';
+    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
   }
 
   if (typeof value === 'string' && value.trim().toLowerCase() === 'no play') {
-    return 'bg-red-100 text-red-700';
+    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-red-100 text-red-800';
   }
 
   const numericValue = typeof value === 'number' ? value : Number(value);
   if (Number.isNaN(numericValue)) {
-    return '';
+    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
   }
 
   if (numericValue < 1) {
-    return 'bg-red-100 text-red-700';
+    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-red-100 text-red-800';
   }
   if (numericValue < 4) {
-    return 'bg-yellow-100 text-yellow-700';
+    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800';
   }
-  return 'bg-green-100 text-green-700';
+  return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-green-100 text-green-800';
 }
 
 function getEdgeClassName(edge: number | null): string {
   if (edge === null) {
-    return '';
+    return 'inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-slate-100 text-slate-600';
   }
   return edge >= 0 ? 'good' : 'bad';
 }
@@ -346,3 +346,4 @@ function getTodayEtDateString(): string {
     day: '2-digit'
   }).format(new Date());
 }
+
