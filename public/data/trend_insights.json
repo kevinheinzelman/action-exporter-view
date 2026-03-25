@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-25T02:04:35.897Z",
+  "generatedAt": "2026-03-25T02:34:32.989Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
-  "rowCount": 6,
+  "rowCount": 7,
   "rows": [
     {
       "insightId": "ncaab:7:spread:favorite:all-sharps:all-picks:all-money",
@@ -75,46 +75,6 @@
         "league": "nhl",
         "market": "moneyline",
         "marketSide": "favorite",
-        "startDate": "2026-03-18",
-        "endDate": "2026-03-24",
-        "sharpsBucket": null,
-        "picksBucket": null,
-        "moneyDeltaBucket": null,
-        "angleCardId": null
-      }
-    },
-    {
-      "insightId": "nhl:7:total:under:all-sharps:all-picks:all-money",
-      "league": "nhl",
-      "timeframeDays": 7,
-      "startDate": "2026-03-18",
-      "endDate": "2026-03-24",
-      "market": "total",
-      "marketSide": "under",
-      "sharpsBucket": null,
-      "picksBucket": null,
-      "moneyDeltaBucket": null,
-      "label": "Unders have been strong",
-      "sampleSize": 27,
-      "wins": 17,
-      "losses": 10,
-      "pushes": 0,
-      "winRate": 0.6296296296296297,
-      "roi": null,
-      "summaryText": "NHL | last 7 days | 63.0% | 17-10 | across 27 plays",
-      "score": 16.663,
-      "scoreComponents": {
-        "sample": 2.7,
-        "edge": 10.963,
-        "roi": 0,
-        "recency": 3
-      },
-      "dimensionType": "baseline",
-      "angleCardId": null,
-      "drilldown": {
-        "league": "nhl",
-        "market": "total",
-        "marketSide": "under",
         "startDate": "2026-03-18",
         "endDate": "2026-03-24",
         "sharpsBucket": null,
@@ -204,6 +164,46 @@
       }
     },
     {
+      "insightId": "nhl:7:total:under:all-sharps:all-picks:all-money",
+      "league": "nhl",
+      "timeframeDays": 7,
+      "startDate": "2026-03-18",
+      "endDate": "2026-03-24",
+      "market": "total",
+      "marketSide": "under",
+      "sharpsBucket": null,
+      "picksBucket": null,
+      "moneyDeltaBucket": null,
+      "label": "Unders have been strong",
+      "sampleSize": 28,
+      "wins": 17,
+      "losses": 11,
+      "pushes": 0,
+      "winRate": 0.6071428571428571,
+      "roi": null,
+      "summaryText": "NHL | last 7 days | 60.7% | 17-11 | across 28 plays",
+      "score": 14.514,
+      "scoreComponents": {
+        "sample": 2.8,
+        "edge": 8.714,
+        "roi": 0,
+        "recency": 3
+      },
+      "dimensionType": "baseline",
+      "angleCardId": null,
+      "drilldown": {
+        "league": "nhl",
+        "market": "total",
+        "marketSide": "under",
+        "startDate": "2026-03-18",
+        "endDate": "2026-03-24",
+        "sharpsBucket": null,
+        "picksBucket": null,
+        "moneyDeltaBucket": null,
+        "angleCardId": null
+      }
+    },
+    {
       "insightId": "nba:7:total:under:all-sharps:all-picks:0 to <5",
       "league": "nba",
       "timeframeDays": 7,
@@ -241,6 +241,46 @@
         "picksBucket": null,
         "moneyDeltaBucket": "0 to <5",
         "angleCardId": "money-0-5"
+      }
+    },
+    {
+      "insightId": "nhl:7:moneyline:underdog:all-sharps:all-picks:all-money",
+      "league": "nhl",
+      "timeframeDays": 7,
+      "startDate": "2026-03-18",
+      "endDate": "2026-03-24",
+      "market": "moneyline",
+      "marketSide": "underdog",
+      "sharpsBucket": null,
+      "picksBucket": null,
+      "moneyDeltaBucket": null,
+      "label": "Moneyline underdogs have been strong",
+      "sampleSize": 12,
+      "wins": 7,
+      "losses": 5,
+      "pushes": 0,
+      "winRate": 0.5833333333333334,
+      "roi": 0.32,
+      "summaryText": "NHL | last 7 days | 58.3% | 7-5 | across 12 plays | ROI 32.0%",
+      "score": 12.533,
+      "scoreComponents": {
+        "sample": 1.2,
+        "edge": 6.333,
+        "roi": 2,
+        "recency": 3
+      },
+      "dimensionType": "baseline",
+      "angleCardId": null,
+      "drilldown": {
+        "league": "nhl",
+        "market": "moneyline",
+        "marketSide": "underdog",
+        "startDate": "2026-03-18",
+        "endDate": "2026-03-24",
+        "sharpsBucket": null,
+        "picksBucket": null,
+        "moneyDeltaBucket": null,
+        "angleCardId": null
       }
     }
   ]
