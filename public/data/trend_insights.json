@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T01:04:35.677Z",
+  "generatedAt": "2026-03-25T01:34:31.446Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 6,
   "rows": [
@@ -215,17 +215,17 @@
       "picksBucket": null,
       "moneyDeltaBucket": "0 to <5",
       "label": "Unders with money > bets slightly are working",
-      "sampleSize": 19,
-      "wins": 11,
+      "sampleSize": 20,
+      "wins": 12,
       "losses": 8,
       "pushes": 0,
-      "winRate": 0.5789473684210527,
+      "winRate": 0.6,
       "roi": null,
-      "summaryText": "NBA | last 7 days | 57.9% | 11-8 | across 19 plays",
-      "score": 10.795,
+      "summaryText": "NBA | last 7 days | 60.0% | 12-8 | across 20 plays",
+      "score": 13,
       "scoreComponents": {
-        "sample": 1.9,
-        "edge": 5.895,
+        "sample": 2,
+        "edge": 8,
         "roi": 0,
         "recency": 3
       },
