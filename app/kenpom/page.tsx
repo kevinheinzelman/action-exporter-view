@@ -3,169 +3,116 @@
 import { useEffect, useMemo, useState } from 'react';
 import { fetchPublicJson, formatNumber, formatSignedNumber } from '../../lib/data';
 
-type KenPomModelRow = {
-  date: string | null;
-  matchupIndex: number;
-  team_a: string;
-  team_b: string;
-  team_a_projected_score: number;
-  team_b_projected_score: number;
-  projected_spread: number;
-  projected_total: number;
-};
-
-type BoardMarket = Record<string, any>;
-
-type BoardGame = {
-  gameId: string | number;
-  leagueSlug?: string | null;
-  startTimeUtc?: string | null;
-  awayTeam?: string | null;
-  homeTeam?: string | null;
-  markets?: {
-    spread?: BoardMarket | null;
-    total?: BoardMarket | null;
-  } | null;
+type KenPomBoardRow = {
+  gameId: string;
+  gameDate: string | null;
+  startTimeUtc: string | null;
+  status: string | null;
+  awayTeam: string;
+  homeTeam: string;
+  leagueSlug: string | null;
+  spreadMarketAway: number | null;
+  spreadMarketHome: number | null;
+  totalMarketLine: number | null;
+  spreadMarketPulledAt: string | null;
+  totalMarketPulledAt: string | null;
+  awayProjectedScore: number | null;
+  homeProjectedScore: number | null;
+  projectedSpread: number | null;
+  projectedTotal: number | null;
+  spreadRecommendation: string | null;
+  totalRecommendation: string | null;
+  spreadEdge: number | null;
+  totalEdge: number | null;
+  awayKenPomRank: number | null;
+  homeKenPomRank: number | null;
 };
 
 type SortKey = 'game_time' | 'projected_spread' | 'projected_total' | 'spread_edge' | 'total_edge';
 type SortDirection = 'asc' | 'desc';
 
-type JoinedKenPomRow = KenPomModelRow & {
-  matchup: string;
-  startTimeUtc: string | null;
-  marketSpread: number | null;
-  marketTotal: number | null;
-  spreadRecommendation: string;
-  spreadEdge: number | null;
-  totalRecommendation: string;
-  totalEdge: number | null;
-  normalizedTeamA: string;
-  normalizedTeamB: string;
-  attemptedMatchupKey: string;
-  boardMatchFound: boolean;
-  likelyBoardMatch: string | null;
-  matchedLineSource: 'current_board' | null;
-};
-
-const EMPTY_KENPOM = {
+const EMPTY_KENPOM_BOARD = {
   generatedAt: null,
-  rows: [] as KenPomModelRow[]
+  rows: [] as KenPomBoardRow[]
 };
-
-const EMPTY_BOARD = {
-  generatedAt: null,
-  games: [] as BoardGame[]
-};
-
-const SPREAD_EDGE_THRESHOLD = 2;
-const TOTAL_EDGE_THRESHOLD = 4;
 
 export default function KenPomPage() {
-  const [kenPomData, setKenPomData] = useState<{ generatedAt: string | null; rows: KenPomModelRow[] }>(EMPTY_KENPOM);
-  const [boardData, setBoardData] = useState<{ generatedAt: string | null; games: BoardGame[] }>(EMPTY_BOARD);
+  const [kenPomBoard, setKenPomBoard] = useState<{ generatedAt: string | null; rows: KenPomBoardRow[] }>(EMPTY_KENPOM_BOARD);
   const [sortKey, setSortKey] = useState<SortKey>('game_time');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
+  const [selectedDate, setSelectedDate] = useState<string>('');
 
   useEffect(() => {
-    fetchPublicJson('/data/kenpom_model_rows.json', EMPTY_KENPOM).then(setKenPomData);
-    fetchPublicJson('/data/current_board.json', EMPTY_BOARD).then(setBoardData);
+    fetchPublicJson('/data/kenpom_board.json', EMPTY_KENPOM_BOARD).then(setKenPomBoard);
   }, []);
 
-  const rows = useMemo<JoinedKenPomRow[]>(() => {
-    const boardIndex = new Map<string, BoardGame>();
-    const boardDebugKeys: Array<{ key: string; awayTeam: string; homeTeam: string }> = [];
+  const availableDates = useMemo(() => {
+    return Array.from(new Set(kenPomBoard.rows.map((row) => row.gameDate).filter((value): value is string => Boolean(value)))).sort();
+  }, [kenPomBoard.rows]);
 
-    for (const game of boardData.games) {
-      const key = getMatchupKey(game.awayTeam, game.homeTeam);
-      if (key && !boardIndex.has(key)) {
-        boardIndex.set(key, game);
-      }
-      if (key) {
-        boardDebugKeys.push({
-          key,
-          awayTeam: String(game.awayTeam ?? ''),
-          homeTeam: String(game.homeTeam ?? '')
-        });
-      }
+  useEffect(() => {
+    if (!availableDates.length) {
+      setSelectedDate('');
+      return;
     }
 
-    return kenPomData.rows.map((row) => {
-      const matchup = `${row.team_a} vs ${row.team_b}`;
-      const normalizedTeamA = normalizeTeamName(row.team_a);
-      const normalizedTeamB = normalizeTeamName(row.team_b);
-      const attemptedMatchupKey = getMatchupKey(row.team_a, row.team_b);
-      const boardGame = boardIndex.get(attemptedMatchupKey);
-      const likelyBoardMatch = boardGame ? null : findLikelyBoardMatch(normalizedTeamA, normalizedTeamB, boardDebugKeys);
-      const teamASide = getTeamSideForGame(boardGame, row.team_a);
-      const spreadMarket = boardGame?.markets?.spread ?? null;
-      const totalMarket = boardGame?.markets?.total ?? null;
-      const marketSpread = spreadMarket && teamASide ? getTeamASpreadMarket(spreadMarket, teamASide) : null;
-      const marketTotal = getTotalLine(totalMarket);
-      const spreadDelta = marketSpread === null ? null : row.projected_spread - marketSpread;
-      const totalDelta = marketTotal === null ? null : row.projected_total - marketTotal;
-      const spreadRecommendation = getSpreadRecommendation(row, spreadDelta);
-      const totalRecommendation = getTotalRecommendation(totalDelta);
+    const todayEt = getTodayEtDateString();
+    if (!selectedDate || !availableDates.includes(selectedDate)) {
+      setSelectedDate(availableDates.includes(todayEt) ? todayEt : availableDates[0]);
+    }
+  }, [availableDates, selectedDate]);
 
-      return {
-        ...row,
-        matchup,
-        startTimeUtc: typeof boardGame?.startTimeUtc === 'string' ? boardGame.startTimeUtc : null,
-        marketSpread,
-        marketTotal,
-        spreadRecommendation,
-        spreadEdge: getSpreadEdge(spreadDelta),
-        totalRecommendation,
-        totalEdge: getDisplayEdge(totalDelta, totalRecommendation === 'No play'),
-        normalizedTeamA,
-        normalizedTeamB,
-        attemptedMatchupKey,
-        boardMatchFound: Boolean(boardGame),
-        likelyBoardMatch,
-        matchedLineSource: boardGame ? 'current_board' : null
-      };
-    });
-  }, [boardData.games, kenPomData.rows]);
+  const filteredRows = useMemo(() => {
+    if (!selectedDate) {
+      return kenPomBoard.rows;
+    }
+    return kenPomBoard.rows.filter((row) => row.gameDate === selectedDate);
+  }, [kenPomBoard.rows, selectedDate]);
 
   const sortedRows = useMemo(() => {
     const direction = sortDirection === 'asc' ? 1 : -1;
-    return [...rows].sort((left, right) => {
+    return [...filteredRows].sort((left, right) => {
       const leftValue = getSortMetric(left, sortKey);
       const rightValue = getSortMetric(right, sortKey);
       if (leftValue !== rightValue) {
         return (leftValue - rightValue) * direction;
       }
-      return left.matchup.localeCompare(right.matchup);
+      return `${left.awayTeam} vs ${left.homeTeam}`.localeCompare(`${right.awayTeam} vs ${right.homeTeam}`);
     });
-  }, [rows, sortDirection, sortKey]);
-
-  const matchedRows = useMemo(() => rows.filter((row) => row.matchedLineSource === 'current_board').length, [rows]);
+  }, [filteredRows, sortDirection, sortKey]);
 
   return (
     <main className="page">
       <section className="hero">
         <h2>KenPom Model Board</h2>
         <p className="subtle">
-          This board shows projected matchup scores generated from the KenPom model export and joins in current market lines when a matchup match is found. Spread values are shown from the <strong>team_a</strong> perspective, and spread versus total recommendations are shown independently.
+          This board uses a single canonical KenPom export dataset keyed by game. Market lines and KenPom projections are joined in the export layer, so this page renders one row per game without UI-side fuzzy matching.
         </p>
         <div className="metrics">
           <div className="metric">
-            <label>Model Rows</label>
-            <strong>{rows.length}</strong>
+            <label>Visible Rows</label>
+            <strong>{sortedRows.length}</strong>
           </div>
           <div className="metric">
-            <label>Matched Market Lines</label>
-            <strong>{matchedRows}</strong>
+            <label>Available Dates</label>
+            <strong>{availableDates.length}</strong>
           </div>
           <div className="metric">
-            <label>KenPom Generated</label>
-            <strong>{kenPomData.generatedAt ?? 'N/A'}</strong>
-          </div>
-          <div className="metric">
-            <label>Board Generated</label>
-            <strong>{boardData.generatedAt ?? 'N/A'}</strong>
+            <label>Generated</label>
+            <strong>{kenPomBoard.generatedAt ?? 'N/A'}</strong>
           </div>
         </div>
+      </section>
+
+      <section className="panel" style={{ marginBottom: 16 }}>
+        <label style={{ fontWeight: 600, marginRight: 8 }}>Select Date:</label>
+        <select value={selectedDate} onChange={(event) => setSelectedDate(event.target.value)}>
+          {availableDates.map((date) => (
+            <option key={date} value={date}>
+              {date}
+            </option>
+          ))}
+        </select>
       </section>
 
       <section className="panel table-wrap">
@@ -173,7 +120,7 @@ export default function KenPomPage() {
           <div>
             <h3>Matchup Table</h3>
             <p className="subtle">
-              If no matching board line is found, market and edge stay blank and the recommendation stays <strong>No play</strong>. Displayed scores and totals are model projections, not raw KenPom efficiency inputs.
+              Rows come directly from <strong>kenpom_board.json</strong>. If a KenPom projection or market line is unavailable, the row still renders and the affected fields stay blank.
             </p>
           </div>
         </div>
@@ -183,10 +130,10 @@ export default function KenPomPage() {
             <tr>
               <th>Matchup</th>
               <th>Game Time (ET)</th>
-              <th>Team A</th>
-              <th>Team B</th>
-              <th>Team A Projected Score</th>
-              <th>Team B Projected Score</th>
+              <th>Away</th>
+              <th>Home</th>
+              <th>Away Projected Score</th>
+              <th>Home Projected Score</th>
               <th>
                 <SortButton
                   label="Projected Spread"
@@ -231,37 +178,37 @@ export default function KenPomPage() {
           </thead>
           <tbody>
             {sortedRows.map((row) => (
-              <tr key={`${row.matchupIndex}:${row.team_a}:${row.team_b}`}>
+              <tr key={row.gameId}>
                 <td>
-                  <strong>{row.matchup}</strong>
+                  <strong>{row.awayTeam} vs {row.homeTeam}</strong>
                 </td>
                 <td>{formatEtTime(row.startTimeUtc)}</td>
-                <td>{row.team_a}</td>
-                <td>{row.team_b}</td>
-                <td>{formatScore(row.team_a_projected_score)}</td>
-                <td>{formatScore(row.team_b_projected_score)}</td>
-                <td>{formatSignedNumber(row.projected_spread)}</td>
-                <td>{formatNumber(row.projected_total)}</td>
-                <td>{row.marketSpread === null ? '' : formatSignedNumber(row.marketSpread)}</td>
-                <td>{row.marketTotal === null ? '' : formatNumber(row.marketTotal)}</td>
+                <td>{row.awayTeam}</td>
+                <td>{row.homeTeam}</td>
+                <td>{formatScore(row.awayProjectedScore)}</td>
+                <td>{formatScore(row.homeProjectedScore)}</td>
+                <td>{formatNullableSigned(row.projectedSpread)}</td>
+                <td>{formatNullableNumber(row.projectedTotal)}</td>
+                <td>{formatNullableSigned(row.spreadMarketAway)}</td>
+                <td>{formatNullableNumber(row.totalMarketLine)}</td>
                 <td>
-                  <span className={`pill ${row.spreadRecommendation === 'No play' ? '' : 'kenpom-recommendation-pill'}`}>
-                    {row.spreadRecommendation}
+                  <span className={`pill ${row.spreadRecommendation && row.spreadRecommendation !== 'No play' ? 'kenpom-recommendation-pill' : ''}`}>
+                    {row.spreadRecommendation ?? ''}
                   </span>
                 </td>
-                <td className={getEdgeClassName(row.spreadEdge)}>{row.spreadEdge === null ? '' : formatSignedNumber(row.spreadEdge)}</td>
+                <td className={getEdgeClassName(row.spreadEdge)}>{formatNullableSigned(row.spreadEdge)}</td>
                 <td>
-                  <span className={`pill ${row.totalRecommendation === 'No play' ? '' : 'kenpom-recommendation-pill'}`}>
-                    {row.totalRecommendation}
+                  <span className={`pill ${row.totalRecommendation && row.totalRecommendation !== 'No play' ? 'kenpom-recommendation-pill' : ''}`}>
+                    {row.totalRecommendation ?? ''}
                   </span>
                 </td>
-                <td className={getEdgeClassName(row.totalEdge)}>{row.totalEdge === null ? '' : formatSignedNumber(row.totalEdge)}</td>
+                <td className={getEdgeClassName(row.totalEdge)}>{formatNullableSigned(row.totalEdge)}</td>
               </tr>
             ))}
             {sortedRows.length === 0 ? (
               <tr>
                 <td colSpan={14} className="subtle">
-                  No KenPom model rows were found. Export `kenpom_model_rows.json` and reload this page.
+                  No KenPom board rows were found for the selected date.
                 </td>
               </tr>
             ) : null}
@@ -305,217 +252,29 @@ function handleSortChange(
     return;
   }
   setSortKey(key);
-  setSortDirection('desc');
+  setSortDirection(key === 'game_time' ? 'asc' : 'desc');
 }
 
-function getSpreadRecommendation(row: KenPomModelRow, spreadDelta: number | null): string {
-  if (spreadDelta === null) {
-    return 'No play';
-  }
-  if (spreadDelta >= SPREAD_EDGE_THRESHOLD) {
-    return row.team_a;
-  }
-  if (spreadDelta <= -SPREAD_EDGE_THRESHOLD) {
-    return row.team_b;
-  }
-  return 'No play';
-}
-
-function getSpreadEdge(delta: number | null): number | null {
-  if (delta === null) {
-    return null;
-  }
-  return Math.abs(delta);
-}
-
-function getTotalRecommendation(totalDelta: number | null): string {
-  if (totalDelta === null) {
-    return 'No play';
-  }
-  if (totalDelta >= TOTAL_EDGE_THRESHOLD) {
-    return 'Over';
-  }
-  if (totalDelta <= -TOTAL_EDGE_THRESHOLD) {
-    return 'Under';
-  }
-  return 'No play';
-}
-
-function getDisplayEdge(delta: number | null, isNoPlay: boolean): number | null {
-  if (delta === null) {
-    return null;
-  }
-  return isNoPlay ? -Math.abs(delta) : Math.abs(delta);
-}
-
-function getSortMetric(row: JoinedKenPomRow, sortKey: SortKey): number {
+function getSortMetric(row: KenPomBoardRow, sortKey: SortKey): number {
   if (sortKey === 'game_time') {
     return getStartTimeSortValue(row.startTimeUtc);
   }
   if (sortKey === 'projected_spread') {
-    return row.projected_spread;
+    return row.projectedSpread ?? Number.NEGATIVE_INFINITY;
   }
   if (sortKey === 'projected_total') {
-    return row.projected_total;
+    return row.projectedTotal ?? Number.NEGATIVE_INFINITY;
   }
   if (sortKey === 'spread_edge') {
-    return row.spreadEdge === null ? Number.NEGATIVE_INFINITY : row.spreadEdge;
+    return row.spreadEdge ?? Number.NEGATIVE_INFINITY;
   }
-  return row.totalEdge === null ? Number.NEGATIVE_INFINITY : row.totalEdge;
+  return row.totalEdge ?? Number.NEGATIVE_INFINITY;
 }
 
-function getMatchupKey(teamA: string | null | undefined, teamB: string | null | undefined): string {
-  const normalizedA = normalizeTeamName(teamA);
-  const normalizedB = normalizeTeamName(teamB);
-  if (!normalizedA || !normalizedB) {
+function formatScore(value: number | null): string {
+  if (typeof value !== 'number') {
     return '';
   }
-  return [normalizedA, normalizedB].sort().join('|');
-}
-
-function getTeamSideForGame(game: BoardGame | undefined, teamName: string): 'away' | 'home' | null {
-  if (!game) {
-    return null;
-  }
-  const normalizedTeam = normalizeTeamName(teamName);
-  if (normalizeTeamName(game.awayTeam) === normalizedTeam) {
-    return 'away';
-  }
-  if (normalizeTeamName(game.homeTeam) === normalizedTeam) {
-    return 'home';
-  }
-  return null;
-}
-
-function normalizeTeamName(value: string | null | undefined): string {
-  const normalized = String(value ?? '')
-    .toLowerCase()
-    .replace(/&/g, ' and ')
-    .replace(/['â€™]/g, '')
-    .replace(/[().,/-]/g, ' ')
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-  const canonical = normalized
-    .split(' ')
-    .filter(Boolean)
-    .map((token, index, allTokens) => {
-      if (token !== 'st') {
-        return token;
-      }
-      return index === allTokens.length - 1 ? 'state' : 'saint';
-    })
-    .join(' ');
-
-  return TEAM_NAME_ALIASES[canonical] ?? canonical;
-}
-
-const TEAM_NAME_ALIASES: Record<string, string> = {
-  smu: 'southern methodist',
-  'southern methodist': 'southern methodist',
-  'prairie view a m': 'prairie view',
-  'prairie view a and m': 'prairie view',
-  'prairie view': 'prairie view',
-  'nc state': 'nc state',
-  'n c state': 'nc state',
-  'north carolina state': 'nc state',
-  'miami oh': 'miami ohio',
-  'miami ohio': 'miami ohio',
-  'miami ohioh': 'miami ohio',
-  'miami o h': 'miami ohio',
-  'miami oh ': 'miami ohio',
-  uconn: 'connecticut',
-  connecticut: 'connecticut',
-  'saint louis': 'saint louis',
-  'st louis': 'saint louis',
-  'saint marys': 'saint marys',
-  'st marys': 'saint marys',
-  'saint josephs': 'saint josephs',
-  'saint joes': 'saint josephs',
-  'st joes': 'saint josephs',
-  'george washington': 'george washington',
-  'g washington': 'george washington',
-  'michigan st': 'michigan state',
-  'michigan state': 'michigan state',
-  'iowa st': 'iowa state',
-  'iowa state': 'iowa state',
-  'utah st': 'utah state',
-  'utah state': 'utah state',
-  'wichita st': 'wichita state',
-  'wichita state': 'wichita state',
-  'unc wilmington': 'unc wilmington',
-  'north carolina wilmington': 'unc wilmington',
-  'st johns': 'saint johns',
-  'saint johns': 'saint johns'
-};
-
-function findLikelyBoardMatch(
-  normalizedTeamA: string,
-  normalizedTeamB: string,
-  boardKeys: Array<{ key: string; awayTeam: string; homeTeam: string }>
-): string | null {
-  let bestMatch: { label: string; score: number } | null = null;
-
-  for (const board of boardKeys) {
-    const score = scoreNearMatch(normalizedTeamA, normalizedTeamB, board.key);
-    if (!bestMatch || score > bestMatch.score) {
-      bestMatch = {
-        label: `${board.awayTeam} vs ${board.homeTeam} [${board.key}]`,
-        score
-      };
-    }
-  }
-
-  return bestMatch && bestMatch.score > 0 ? bestMatch.label : null;
-}
-
-function scoreNearMatch(normalizedTeamA: string, normalizedTeamB: string, boardKey: string): number {
-  const boardTeams = boardKey.split('|');
-  const kenPomTeams = [normalizedTeamA, normalizedTeamB];
-  let score = 0;
-
-  for (const team of kenPomTeams) {
-    for (const boardTeam of boardTeams) {
-      if (team === boardTeam) {
-        score += 10;
-      } else if (team.includes(boardTeam) || boardTeam.includes(team)) {
-        score += 4;
-      } else {
-        const overlap = sharedTokenCount(team, boardTeam);
-        score += overlap;
-      }
-    }
-  }
-
-  return score;
-}
-
-function sharedTokenCount(left: string, right: string): number {
-  const leftTokens = new Set(left.split(' ').filter(Boolean));
-  const rightTokens = new Set(right.split(' ').filter(Boolean));
-  let count = 0;
-  for (const token of leftTokens) {
-    if (rightTokens.has(token)) {
-      count += 1;
-    }
-  }
-  return count;
-}
-
-function getTeamASpreadMarket(row: BoardMarket, side: 'away' | 'home'): number | null {
-  const value = side === 'away' ? row.awayValue : row.homeValue;
-  return typeof value === 'number' ? value : null;
-}
-
-function getTotalLine(row: BoardMarket | null): number | null {
-  if (!row) {
-    return null;
-  }
-  return typeof row.totalLine === 'number' ? row.totalLine : typeof row.totalCurrentLine === 'number' ? row.totalCurrentLine : null;
-}
-
-function formatScore(value: number): string {
   return value.toFixed(1).replace(/\.0$/, '');
 }
 
@@ -541,9 +300,26 @@ function getStartTimeSortValue(value: string | null | undefined): number {
   return Number.isFinite(timestamp) ? timestamp : Number.POSITIVE_INFINITY;
 }
 
+function formatNullableSigned(value: number | null): string {
+  return typeof value === 'number' ? formatSignedNumber(value) : '';
+}
+
+function formatNullableNumber(value: number | null): string {
+  return typeof value === 'number' ? formatNumber(value) : '';
+}
+
 function getEdgeClassName(edge: number | null): string {
   if (edge === null) {
     return '';
   }
   return edge >= 0 ? 'good' : 'bad';
+}
+
+function getTodayEtDateString(): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(new Date());
 }
