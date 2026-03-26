@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T00:04:39.845Z",
+  "generatedAt": "2026-03-26T00:34:41.363Z",
   "rowCount": 2,
   "rows": [
     {
@@ -11,10 +11,10 @@
       "homeTeam": "Dayton",
       "leagueSlug": "ncaab",
       "spreadMarketAway": 7.5,
-      "spreadMarketHome": 3.5,
-      "totalMarketLine": 129.5,
-      "spreadMarketPulledAt": "2026-03-26T00:03:50.918Z",
-      "totalMarketPulledAt": "2026-03-26T00:03:50.918Z",
+      "spreadMarketHome": 13.5,
+      "totalMarketLine": 120.5,
+      "spreadMarketPulledAt": "2026-03-26T00:33:54.477Z",
+      "totalMarketPulledAt": "2026-03-26T00:33:54.477Z",
       "awayProjectedScore": 66.51637499999998,
       "homeProjectedScore": 71.522625,
       "projectedSpread": 5.006250000000023,
@@ -22,7 +22,7 @@
       "spreadRecommendation": "Dayton",
       "totalRecommendation": "Over",
       "spreadEdge": 2.4937499999999773,
-      "totalEdge": 8.538999999999987,
+      "totalEdge": 17.538999999999987,
       "awayKenPomRank": 97,
       "homeKenPomRank": 64
     },
@@ -37,8 +37,8 @@
       "spreadMarketAway": 8.5,
       "spreadMarketHome": -8.5,
       "totalMarketLine": 153.5,
-      "spreadMarketPulledAt": "2026-03-26T00:03:50.918Z",
-      "totalMarketPulledAt": "2026-03-26T00:03:50.918Z",
+      "spreadMarketPulledAt": "2026-03-26T00:33:54.477Z",
+      "totalMarketPulledAt": "2026-03-26T00:33:54.477Z",
       "awayProjectedScore": 73.37980000000002,
       "homeProjectedScore": 81.12860000000002,
       "projectedSpread": 7.748800000000003,
