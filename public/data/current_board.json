@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T01:34:38.468Z",
+  "generatedAt": "2026-03-26T02:04:40.037Z",
   "boardDate": "2026-03-25",
   "rowCount": 17,
   "games": [
@@ -12,7 +12,7 @@
       "awayTeam": "Illinois St",
       "homeTeam": "Dayton",
       "status": "complete",
-      "latestPulledAt": "2026-03-26T01:33:53.720Z",
+      "latestPulledAt": "2026-03-26T02:03:55.411Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -338,7 +338,7 @@
       "awayTeam": "Bulls",
       "homeTeam": "76ers",
       "status": "complete",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -663,8 +663,8 @@
       "startTimeUtc": "2026-03-25T23:00:00.000Z",
       "awayTeam": "Hawks",
       "homeTeam": "Pistons",
-      "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "status": "complete",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -990,7 +990,7 @@
       "awayTeam": "Lakers",
       "homeTeam": "Pacers",
       "status": "complete",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -1316,7 +1316,7 @@
       "awayTeam": "Bruins",
       "homeTeam": "Sabres",
       "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:34:24.050Z",
+      "latestPulledAt": "2026-03-26T02:04:25.199Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -1642,7 +1642,7 @@
       "awayTeam": "Rangers",
       "homeTeam": "Maple Leafs",
       "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:34:24.050Z",
+      "latestPulledAt": "2026-03-26T02:04:25.199Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -1967,8 +1967,8 @@
       "startTimeUtc": "2026-03-25T23:30:00.000Z",
       "awayTeam": "Heat",
       "homeTeam": "Cavaliers",
-      "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "status": "complete",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -2287,8 +2287,8 @@
       "startTimeUtc": "2026-03-25T23:30:00.000Z",
       "awayTeam": "Thunder",
       "homeTeam": "Celtics",
-      "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "status": "complete",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -2614,7 +2614,7 @@
       "awayTeam": "Spurs",
       "homeTeam": "Grizzlies",
       "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -2940,7 +2940,7 @@
       "awayTeam": "Yankees",
       "homeTeam": "Giants",
       "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:33:31.161Z",
+      "latestPulledAt": "2026-03-26T02:03:32.345Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -3272,7 +3272,7 @@
       "awayTeam": "Nevada",
       "homeTeam": "Auburn",
       "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:33:53.720Z",
+      "latestPulledAt": "2026-03-26T02:03:55.411Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -3592,7 +3592,7 @@
       "awayTeam": "Wizards",
       "homeTeam": "Jazz",
       "status": "inprogress",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -3923,8 +3923,8 @@
       "startTimeUtc": "2026-03-26T01:30:00.000Z",
       "awayTeam": "Rockets",
       "homeTeam": "Timberwolves",
-      "status": "scheduled",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "status": "inprogress",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -4250,7 +4250,7 @@
       "awayTeam": "Bucks",
       "homeTeam": "Trail Blazers",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -4352,7 +4352,7 @@
             "recommendationTier": null,
             "recommendationReason": null
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "281512|2213|spread",
@@ -4457,7 +4457,7 @@
             "recommendationTier": null,
             "recommendationReason": null
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "281512|2213|total",
@@ -4562,10 +4562,10 @@
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         }
       },
-      "marketLockedAtStart": false
+      "marketLockedAtStart": true
     },
     {
       "gameId": "281513",
@@ -4576,7 +4576,7 @@
       "awayTeam": "Mavericks",
       "homeTeam": "Nuggets",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -4678,7 +4678,7 @@
             "recommendationTier": null,
             "recommendationReason": null
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "281513|2213|spread",
@@ -4783,7 +4783,7 @@
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps Â· money over bets +10"
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "281513|2213|total",
@@ -4888,10 +4888,10 @@
             "recommendationTier": "Watch",
             "recommendationReason": "3+ sharps"
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         }
       },
-      "marketLockedAtStart": false
+      "marketLockedAtStart": true
     },
     {
       "gameId": "281511",
@@ -4902,7 +4902,7 @@
       "awayTeam": "Nets",
       "homeTeam": "Warriors",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
@@ -5004,7 +5004,7 @@
             "recommendationTier": null,
             "recommendationReason": null
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         },
         "spread": {
           "evaluationKey": "281511|2213|spread",
@@ -5109,7 +5109,7 @@
             "recommendationTier": null,
             "recommendationReason": null
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         },
         "total": {
           "evaluationKey": "281511|2213|total",
@@ -5214,10 +5214,10 @@
             "recommendationTier": "Interesting",
             "recommendationReason": "3+ sharps Â· sharp + pick agreement"
           },
-          "marketLockedAtStart": false
+          "marketLockedAtStart": true
         }
       },
-      "marketLockedAtStart": false
+      "marketLockedAtStart": true
     },
     {
       "gameId": "281514",
@@ -5228,17 +5228,17 @@
       "awayTeam": "Raptors",
       "homeTeam": "Clippers",
       "status": "scheduled",
-      "latestPulledAt": "2026-03-26T01:33:43.603Z",
+      "latestPulledAt": "2026-03-26T02:03:45.777Z",
       "isNcaaTournament": false,
       "tournamentSeason": null,
       "tournamentRound": null,
       "markets": {
         "moneyline": {
-          "evaluationKey": "281514|2213|moneyline",
+          "evaluationKey": "281514|2225|moneyline",
           "gameId": "281514",
-          "runId": 2213,
+          "runId": 2225,
           "market": "moneyline",
-          "pulledAt": "2026-03-26T01:33:43.603Z",
+          "pulledAt": "2026-03-26T02:03:45.777Z",
           "leagueSlug": "nba",
           "sport": "Basketball",
           "gameDate": "2026-03-25",
@@ -5247,11 +5247,11 @@
           "homeTeam": "Clippers",
           "status": "scheduled",
           "awayValue": 150,
-          "homeValue": -185,
+          "homeValue": -180,
           "awayOpenValue": null,
           "homeOpenValue": null,
           "awayCurrentValue": 150,
-          "homeCurrentValue": -185,
+          "homeCurrentValue": -180,
           "awayMoveValue": null,
           "homeMoveValue": null,
           "awayPublicBetsPct": 16,
@@ -5308,7 +5308,7 @@
           "underMargin": null,
           "gradedAt": null,
           "awayClosingValue": 150,
-          "homeClosingValue": -185,
+          "homeClosingValue": -180,
           "overClosingValue": null,
           "underClosingValue": null,
           "totalClosingLine": null,
@@ -5333,11 +5333,11 @@
           "marketLockedAtStart": false
         },
         "spread": {
-          "evaluationKey": "281514|2213|spread",
+          "evaluationKey": "281514|2225|spread",
           "gameId": "281514",
-          "runId": 2213,
+          "runId": 2225,
           "market": "spread",
-          "pulledAt": "2026-03-26T01:33:43.603Z",
+          "pulledAt": "2026-03-26T02:03:45.777Z",
           "leagueSlug": "nba",
           "sport": "Basketball",
           "gameDate": "2026-03-25",
@@ -5345,12 +5345,12 @@
           "awayTeam": "Raptors",
           "homeTeam": "Clippers",
           "status": "scheduled",
-          "awayValue": 4.5,
-          "homeValue": -4.5,
+          "awayValue": 3.5,
+          "homeValue": -3.5,
           "awayOpenValue": null,
           "homeOpenValue": null,
-          "awayCurrentValue": 4.5,
-          "homeCurrentValue": -4.5,
+          "awayCurrentValue": 3.5,
+          "homeCurrentValue": -3.5,
           "awayMoveValue": null,
           "homeMoveValue": null,
           "awayPublicBetsPct": 13,
@@ -5378,11 +5378,11 @@
           "underPickCount": 0,
           "sharpKey": "Raptors",
           "normalizedSharpKey": "away",
-          "sharpCount": 4,
+          "sharpCount": 5,
           "sharpExplanation": "We've tracked sharp money coming in on TOR.",
           "steamMoves": 1,
-          "reverseLineMoves": 3,
-          "awaySharpCount": 4,
+          "reverseLineMoves": 4,
+          "awaySharpCount": 5,
           "homeSharpCount": 0,
           "overSharpCount": 0,
           "underSharpCount": 0,
@@ -5390,7 +5390,7 @@
           "pickMajoritySide": "away",
           "sharpIsTie": false,
           "pickIsTie": false,
-          "sharpMargin": 4,
+          "sharpMargin": 5,
           "pickMargin": 1,
           "sharpPickAgree": true,
           "sharpPickAgreeSide": "away",
@@ -5406,8 +5406,8 @@
           "overMargin": null,
           "underMargin": null,
           "gradedAt": null,
-          "awayClosingValue": 4.5,
-          "homeClosingValue": -4.5,
+          "awayClosingValue": 3.5,
+          "homeClosingValue": -3.5,
           "overClosingValue": null,
           "underClosingValue": null,
           "totalClosingLine": null,
@@ -5438,11 +5438,11 @@
           "marketLockedAtStart": false
         },
         "total": {
-          "evaluationKey": "281514|2213|total",
+          "evaluationKey": "281514|2225|total",
           "gameId": "281514",
-          "runId": 2213,
+          "runId": 2225,
           "market": "total",
-          "pulledAt": "2026-03-26T01:33:43.603Z",
+          "pulledAt": "2026-03-26T02:03:45.777Z",
           "leagueSlug": "nba",
           "sport": "Basketball",
           "gameDate": "2026-03-25",
@@ -5462,15 +5462,15 @@
           "homePublicBetsPct": null,
           "awayPublicMoneyPct": null,
           "homePublicMoneyPct": null,
-          "overValue": 228.5,
-          "underValue": 228.5,
-          "totalLine": 228.5,
+          "overValue": 226.5,
+          "underValue": 226.5,
+          "totalLine": 226.5,
           "overOpenValue": null,
           "underOpenValue": null,
           "totalOpenLine": null,
-          "overCurrentValue": 228.5,
-          "underCurrentValue": 228.5,
-          "totalCurrentLine": 228.5,
+          "overCurrentValue": 226.5,
+          "underCurrentValue": 226.5,
+          "totalCurrentLine": 226.5,
           "overMoveValue": null,
           "underMoveValue": null,
           "overPublicBetsPct": 96,
@@ -5513,9 +5513,9 @@
           "gradedAt": null,
           "awayClosingValue": null,
           "homeClosingValue": null,
-          "overClosingValue": 228.5,
-          "underClosingValue": 228.5,
-          "totalClosingLine": 228.5,
+          "overClosingValue": 226.5,
+          "underClosingValue": 226.5,
+          "totalClosingLine": 226.5,
           "awayCloseDelta": null,
           "homeCloseDelta": null,
           "totalCloseDelta": 0,
@@ -5525,8 +5525,8 @@
           "historicalSupport": {
             "angleId": "nba:total:sharp-majority-2plus",
             "angleLabel": "Sharp majority, 2+ sharps",
-            "sampleSize": 29,
-            "winRate": 0.3103448275862069,
+            "sampleSize": 31,
+            "winRate": 0.3225806451612903,
             "roi": null
           },
           "publicContext": {
