@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T02:34:38.175Z",
+  "generatedAt": "2026-03-26T03:04:38.694Z",
   "rowCount": 2,
   "rows": [
     {
@@ -13,8 +13,8 @@
       "spreadMarketAway": 7.5,
       "spreadMarketHome": -7.5,
       "totalMarketLine": 140.5,
-      "spreadMarketPulledAt": "2026-03-26T02:33:51.549Z",
-      "totalMarketPulledAt": "2026-03-26T02:33:51.549Z",
+      "spreadMarketPulledAt": "2026-03-26T03:03:51.041Z",
+      "totalMarketPulledAt": "2026-03-26T03:03:51.041Z",
       "awayProjectedScore": 66.51637499999998,
       "homeProjectedScore": 71.522625,
       "projectedSpread": 5.006250000000023,
@@ -36,9 +36,9 @@
       "leagueSlug": "ncaab",
       "spreadMarketAway": 8.5,
       "spreadMarketHome": -8.5,
-      "totalMarketLine": 133.5,
-      "spreadMarketPulledAt": "2026-03-26T02:33:51.549Z",
-      "totalMarketPulledAt": "2026-03-26T02:33:51.549Z",
+      "totalMarketLine": 139,
+      "spreadMarketPulledAt": "2026-03-26T03:03:51.041Z",
+      "totalMarketPulledAt": "2026-03-26T03:03:51.041Z",
       "awayProjectedScore": 73.37980000000002,
       "homeProjectedScore": 81.12860000000002,
       "projectedSpread": 7.748800000000003,
@@ -46,7 +46,7 @@
       "spreadRecommendation": "No play",
       "totalRecommendation": "Over",
       "spreadEdge": 0.7511999999999972,
-      "totalEdge": 21.00840000000005,
+      "totalEdge": 15.508400000000051,
       "awayKenPomRank": 71,
       "homeKenPomRank": 40
     }

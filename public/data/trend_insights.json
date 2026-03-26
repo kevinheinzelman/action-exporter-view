@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T02:34:38.175Z",
+  "generatedAt": "2026-03-26T03:04:38.694Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 7,
   "rows": [
@@ -55,16 +55,16 @@
       "picksBucket": null,
       "moneyDeltaBucket": null,
       "label": "Unders have been strong",
-      "sampleSize": 12,
+      "sampleSize": 13,
       "wins": 8,
       "losses": 4,
-      "pushes": 0,
+      "pushes": 1,
       "winRate": 0.6666666666666666,
       "roi": null,
-      "summaryText": "MLB | last 7 days | 66.7% | 8-4 | across 12 plays",
-      "score": 18.867,
+      "summaryText": "MLB | last 7 days | 66.7% | 8-4-1 | across 13 plays",
+      "score": 18.967,
       "scoreComponents": {
-        "sample": 1.2,
+        "sample": 1.3,
         "edge": 14.667,
         "roi": 0,
         "recency": 3
