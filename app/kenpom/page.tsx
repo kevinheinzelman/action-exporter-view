@@ -336,11 +336,10 @@ function getSpreadRecommendationDisplay(row: KenPomBoardRow): string {
   if (typeof row.projectedSpread !== 'number' || typeof row.spreadMarketAway !== 'number') {
     return 'No play';
   }
-  const delta = row.projectedSpread - row.spreadMarketAway;
-  if (delta > 0) {
+  if (row.projectedSpread < row.spreadMarketAway) {
     return row.awayTeam;
   }
-  if (delta < 0) {
+  if (row.projectedSpread > row.spreadMarketAway) {
     return row.homeTeam;
   }
   return 'No play';
@@ -396,6 +395,7 @@ function getTodayEtDateString(): string {
     day: '2-digit'
   }).format(new Date());
 }
+
 
 
 
