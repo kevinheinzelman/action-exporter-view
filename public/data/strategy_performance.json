@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T14:34:42.774Z",
+  "generatedAt": "2026-03-26T15:04:44.301Z",
   "basis": "latest_pregame",
   "rowCount": 522,
   "cohorts": [
@@ -9,15 +9,15 @@
       "signalType": "sharp",
       "sport": "all",
       "market": "all",
-      "sampleSize": 258,
+      "sampleSize": 257,
       "wins": 107,
       "losses": 99,
       "pushes": 3,
-      "unknowns": 49,
+      "unknowns": 48,
       "winPct": 0.5119617224880383,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
-      "avgCloseDelta": 0.07751937984496124,
-      "positiveCloseDeltaPct": 0.2596899224806202
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
+      "avgCloseDelta": 0.07782101167315175,
+      "positiveCloseDeltaPct": 0.2607003891050584
     },
     {
       "cohortKey": "sharp_public_fade:all:all",
@@ -31,7 +31,7 @@
       "pushes": 2,
       "unknowns": 38,
       "winPct": 0.5283018867924528,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 1.3096446700507614,
       "positiveCloseDeltaPct": 0.25380710659898476
     },
@@ -47,7 +47,7 @@
       "pushes": 2,
       "unknowns": 38,
       "winPct": 0.504424778761062,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.019867549668874173,
       "positiveCloseDeltaPct": 0.2119205298013245
     },
@@ -57,15 +57,15 @@
       "signalType": "sharp",
       "sport": "all",
       "market": "total",
-      "sampleSize": 133,
+      "sampleSize": 132,
       "wins": 55,
       "losses": 49,
       "pushes": 2,
-      "unknowns": 27,
+      "unknowns": 26,
       "winPct": 0.5188679245283019,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
-      "avgCloseDelta": 0.08270676691729323,
-      "positiveCloseDeltaPct": 0.21804511278195488
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
+      "avgCloseDelta": 0.08333333333333333,
+      "positiveCloseDeltaPct": 0.2196969696969697
     },
     {
       "cohortKey": "sharp:Basketball:all",
@@ -79,7 +79,7 @@
       "pushes": 1,
       "unknowns": 11,
       "winPct": 0.5263157894736842,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.088,
       "positiveCloseDeltaPct": 0.288
     },
@@ -95,7 +95,7 @@
       "pushes": 2,
       "unknowns": 23,
       "winPct": 0.5056179775280899,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.08482142857142858,
       "positiveCloseDeltaPct": 0.21428571428571427
     },
@@ -111,7 +111,7 @@
       "pushes": 0,
       "unknowns": 9,
       "winPct": 0.5402298850574713,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.08854166666666667,
       "positiveCloseDeltaPct": 0.2708333333333333
     },
@@ -127,7 +127,7 @@
       "pushes": 1,
       "unknowns": 13,
       "winPct": 0.5540540540540541,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.05747126436781609,
       "positiveCloseDeltaPct": 0.21839080459770116
     },
@@ -137,15 +137,15 @@
       "signalType": "sharp",
       "sport": "Hockey",
       "market": "all",
-      "sampleSize": 77,
+      "sampleSize": 76,
       "wins": 35,
       "losses": 24,
       "pushes": 1,
-      "unknowns": 17,
+      "unknowns": 16,
       "winPct": 0.5833333333333334,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
-      "avgCloseDelta": 2.6818181818181817,
-      "positiveCloseDeltaPct": 0.24675324675324675
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
+      "avgCloseDelta": 2.7171052631578947,
+      "positiveCloseDeltaPct": 0.25
     },
     {
       "cohortKey": "sharp:all:moneyline",
@@ -159,7 +159,7 @@
       "pushes": 0,
       "unknowns": 18,
       "winPct": 0.42,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.17647058823529413,
       "positiveCloseDeltaPct": 0.4117647058823529
     },
@@ -175,7 +175,7 @@
       "pushes": 0,
       "unknowns": 7,
       "winPct": 0.47540983606557374,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.20588235294117646,
       "positiveCloseDeltaPct": 0.38235294117647056
     },
@@ -191,7 +191,7 @@
       "pushes": 1,
       "unknowns": 17,
       "winPct": 0.5111111111111111,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.3548387096774194,
       "positiveCloseDeltaPct": 0.24193548387096775
     },
@@ -207,7 +207,7 @@
       "pushes": 0,
       "unknowns": 6,
       "winPct": 0.47058823529411764,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.21052631578947367,
       "positiveCloseDeltaPct": 0.3684210526315789
     },
@@ -223,7 +223,7 @@
       "pushes": 1,
       "unknowns": 14,
       "winPct": 0.5813953488372093,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 3.8771929824561404,
       "positiveCloseDeltaPct": 0.22807017543859648
     },
@@ -239,7 +239,7 @@
       "pushes": 1,
       "unknowns": 4,
       "winPct": 0.5849056603773585,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": -0.05263157894736842,
       "positiveCloseDeltaPct": 0.17543859649122806
     },
@@ -255,7 +255,7 @@
       "pushes": 1,
       "unknowns": 4,
       "winPct": 0.5849056603773585,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": -0.05263157894736842,
       "positiveCloseDeltaPct": 0.17543859649122806
     },
@@ -271,7 +271,7 @@
       "pushes": 0,
       "unknowns": 15,
       "winPct": 0.4634146341463415,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.03571428571428571,
       "positiveCloseDeltaPct": 0.30357142857142855
     },
@@ -287,7 +287,7 @@
       "pushes": 1,
       "unknowns": 21,
       "winPct": 0.34285714285714286,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": -3.5267857142857144,
       "positiveCloseDeltaPct": 0.21428571428571427
     },
@@ -303,7 +303,7 @@
       "pushes": 1,
       "unknowns": 9,
       "winPct": 0.5121951219512195,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0.16
     },
@@ -319,7 +319,7 @@
       "pushes": 0,
       "unknowns": 12,
       "winPct": 0.47058823529411764,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 5.478260869565218,
       "positiveCloseDeltaPct": 0.45652173913043476
     },
@@ -335,7 +335,7 @@
       "pushes": 1,
       "unknowns": 14,
       "winPct": 0.5483870967741935,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.022222222222222223,
       "positiveCloseDeltaPct": 0.15555555555555556
     },
@@ -351,7 +351,7 @@
       "pushes": 1,
       "unknowns": 15,
       "winPct": 0.41379310344827586,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0.6477272727272727,
       "positiveCloseDeltaPct": 0.25
     },
@@ -367,7 +367,7 @@
       "pushes": 1,
       "unknowns": 6,
       "winPct": 0.5135135135135135,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0.18604651162790697
     },
@@ -377,15 +377,15 @@
       "signalType": "sharp",
       "sport": "Hockey",
       "market": "total",
-      "sampleSize": 43,
+      "sampleSize": 42,
       "wins": 20,
       "losses": 13,
       "pushes": 1,
-      "unknowns": 9,
+      "unknowns": 8,
       "winPct": 0.5882352941176471,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
-      "avgCloseDelta": -0.08139534883720931,
-      "positiveCloseDeltaPct": 0.046511627906976744
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
+      "avgCloseDelta": -0.08333333333333333,
+      "positiveCloseDeltaPct": 0.047619047619047616
     },
     {
       "cohortKey": "sharp_public_fade:all:spread",
@@ -399,7 +399,7 @@
       "pushes": 0,
       "unknowns": 3,
       "winPct": 0.6388888888888888,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": -0.08974358974358974,
       "positiveCloseDeltaPct": 0.1282051282051282
     },
@@ -415,7 +415,7 @@
       "pushes": 0,
       "unknowns": 3,
       "winPct": 0.6388888888888888,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": -0.08974358974358974,
       "positiveCloseDeltaPct": 0.1282051282051282
     },
@@ -431,7 +431,7 @@
       "pushes": 1,
       "unknowns": 6,
       "winPct": 0.53125,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.05263157894736842,
       "positiveCloseDeltaPct": 0.21052631578947367
     },
@@ -447,7 +447,7 @@
       "pushes": 1,
       "unknowns": 7,
       "winPct": 0.5555555555555556,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": -0.08823529411764706,
       "positiveCloseDeltaPct": 0.058823529411764705
     },
@@ -463,7 +463,7 @@
       "pushes": 0,
       "unknowns": 10,
       "winPct": 0.25,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": -5.823529411764706,
       "positiveCloseDeltaPct": 0.3235294117647059
     },
@@ -479,7 +479,7 @@
       "pushes": 0,
       "unknowns": 8,
       "winPct": 0.5769230769230769,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 6.176470588235294,
       "positiveCloseDeltaPct": 0.5
     },
@@ -495,7 +495,7 @@
       "pushes": 0,
       "unknowns": 3,
       "winPct": 0.43333333333333335,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.06060606060606061,
       "positiveCloseDeltaPct": 0.36363636363636365
     },
@@ -511,7 +511,7 @@
       "pushes": 1,
       "unknowns": 22,
       "winPct": 0.3333333333333333,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": -0.12903225806451613,
       "positiveCloseDeltaPct": 0.03225806451612903
     },
@@ -527,7 +527,7 @@
       "pushes": 0,
       "unknowns": 11,
       "winPct": 0.5555555555555556,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.06896551724137931,
       "positiveCloseDeltaPct": 0.1724137931034483
     },
@@ -543,7 +543,7 @@
       "pushes": 0,
       "unknowns": 3,
       "winPct": 0.6086956521739131,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.038461538461538464,
       "positiveCloseDeltaPct": 0.23076923076923078
     },
@@ -559,7 +559,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 0.4090909090909091,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0.08333333333333333,
       "positiveCloseDeltaPct": 0.4583333333333333
     },
@@ -575,7 +575,7 @@
       "pushes": 0,
       "unknowns": 5,
       "winPct": 0.3333333333333333,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 1.2173913043478262,
       "positiveCloseDeltaPct": 0.43478260869565216
     },
@@ -591,7 +591,7 @@
       "pushes": 0,
       "unknowns": 7,
       "winPct": 0.625,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 9.73913043478261,
       "positiveCloseDeltaPct": 0.4782608695652174
     },
@@ -607,7 +607,7 @@
       "pushes": 1,
       "unknowns": 11,
       "winPct": 0.5454545454545454,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0.022727272727272728,
       "positiveCloseDeltaPct": 0.045454545454545456
     },
@@ -623,7 +623,7 @@
       "pushes": 1,
       "unknowns": 3,
       "winPct": 0.5,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0.19047619047619047
     },
@@ -639,7 +639,7 @@
       "pushes": 1,
       "unknowns": 3,
       "winPct": 0.5,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0.19047619047619047
     },
@@ -655,7 +655,7 @@
       "pushes": 1,
       "unknowns": 10,
       "winPct": 0.5454545454545454,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0.023809523809523808,
       "positiveCloseDeltaPct": 0.047619047619047616
     },
@@ -671,7 +671,7 @@
       "pushes": 0,
       "unknowns": 4,
       "winPct": 0.5714285714285714,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.2222222222222222,
       "positiveCloseDeltaPct": 0.2777777777777778
     },
@@ -687,7 +687,7 @@
       "pushes": 0,
       "unknowns": 3,
       "winPct": 0.5714285714285714,
-      "latestPulledAt": "2026-03-26T14:33:54.654Z",
+      "latestPulledAt": "2026-03-26T15:03:56.305Z",
       "avgCloseDelta": 0.11764705882352941,
       "positiveCloseDeltaPct": 0.23529411764705882
     },
@@ -703,7 +703,7 @@
       "pushes": 0,
       "unknowns": 9,
       "winPct": 0.4,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": -0.2857142857142857,
       "positiveCloseDeltaPct": 0.07142857142857142
     },
@@ -719,7 +719,7 @@
       "pushes": 0,
       "unknowns": 1,
       "winPct": 0.4166666666666667,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 1.5384615384615385,
       "positiveCloseDeltaPct": 0.5384615384615384
     },
@@ -735,7 +735,7 @@
       "pushes": 1,
       "unknowns": 10,
       "winPct": 0,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
@@ -751,7 +751,7 @@
       "pushes": 0,
       "unknowns": 3,
       "winPct": 0.4444444444444444,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 1.6666666666666667,
       "positiveCloseDeltaPct": 0.5
     },
@@ -767,7 +767,7 @@
       "pushes": 0,
       "unknowns": 10,
       "winPct": 1,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
@@ -783,7 +783,7 @@
       "pushes": 0,
       "unknowns": 1,
       "winPct": 0.375,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 2.2222222222222223,
       "positiveCloseDeltaPct": 0.6666666666666666
     },
@@ -799,7 +799,7 @@
       "pushes": 0,
       "unknowns": 8,
       "winPct": null,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
@@ -815,7 +815,7 @@
       "pushes": 0,
       "unknowns": 1,
       "winPct": 0.6,
-      "latestPulledAt": "2026-03-26T14:34:26.086Z",
+      "latestPulledAt": "2026-03-26T15:04:27.077Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0.16666666666666666
     },
@@ -847,7 +847,7 @@
       "pushes": 0,
       "unknowns": 3,
       "winPct": 1,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
@@ -863,7 +863,7 @@
       "pushes": 0,
       "unknowns": 2,
       "winPct": 1,
-      "latestPulledAt": "2026-03-26T14:33:33.078Z",
+      "latestPulledAt": "2026-03-26T15:03:32.483Z",
       "avgCloseDelta": 0,
       "positiveCloseDeltaPct": 0
     },
