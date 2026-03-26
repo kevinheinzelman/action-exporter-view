@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T22:34:40.357Z",
+  "generatedAt": "2026-03-26T23:04:42.781Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 7,
   "rows": [
@@ -41,6 +41,46 @@
         "picksBucket": null,
         "moneyDeltaBucket": null,
         "angleCardId": null
+      }
+    },
+    {
+      "insightId": "mlb:7:total:under:1-3:all-picks:all-money",
+      "league": "mlb",
+      "timeframeDays": 7,
+      "startDate": "2026-03-20",
+      "endDate": "2026-03-26",
+      "market": "total",
+      "marketSide": "under",
+      "sharpsBucket": "1-3",
+      "picksBucket": null,
+      "moneyDeltaBucket": null,
+      "label": "Unders with 1-3 sharps are working",
+      "sampleSize": 13,
+      "wins": 9,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.6923076923076923,
+      "roi": null,
+      "summaryText": "MLB | last 7 days | 69.2% | 9-4 | across 13 plays",
+      "score": 21.531,
+      "scoreComponents": {
+        "sample": 1.3,
+        "edge": 17.231,
+        "roi": 0,
+        "recency": 3
+      },
+      "dimensionType": "sharps",
+      "angleCardId": "sharps-1-3",
+      "drilldown": {
+        "league": "mlb",
+        "market": "total",
+        "marketSide": "under",
+        "startDate": "2026-03-20",
+        "endDate": "2026-03-26",
+        "sharpsBucket": "1-3",
+        "picksBucket": null,
+        "moneyDeltaBucket": null,
+        "angleCardId": "sharps-1-3"
       }
     },
     {
@@ -121,46 +161,6 @@
         "picksBucket": "1-3",
         "moneyDeltaBucket": null,
         "angleCardId": "picks-1-3"
-      }
-    },
-    {
-      "insightId": "mlb:7:total:under:1-3:all-picks:all-money",
-      "league": "mlb",
-      "timeframeDays": 7,
-      "startDate": "2026-03-20",
-      "endDate": "2026-03-26",
-      "market": "total",
-      "marketSide": "under",
-      "sharpsBucket": "1-3",
-      "picksBucket": null,
-      "moneyDeltaBucket": null,
-      "label": "Unders with 1-3 sharps are working",
-      "sampleSize": 12,
-      "wins": 8,
-      "losses": 4,
-      "pushes": 0,
-      "winRate": 0.6666666666666666,
-      "roi": null,
-      "summaryText": "MLB | last 7 days | 66.7% | 8-4 | across 12 plays",
-      "score": 18.867,
-      "scoreComponents": {
-        "sample": 1.2,
-        "edge": 14.667,
-        "roi": 0,
-        "recency": 3
-      },
-      "dimensionType": "sharps",
-      "angleCardId": "sharps-1-3",
-      "drilldown": {
-        "league": "mlb",
-        "market": "total",
-        "marketSide": "under",
-        "startDate": "2026-03-20",
-        "endDate": "2026-03-26",
-        "sharpsBucket": "1-3",
-        "picksBucket": null,
-        "moneyDeltaBucket": null,
-        "angleCardId": "sharps-1-3"
       }
     },
     {
