@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T03:34:55.640Z",
+  "generatedAt": "2026-03-27T04:04:46.709Z",
   "basis": "analysis_rows_latest_pregame",
   "rowCount": 79,
   "rows": [
@@ -1705,15 +1705,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 30,
-      "wins": 14,
-      "losses": 16,
+      "sampleSize": 32,
+      "wins": 15,
+      "losses": 17,
       "pushes": 0,
-      "winRate": 0.4666666666666667,
-      "roi": -0.05088501333383406,
-      "averagePublicMoneyMinusBetsPct": 2.8666666666666667,
-      "averageSharpCount": 3.2333333333333334,
-      "averagePickCount": 0.6333333333333333
+      "winRate": 0.46875,
+      "roi": -0.04332970000046941,
+      "averagePublicMoneyMinusBetsPct": 2.625,
+      "averageSharpCount": 3.1875,
+      "averagePickCount": 0.625
     },
     {
       "angleId": "nhl:moneyline:money-minus-bets-10",
@@ -1754,15 +1754,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 20,
+      "sampleSize": 21,
       "wins": 9,
-      "losses": 11,
+      "losses": 12,
       "pushes": 0,
-      "winRate": 0.45,
-      "roi": -0.06834919369129894,
-      "averagePublicMoneyMinusBetsPct": 6,
-      "averageSharpCount": 3.85,
-      "averagePickCount": 0.75
+      "winRate": 0.42857142857142855,
+      "roi": -0.11271351780123709,
+      "averagePublicMoneyMinusBetsPct": 5.761904761904762,
+      "averageSharpCount": 3.8095238095238093,
+      "averagePickCount": 0.7619047619047619
     },
     {
       "angleId": "nhl:moneyline:pick-majority-2plus",
@@ -1894,15 +1894,15 @@
           "value": "<5"
         }
       ],
-      "sampleSize": 90,
-      "wins": 45,
-      "losses": 45,
+      "sampleSize": 94,
+      "wins": 47,
+      "losses": 47,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 0,
       "averageSharpCount": 0,
-      "averagePickCount": 0.05555555555555555
+      "averagePickCount": 0.05319148936170213
     },
     {
       "angleId": "nhl:spread:money-minus-bets-5",
@@ -1916,15 +1916,15 @@
           "value": 5
         }
       ],
-      "sampleSize": 33,
+      "sampleSize": 35,
       "wins": 11,
-      "losses": 22,
+      "losses": 24,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
+      "winRate": 0.3142857142857143,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 19.12121212121212,
+      "averagePublicMoneyMinusBetsPct": 20.02857142857143,
       "averageSharpCount": 0,
-      "averagePickCount": 0.09090909090909091
+      "averagePickCount": 0.08571428571428572
     },
     {
       "angleId": "nhl:spread:money-minus-bets-10",
@@ -1938,15 +1938,15 @@
           "value": 10
         }
       ],
-      "sampleSize": 27,
+      "sampleSize": 29,
       "wins": 9,
-      "losses": 18,
+      "losses": 20,
       "pushes": 0,
-      "winRate": 0.3333333333333333,
+      "winRate": 0.3103448275862069,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 21.74074074074074,
+      "averagePublicMoneyMinusBetsPct": 22.655172413793103,
       "averageSharpCount": 0,
-      "averagePickCount": 0.1111111111111111
+      "averagePickCount": 0.10344827586206896
     },
     {
       "angleId": "nhl:total:sharp-majority-2plus",
@@ -1965,15 +1965,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 34,
-      "wins": 20,
-      "losses": 13,
+      "sampleSize": 36,
+      "wins": 21,
+      "losses": 14,
       "pushes": 1,
-      "winRate": 0.6060606060606061,
+      "winRate": 0.6,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": -1.8235294117647058,
-      "averageSharpCount": 3.1176470588235294,
-      "averagePickCount": 0.14705882352941177
+      "averagePublicMoneyMinusBetsPct": -1.6666666666666667,
+      "averageSharpCount": 3.0833333333333335,
+      "averagePickCount": 0.1388888888888889
     },
     {
       "angleId": "nhl:total:sharp-majority-3plus",
@@ -1992,15 +1992,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 21,
+      "sampleSize": 22,
       "wins": 13,
-      "losses": 7,
+      "losses": 8,
       "pushes": 1,
-      "winRate": 0.65,
+      "winRate": 0.6190476190476191,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": -2.238095238095238,
-      "averageSharpCount": 3.8095238095238093,
-      "averagePickCount": 0.09523809523809523
+      "averagePublicMoneyMinusBetsPct": -2.090909090909091,
+      "averageSharpCount": 3.772727272727273,
+      "averagePickCount": 0.09090909090909091
     },
     {
       "angleId": "nhl:total:money-minus-bets-5",
