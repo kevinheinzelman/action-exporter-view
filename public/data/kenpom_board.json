@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T08:04:59.093Z",
+  "generatedAt": "2026-03-28T08:34:58.486Z",
   "rowCount": 2,
   "rows": [
     {
@@ -13,8 +13,8 @@
       "spreadMarketAway": 7,
       "spreadMarketHome": -7,
       "totalMarketLine": 138.5,
-      "spreadMarketPulledAt": "2026-03-28T08:04:05.019Z",
-      "totalMarketPulledAt": "2026-03-28T08:04:05.019Z",
+      "spreadMarketPulledAt": "2026-03-28T08:34:03.479Z",
+      "totalMarketPulledAt": "2026-03-28T08:34:03.479Z",
       "awayProjectedScore": 71.23857500000001,
       "homeProjectedScore": 77.94225000000002,
       "projectedSpread": 6.703675000000004,
@@ -37,8 +37,8 @@
       "spreadMarketAway": 6.5,
       "spreadMarketHome": -6.5,
       "totalMarketLine": 153.5,
-      "spreadMarketPulledAt": "2026-03-28T08:04:05.019Z",
-      "totalMarketPulledAt": "2026-03-28T08:04:05.019Z",
+      "spreadMarketPulledAt": "2026-03-28T08:34:03.479Z",
+      "totalMarketPulledAt": "2026-03-28T08:34:03.479Z",
       "awayProjectedScore": 75.15199999999999,
       "homeProjectedScore": 78.74184999999999,
       "projectedSpread": 3.5898499999999984,
