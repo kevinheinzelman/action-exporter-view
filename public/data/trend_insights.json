@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T21:14:29.698Z",
+  "generatedAt": "2026-03-28T22:14:56.761Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 7,
   "rows": [
@@ -84,46 +84,6 @@
       }
     },
     {
-      "insightId": "nba:7:spread:underdog:all-sharps:1-3:all-money",
-      "league": "nba",
-      "timeframeDays": 7,
-      "startDate": "2026-03-22",
-      "endDate": "2026-03-28",
-      "market": "spread",
-      "marketSide": "underdog",
-      "sharpsBucket": null,
-      "picksBucket": "1-3",
-      "moneyDeltaBucket": null,
-      "label": "Spread underdogs with 1-3 picks are working",
-      "sampleSize": 18,
-      "wins": 12,
-      "losses": 6,
-      "pushes": 0,
-      "winRate": 0.6666666666666666,
-      "roi": null,
-      "summaryText": "NBA | last 7 days | 66.7% | 12-6 | across 18 plays",
-      "score": 19.467,
-      "scoreComponents": {
-        "sample": 1.8,
-        "edge": 14.667,
-        "roi": 0,
-        "recency": 3
-      },
-      "dimensionType": "picks",
-      "angleCardId": "picks-1-3",
-      "drilldown": {
-        "league": "nba",
-        "market": "spread",
-        "marketSide": "underdog",
-        "startDate": "2026-03-22",
-        "endDate": "2026-03-28",
-        "sharpsBucket": null,
-        "picksBucket": "1-3",
-        "moneyDeltaBucket": null,
-        "angleCardId": "picks-1-3"
-      }
-    },
-    {
       "insightId": "mlb:7:total:under:1-3:all-picks:all-money",
       "league": "mlb",
       "timeframeDays": 7,
@@ -161,6 +121,46 @@
         "picksBucket": null,
         "moneyDeltaBucket": null,
         "angleCardId": "sharps-1-3"
+      }
+    },
+    {
+      "insightId": "nba:7:spread:underdog:all-sharps:1-3:all-money",
+      "league": "nba",
+      "timeframeDays": 7,
+      "startDate": "2026-03-22",
+      "endDate": "2026-03-28",
+      "market": "spread",
+      "marketSide": "underdog",
+      "sharpsBucket": null,
+      "picksBucket": "1-3",
+      "moneyDeltaBucket": null,
+      "label": "Spread underdogs with 1-3 picks are working",
+      "sampleSize": 19,
+      "wins": 12,
+      "losses": 7,
+      "pushes": 0,
+      "winRate": 0.631578947368421,
+      "roi": null,
+      "summaryText": "NBA | last 7 days | 63.2% | 12-7 | across 19 plays",
+      "score": 16.058,
+      "scoreComponents": {
+        "sample": 1.9,
+        "edge": 11.158,
+        "roi": 0,
+        "recency": 3
+      },
+      "dimensionType": "picks",
+      "angleCardId": "picks-1-3",
+      "drilldown": {
+        "league": "nba",
+        "market": "spread",
+        "marketSide": "underdog",
+        "startDate": "2026-03-22",
+        "endDate": "2026-03-28",
+        "sharpsBucket": null,
+        "picksBucket": "1-3",
+        "moneyDeltaBucket": null,
+        "angleCardId": "picks-1-3"
       }
     },
     {
