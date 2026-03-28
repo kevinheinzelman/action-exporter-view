@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T02:04:58.073Z",
+  "generatedAt": "2026-03-28T02:34:55.971Z",
   "basis": "analysis_rows_latest_pregame",
   "rowCount": 79,
   "rows": [
@@ -20,15 +20,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 28,
+      "sampleSize": 29,
       "wins": 8,
-      "losses": 20,
+      "losses": 21,
       "pushes": 0,
-      "winRate": 0.2857142857142857,
-      "roi": -0.36273600776050496,
-      "averagePublicMoneyMinusBetsPct": 3.857142857142857,
-      "averageSharpCount": 3,
-      "averagePickCount": 0.5
+      "winRate": 0.27586206896551724,
+      "roi": -0.3847106281825565,
+      "averagePublicMoneyMinusBetsPct": 3.7586206896551726,
+      "averageSharpCount": 3.0344827586206895,
+      "averagePickCount": 0.4827586206896552
     },
     {
       "angleId": "mlb:moneyline:money-minus-bets-5",
@@ -69,15 +69,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 15,
+      "sampleSize": 16,
       "wins": 4,
-      "losses": 11,
+      "losses": 12,
       "pushes": 0,
-      "winRate": 0.26666666666666666,
-      "roi": -0.34059927797833933,
-      "averagePublicMoneyMinusBetsPct": 0.9333333333333333,
-      "averageSharpCount": 3.8666666666666667,
-      "averagePickCount": 0.7333333333333333
+      "winRate": 0.25,
+      "roi": -0.38181182310469314,
+      "averagePublicMoneyMinusBetsPct": 0.9375,
+      "averageSharpCount": 3.875,
+      "averagePickCount": 0.6875
     },
     {
       "angleId": "mlb:moneyline:money-minus-bets-10",
@@ -231,15 +231,15 @@
           "value": "<5"
         }
       ],
-      "sampleSize": 108,
-      "wins": 54,
-      "losses": 54,
+      "sampleSize": 110,
+      "wins": 55,
+      "losses": 55,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 0,
       "averageSharpCount": 0,
-      "averagePickCount": 0.12962962962962962
+      "averagePickCount": 0.13636363636363635
     },
     {
       "angleId": "mlb:spread:money-minus-bets-5",
@@ -253,15 +253,15 @@
           "value": 5
         }
       ],
-      "sampleSize": 10,
-      "wins": 6,
+      "sampleSize": 11,
+      "wins": 7,
       "losses": 4,
       "pushes": 0,
-      "winRate": 0.6,
+      "winRate": 0.6363636363636364,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 16.5,
+      "averagePublicMoneyMinusBetsPct": 15.545454545454545,
       "averageSharpCount": 0,
-      "averagePickCount": 0.1
+      "averagePickCount": 0.09090909090909091
     },
     {
       "angleId": "mlb:spread:money-minus-bets-10",
@@ -400,15 +400,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 16,
-      "wins": 8,
+      "sampleSize": 17,
+      "wins": 9,
       "losses": 6,
       "pushes": 2,
-      "winRate": 0.5714285714285714,
+      "winRate": 0.6,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 4.375,
-      "averageSharpCount": 5.6875,
-      "averagePickCount": 1.625
+      "averagePublicMoneyMinusBetsPct": 4.176470588235294,
+      "averageSharpCount": 5.529411764705882,
+      "averagePickCount": 1.5294117647058822
     },
     {
       "angleId": "mlb:total:sharp-majority-3plus",
@@ -427,15 +427,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 16,
-      "wins": 8,
+      "sampleSize": 17,
+      "wins": 9,
       "losses": 6,
       "pushes": 2,
-      "winRate": 0.5714285714285714,
+      "winRate": 0.6,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 4.375,
-      "averageSharpCount": 5.6875,
-      "averagePickCount": 1.625
+      "averagePublicMoneyMinusBetsPct": 4.176470588235294,
+      "averageSharpCount": 5.529411764705882,
+      "averagePickCount": 1.5294117647058822
     },
     {
       "angleId": "mlb:total:pick-majority-2plus",
@@ -454,15 +454,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 11,
+      "sampleSize": 12,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "pushes": 1,
-      "winRate": 0.4,
+      "winRate": 0.36363636363636365,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 2.5454545454545454,
-      "averageSharpCount": 3.272727272727273,
-      "averagePickCount": 3.1818181818181817
+      "averagePublicMoneyMinusBetsPct": 2.25,
+      "averageSharpCount": 3,
+      "averagePickCount": 3.3333333333333335
     },
     {
       "angleId": "mlb:total:pick-majority-3plus",
@@ -481,15 +481,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 8,
+      "sampleSize": 9,
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "pushes": 1,
-      "winRate": 0.2857142857142857,
+      "winRate": 0.25,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 3.375,
-      "averageSharpCount": 3.625,
-      "averagePickCount": 3.625
+      "averagePublicMoneyMinusBetsPct": 2.888888888888889,
+      "averageSharpCount": 3.2222222222222223,
+      "averagePickCount": 3.7777777777777777
     },
     {
       "angleId": "mlb:total:agreement-2-2",
@@ -567,15 +567,15 @@
           "value": 5
         }
       ],
-      "sampleSize": 25,
+      "sampleSize": 27,
       "wins": 4,
-      "losses": 21,
+      "losses": 23,
       "pushes": 0,
-      "winRate": 0.16,
-      "roi": -0.4941904761904762,
-      "averagePublicMoneyMinusBetsPct": 12.64,
+      "winRate": 0.14814814814814814,
+      "roi": -0.531657848324515,
+      "averagePublicMoneyMinusBetsPct": 12.11111111111111,
       "averageSharpCount": 0,
-      "averagePickCount": 0.16
+      "averagePickCount": 0.14814814814814814
     },
     {
       "angleId": "nba:moneyline:money-minus-bets-10",
@@ -665,15 +665,15 @@
           "value": ">10"
         }
       ],
-      "sampleSize": 38,
-      "wins": 19,
-      "losses": 19,
+      "sampleSize": 42,
+      "wins": 21,
+      "losses": 21,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 0,
-      "averageSharpCount": 1.0263157894736843,
-      "averagePickCount": 0.6578947368421053
+      "averageSharpCount": 0.9761904761904762,
+      "averagePickCount": 0.5952380952380952
     },
     {
       "angleId": "nba:spread:sharp-majority-2plus",
@@ -692,15 +692,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 37,
-      "wins": 19,
+      "sampleSize": 39,
+      "wins": 21,
       "losses": 17,
       "pushes": 1,
-      "winRate": 0.5277777777777778,
+      "winRate": 0.5526315789473685,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 2.1621621621621623,
-      "averageSharpCount": 4.72972972972973,
-      "averagePickCount": 1.0810810810810811
+      "averagePublicMoneyMinusBetsPct": 2.1025641025641026,
+      "averageSharpCount": 4.666666666666667,
+      "averagePickCount": 1.0256410256410255
     },
     {
       "angleId": "nba:spread:sharp-majority-3plus",
@@ -719,15 +719,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 31,
-      "wins": 16,
+      "sampleSize": 32,
+      "wins": 17,
       "losses": 14,
       "pushes": 1,
-      "winRate": 0.5333333333333333,
+      "winRate": 0.5483870967741935,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 2,
-      "averageSharpCount": 5.258064516129032,
-      "averagePickCount": 1.1935483870967742
+      "averageSharpCount": 5.25,
+      "averagePickCount": 1.15625
     },
     {
       "angleId": "nba:spread:spread-middle-range",
@@ -741,15 +741,15 @@
           "value": "5-10"
         }
       ],
-      "sampleSize": 28,
-      "wins": 13,
-      "losses": 13,
+      "sampleSize": 30,
+      "wins": 14,
+      "losses": 14,
       "pushes": 2,
       "winRate": 0.5,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 0,
-      "averageSharpCount": 2.25,
-      "averagePickCount": 1.1428571428571428
+      "averageSharpCount": 2.2666666666666666,
+      "averagePickCount": 1.1
     },
     {
       "angleId": "nba:spread:spread-short-favorite-range",
@@ -952,15 +952,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 43,
+      "sampleSize": 45,
       "wins": 17,
-      "losses": 26,
-      "pushes": 0,
-      "winRate": 0.3953488372093023,
+      "losses": 27,
+      "pushes": 1,
+      "winRate": 0.38636363636363635,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 1.2093023255813953,
-      "averageSharpCount": 5.395348837209302,
-      "averagePickCount": 0.2558139534883721
+      "averagePublicMoneyMinusBetsPct": 1.1777777777777778,
+      "averageSharpCount": 5.444444444444445,
+      "averagePickCount": 0.24444444444444444
     },
     {
       "angleId": "nba:total:sharp-majority-3plus",
@@ -979,15 +979,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 40,
+      "sampleSize": 42,
       "wins": 17,
-      "losses": 23,
-      "pushes": 0,
-      "winRate": 0.425,
+      "losses": 24,
+      "pushes": 1,
+      "winRate": 0.4146341463414634,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 1.125,
-      "averageSharpCount": 5.65,
-      "averagePickCount": 0.275
+      "averagePublicMoneyMinusBetsPct": 1.0952380952380953,
+      "averageSharpCount": 5.690476190476191,
+      "averagePickCount": 0.2619047619047619
     },
     {
       "angleId": "nba:total:money-minus-bets-5",
@@ -1082,15 +1082,15 @@
           "value": 5
         }
       ],
-      "sampleSize": 21,
+      "sampleSize": 22,
       "wins": 3,
-      "losses": 18,
+      "losses": 19,
       "pushes": 0,
-      "winRate": 0.14285714285714285,
-      "roi": -0.6047619047619047,
-      "averagePublicMoneyMinusBetsPct": 18,
+      "winRate": 0.13636363636363635,
+      "roi": -0.6227272727272727,
+      "averagePublicMoneyMinusBetsPct": 17.681818181818183,
       "averageSharpCount": 0,
-      "averagePickCount": 1.0952380952380953
+      "averagePickCount": 1.0909090909090908
     },
     {
       "angleId": "ncaab:moneyline:money-minus-bets-10",
@@ -1104,15 +1104,15 @@
           "value": 10
         }
       ],
-      "sampleSize": 14,
+      "sampleSize": 15,
       "wins": 1,
-      "losses": 13,
+      "losses": 14,
       "pushes": 0,
-      "winRate": 0.07142857142857142,
-      "roi": -0.7892857142857144,
-      "averagePublicMoneyMinusBetsPct": 23.357142857142858,
+      "winRate": 0.06666666666666667,
+      "roi": -0.8033333333333333,
+      "averagePublicMoneyMinusBetsPct": 22.533333333333335,
       "averageSharpCount": 0,
-      "averagePickCount": 0.5
+      "averagePickCount": 0.5333333333333333
     },
     {
       "angleId": "ncaab:moneyline:pick-majority-2plus",
@@ -1180,15 +1180,15 @@
           "value": "5-10"
         }
       ],
-      "sampleSize": 28,
-      "wins": 14,
-      "losses": 14,
+      "sampleSize": 30,
+      "wins": 15,
+      "losses": 15,
       "pushes": 0,
       "winRate": 0.5,
       "roi": null,
       "averagePublicMoneyMinusBetsPct": 0,
-      "averageSharpCount": 1.4285714285714286,
-      "averagePickCount": 2.7857142857142856
+      "averageSharpCount": 1.3333333333333333,
+      "averagePickCount": 3.1666666666666665
     },
     {
       "angleId": "ncaab:spread:spread-short-favorite-range",
@@ -1224,15 +1224,15 @@
           "value": 5
         }
       ],
-      "sampleSize": 18,
-      "wins": 12,
+      "sampleSize": 19,
+      "wins": 13,
       "losses": 5,
       "pushes": 1,
-      "winRate": 0.7058823529411765,
+      "winRate": 0.7222222222222222,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 11.88888888888889,
-      "averageSharpCount": 1.7222222222222223,
-      "averagePickCount": 4.111111111111111
+      "averagePublicMoneyMinusBetsPct": 11.68421052631579,
+      "averageSharpCount": 1.631578947368421,
+      "averagePickCount": 4.473684210526316
     },
     {
       "angleId": "ncaab:spread:pick-majority-2plus",
@@ -1251,15 +1251,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 18,
-      "wins": 10,
+      "sampleSize": 19,
+      "wins": 11,
       "losses": 8,
       "pushes": 0,
-      "winRate": 0.5555555555555556,
+      "winRate": 0.5789473684210527,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 1.7777777777777777,
-      "averageSharpCount": 3.111111111111111,
-      "averagePickCount": 7.833333333333333
+      "averagePublicMoneyMinusBetsPct": 2.1052631578947367,
+      "averageSharpCount": 2.9473684210526314,
+      "averagePickCount": 8
     },
     {
       "angleId": "ncaab:spread:pick-majority-3plus",
@@ -1278,15 +1278,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 18,
-      "wins": 10,
+      "sampleSize": 19,
+      "wins": 11,
       "losses": 8,
       "pushes": 0,
-      "winRate": 0.5555555555555556,
+      "winRate": 0.5789473684210527,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 1.7777777777777777,
-      "averageSharpCount": 3.111111111111111,
-      "averagePickCount": 7.833333333333333
+      "averagePublicMoneyMinusBetsPct": 2.1052631578947367,
+      "averageSharpCount": 2.9473684210526314,
+      "averagePickCount": 8
     },
     {
       "angleId": "ncaab:spread:sharp-majority-2plus",
@@ -1467,15 +1467,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 28,
+      "sampleSize": 29,
       "wins": 16,
-      "losses": 12,
+      "losses": 13,
       "pushes": 0,
-      "winRate": 0.5714285714285714,
+      "winRate": 0.5517241379310345,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 2.5714285714285716,
-      "averageSharpCount": 8,
-      "averagePickCount": 1.5357142857142858
+      "averagePublicMoneyMinusBetsPct": 2.586206896551724,
+      "averageSharpCount": 8.344827586206897,
+      "averagePickCount": 1.5172413793103448
     },
     {
       "angleId": "ncaab:total:sharp-majority-3plus",
@@ -1494,15 +1494,15 @@
           "value": 3
         }
       ],
-      "sampleSize": 26,
+      "sampleSize": 27,
       "wins": 14,
-      "losses": 12,
+      "losses": 13,
       "pushes": 0,
-      "winRate": 0.5384615384615384,
+      "winRate": 0.5185185185185185,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 2.423076923076923,
-      "averageSharpCount": 8.461538461538462,
-      "averagePickCount": 1.6538461538461537
+      "averagePublicMoneyMinusBetsPct": 2.4444444444444446,
+      "averageSharpCount": 8.814814814814815,
+      "averagePickCount": 1.6296296296296295
     },
     {
       "angleId": "ncaab:total:pick-majority-2plus",
@@ -1521,15 +1521,15 @@
           "value": 2
         }
       ],
-      "sampleSize": 15,
-      "wins": 9,
+      "sampleSize": 16,
+      "wins": 10,
       "losses": 6,
       "pushes": 0,
-      "winRate": 0.6,
+      "winRate": 0.625,
       "roi": null,
-      "averagePublicMoneyMinusBetsPct": 3.7333333333333334,
-      "averageSharpCount": 9.133333333333333,
-      "averagePickCount": 3.2
+      "averagePublicMoneyMinusBetsPct": 3.3125,
+      "averageSharpCount": 8.5625,
+      "averagePickCount": 3.125
     },
     {
       "angleId": "ncaab:total:agreement-2-2",
