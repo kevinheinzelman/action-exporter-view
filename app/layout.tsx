@@ -9,6 +9,9 @@ export const metadata = {
 
 const NAV_ITEMS = [
   { href: '/', label: 'Current Board' },
+  { href: '/mlb', label: 'MLB Leans' },
+  { href: '/mlb/signals', label: 'MLB Signals' },
+  { href: '/mlb/performance', label: 'MLB Performance' },
   { href: '/kenpom', label: 'KenPom Board' },
   { href: '/analysis', label: 'Analysis' },
   { href: '/about-data', label: 'About Data' }
