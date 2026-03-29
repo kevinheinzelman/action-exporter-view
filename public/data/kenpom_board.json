@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T23:14:26.416Z",
+  "generatedAt": "2026-03-29T00:14:37.464Z",
   "rowCount": 2,
   "rows": [
     {
@@ -11,10 +11,10 @@
       "homeTeam": "Illinois",
       "leagueSlug": "ncaab",
       "spreadMarketAway": 6.5,
-      "spreadMarketHome": -3.5,
-      "totalMarketLine": 134.5,
-      "spreadMarketPulledAt": "2026-03-28T23:08:45.898Z",
-      "totalMarketPulledAt": "2026-03-28T23:08:45.898Z",
+      "spreadMarketHome": -6.5,
+      "totalMarketLine": 131.5,
+      "spreadMarketPulledAt": "2026-03-29T00:08:43.203Z",
+      "totalMarketPulledAt": "2026-03-29T00:08:43.203Z",
       "awayProjectedScore": 71.23857500000001,
       "homeProjectedScore": 77.94225000000002,
       "projectedSpread": 6.703675000000004,
@@ -22,7 +22,7 @@
       "spreadRecommendation": "No play",
       "totalRecommendation": "Over",
       "spreadEdge": 0.20367500000000405,
-      "totalEdge": 14.680825000000027,
+      "totalEdge": 17.680825000000027,
       "awayKenPomRank": 22,
       "homeKenPomRank": 6
     },
@@ -37,8 +37,8 @@
       "spreadMarketAway": 5.5,
       "spreadMarketHome": -5.5,
       "totalMarketLine": 152.5,
-      "spreadMarketPulledAt": "2026-03-28T23:08:45.898Z",
-      "totalMarketPulledAt": "2026-03-28T23:08:45.898Z",
+      "spreadMarketPulledAt": "2026-03-29T00:08:43.203Z",
+      "totalMarketPulledAt": "2026-03-29T00:08:43.203Z",
       "awayProjectedScore": 75.15199999999999,
       "homeProjectedScore": 78.74184999999999,
       "projectedSpread": 3.5898499999999984,
