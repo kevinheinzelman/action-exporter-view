@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T21:15:01.148Z",
+  "generatedAt": "2026-03-29T22:16:40.796Z",
   "rowCount": 2,
   "rows": [
     {
@@ -13,18 +13,18 @@
       "spreadMarketAway": 8.5,
       "spreadMarketHome": -8.5,
       "totalMarketLine": 146.5,
-      "spreadMarketPulledAt": "2026-03-29T21:08:59.913Z",
-      "totalMarketPulledAt": "2026-03-29T21:08:59.913Z",
-      "awayProjectedScore": 67.96600000000001,
-      "homeProjectedScore": 75.82,
-      "projectedSpread": 7.853999999999985,
-      "projectedTotal": 143.786,
+      "spreadMarketPulledAt": "2026-03-29T22:09:39.738Z",
+      "totalMarketPulledAt": "2026-03-29T22:09:39.738Z",
+      "awayProjectedScore": 67.440375,
+      "homeProjectedScore": 75.6963,
+      "projectedSpread": 8.25592499999999,
+      "projectedTotal": 143.136675,
       "spreadRecommendation": "No play",
       "totalRecommendation": "No play",
-      "spreadEdge": 0.646000000000015,
-      "totalEdge": 2.7139999999999986,
-      "awayKenPomRank": 14,
-      "homeKenPomRank": 1
+      "spreadEdge": 0.24407500000000937,
+      "totalEdge": 3.3633250000000032,
+      "awayKenPomRank": 15,
+      "homeKenPomRank": 3
     },
     {
       "gameId": "287706",
@@ -37,18 +37,18 @@
       "spreadMarketAway": 4.5,
       "spreadMarketHome": -4.5,
       "totalMarketLine": 135.5,
-      "spreadMarketPulledAt": "2026-03-29T21:08:59.913Z",
-      "totalMarketPulledAt": "2026-03-29T21:08:59.913Z",
-      "awayProjectedScore": 66.38785,
-      "homeProjectedScore": 73.03315,
-      "projectedSpread": 6.645300000000006,
-      "projectedTotal": 139.421,
+      "spreadMarketPulledAt": "2026-03-29T22:09:39.738Z",
+      "totalMarketPulledAt": "2026-03-29T22:09:39.738Z",
+      "awayProjectedScore": 66.14160000000001,
+      "homeProjectedScore": 73.59555,
+      "projectedSpread": 7.453949999999992,
+      "projectedTotal": 139.73715,
       "spreadRecommendation": "UConn",
-      "totalRecommendation": "No play",
-      "spreadEdge": 2.145300000000006,
-      "totalEdge": 3.9209999999999923,
+      "totalRecommendation": "Over",
+      "spreadEdge": 2.953949999999992,
+      "totalEdge": 4.237150000000014,
       "awayKenPomRank": 10,
-      "homeKenPomRank": 3
+      "homeKenPomRank": 1
     }
   ]
 }
