@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-03-29T18:17:45.511Z",
+  "boardDate": "2026-03-29",
+  "lastLeanUpdateAt": "2026-03-29T18:17:30.440Z",
+  "currentBoardRowCount": 18,
+  "countsByLane": {
+    "core": 2,
+    "exploratory": 16
+  },
+  "countsByConfidenceTier": {
+    "strong": 2,
+    "moderate": 16
+  },
+  "countsBySupportProfile": {
+    "action_only": 15,
+    "action_plus_market": 3
+  },
+  "historyRowCount": 71,
+  "settledHistoryRowCount": 53,
+  "pendingHistoryRowCount": 18,
+  "note": "MLB daily leans export generated from mlb_daily_leans_v2."
+}
