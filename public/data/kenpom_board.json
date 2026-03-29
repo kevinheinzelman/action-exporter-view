@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T01:15:06.511Z",
+  "generatedAt": "2026-03-29T02:14:43.576Z",
   "rowCount": 2,
   "rows": [
     {
@@ -13,8 +13,8 @@
       "spreadMarketAway": 6.5,
       "spreadMarketHome": -6.5,
       "totalMarketLine": 138.5,
-      "spreadMarketPulledAt": "2026-03-29T01:08:56.731Z",
-      "totalMarketPulledAt": "2026-03-29T01:08:56.731Z",
+      "spreadMarketPulledAt": "2026-03-29T02:08:51.680Z",
+      "totalMarketPulledAt": "2026-03-29T02:08:51.680Z",
       "awayProjectedScore": 71.23857500000001,
       "homeProjectedScore": 77.94225000000002,
       "projectedSpread": 6.703675000000004,
@@ -35,18 +35,18 @@
       "homeTeam": "Arizona",
       "leagueSlug": "ncaab",
       "spreadMarketAway": 5.5,
-      "spreadMarketHome": -5.5,
-      "totalMarketLine": 156.5,
-      "spreadMarketPulledAt": "2026-03-29T01:08:56.731Z",
-      "totalMarketPulledAt": "2026-03-29T01:08:56.731Z",
+      "spreadMarketHome": 1.5,
+      "totalMarketLine": 149.5,
+      "spreadMarketPulledAt": "2026-03-29T02:08:51.680Z",
+      "totalMarketPulledAt": "2026-03-29T02:08:51.680Z",
       "awayProjectedScore": 75.15199999999999,
       "homeProjectedScore": 78.74184999999999,
       "projectedSpread": 3.5898499999999984,
       "projectedTotal": 153.89385,
       "spreadRecommendation": "No play",
-      "totalRecommendation": "No play",
+      "totalRecommendation": "Over",
       "spreadEdge": 1.9101500000000016,
-      "totalEdge": 2.6061500000000137,
+      "totalEdge": 4.393849999999986,
       "awayKenPomRank": 8,
       "homeKenPomRank": 2
     }
