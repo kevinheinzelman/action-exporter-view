@@ -5,6 +5,26 @@ export type MlbDailyLeanRow = {
   marketType: string;
   marketSide: string;
   selectionLabel: string;
+  currentOdds?: number | null;
+  currentLine?: number | null;
+  scheduledStartTime?: string | null;
+  snapshotCapturedAt?: string | null;
+  minutesBeforeStart?: number | null;
+  lineValue?: number | null;
+  priceAmerican?: number | null;
+  openingLineValue?: number | null;
+  openingPriceAmerican?: number | null;
+  lineDelta?: number | null;
+  priceDelta?: number | null;
+  moveDirection?: string | null;
+  moveBucket?: string | null;
+  marketMoveToward?: string | null;
+  sharpCount?: number | null;
+  pickCount?: number | null;
+  steamMoves?: number | null;
+  reverseLineMoves?: number | null;
+  publicBetsPct?: number | null;
+  publicMoneyPct?: number | null;
   homeTeam: string | null;
   awayTeam: string | null;
   leanLane: 'core' | 'exploratory';
@@ -94,6 +114,7 @@ export type MlbPerformanceRow = {
 
 export type MlbPerformanceRowsPayload = {
   generatedAt: string | null;
+  trackingStartDate?: string | null;
   rowCount: number;
   settledRowCount: number;
   rows: MlbPerformanceRow[];
@@ -118,6 +139,7 @@ export type MlbPerformanceWindowSummary = {
   dateRange: { start: string | null; end: string | null };
   overall: {
     bets: number;
+    pricedBets: number;
     wins: number;
     losses: number;
     pushes: number;
@@ -133,12 +155,34 @@ export type MlbPerformanceWindowSummary = {
 
 export type MlbPerformanceSummaryPayload = {
   generatedAt: string | null;
+  trackingStartDate?: string | null;
   settledRowCount: number;
   windows: MlbPerformanceWindowSummary[];
 };
 
 export function formatLeanScore(value: number | null | undefined): string {
   return typeof value === 'number' ? value.toFixed(2).replace(/\.00$/, '') : 'N/A';
+}
+
+export function formatAmericanOdds(value: number | null | undefined): string {
+  if (typeof value !== 'number') {
+    return 'N/A';
+  }
+  return value > 0 ? `+${value}` : `${value}`;
+}
+
+export function formatMarketTypeLabel(value: string | null | undefined): string {
+  if (!value) {
+    return 'Unknown';
+  }
+  if (value === 'moneyline') return 'Moneyline';
+  if (value === 'run_line') return 'Run Line';
+  if (value === 'total') return 'Total';
+  return value
+    .split(/[_\s]+/)
+    .filter(Boolean)
+    .map((segment) => segment[0].toUpperCase() + segment.slice(1))
+    .join(' ');
 }
 
 export function formatUnits(value: number | null | undefined): string {
@@ -152,16 +196,18 @@ export function summarizePerformanceRows(rows: MlbPerformanceRow[]) {
   const wins = rows.filter((row) => row.result === 'win').length;
   const losses = rows.filter((row) => row.result === 'loss').length;
   const pushes = rows.filter((row) => row.result === 'push').length;
-  const units = rows.reduce((sum, row) => sum + (row.realizedRoi ?? 0), 0);
+  const pricedRows = rows.filter((row) => typeof row.realizedRoi === 'number');
+  const units = pricedRows.reduce((sum, row) => sum + (row.realizedRoi ?? 0), 0);
   const graded = wins + losses;
   return {
     bets: rows.length,
+    pricedBets: pricedRows.length,
     wins,
     losses,
     pushes,
     winPct: graded ? wins / graded : null,
-    units,
-    roi: rows.length ? units / rows.length : null
+    units: pricedRows.length ? units : null,
+    roi: pricedRows.length ? units / pricedRows.length : null
   };
 }
 
@@ -178,7 +224,7 @@ export function buildBreakdown<T extends string>(rows: MlbPerformanceRow[], getK
       key,
       ...summarizePerformanceRows(bucketRows)
     }))
-    .sort((left, right) => right.bets - left.bets || String(left.key).localeCompare(String(right.key)));
+    .sort((left, right) => compareBreakdownKeys(String(left.key), String(right.key)) || right.bets - left.bets || String(left.key).localeCompare(String(right.key)));
 }
 
 export function filterRowsByDate(rows: MlbPerformanceRow[], startDate: string, endDate: string) {
@@ -200,4 +246,18 @@ export function getPresetStartDate(endDate: string, days: number): string {
   }
   date.setDate(date.getDate() - (days - 1));
   return date.toISOString().slice(0, 10);
+}
+
+function compareBreakdownKeys(left: string, right: string): number {
+  const leanTypeOrder = ['core', 'exploratory', 'unknown'];
+  const leftLeanTypeIndex = leanTypeOrder.indexOf(left);
+  const rightLeanTypeIndex = leanTypeOrder.indexOf(right);
+  if (leftLeanTypeIndex !== -1 || rightLeanTypeIndex !== -1) {
+    return normalizeOrderIndex(leftLeanTypeIndex) - normalizeOrderIndex(rightLeanTypeIndex);
+  }
+  return 0;
+}
+
+function normalizeOrderIndex(value: number): number {
+  return value === -1 ? Number.MAX_SAFE_INTEGER : value;
 }

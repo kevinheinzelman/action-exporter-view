@@ -1266,13 +1266,38 @@ th {
   gap: 16px;
 }
 
+.mlb-hero {
+  padding: 22px;
+}
+
+.mlb-hero-compact {
+  padding: 18px;
+}
+
+.mlb-hero-tight {
+  padding: 14px 18px;
+}
+
+.mlb-hero-copy {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
 .mlb-lean-card {
-  border: 1px solid var(--surface-border-strong);
+  border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.86);
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.06), transparent 32%),
+    rgba(255, 255, 255, 0.94);
   padding: 16px;
   display: grid;
   gap: 14px;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.06);
+}
+
+.mlb-lean-card-emphasis {
+  gap: 16px;
 }
 
 .mlb-lean-card-head {
@@ -1284,6 +1309,9 @@ th {
 
 .mlb-lean-card-head h4 {
   margin: 4px 0 0;
+  font-size: 1.42rem;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
 }
 
 .mlb-lean-kicker {
@@ -1307,6 +1335,18 @@ th {
   color: var(--text-soft);
 }
 
+.mlb-pill-positive {
+  background: rgba(220, 252, 231, 0.92);
+  border-color: rgba(34, 197, 94, 0.28);
+  color: #166534;
+}
+
+.mlb-pill-negative {
+  background: rgba(254, 226, 226, 0.92);
+  border-color: rgba(239, 68, 68, 0.28);
+  color: #991b1b;
+}
+
 .mlb-pill-lane-core {
   background: rgba(34, 197, 94, 0.12);
   border-color: rgba(34, 197, 94, 0.2);
@@ -1325,6 +1365,24 @@ th {
   color: #b45309;
 }
 
+.mlb-pill-maturity-early {
+  background: rgba(254, 249, 195, 0.92);
+  border-color: rgba(234, 179, 8, 0.26);
+  color: #854d0e;
+}
+
+.mlb-pill-maturity-developing {
+  background: rgba(219, 234, 254, 0.92);
+  border-color: rgba(59, 130, 246, 0.24);
+  color: #1d4ed8;
+}
+
+.mlb-pill-maturity-stable {
+  background: rgba(220, 252, 231, 0.92);
+  border-color: rgba(34, 197, 94, 0.28);
+  color: #166534;
+}
+
 .mlb-lean-selection {
   display: flex;
   justify-content: space-between;
@@ -1335,6 +1393,91 @@ th {
 
 .mlb-lean-selection strong {
   color: var(--text-muted);
+}
+
+.mlb-lean-explainer {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.mlb-signal-block {
+  display: grid;
+  gap: 10px;
+}
+
+.mlb-signal-chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mlb-signal-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.mlb-signal-chip-primary {
+  background: rgba(239, 246, 255, 0.94);
+  border-color: rgba(37, 99, 235, 0.22);
+  color: #1e3a8a;
+}
+
+.mlb-signal-chip-cautious {
+  background: rgba(255, 247, 237, 0.94);
+  border-color: rgba(249, 115, 22, 0.22);
+  color: #9a3412;
+}
+
+.mlb-signal-chip-icon {
+  display: inline-flex;
+  width: 16px;
+  justify-content: center;
+}
+
+.mlb-trend-chart {
+  display: grid;
+  gap: 10px;
+}
+
+.mlb-trend-chart-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.mlb-trend-axis {
+  stroke: rgba(148, 163, 184, 0.5);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.mlb-trend-line {
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mlb-trend-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.mlb-trend-foot strong {
+  color: var(--text);
 }
 
 .mlb-lean-metrics {
@@ -1360,4 +1503,41 @@ th {
   color: var(--text-soft);
   display: grid;
   gap: 6px;
+}
+
+.mlb-lean-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.mlb-lean-footer .subtle {
+  font-size: 0.84rem;
+}
+
+@media (max-width: 768px) {
+  .mlb-hero,
+  .mlb-lean-card {
+    padding: 14px;
+  }
+
+  .mlb-lean-card-head {
+    flex-direction: column;
+  }
+
+  .mlb-lean-card-head h4 {
+    font-size: 1.18rem;
+  }
+
+  .mlb-lean-selection {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .mlb-lean-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
