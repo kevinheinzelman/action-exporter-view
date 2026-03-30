@@ -1,113 +1,585 @@
 {
-  "generatedAt": "2026-03-29T23:45:24.384Z",
+  "generatedAt": "2026-03-30T17:04:28.979Z",
   "trackingStartDate": "2026-03-28",
-  "settledRowCount": 0,
+  "settledRowCount": 5,
   "windows": [
     {
       "windowKey": "last_7_days",
       "dateRange": {
-        "start": null,
-        "end": null
+        "start": "2026-03-22",
+        "end": "2026-03-28"
       },
       "overall": {
-        "bets": 0,
-        "pricedBets": 0,
-        "wins": 0,
-        "losses": 0,
+        "bets": 5,
+        "pricedBets": 5,
+        "wins": 4,
+        "losses": 1,
         "pushes": 0,
-        "winPct": null,
-        "units": null,
-        "roi": null
+        "winPct": 0.8,
+        "units": 2.3567,
+        "roi": 0.4713472845898775
       },
-      "byLane": [],
-      "byConfidenceTier": [],
-      "byMarketType": [],
-      "bySupportProfile": []
+      "byLane": [
+        {
+          "key": "exploratory",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "core",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byConfidenceTier": [
+        {
+          "key": "moderate",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "strong",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byMarketType": [
+        {
+          "key": "total",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 2,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.6666666666666666,
+          "units": 0.8929,
+          "roi": 0.2976190476190476
+        },
+        {
+          "key": "moneyline",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.9174,
+          "roi": 0.9174311926605505
+        },
+        {
+          "key": "run_line",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.5464,
+          "roi": 0.546448087431694
+        }
+      ],
+      "bySupportProfile": [
+        {
+          "key": "action_only",
+          "bets": 5,
+          "pricedBets": 5,
+          "wins": 4,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.8,
+          "units": 2.3567,
+          "roi": 0.4713472845898775
+        }
+      ]
     },
     {
       "windowKey": "last_14_days",
       "dateRange": {
-        "start": null,
-        "end": null
+        "start": "2026-03-15",
+        "end": "2026-03-28"
       },
       "overall": {
-        "bets": 0,
-        "pricedBets": 0,
-        "wins": 0,
-        "losses": 0,
+        "bets": 5,
+        "pricedBets": 5,
+        "wins": 4,
+        "losses": 1,
         "pushes": 0,
-        "winPct": null,
-        "units": null,
-        "roi": null
+        "winPct": 0.8,
+        "units": 2.3567,
+        "roi": 0.4713472845898775
       },
-      "byLane": [],
-      "byConfidenceTier": [],
-      "byMarketType": [],
-      "bySupportProfile": []
+      "byLane": [
+        {
+          "key": "exploratory",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "core",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byConfidenceTier": [
+        {
+          "key": "moderate",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "strong",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byMarketType": [
+        {
+          "key": "total",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 2,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.6666666666666666,
+          "units": 0.8929,
+          "roi": 0.2976190476190476
+        },
+        {
+          "key": "moneyline",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.9174,
+          "roi": 0.9174311926605505
+        },
+        {
+          "key": "run_line",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.5464,
+          "roi": 0.546448087431694
+        }
+      ],
+      "bySupportProfile": [
+        {
+          "key": "action_only",
+          "bets": 5,
+          "pricedBets": 5,
+          "wins": 4,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.8,
+          "units": 2.3567,
+          "roi": 0.4713472845898775
+        }
+      ]
     },
     {
       "windowKey": "last_30_days",
       "dateRange": {
-        "start": null,
-        "end": null
+        "start": "2026-02-27",
+        "end": "2026-03-28"
       },
       "overall": {
-        "bets": 0,
-        "pricedBets": 0,
-        "wins": 0,
-        "losses": 0,
+        "bets": 5,
+        "pricedBets": 5,
+        "wins": 4,
+        "losses": 1,
         "pushes": 0,
-        "winPct": null,
-        "units": null,
-        "roi": null
+        "winPct": 0.8,
+        "units": 2.3567,
+        "roi": 0.4713472845898775
       },
-      "byLane": [],
-      "byConfidenceTier": [],
-      "byMarketType": [],
-      "bySupportProfile": []
+      "byLane": [
+        {
+          "key": "exploratory",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "core",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byConfidenceTier": [
+        {
+          "key": "moderate",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "strong",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byMarketType": [
+        {
+          "key": "total",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 2,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.6666666666666666,
+          "units": 0.8929,
+          "roi": 0.2976190476190476
+        },
+        {
+          "key": "moneyline",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.9174,
+          "roi": 0.9174311926605505
+        },
+        {
+          "key": "run_line",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.5464,
+          "roi": 0.546448087431694
+        }
+      ],
+      "bySupportProfile": [
+        {
+          "key": "action_only",
+          "bets": 5,
+          "pricedBets": 5,
+          "wins": 4,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.8,
+          "units": 2.3567,
+          "roi": 0.4713472845898775
+        }
+      ]
     },
     {
       "windowKey": "last_6_months",
       "dateRange": {
-        "start": null,
-        "end": null
+        "start": "2025-09-30",
+        "end": "2026-03-28"
       },
       "overall": {
-        "bets": 0,
-        "pricedBets": 0,
-        "wins": 0,
-        "losses": 0,
+        "bets": 5,
+        "pricedBets": 5,
+        "wins": 4,
+        "losses": 1,
         "pushes": 0,
-        "winPct": null,
-        "units": null,
-        "roi": null
+        "winPct": 0.8,
+        "units": 2.3567,
+        "roi": 0.4713472845898775
       },
-      "byLane": [],
-      "byConfidenceTier": [],
-      "byMarketType": [],
-      "bySupportProfile": []
+      "byLane": [
+        {
+          "key": "exploratory",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "core",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byConfidenceTier": [
+        {
+          "key": "moderate",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "strong",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byMarketType": [
+        {
+          "key": "total",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 2,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.6666666666666666,
+          "units": 0.8929,
+          "roi": 0.2976190476190476
+        },
+        {
+          "key": "moneyline",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.9174,
+          "roi": 0.9174311926605505
+        },
+        {
+          "key": "run_line",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.5464,
+          "roi": 0.546448087431694
+        }
+      ],
+      "bySupportProfile": [
+        {
+          "key": "action_only",
+          "bets": 5,
+          "pricedBets": 5,
+          "wins": 4,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.8,
+          "units": 2.3567,
+          "roi": 0.4713472845898775
+        }
+      ]
     },
     {
       "windowKey": "all_time",
       "dateRange": {
-        "start": null,
-        "end": null
+        "start": "2026-03-28",
+        "end": "2026-03-28"
       },
       "overall": {
-        "bets": 0,
-        "pricedBets": 0,
-        "wins": 0,
-        "losses": 0,
+        "bets": 5,
+        "pricedBets": 5,
+        "wins": 4,
+        "losses": 1,
         "pushes": 0,
-        "winPct": null,
-        "units": null,
-        "roi": null
+        "winPct": 0.8,
+        "units": 2.3567,
+        "roi": 0.4713472845898775
       },
-      "byLane": [],
-      "byConfidenceTier": [],
-      "byMarketType": [],
-      "bySupportProfile": []
+      "byLane": [
+        {
+          "key": "exploratory",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "core",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byConfidenceTier": [
+        {
+          "key": "moderate",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 3,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 2.4393,
+          "roi": 0.8131017434296123
+        },
+        {
+          "key": "strong",
+          "bets": 2,
+          "pricedBets": 2,
+          "wins": 1,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.5,
+          "units": -0.0826,
+          "roi": -0.041284403669724745
+        }
+      ],
+      "byMarketType": [
+        {
+          "key": "total",
+          "bets": 3,
+          "pricedBets": 3,
+          "wins": 2,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.6666666666666666,
+          "units": 0.8929,
+          "roi": 0.2976190476190476
+        },
+        {
+          "key": "moneyline",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.9174,
+          "roi": 0.9174311926605505
+        },
+        {
+          "key": "run_line",
+          "bets": 1,
+          "pricedBets": 1,
+          "wins": 1,
+          "losses": 0,
+          "pushes": 0,
+          "winPct": 1,
+          "units": 0.5464,
+          "roi": 0.546448087431694
+        }
+      ],
+      "bySupportProfile": [
+        {
+          "key": "action_only",
+          "bets": 5,
+          "pricedBets": 5,
+          "wins": 4,
+          "losses": 1,
+          "pushes": 0,
+          "winPct": 0.8,
+          "units": 2.3567,
+          "roi": 0.4713472845898775
+        }
+      ]
     }
   ],
-  "dailyTrend": []
+  "dailyTrend": [
+    {
+      "requestedDate": "2026-03-28",
+      "bets": 5,
+      "pricedBets": 5,
+      "wins": 4,
+      "losses": 1,
+      "pushes": 0,
+      "winPct": 0.8,
+      "units": 2.3567,
+      "roi": 0.4713472845898775
+    }
+  ]
 }

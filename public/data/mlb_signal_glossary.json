@@ -1,5 +1,1936 @@
 {
-  "generatedAt": "2026-03-29T23:45:24.384Z",
-  "rowCount": 0,
-  "rows": []
+  "generatedAt": "2026-03-30T17:04:28.979Z",
+  "rowCount": 106,
+  "rows": [
+    {
+      "signalId": "combo|action_alignment|total|under|sharp_and_majority_pick_agree_on_row_side",
+      "signalFamily": "action_alignment",
+      "signalName": "sharp_and_majority_pick_agree_on_row_side",
+      "humanReadableLabel": "sharp and majority pick agree on row side",
+      "plainEnglishDescription": "Action-derived signal: sharp and majority pick agree on row side.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 862,
+      "roi": 0.026038870270996904,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "combo|action_alignment|moneyline|home|sharp_and_majority_pick_agree_on_row_side",
+      "signalFamily": "action_alignment",
+      "signalName": "sharp_and_majority_pick_agree_on_row_side",
+      "humanReadableLabel": "sharp and majority pick agree on row side",
+      "plainEnglishDescription": "Action-derived signal: sharp and majority pick agree on row side.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 306,
+      "roi": 0.0223772083104012,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "combo|action_market|moneyline|away|sharp_on_side__moderate_dog",
+      "signalFamily": "action_market",
+      "signalName": "sharp_on_side__moderate_dog",
+      "humanReadableLabel": "sharp on side + moderate dog",
+      "plainEnglishDescription": "Action-derived signal: sharp on side + moderate dog.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 163,
+      "roi": 0.07092024539877298,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "combo|action_market|moneyline|home|sharp_on_side__moderate_dog",
+      "signalFamily": "action_market",
+      "signalName": "sharp_on_side__moderate_dog",
+      "humanReadableLabel": "sharp on side + moderate dog",
+      "plainEnglishDescription": "Action-derived signal: sharp on side + moderate dog.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 77,
+      "roi": 0.12064935064935065,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "combo|action_market|total|under|sharp_on_side__totals",
+      "signalFamily": "action_market",
+      "signalName": "sharp_on_side__totals",
+      "humanReadableLabel": "sharp on side + totals",
+      "plainEnglishDescription": "Action-derived signal: sharp on side + totals.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1678,
+      "roi": 0.02956087721563081,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_picks|total|under|action_is_majority_pick_side",
+      "signalFamily": "action_picks",
+      "signalName": "action_is_majority_pick_side",
+      "humanReadableLabel": "action is majority pick side",
+      "plainEnglishDescription": "Action-derived signal: action is majority pick side.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 965,
+      "roi": 0.02694105569504497,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_picks|moneyline|home|action_is_majority_pick_side",
+      "signalFamily": "action_picks",
+      "signalName": "action_is_majority_pick_side",
+      "humanReadableLabel": "action is majority pick side",
+      "plainEnglishDescription": "Action-derived signal: action is majority pick side.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 601,
+      "roi": 0.026279650269364564,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_picks|moneyline|away|pick_count:high",
+      "signalFamily": "action_picks",
+      "signalName": "pick_count:high",
+      "humanReadableLabel": "pick count high",
+      "plainEnglishDescription": "Action-derived signal: pick count high.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 104,
+      "roi": 0.026381615296397085,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_picks|total|under|pick_count:medium",
+      "signalFamily": "action_picks",
+      "signalName": "pick_count:medium",
+      "humanReadableLabel": "pick count medium",
+      "plainEnglishDescription": "Action-derived signal: pick count medium.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 256,
+      "roi": 0.12482703161759776,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_picks|moneyline|home|pick_count:medium",
+      "signalFamily": "action_picks",
+      "signalName": "pick_count:medium",
+      "humanReadableLabel": "pick count medium",
+      "plainEnglishDescription": "Action-derived signal: pick count medium.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 285,
+      "roi": 0.09216010040548124,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_picks|moneyline|home|pick_parser_confidence:high",
+      "signalFamily": "action_picks",
+      "signalName": "pick_parser_confidence:high",
+      "humanReadableLabel": "pick parser confidence high",
+      "plainEnglishDescription": "Action-derived signal: pick parser confidence high.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1494,
+      "roi": 0.01084139451312434,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_picks|total|under|pick_parser_confidence:high",
+      "signalFamily": "action_picks",
+      "signalName": "pick_parser_confidence:high",
+      "humanReadableLabel": "pick parser confidence high",
+      "plainEnglishDescription": "Action-derived signal: pick parser confidence high.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1791,
+      "roi": 0.005783326416068704,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|total|under|money_minus_bets:bets_gt_money",
+      "signalFamily": "action_sentiment",
+      "signalName": "money_minus_bets:bets_gt_money",
+      "humanReadableLabel": "money minus bets bets gt money",
+      "plainEnglishDescription": "Action-derived signal: money minus bets bets gt money.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 83,
+      "roi": 0.08940976104888461,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|run_line|away|money_minus_bets:bets_gt_money",
+      "signalFamily": "action_sentiment",
+      "signalName": "money_minus_bets:bets_gt_money",
+      "humanReadableLabel": "money minus bets bets gt money",
+      "plainEnglishDescription": "Action-derived signal: money minus bets bets gt money.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 234,
+      "roi": 0.007870061589783242,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|moneyline|home|money_minus_bets:money_gt_bets",
+      "signalFamily": "action_sentiment",
+      "signalName": "money_minus_bets:money_gt_bets",
+      "humanReadableLabel": "money minus bets money gt bets",
+      "plainEnglishDescription": "Action-derived signal: money minus bets money gt bets.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 163,
+      "roi": 0.04831055352179915,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|moneyline|home|public_bets:balanced",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_bets:balanced",
+      "humanReadableLabel": "public bets balanced",
+      "plainEnglishDescription": "Action-derived signal: public bets balanced.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 319,
+      "roi": 0.0928241982992465,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|total|over|public_bets:balanced",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_bets:balanced",
+      "humanReadableLabel": "public bets balanced",
+      "plainEnglishDescription": "Action-derived signal: public bets balanced.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 146,
+      "roi": 0.044100018064161035,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|run_line|home|public_bets:low",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_bets:low",
+      "humanReadableLabel": "public bets low",
+      "plainEnglishDescription": "Action-derived signal: public bets low.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 563,
+      "roi": 0.03341149593926971,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|total|under|public_bets:low",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_bets:low",
+      "humanReadableLabel": "public bets low",
+      "plainEnglishDescription": "Action-derived signal: public bets low.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1943,
+      "roi": 0.006703938999595498,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|total|over|public_money:balanced",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_money:balanced",
+      "humanReadableLabel": "public money balanced",
+      "plainEnglishDescription": "Action-derived signal: public money balanced.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 165,
+      "roi": 0.055929213386026466,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|moneyline|home|public_money:low",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_money:low",
+      "humanReadableLabel": "public money low",
+      "plainEnglishDescription": "Action-derived signal: public money low.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 645,
+      "roi": 0.0504171717693728,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|run_line|home|public_money:low",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_money:low",
+      "humanReadableLabel": "public money low",
+      "plainEnglishDescription": "Action-derived signal: public money low.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 643,
+      "roi": 0.03941726139830041,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sentiment|total|under|public_money:low",
+      "signalFamily": "action_sentiment",
+      "signalName": "public_money:low",
+      "humanReadableLabel": "public money low",
+      "plainEnglishDescription": "Action-derived signal: public money low.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1911,
+      "roi": 0.009437454094468108,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|total|under|action_sharp_count:high",
+      "signalFamily": "action_sharp",
+      "signalName": "action_sharp_count:high",
+      "humanReadableLabel": "action sharp count high",
+      "plainEnglishDescription": "Action-derived signal: action sharp count high.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1164,
+      "roi": 0.03436993889227085,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|moneyline|home|action_sharp_count:low",
+      "signalFamily": "action_sharp",
+      "signalName": "action_sharp_count:low",
+      "humanReadableLabel": "action sharp count low",
+      "plainEnglishDescription": "Action-derived signal: action sharp count low.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 303,
+      "roi": 0.0070950016046203825,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|total|under|action_sharp_on_side",
+      "signalFamily": "action_sharp",
+      "signalName": "action_sharp_on_side",
+      "humanReadableLabel": "action sharp on side",
+      "plainEnglishDescription": "Action-derived signal: action sharp on side.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1678,
+      "roi": 0.02956087721563081,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|moneyline|home|action_sharp_on_side",
+      "signalFamily": "action_sharp",
+      "signalName": "action_sharp_on_side",
+      "humanReadableLabel": "action sharp on side",
+      "plainEnglishDescription": "Action-derived signal: action sharp on side.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 705,
+      "roi": 0.02209030139930644,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|total|under|action_sharp_present",
+      "signalFamily": "action_sharp",
+      "signalName": "action_sharp_present",
+      "humanReadableLabel": "action sharp present",
+      "plainEnglishDescription": "Action-derived signal: action sharp present.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1961,
+      "roi": 0.011867748307280023,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|moneyline|home|reverse_line_moves:1",
+      "signalFamily": "action_sharp",
+      "signalName": "reverse_line_moves:1",
+      "humanReadableLabel": "reverse line moves 1",
+      "plainEnglishDescription": "Action-derived signal: reverse line moves 1.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 246,
+      "roi": 0.039387394291957235,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|total|under|reverse_line_moves:2_plus",
+      "signalFamily": "action_sharp",
+      "signalName": "reverse_line_moves:2_plus",
+      "humanReadableLabel": "reverse line moves 2 plus",
+      "plainEnglishDescription": "Action-derived signal: reverse line moves 2 plus.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1435,
+      "roi": 0.041230710121369016,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|moneyline|home|sharp_count:4",
+      "signalFamily": "action_sharp",
+      "signalName": "sharp_count:4",
+      "humanReadableLabel": "sharp count 4",
+      "plainEnglishDescription": "Action-derived signal: sharp count 4.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 303,
+      "roi": 0.07930650882717036,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|total|under|sharp_count:6",
+      "signalFamily": "action_sharp",
+      "signalName": "sharp_count:6",
+      "humanReadableLabel": "sharp count 6",
+      "plainEnglishDescription": "Action-derived signal: sharp count 6.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 340,
+      "roi": 0.10289351406550408,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|moneyline|away|sharp_count:7",
+      "signalFamily": "action_sharp",
+      "signalName": "sharp_count:7",
+      "humanReadableLabel": "sharp count 7",
+      "plainEnglishDescription": "Action-derived signal: sharp count 7.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 125,
+      "roi": 0.03402917027341911,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|total|under|sharp_subtype:steam_and_reverse_line_movement",
+      "signalFamily": "action_sharp",
+      "signalName": "sharp_subtype:steam_and_reverse_line_movement",
+      "humanReadableLabel": "sharp subtype steam and reverse line movement",
+      "plainEnglishDescription": "Action-derived signal: sharp subtype steam and reverse line movement.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1578,
+      "roi": 0.022577177778298166,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|moneyline|home|sharp_subtype:steam_and_reverse_line_movement",
+      "signalFamily": "action_sharp",
+      "signalName": "sharp_subtype:steam_and_reverse_line_movement",
+      "humanReadableLabel": "sharp subtype steam and reverse line movement",
+      "plainEnglishDescription": "Action-derived signal: sharp subtype steam and reverse line movement.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 491,
+      "roi": 0.022000347520339452,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|total|under|steam_moves:1",
+      "signalFamily": "action_sharp",
+      "signalName": "steam_moves:1",
+      "humanReadableLabel": "steam moves 1",
+      "plainEnglishDescription": "Action-derived signal: steam moves 1.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 158,
+      "roi": 0.06366250153537771,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|action_sharp|moneyline|home|steam_moves:1",
+      "signalFamily": "action_sharp",
+      "signalName": "steam_moves:1",
+      "humanReadableLabel": "steam moves 1",
+      "plainEnglishDescription": "Action-derived signal: steam moves 1.",
+      "actionDependencyFlag": true,
+      "universes": [
+        "full"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 214,
+      "roi": 0.021760305742940942,
+      "notes": "Action subset only"
+    },
+    {
+      "signalId": "standalone|baseball_interaction|run_line|home|both_run_prevention_weak",
+      "signalFamily": "baseball_interaction",
+      "signalName": "both_run_prevention_weak",
+      "humanReadableLabel": "both run prevention weak",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: both run prevention weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 979,
+      "roi": 0.0052643184827491,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|moneyline|home|both_run_prevention_weak",
+      "signalFamily": "baseball_interaction",
+      "signalName": "both_run_prevention_weak",
+      "humanReadableLabel": "both run prevention weak",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: both run prevention weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1060,
+      "roi": 0.0052628874765274685,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|run_line|away|both_starters_weak",
+      "signalFamily": "baseball_interaction",
+      "signalName": "both_starters_weak",
+      "humanReadableLabel": "both starters weak",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: both starters weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 94,
+      "roi": 0.06333901643255657,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|total|under|both_starters_weak",
+      "signalFamily": "baseball_interaction",
+      "signalName": "both_starters_weak",
+      "humanReadableLabel": "both starters weak",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: both starters weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 128,
+      "roi": 0.053157500941072106,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|moneyline|away|both_starters_weak",
+      "signalFamily": "baseball_interaction",
+      "signalName": "both_starters_weak",
+      "humanReadableLabel": "both starters weak",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: both starters weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 97,
+      "roi": 0.030508941405853085,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|run_line|home|over_support_score:strong",
+      "signalFamily": "baseball_interaction",
+      "signalName": "over_support_score:strong",
+      "humanReadableLabel": "over support score strong",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: over support score strong.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 979,
+      "roi": 0.0052643184827491,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|moneyline|home|over_support_score:strong",
+      "signalFamily": "baseball_interaction",
+      "signalName": "over_support_score:strong",
+      "humanReadableLabel": "over support score strong",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: over support score strong.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1060,
+      "roi": 0.0052628874765274685,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|run_line|away|over_support_score:strong_fade",
+      "signalFamily": "baseball_interaction",
+      "signalName": "over_support_score:strong_fade",
+      "humanReadableLabel": "over support score strong fade",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: over support score strong fade.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 634,
+      "roi": 0.02198321496863609,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|run_line|away|under_support_score:strong",
+      "signalFamily": "baseball_interaction",
+      "signalName": "under_support_score:strong",
+      "humanReadableLabel": "under support score strong",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: under support score strong.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 762,
+      "roi": 0.006865864733389156,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|run_line|home|under_support_score:strong_fade",
+      "signalFamily": "baseball_interaction",
+      "signalName": "under_support_score:strong_fade",
+      "humanReadableLabel": "under support score strong fade",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: under support score strong fade.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 979,
+      "roi": 0.0052643184827491,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|baseball_interaction|moneyline|home|under_support_score:strong_fade",
+      "signalFamily": "baseball_interaction",
+      "signalName": "under_support_score:strong_fade",
+      "humanReadableLabel": "under support score strong fade",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: under support score strong fade.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1060,
+      "roi": 0.0052628874765274685,
+      "notes": null
+    },
+    {
+      "signalId": "combo|baseball_interaction|total|under|wind_in__under_supportive",
+      "signalFamily": "baseball_interaction",
+      "signalName": "wind_in__under_supportive",
+      "humanReadableLabel": "wind in + under supportive",
+      "plainEnglishDescription": "Pregame baseball interaction signal combining pitcher, bullpen, or totals context: wind in + under supportive.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 177,
+      "roi": 0.10979363096344873,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|over|bullpen_fatigue_matchup:fresh_vs_fresh",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_fatigue_matchup:fresh_vs_fresh",
+      "humanReadableLabel": "bullpen fatigue matchup fresh vs fresh",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen fatigue matchup fresh vs fresh.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 192,
+      "roi": 0.1018110769518371,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|home|bullpen_fatigue_matchup:taxed_vs_heavily_taxed",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_fatigue_matchup:taxed_vs_heavily_taxed",
+      "humanReadableLabel": "bullpen fatigue matchup taxed vs heavily taxed",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen fatigue matchup taxed vs heavily taxed.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1628,
+      "roi": 0.02883618227401725,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|away|bullpen_fatigue_matchup:taxed_vs_normal",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_fatigue_matchup:taxed_vs_normal",
+      "humanReadableLabel": "bullpen fatigue matchup taxed vs normal",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen fatigue matchup taxed vs normal.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 757,
+      "roi": 0.012638194965069415,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|under|bullpen_fatigue_matchup:taxed_vs_taxed",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_fatigue_matchup:taxed_vs_taxed",
+      "humanReadableLabel": "bullpen fatigue matchup taxed vs taxed",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen fatigue matchup taxed vs taxed.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1850,
+      "roi": 0.023207805146760935,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|away|bullpen_fatigue_matchup:taxed_vs_taxed",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_fatigue_matchup:taxed_vs_taxed",
+      "humanReadableLabel": "bullpen fatigue matchup taxed vs taxed",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen fatigue matchup taxed vs taxed.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1461,
+      "roi": 0.008823931903925086,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|home|bullpen_freshness_matchup:away_fresher",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_freshness_matchup:away_fresher",
+      "humanReadableLabel": "bullpen freshness matchup away fresher",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen freshness matchup away fresher.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 2571,
+      "roi": 0.01222784149713995,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|home|bullpen_matchup:average_vs_strong",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_matchup:average_vs_strong",
+      "humanReadableLabel": "bullpen matchup average vs strong",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen matchup average vs strong.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 296,
+      "roi": 0.04617075382346407,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|under|bullpen_matchup:strong_vs_weak",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_matchup:strong_vs_weak",
+      "humanReadableLabel": "bullpen matchup strong vs weak",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen matchup strong vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 90,
+      "roi": 0.18296655599036482,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|away|bullpen_rest_matchup:fresh_vs_taxed",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_rest_matchup:fresh_vs_taxed",
+      "humanReadableLabel": "bullpen rest matchup fresh vs taxed",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen rest matchup fresh vs taxed.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 206,
+      "roi": 0.04392614013331599,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|away|bullpen_rest_matchup:fresh_vs_taxed",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_rest_matchup:fresh_vs_taxed",
+      "humanReadableLabel": "bullpen rest matchup fresh vs taxed",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen rest matchup fresh vs taxed.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 217,
+      "roi": 0.02189854193917566,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|home|bullpen_rest_matchup:heavily_taxed_vs_fresh",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_rest_matchup:heavily_taxed_vs_fresh",
+      "humanReadableLabel": "bullpen rest matchup heavily taxed vs fresh",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen rest matchup heavily taxed vs fresh.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 107,
+      "roi": 0.020492393796096933,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|over|bullpen_rest_matchup:heavily_taxed_vs_taxed",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_rest_matchup:heavily_taxed_vs_taxed",
+      "humanReadableLabel": "bullpen rest matchup heavily taxed vs taxed",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen rest matchup heavily taxed vs taxed.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1070,
+      "roi": 0.0010142702832611943,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|home|bullpen_rest_matchup:normal_vs_taxed",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_rest_matchup:normal_vs_taxed",
+      "humanReadableLabel": "bullpen rest matchup normal vs taxed",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen rest matchup normal vs taxed.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 923,
+      "roi": 0.006127933944310063,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|under|bullpen_rest_matchup:taxed_vs_fresh",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_rest_matchup:taxed_vs_fresh",
+      "humanReadableLabel": "bullpen rest matchup taxed vs fresh",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen rest matchup taxed vs fresh.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 168,
+      "roi": 0.06722821972256134,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|home|bullpen_strength_matchup:average_vs_weak",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_strength_matchup:average_vs_weak",
+      "humanReadableLabel": "bullpen strength matchup average vs weak",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen strength matchup average vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 440,
+      "roi": 0.01796171710578564,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|over|bullpen_strength_matchup:strong_vs_weak",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_strength_matchup:strong_vs_weak",
+      "humanReadableLabel": "bullpen strength matchup strong vs weak",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen strength matchup strong vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 677,
+      "roi": 0.012224237654233194,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|home|bullpen_strength_matchup:weak_vs_strong",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_strength_matchup:weak_vs_strong",
+      "humanReadableLabel": "bullpen strength matchup weak vs strong",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen strength matchup weak vs strong.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 520,
+      "roi": 0.044733368486385004,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|under|bullpen_strength_matchup:weak_vs_weak",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_strength_matchup:weak_vs_weak",
+      "humanReadableLabel": "bullpen strength matchup weak vs weak",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen strength matchup weak vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 165,
+      "roi": 0.046569037428988456,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|away|bullpen_strength_matchup:weak_vs_weak",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_strength_matchup:weak_vs_weak",
+      "humanReadableLabel": "bullpen strength matchup weak vs weak",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen strength matchup weak vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 125,
+      "roi": 0.0892140130662983,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|away|bullpen_strength_matchup:weak_vs_weak",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_strength_matchup:weak_vs_weak",
+      "humanReadableLabel": "bullpen strength matchup weak vs weak",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen strength matchup weak vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 137,
+      "roi": 0.04775467193353162,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|moneyline|away|bullpen_workload_matchup:heavy_vs_heavy",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_workload_matchup:heavy_vs_heavy",
+      "humanReadableLabel": "bullpen workload matchup heavy vs heavy",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen workload matchup heavy vs heavy.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1705,
+      "roi": 0.002585618808254768,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|under|bullpen_workload_matchup:heavy_vs_normal",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_workload_matchup:heavy_vs_normal",
+      "humanReadableLabel": "bullpen workload matchup heavy vs normal",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen workload matchup heavy vs normal.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1029,
+      "roi": 0.04103263851964657,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|total|over|bullpen_workload_matchup:light_vs_light",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_workload_matchup:light_vs_light",
+      "humanReadableLabel": "bullpen workload matchup light vs light",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen workload matchup light vs light.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 235,
+      "roi": 0.10381447807869033,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_workload_matchup:light_vs_light",
+      "humanReadableLabel": "bullpen workload matchup light vs light",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen workload matchup light vs light.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 167,
+      "roi": 0.014611450812224225,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|bullpen|run_line|away|bullpen_workload_matchup:normal_vs_normal",
+      "signalFamily": "bullpen",
+      "signalName": "bullpen_workload_matchup:normal_vs_normal",
+      "humanReadableLabel": "bullpen workload matchup normal vs normal",
+      "plainEnglishDescription": "Pregame bullpen workload or quality signal: bullpen workload matchup normal vs normal.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 632,
+      "roi": 0.03958910211204287,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_movement|run_line|away|line_move_bucket:medium_move",
+      "signalFamily": "market_movement",
+      "signalName": "line_move_bucket:medium_move",
+      "humanReadableLabel": "line move bucket medium move",
+      "plainEnglishDescription": "Market-context signal: line move bucket medium move.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 179,
+      "roi": 0.04624661988688554,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_movement|total|under|line_move_bucket:small_move",
+      "signalFamily": "market_movement",
+      "signalName": "line_move_bucket:small_move",
+      "humanReadableLabel": "line move bucket small move",
+      "plainEnglishDescription": "Market-context signal: line move bucket small move.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1260,
+      "roi": 0.02013405101688176,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_movement|run_line|away|market_move_toward:away_from_selected_side",
+      "signalFamily": "market_movement",
+      "signalName": "market_move_toward:away_from_selected_side",
+      "humanReadableLabel": "market move toward away from selected side",
+      "plainEnglishDescription": "Market-context signal: market move toward away from selected side.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1299,
+      "roi": 0.0337038312154782,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_movement|total|under|market_move_toward:under",
+      "signalFamily": "market_movement",
+      "signalName": "market_move_toward:under",
+      "humanReadableLabel": "market move toward under",
+      "plainEnglishDescription": "Market-context signal: market move toward under.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 571,
+      "roi": 0.046671063257238486,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_movement|total|under|price_move_bucket:medium_move",
+      "signalFamily": "market_movement",
+      "signalName": "price_move_bucket:medium_move",
+      "humanReadableLabel": "price move bucket medium move",
+      "plainEnglishDescription": "Market-context signal: price move bucket medium move.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 958,
+      "roi": 0.03356783104193738,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_movement|run_line|away|price_move_bucket:small_move",
+      "signalFamily": "market_movement",
+      "signalName": "price_move_bucket:small_move",
+      "humanReadableLabel": "price move bucket small move",
+      "plainEnglishDescription": "Market-context signal: price move bucket small move.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 1302,
+      "roi": 0.03693054940285261,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_pricing|total|over|implied_prob_55_to_64",
+      "signalFamily": "market_pricing",
+      "signalName": "implied_prob_55_to_64",
+      "humanReadableLabel": "implied prob 55 to 64",
+      "plainEnglishDescription": "Market-context signal: implied prob 55 to 64.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 270,
+      "roi": 0.013003139597969718,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_pricing|run_line|home|long_dog",
+      "signalFamily": "market_pricing",
+      "signalName": "long_dog",
+      "humanReadableLabel": "long dog",
+      "plainEnglishDescription": "Market-context signal: long dog.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 203,
+      "roi": 0.03251231527093595,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_pricing|moneyline|home|long_dog",
+      "signalFamily": "market_pricing",
+      "signalName": "long_dog",
+      "humanReadableLabel": "long dog",
+      "plainEnglishDescription": "Market-context signal: long dog.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 375,
+      "roi": 0.029120000000000014,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|market_pricing|moneyline|away|moderate_dog",
+      "signalFamily": "market_pricing",
+      "signalName": "moderate_dog",
+      "humanReadableLabel": "moderate dog",
+      "plainEnglishDescription": "Market-context signal: moderate dog.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 2108,
+      "roi": 0.011361480075901341,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|park|run_line|home|roof_weather_bucket:indoor",
+      "signalFamily": "park",
+      "signalName": "roof_weather_bucket:indoor",
+      "humanReadableLabel": "roof weather bucket indoor",
+      "plainEnglishDescription": "Pregame environment signal: roof weather bucket indoor.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 272,
+      "roi": 0.02761843478489724,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|total|over|quality_matchup:average_vs_unknown",
+      "signalFamily": "pitcher",
+      "signalName": "quality_matchup:average_vs_unknown",
+      "humanReadableLabel": "quality matchup average vs unknown",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: quality matchup average vs unknown.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 621,
+      "roi": 0.021659713206850735,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|moneyline|home|quality_matchup:unknown_vs_weak",
+      "signalFamily": "pitcher",
+      "signalName": "quality_matchup:unknown_vs_weak",
+      "humanReadableLabel": "quality matchup unknown vs weak",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: quality matchup unknown vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 108,
+      "roi": 0.05492788068380321,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|run_line|away|quality_matchup:weak_vs_weak",
+      "signalFamily": "pitcher",
+      "signalName": "quality_matchup:weak_vs_weak",
+      "humanReadableLabel": "quality matchup weak vs weak",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: quality matchup weak vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 94,
+      "roi": 0.06333901643255657,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|total|under|quality_matchup:weak_vs_weak",
+      "signalFamily": "pitcher",
+      "signalName": "quality_matchup:weak_vs_weak",
+      "humanReadableLabel": "quality matchup weak vs weak",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: quality matchup weak vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 128,
+      "roi": 0.053157500941072106,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|moneyline|away|quality_matchup:weak_vs_weak",
+      "signalFamily": "pitcher",
+      "signalName": "quality_matchup:weak_vs_weak",
+      "humanReadableLabel": "quality matchup weak vs weak",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: quality matchup weak vs weak.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 97,
+      "roi": 0.030508941405853085,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|moneyline|away|selected_starter_quality_score:supportive",
+      "signalFamily": "pitcher",
+      "signalName": "selected_starter_quality_score:supportive",
+      "humanReadableLabel": "selected starter quality score supportive",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: selected starter quality score supportive.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1604,
+      "roi": 0.011408135203667034,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|moneyline|away|selected_starter_recent_form_score:shaky",
+      "signalFamily": "pitcher",
+      "signalName": "selected_starter_recent_form_score:shaky",
+      "humanReadableLabel": "selected starter recent form score shaky",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: selected starter recent form score shaky.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 138,
+      "roi": 0.1220390233051859,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|run_line|away|selected_starter_recent_form_score:shaky",
+      "signalFamily": "pitcher",
+      "signalName": "selected_starter_recent_form_score:shaky",
+      "humanReadableLabel": "selected starter recent form score shaky",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: selected starter recent form score shaky.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 137,
+      "roi": 0.06689021314110365,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|run_line|home|selected_starter_recent_form_score:supportive",
+      "signalFamily": "pitcher",
+      "signalName": "selected_starter_recent_form_score:supportive",
+      "humanReadableLabel": "selected starter recent form score supportive",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: selected starter recent form score supportive.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 280,
+      "roi": 0.11841474573929618,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|moneyline|home|selected_starter_recent_form_score:supportive",
+      "signalFamily": "pitcher",
+      "signalName": "selected_starter_recent_form_score:supportive",
+      "humanReadableLabel": "selected starter recent form score supportive",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: selected starter recent form score supportive.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 286,
+      "roi": 0.0729534077783431,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|moneyline|away|starter_matchup:cold_vs_unknown",
+      "signalFamily": "pitcher",
+      "signalName": "starter_matchup:cold_vs_unknown",
+      "humanReadableLabel": "starter matchup cold vs unknown",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: starter matchup cold vs unknown.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 84,
+      "roi": 0.1967156587690107,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|total|over|starter_matchup:hot_vs_limited_sample",
+      "signalFamily": "pitcher",
+      "signalName": "starter_matchup:hot_vs_limited_sample",
+      "humanReadableLabel": "starter matchup hot vs limited sample",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: starter matchup hot vs limited sample.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 512,
+      "roi": 0.04887156108478425,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|run_line|away|starter_matchup:hot_vs_limited_sample",
+      "signalFamily": "pitcher",
+      "signalName": "starter_matchup:hot_vs_limited_sample",
+      "humanReadableLabel": "starter matchup hot vs limited sample",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: starter matchup hot vs limited sample.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "validated"
+      ],
+      "sampleSize": 399,
+      "roi": 0.026363121236586937,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|total|under|starter_matchup:limited_sample_vs_steady",
+      "signalFamily": "pitcher",
+      "signalName": "starter_matchup:limited_sample_vs_steady",
+      "humanReadableLabel": "starter matchup limited sample vs steady",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: starter matchup limited sample vs steady.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "active_ready"
+      ],
+      "sampleSize": 300,
+      "roi": 0.09991111238038064,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|moneyline|home|starter_matchup:unknown_vs_cold",
+      "signalFamily": "pitcher",
+      "signalName": "starter_matchup:unknown_vs_cold",
+      "humanReadableLabel": "starter matchup unknown vs cold",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: starter matchup unknown vs cold.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 88,
+      "roi": 0.23021064801042543,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|pitcher|run_line|home|starter_matchup:unknown_vs_cold",
+      "signalFamily": "pitcher",
+      "signalName": "starter_matchup:unknown_vs_cold",
+      "humanReadableLabel": "starter matchup unknown vs cold",
+      "plainEnglishDescription": "Pregame starting-pitcher context signal: starter matchup unknown vs cold.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 80,
+      "roi": 0.1297088178102126,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|weather|total|under|weather_condition:clear",
+      "signalFamily": "weather",
+      "signalName": "weather_condition:clear",
+      "humanReadableLabel": "weather condition clear",
+      "plainEnglishDescription": "Pregame environment signal: weather condition clear.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 6543,
+      "roi": 0.0024179628062025067,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|wind|run_line|away|wind_effect_class:cross",
+      "signalFamily": "wind",
+      "signalName": "wind_effect_class:cross",
+      "humanReadableLabel": "wind effect class cross",
+      "plainEnglishDescription": "Pregame environment signal: wind effect class cross.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 2001,
+      "roi": 0.0018276661083134933,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|wind|run_line|away|wind_effect_strength:moderate_cross",
+      "signalFamily": "wind",
+      "signalName": "wind_effect_strength:moderate_cross",
+      "humanReadableLabel": "wind effect strength moderate cross",
+      "plainEnglishDescription": "Pregame environment signal: wind effect strength moderate cross.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 1601,
+      "roi": 0.01390172504023382,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|wind|total|under|wind_effect_strength:moderate_in",
+      "signalFamily": "wind",
+      "signalName": "wind_effect_strength:moderate_in",
+      "humanReadableLabel": "wind effect strength moderate in",
+      "plainEnglishDescription": "Pregame environment signal: wind effect strength moderate in.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 851,
+      "roi": 0.02432244001460392,
+      "notes": null
+    },
+    {
+      "signalId": "standalone|wind|total|over|wind_effect_strength:strong_in",
+      "signalFamily": "wind",
+      "signalName": "wind_effect_strength:strong_in",
+      "humanReadableLabel": "wind effect strength strong in",
+      "plainEnglishDescription": "Pregame environment signal: wind effect strength strong in.",
+      "actionDependencyFlag": false,
+      "universes": [
+        "full",
+        "non_action",
+        "pure_baseball"
+      ],
+      "governanceStates": [
+        "candidate"
+      ],
+      "sampleSize": 108,
+      "roi": 0.003193083526923004,
+      "notes": null
+    }
+  ]
 }
