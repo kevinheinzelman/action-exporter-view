@@ -34,8 +34,6 @@ type CompositeContext = {
   detail: string;
 };
 
-type MarketMaturity = 'early' | 'developing' | 'stable';
-
 type DisplaySignal = {
   canonicalSignalKey: string;
   family: 'market' | 'weather' | 'pitcher' | 'bullpen' | 'team_context' | 'game_environment';
@@ -44,6 +42,7 @@ type DisplaySignal = {
   explanation: string;
   summaryText: string;
   components?: string[];
+  details?: Array<{ label: string; explanation: string }>;
   sourceDimension?: 'action' | 'baseball' | 'market' | null;
 };
 
@@ -204,11 +203,13 @@ function LeanSection({
         {rows.map((row) => {
           const displaySignals = buildDisplaySignals(row);
           const familyCount = new Set(displaySignals.map((signal) => signal.family)).size;
+          const signalCount = countRenderedSignals(displaySignals);
           const context = describeCompositeContext(row);
-          const maturity = getMarketMaturity(row);
-          const maturityLabel = getMarketMaturityLabel(maturity);
+          const maturityLabel = getMarketMaturityLabel(row);
           const marketState = row.marketState ?? { state: 'neutral', label: 'No market movement yet', reason: 'No meaningful aligned market signal is visible yet.' };
           const displayConfidence = row.displayConfidenceTier ?? row.confidenceTier;
+          const baseballFactorLabel = getVisibleBaseballFactorLabel(displaySignals);
+          const startTime = formatStartTimeEastern(row.scheduledStartTime);
 
           return (
             <article className="mlb-lean-card mlb-lean-card-emphasis" key={`${row.gameId}:${row.marketType}:${row.marketSide}`}>
@@ -218,11 +219,14 @@ function LeanSection({
                     {row.awayTeam ?? 'Away'} at {row.homeTeam ?? 'Home'}
                   </div>
                   <h4>Bet: {buildBetDisplay(row)}</h4>
-                  <div className="subtle">{formatMarketTypeLabel(row.marketType)}</div>
+                  <div className="subtle">
+                    {formatMarketTypeLabel(row.marketType)}
+                    {startTime ? ` • ${startTime} ET` : ''}
+                  </div>
                 </div>
                 <div className="mlb-lean-badges">
                   <span className="pill mlb-pill mlb-pill-confidence">{titleize(displayConfidence)}</span>
-                  <span className={`pill mlb-pill ${maturityLabel.className}`}>{maturityLabel.label}</span>
+                  {maturityLabel ? <span className={`pill mlb-pill ${maturityLabel.className}`}>{maturityLabel.label}</span> : null}
                 </div>
               </div>
 
@@ -230,11 +234,9 @@ function LeanSection({
 
               <div className="mlb-pill-row">
                 <span className={`pill mlb-pill ${hasVisibleActionReason(displaySignals) ? 'mlb-pill-positive' : 'mlb-pill-neutral'}`}>
-                  {hasVisibleActionReason(displaySignals) ? 'Sharp money present' : 'No sharp signal yet'}
+                  {hasVisibleActionReason(displaySignals) ? 'Action signals present' : 'No Action signal yet'}
                 </span>
-                <span className={`pill mlb-pill ${hasVisibleBaseballReason(displaySignals) ? 'mlb-pill-positive' : 'mlb-pill-neutral'}`}>
-                  {hasVisibleBaseballReason(displaySignals) ? 'Baseball factors aligned' : 'No baseball factor visible'}
-                </span>
+                {baseballFactorLabel ? <span className="pill mlb-pill mlb-pill-positive">{baseballFactorLabel}</span> : null}
                 <span className={`pill mlb-pill ${marketStateClassName(marketState.state)}`}>
                   {marketState.label}
                 </span>
@@ -249,7 +251,7 @@ function LeanSection({
                 <div className="metric">
                   <label>Support</label>
                   <strong>
-                    {displaySignals.length} signals across {familyCount} families
+                    {familyCount} families / {signalCount} signals
                   </strong>
                   <div className="subtle">{buildSignalSummaryLine(row, displaySignals)}</div>
                 </div>
@@ -272,7 +274,15 @@ function LeanSection({
                   {displaySignals.map((signal) => (
                     <div className="summary-item" key={`${signal.canonicalSignalKey}:detail`}>
                       <strong>{signal.label}</strong>
-                      <span className="subtle">{signal.explanation}</span>
+                      {Array.isArray(signal.details) && signal.details.length ? (
+                        <div className="subtle">
+                          {signal.details.map((detail) => (
+                            <div key={`${signal.canonicalSignalKey}:${detail.label}`}>• {detail.label}: {detail.explanation}</div>
+                          ))}
+                        </div>
+                      ) : (
+                        <span className="subtle">• {signal.explanation}</span>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -341,8 +351,7 @@ function buildSignalSummaryLine(row: MlbDailyLeanRow, displaySignals: DisplaySig
     return row.signalSummaryLine;
   }
   const familyCount = new Set(displaySignals.map((signal) => signal.family)).size;
-  const details = displaySignals.slice(0, 4).map((signal) => signal.summaryText);
-  return `${displaySignals.length} signals across ${familyCount} independent factors: ${details.join('; ')}`;
+  return `${familyCount} families / ${countRenderedSignals(displaySignals)} signals`;
 }
 
 function buildSelectionAnchor(row: MlbDailyLeanRow): string {
@@ -359,38 +368,71 @@ function hasVisibleActionReason(signals: DisplaySignal[]): boolean {
   );
 }
 
-function hasVisibleBaseballReason(signals: DisplaySignal[]): boolean {
-  return signals.some((signal) => signal.family !== 'market');
-}
-
 function marketStateClassName(state: 'confirmed' | 'neutral' | 'contradictory'): string {
   if (state === 'confirmed') return 'mlb-pill-positive';
   if (state === 'contradictory') return 'mlb-pill-negative';
   return 'mlb-pill-neutral';
 }
 
-function getMarketMaturity(row: MlbDailyLeanRow): MarketMaturity {
-  const minutes = row.minutesBeforeStart;
-  if (typeof minutes !== 'number' || !Number.isFinite(minutes)) {
-    return 'developing';
+function getMarketMaturityLabel(row: MlbDailyLeanRow): { label: string; className: string } | null {
+  if (row.scheduledStartTime) {
+    const scheduledStart = new Date(row.scheduledStartTime);
+    if (!Number.isNaN(scheduledStart.getTime())) {
+      const minutesUntilStart = Math.round((scheduledStart.getTime() - Date.now()) / 60000);
+      if (minutesUntilStart <= 0) {
+        return null;
+      }
+      if (minutesUntilStart <= 60) {
+        return { label: 'Starting Soon', className: 'mlb-pill-maturity-stable' };
+      }
+      if (minutesUntilStart <= 300) {
+        return { label: 'Developing Market', className: 'mlb-pill-maturity-developing' };
+      }
+      return { label: 'Early Look', className: 'mlb-pill-maturity-early' };
+    }
   }
-  if (minutes > 360) {
-    return 'early';
+  if (!row.maturityLabel) {
+    return null;
   }
-  if (minutes >= 120) {
-    return 'developing';
+  if (row.maturityLabel === 'Early Look') {
+    return { label: row.maturityLabel, className: 'mlb-pill-maturity-early' };
   }
-  return 'stable';
+  if (row.maturityLabel === 'Starting Soon' || row.maturityLabel === 'Market Confirmed') {
+    return { label: row.maturityLabel, className: 'mlb-pill-maturity-stable' };
+  }
+  return { label: row.maturityLabel, className: 'mlb-pill-maturity-developing' };
 }
 
-function getMarketMaturityLabel(maturity: MarketMaturity): { label: string; className: string } {
-  if (maturity === 'early') {
-    return { label: 'Early Look', className: 'mlb-pill-maturity-early' };
+function countRenderedSignals(signals: DisplaySignal[]): number {
+  return signals.reduce((sum, signal) => sum + (Array.isArray(signal.details) && signal.details.length ? signal.details.length : 1), 0);
+}
+
+function getVisibleBaseballFactorLabel(signals: DisplaySignal[]): string | null {
+  const nonMarket = signals.find((signal) => signal.family !== 'market');
+  if (!nonMarket) {
+    return null;
   }
-  if (maturity === 'stable') {
-    return { label: 'Market Confirmed', className: 'mlb-pill-maturity-stable' };
+  if (nonMarket.family === 'weather') return 'Wind signal present';
+  if (nonMarket.family === 'bullpen') return 'Bullpen edge present';
+  if (nonMarket.family === 'pitcher') return 'Pitcher edge present';
+  if (nonMarket.family === 'game_environment') return 'Environment edge present';
+  if (nonMarket.family === 'team_context') return 'Team context present';
+  return null;
+}
+
+function formatStartTimeEastern(value: string | null | undefined): string | null {
+  if (!value) {
+    return null;
   }
-  return { label: 'Developing Market', className: 'mlb-pill-maturity-developing' };
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+  return new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    hour: 'numeric',
+    minute: '2-digit'
+  }).format(date);
 }
 
 function buildMarketBreakdown(rows: MlbDailyLeanRow[]) {
@@ -492,6 +534,7 @@ function iconForFamily(family: string, label: string): string {
   const lowerFamily = family.toLowerCase();
   const lowerLabel = label.toLowerCase();
   if (lowerFamily.includes('market')) {
+    if (lowerLabel.includes('action')) return '🔪';
     if (lowerLabel.includes('sharp')) return '🔪';
     if (lowerLabel.includes('steam')) return '💨';
     if (lowerLabel.includes('reverse')) return '📉';

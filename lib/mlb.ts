@@ -74,6 +74,7 @@ export type MlbDailyLeanRow = {
     explanation: string;
     summaryText: string;
     components?: string[];
+    details?: Array<{ label: string; explanation: string }>;
     sourceDimension?: 'action' | 'baseball' | 'market' | null;
   }>;
   supportingFamilies: string[];
