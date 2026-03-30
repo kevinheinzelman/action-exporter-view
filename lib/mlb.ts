@@ -34,6 +34,7 @@ export type MlbDailyLeanRow = {
   leanRankForDay: number;
   leanRankWithinLane: number;
   confidenceTier: string;
+  displayConfidenceTier?: string | null;
   signalCount: number;
   supportingFamilyCount: number;
   supportProfile: string;
@@ -48,6 +49,13 @@ export type MlbDailyLeanRow = {
   actionSupportScore: number;
   contrarianOrConflictFlag: boolean;
   explanationText: string;
+  signalSummaryLine?: string | null;
+  driverSummary?: string | null;
+  marketState?: {
+    state: 'confirmed' | 'neutral' | 'contradictory';
+    label: string;
+    reason: string;
+  } | null;
   historicalEvidenceSummary?: {
     evidenceBase?: string | null;
     available?: boolean;
@@ -58,8 +66,18 @@ export type MlbDailyLeanRow = {
     detail?: string | null;
   } | null;
   topSupportingSignals: Array<Record<string, unknown>>;
-  triggeredSignals: Array<Record<string, unknown>>;
+  triggeredSignals: Array<{
+    canonicalSignalKey: string;
+    family: 'market' | 'weather' | 'pitcher' | 'bullpen' | 'team_context' | 'game_environment';
+    tier: 'PRIMARY' | 'SUPPORTING';
+    label: string;
+    explanation: string;
+    summaryText: string;
+    components?: string[];
+    sourceDimension?: 'action' | 'baseball' | 'market' | null;
+  }>;
   supportingFamilies: string[];
+  reconciliationDebug?: Record<string, unknown> | null;
   updatedAt: string;
 };
 
