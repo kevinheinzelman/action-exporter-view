@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T22:49:12.682Z",
+  "generatedAt": "2026-03-30T23:41:23.325Z",
   "requestedDate": "2026-03-30",
   "rowCount": 24,
   "countsByLane": {
@@ -55,7 +55,7 @@
       "leanRankWithinLane": 1,
       "confidenceTier": "very_strong",
       "displayConfidenceTier": "strong",
-      "signalCount": 2,
+      "signalCount": 6,
       "supportingFamilyCount": 2,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "baseball",
@@ -70,7 +70,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by baseball evidence: wind in + under supportive, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Wind blowing in and sharp market support favor Under 9.",
-      "driverSummary": "Driven primarily by market pressure and wind or weather conditions.",
+      "driverSummary": "Driven primarily by Action-market pressure and wind or weather conditions.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -139,7 +139,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "3 sharp signals align on Under 9, line movement leans toward Under 9, 2 steam moves hit Under 9, 40% of money vs 45% of bets favor Under 9, and 1 tracked pick also land on Under 9.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
           "components": [
@@ -148,6 +148,28 @@
             "market_reverse_line_movement",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "3 sharp signals align on Under 9."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 9."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "2 steam moves hit Under 9."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "40% of money vs 45% of bets favor Under 9."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Under 9."
+            }
           ],
           "contributionWeight": 4,
           "sourceDimension": "action"
@@ -408,7 +430,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "3 sharp signals align on Under 9, line movement leans toward Under 9, 2 steam moves hit Under 9, 40% of money vs 45% of bets favor Under 9, and 1 tracked pick also land on Under 9.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
             "components": [
@@ -417,6 +439,28 @@
               "market_reverse_line_movement",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "3 sharp signals align on Under 9."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 9."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "2 steam moves hit Under 9."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "40% of money vs 45% of bets favor Under 9."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Under 9."
+              }
             ],
             "contributionWeight": 4,
             "sourceDimension": "action"
@@ -583,13 +627,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -627,8 +671,8 @@
       "leanRankForDay": 2,
       "leanRankWithinLane": 2,
       "confidenceTier": "strong",
-      "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "displayConfidenceTier": "strong",
+      "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "action",
@@ -643,7 +687,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by action evidence: reverse line moves 2 plus, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Sharp market support favors Under 8.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -700,7 +744,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "4 sharp signals align on Under 8, line movement leans toward Under 8, 2 steam moves hit Under 8, 32% of money vs 25% of bets favor Under 8, and 2 tracked picks also land on Under 8.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
           "components": [
@@ -711,6 +755,28 @@
             "action_market_pick_alignment",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "4 sharp signals align on Under 8."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 8."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "2 steam moves hit Under 8."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "32% of money vs 25% of bets favor Under 8."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "2 tracked picks also land on Under 8."
+            }
           ],
           "contributionWeight": 7,
           "sourceDimension": "action"
@@ -1004,7 +1070,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "4 sharp signals align on Under 8, line movement leans toward Under 8, 2 steam moves hit Under 8, 32% of money vs 25% of bets favor Under 8, and 2 tracked picks also land on Under 8.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
             "components": [
@@ -1015,6 +1081,28 @@
               "action_market_pick_alignment",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "4 sharp signals align on Under 8."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 8."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "2 steam moves hit Under 8."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "32% of money vs 25% of bets favor Under 8."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "2 tracked picks also land on Under 8."
+              }
             ],
             "contributionWeight": 7,
             "sourceDimension": "action"
@@ -1204,13 +1292,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -1248,8 +1336,8 @@
       "leanRankForDay": 3,
       "leanRankWithinLane": 3,
       "confidenceTier": "strong",
-      "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "displayConfidenceTier": "strong",
+      "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "action",
@@ -1264,7 +1352,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by action evidence: steam moves 1, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Sharp market support favors Under 9.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -1321,7 +1409,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "2 sharp signals align on Under 9.5, line movement leans toward Under 9.5, 1 steam move hit Under 9.5, 20% of money vs 38% of bets favor Under 9.5, and 1 tracked pick also land on Under 9.5.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
           "components": [
@@ -1334,6 +1422,28 @@
             "market_reverse_line_movement",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "2 sharp signals align on Under 9.5."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 9.5."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "1 steam move hit Under 9.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "20% of money vs 38% of bets favor Under 9.5."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Under 9.5."
+            }
           ],
           "contributionWeight": 8,
           "sourceDimension": "action"
@@ -1662,7 +1772,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "2 sharp signals align on Under 9.5, line movement leans toward Under 9.5, 1 steam move hit Under 9.5, 20% of money vs 38% of bets favor Under 9.5, and 1 tracked pick also land on Under 9.5.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
             "components": [
@@ -1675,6 +1785,28 @@
               "market_reverse_line_movement",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "2 sharp signals align on Under 9.5."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 9.5."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "1 steam move hit Under 9.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "20% of money vs 38% of bets favor Under 9.5."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Under 9.5."
+              }
             ],
             "contributionWeight": 8,
             "sourceDimension": "action"
@@ -1881,13 +2013,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -1925,8 +2057,8 @@
       "leanRankForDay": 4,
       "leanRankWithinLane": 4,
       "confidenceTier": "strong",
-      "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "displayConfidenceTier": "strong",
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "action",
@@ -1941,7 +2073,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by action evidence: reverse line moves 2 plus, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Sharp market support favors Under 8.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -1998,7 +2130,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "5 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 2 steam moves hit Under 8.5, and 30% of money vs 20% of bets favor Under 8.5.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split",
           "components": [
@@ -2007,6 +2139,24 @@
             "market_reverse_line_movement",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "5 sharp signals align on Under 8.5."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 8.5."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "2 steam moves hit Under 8.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "30% of money vs 20% of bets favor Under 8.5."
+            }
           ],
           "contributionWeight": 5,
           "sourceDimension": "action"
@@ -2242,7 +2392,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "5 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 2 steam moves hit Under 8.5, and 30% of money vs 20% of bets favor Under 8.5.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split",
             "components": [
@@ -2251,6 +2401,24 @@
               "market_reverse_line_movement",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "5 sharp signals align on Under 8.5."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 8.5."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "2 steam moves hit Under 8.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "30% of money vs 20% of bets favor Under 8.5."
+              }
             ],
             "contributionWeight": 5,
             "sourceDimension": "action"
@@ -2414,13 +2582,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -2458,8 +2626,8 @@
       "leanRankForDay": 5,
       "leanRankWithinLane": 5,
       "confidenceTier": "strong",
-      "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "displayConfidenceTier": "strong",
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "action",
@@ -2474,7 +2642,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by action evidence: steam moves 1, reverse line moves 2 plus, action sharp on side.",
       "signalSummaryLine": "Sharp market support favors Under 8.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -2531,7 +2699,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "3 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 1 steam move hit Under 8.5, and 23% of money vs 23% of bets favor Under 8.5.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split",
           "components": [
@@ -2542,6 +2710,24 @@
             "action_market_steam_moves",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "3 sharp signals align on Under 8.5."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 8.5."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "1 steam move hit Under 8.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "23% of money vs 23% of bets favor Under 8.5."
+            }
           ],
           "contributionWeight": 7,
           "sourceDimension": "action"
@@ -2812,7 +2998,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "3 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 1 steam move hit Under 8.5, and 23% of money vs 23% of bets favor Under 8.5.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split",
             "components": [
@@ -2823,6 +3009,24 @@
               "action_market_steam_moves",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "3 sharp signals align on Under 8.5."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 8.5."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "1 steam move hit Under 8.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "23% of money vs 23% of bets favor Under 8.5."
+              }
             ],
             "contributionWeight": 7,
             "sourceDimension": "action"
@@ -3002,13 +3206,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -3047,7 +3251,7 @@
       "leanRankWithinLane": 6,
       "confidenceTier": "strong",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "action",
@@ -3062,7 +3266,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by action evidence: action sharp on side, sharp on side + totals, weather condition clear.",
       "signalSummaryLine": "Sharp market support favors Under 8.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -3119,7 +3323,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "1 sharp signal align on Under 8.5 and 25% of money vs 28% of bets favor Under 8.5.",
           "summaryText": "sharp market support + money/bets split",
           "components": [
@@ -3127,6 +3331,16 @@
             "action_market_sharp_money",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "1 sharp signal align on Under 8.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "25% of money vs 28% of bets favor Under 8.5."
+            }
           ],
           "contributionWeight": 3,
           "sourceDimension": "action"
@@ -3304,7 +3518,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "1 sharp signal align on Under 8.5 and 25% of money vs 28% of bets favor Under 8.5.",
             "summaryText": "sharp market support + money/bets split",
             "components": [
@@ -3312,6 +3526,16 @@
               "action_market_sharp_money",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "1 sharp signal align on Under 8.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "25% of money vs 28% of bets favor Under 8.5."
+              }
             ],
             "contributionWeight": 3,
             "sourceDimension": "action"
@@ -3451,13 +3675,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -3511,7 +3735,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by mixed evidence: public money low, bullpen workload matchup light vs light.",
       "signalSummaryLine": "Market support and bullpen edge favor Chicago Cubs run line -1.5.",
-      "driverSummary": "Driven primarily by market pressure and bullpen context.",
+      "driverSummary": "Driven primarily by Action-market pressure and bullpen context.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -3548,12 +3772,18 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "38% of money vs 71% of bets favor Chicago Cubs run line -1.5.",
           "summaryText": "money/bets split",
           "components": [
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Money vs bets",
+              "explanation": "38% of money vs 71% of bets favor Chicago Cubs run line -1.5."
+            }
           ],
           "contributionWeight": 2,
           "sourceDimension": "action"
@@ -3662,12 +3892,18 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "38% of money vs 71% of bets favor Chicago Cubs run line -1.5.",
             "summaryText": "money/bets split",
             "components": [
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Money vs bets",
+                "explanation": "38% of money vs 71% of bets favor Chicago Cubs run line -1.5."
+              }
             ],
             "contributionWeight": 2,
             "sourceDimension": "action"
@@ -3778,13 +4014,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -3838,7 +4074,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by mixed evidence: public money low, public bets low, bullpen workload matchup light vs light.",
       "signalSummaryLine": "Market support and bullpen edge favor St. Louis Cardinals run line +1.5.",
-      "driverSummary": "Driven primarily by market pressure and bullpen context.",
+      "driverSummary": "Driven primarily by Action-market pressure and bullpen context.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -3885,12 +4121,18 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "18% of money vs 23% of bets favor St. Louis Cardinals run line +1.5.",
           "summaryText": "money/bets split",
           "components": [
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Money vs bets",
+              "explanation": "18% of money vs 23% of bets favor St. Louis Cardinals run line +1.5."
+            }
           ],
           "contributionWeight": 2,
           "sourceDimension": "action"
@@ -4022,12 +4264,18 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "18% of money vs 23% of bets favor St. Louis Cardinals run line +1.5.",
             "summaryText": "money/bets split",
             "components": [
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Money vs bets",
+                "explanation": "18% of money vs 23% of bets favor St. Louis Cardinals run line +1.5."
+              }
             ],
             "contributionWeight": 2,
             "sourceDimension": "action"
@@ -4148,13 +4396,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -4208,7 +4456,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by mixed evidence: public money low, public bets low, bullpen workload matchup light vs light.",
       "signalSummaryLine": "Market support and bullpen edge favor Seattle Mariners run line +1.5.",
-      "driverSummary": "Driven primarily by market pressure and bullpen context.",
+      "driverSummary": "Driven primarily by Action-market pressure and bullpen context.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -4255,12 +4503,18 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "35% of money vs 34% of bets favor Seattle Mariners run line +1.5.",
           "summaryText": "money/bets split",
           "components": [
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Money vs bets",
+              "explanation": "35% of money vs 34% of bets favor Seattle Mariners run line +1.5."
+            }
           ],
           "contributionWeight": 2,
           "sourceDimension": "action"
@@ -4392,12 +4646,18 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "35% of money vs 34% of bets favor Seattle Mariners run line +1.5.",
             "summaryText": "money/bets split",
             "components": [
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Money vs bets",
+                "explanation": "35% of money vs 34% of bets favor Seattle Mariners run line +1.5."
+              }
             ],
             "contributionWeight": 2,
             "sourceDimension": "action"
@@ -4518,13 +4778,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -4563,7 +4823,7 @@
       "leanRankWithinLane": 1,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -4578,7 +4838,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: steam moves 1, reverse line moves 2 plus, action sharp on side.",
       "signalSummaryLine": "Sharp market support favors Under 8.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -4635,7 +4895,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "4 sharp signals align on Under 8, line movement leans toward Under 8, 1 steam move hit Under 8, 10% of money vs 11% of bets favor Under 8, and 1 tracked pick also land on Under 8.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
           "components": [
@@ -4648,6 +4908,28 @@
             "action_market_steam_moves",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "4 sharp signals align on Under 8."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 8."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "1 steam move hit Under 8."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "10% of money vs 11% of bets favor Under 8."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Under 8."
+            }
           ],
           "contributionWeight": 9,
           "sourceDimension": "action"
@@ -4963,7 +5245,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "4 sharp signals align on Under 8, line movement leans toward Under 8, 1 steam move hit Under 8, 10% of money vs 11% of bets favor Under 8, and 1 tracked pick also land on Under 8.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
             "components": [
@@ -4976,6 +5258,28 @@
               "action_market_steam_moves",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "4 sharp signals align on Under 8."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 8."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "1 steam move hit Under 8."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "10% of money vs 11% of bets favor Under 8."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Under 8."
+              }
             ],
             "contributionWeight": 9,
             "sourceDimension": "action"
@@ -5173,13 +5477,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -5218,7 +5522,7 @@
       "leanRankWithinLane": 2,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -5233,7 +5537,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: reverse line moves 2 plus, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Sharp market support favors Under 7.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -5290,7 +5594,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "5 sharp signals align on Under 7.5, line movement leans toward Under 7.5, 2 steam moves hit Under 7.5, 19% of money vs 17% of bets favor Under 7.5, and 1 tracked pick also land on Under 7.5.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
           "components": [
@@ -5301,6 +5605,28 @@
             "action_market_pick_alignment",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "5 sharp signals align on Under 7.5."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 7.5."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "2 steam moves hit Under 7.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "19% of money vs 17% of bets favor Under 7.5."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Under 7.5."
+            }
           ],
           "contributionWeight": 7,
           "sourceDimension": "action"
@@ -5581,7 +5907,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "5 sharp signals align on Under 7.5, line movement leans toward Under 7.5, 2 steam moves hit Under 7.5, 19% of money vs 17% of bets favor Under 7.5, and 1 tracked pick also land on Under 7.5.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split + pick alignment",
             "components": [
@@ -5592,6 +5918,28 @@
               "action_market_pick_alignment",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "5 sharp signals align on Under 7.5."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 7.5."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "2 steam moves hit Under 7.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "19% of money vs 17% of bets favor Under 7.5."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Under 7.5."
+              }
             ],
             "contributionWeight": 7,
             "sourceDimension": "action"
@@ -5773,13 +6121,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -5818,7 +6166,7 @@
       "leanRankWithinLane": 3,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 3,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -5833,7 +6181,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: action sharp on side, sharp on side + totals, action is majority pick side.",
       "signalSummaryLine": "Sharp market support favors Under 9.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -5890,7 +6238,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "1 sharp signal align on Under 9, 34% of money vs 39% of bets favor Under 9, and 1 tracked pick also land on Under 9.",
           "summaryText": "sharp market support + money/bets split + pick alignment",
           "components": [
@@ -5900,6 +6248,20 @@
             "action_market_pick_alignment",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "1 sharp signal align on Under 9."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "34% of money vs 39% of bets favor Under 9."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Under 9."
+            }
           ],
           "contributionWeight": 5,
           "sourceDimension": "action"
@@ -6122,7 +6484,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "1 sharp signal align on Under 9, 34% of money vs 39% of bets favor Under 9, and 1 tracked pick also land on Under 9.",
             "summaryText": "sharp market support + money/bets split + pick alignment",
             "components": [
@@ -6132,6 +6494,20 @@
               "action_market_pick_alignment",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "1 sharp signal align on Under 9."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "34% of money vs 39% of bets favor Under 9."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Under 9."
+              }
             ],
             "contributionWeight": 5,
             "sourceDimension": "action"
@@ -6289,13 +6665,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": 137,
@@ -6334,7 +6710,7 @@
       "leanRankWithinLane": 4,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_market",
       "leadSupportFamily": "action",
@@ -6349,7 +6725,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_plus_market support, led by action evidence: sharp on side + moderate dog, moderate dog.",
       "signalSummaryLine": "Sharp market support favors Minnesota Twins moneyline.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -6386,13 +6762,31 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "PRIMARY",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "1 sharp signal align on Minnesota Twins moneyline, 1 steam move hit Minnesota Twins moneyline, 24% of money vs 24% of bets favor Minnesota Twins moneyline, and 2 tracked picks also land on Minnesota Twins moneyline.",
           "summaryText": "sharp market support + steam activity + money/bets split + pick alignment",
           "components": [
             "market_sharp_money",
             "action_market_sharp_money",
             "market_structure_moderate_dog"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "1 sharp signal align on Minnesota Twins moneyline."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "1 steam move hit Minnesota Twins moneyline."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "24% of money vs 24% of bets favor Minnesota Twins moneyline."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "2 tracked picks also land on Minnesota Twins moneyline."
+            }
           ],
           "contributionWeight": 4.5,
           "sourceDimension": "action"
@@ -6488,13 +6882,31 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "PRIMARY",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "1 sharp signal align on Minnesota Twins moneyline, 1 steam move hit Minnesota Twins moneyline, 24% of money vs 24% of bets favor Minnesota Twins moneyline, and 2 tracked picks also land on Minnesota Twins moneyline.",
             "summaryText": "sharp market support + steam activity + money/bets split + pick alignment",
             "components": [
               "market_sharp_money",
               "action_market_sharp_money",
               "market_structure_moderate_dog"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "1 sharp signal align on Minnesota Twins moneyline."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "1 steam move hit Minnesota Twins moneyline."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "24% of money vs 24% of bets favor Minnesota Twins moneyline."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "2 tracked picks also land on Minnesota Twins moneyline."
+              }
             ],
             "contributionWeight": 4.5,
             "sourceDimension": "action"
@@ -6594,13 +7006,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": 154,
@@ -6639,7 +7051,7 @@
       "leanRankWithinLane": 5,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_market",
       "leadSupportFamily": "action",
@@ -6654,7 +7066,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_plus_market support, led by action evidence: sharp on side + moderate dog, moderate dog.",
       "signalSummaryLine": "Sharp market support favors Los Angeles Angels moneyline.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -6691,13 +7103,31 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "PRIMARY",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "1 sharp signal align on Los Angeles Angels moneyline, 1 steam move hit Los Angeles Angels moneyline, 27% of money vs 23% of bets favor Los Angeles Angels moneyline, and 1 tracked pick also land on Los Angeles Angels moneyline.",
           "summaryText": "sharp market support + steam activity + money/bets split + pick alignment",
           "components": [
             "market_sharp_money",
             "action_market_sharp_money",
             "market_structure_moderate_dog"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "1 sharp signal align on Los Angeles Angels moneyline."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "1 steam move hit Los Angeles Angels moneyline."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "27% of money vs 23% of bets favor Los Angeles Angels moneyline."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Los Angeles Angels moneyline."
+            }
           ],
           "contributionWeight": 4.5,
           "sourceDimension": "action"
@@ -6793,13 +7223,31 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "PRIMARY",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "1 sharp signal align on Los Angeles Angels moneyline, 1 steam move hit Los Angeles Angels moneyline, 27% of money vs 23% of bets favor Los Angeles Angels moneyline, and 1 tracked pick also land on Los Angeles Angels moneyline.",
             "summaryText": "sharp market support + steam activity + money/bets split + pick alignment",
             "components": [
               "market_sharp_money",
               "action_market_sharp_money",
               "market_structure_moderate_dog"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "1 sharp signal align on Los Angeles Angels moneyline."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "1 steam move hit Los Angeles Angels moneyline."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "27% of money vs 23% of bets favor Los Angeles Angels moneyline."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Los Angeles Angels moneyline."
+              }
             ],
             "contributionWeight": 4.5,
             "sourceDimension": "action"
@@ -6899,13 +7347,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": -117,
@@ -6944,7 +7392,7 @@
       "leanRankWithinLane": 6,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -6959,7 +7407,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: public bets balanced, pick count medium, action is majority pick side.",
       "signalSummaryLine": "Market support favors Arizona Diamondbacks moneyline.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -7006,7 +7454,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "50% of money vs 48% of bets favor Arizona Diamondbacks moneyline and 3 tracked picks also land on Arizona Diamondbacks moneyline.",
           "summaryText": "money/bets split + pick alignment",
           "components": [
@@ -7014,6 +7462,16 @@
             "action_market_pick_alignment",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Money vs bets",
+              "explanation": "50% of money vs 48% of bets favor Arizona Diamondbacks moneyline."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "3 tracked picks also land on Arizona Diamondbacks moneyline."
+            }
           ],
           "contributionWeight": 6,
           "sourceDimension": "action"
@@ -7132,7 +7590,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "50% of money vs 48% of bets favor Arizona Diamondbacks moneyline and 3 tracked picks also land on Arizona Diamondbacks moneyline.",
             "summaryText": "money/bets split + pick alignment",
             "components": [
@@ -7140,6 +7598,16 @@
               "action_market_pick_alignment",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Money vs bets",
+                "explanation": "50% of money vs 48% of bets favor Arizona Diamondbacks moneyline."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "3 tracked picks also land on Arizona Diamondbacks moneyline."
+              }
             ],
             "contributionWeight": 6,
             "sourceDimension": "action"
@@ -7251,13 +7719,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": -135,
@@ -7296,7 +7764,7 @@
       "leanRankWithinLane": 7,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -7311,7 +7779,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: pick count medium, action is majority pick side, sharp and majority pick agree on row side.",
       "signalSummaryLine": "Sharp market support favors Cincinnati Reds moneyline.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -7368,7 +7836,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "3 sharp signals align on Cincinnati Reds moneyline, 3 steam moves hit Cincinnati Reds moneyline, 42% of money vs 68% of bets favor Cincinnati Reds moneyline, and 3 tracked picks also land on Cincinnati Reds moneyline.",
           "summaryText": "sharp market support + steam activity + money/bets split + pick alignment",
           "components": [
@@ -7376,6 +7844,24 @@
             "action_market_pick_alignment",
             "market_sharp_money",
             "action_market_sharp_money"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "3 sharp signals align on Cincinnati Reds moneyline."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "3 steam moves hit Cincinnati Reds moneyline."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "42% of money vs 68% of bets favor Cincinnati Reds moneyline."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "3 tracked picks also land on Cincinnati Reds moneyline."
+            }
           ],
           "contributionWeight": 4,
           "sourceDimension": "action"
@@ -7517,7 +8003,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "3 sharp signals align on Cincinnati Reds moneyline, 3 steam moves hit Cincinnati Reds moneyline, 42% of money vs 68% of bets favor Cincinnati Reds moneyline, and 3 tracked picks also land on Cincinnati Reds moneyline.",
             "summaryText": "sharp market support + steam activity + money/bets split + pick alignment",
             "components": [
@@ -7525,6 +8011,24 @@
               "action_market_pick_alignment",
               "market_sharp_money",
               "action_market_sharp_money"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "3 sharp signals align on Cincinnati Reds moneyline."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "3 steam moves hit Cincinnati Reds moneyline."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "42% of money vs 68% of bets favor Cincinnati Reds moneyline."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "3 tracked picks also land on Cincinnati Reds moneyline."
+              }
             ],
             "contributionWeight": 4,
             "sourceDimension": "action"
@@ -7646,13 +8150,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": 125,
@@ -7691,7 +8195,7 @@
       "leanRankWithinLane": 8,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -7706,7 +8210,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: public money low, action is majority pick side.",
       "signalSummaryLine": "Market support favors St. Louis Cardinals moneyline.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -7743,7 +8247,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "17% of money vs 21% of bets favor St. Louis Cardinals moneyline and 1 tracked pick also land on St. Louis Cardinals moneyline.",
           "summaryText": "money/bets split + pick alignment",
           "components": [
@@ -7751,6 +8255,16 @@
             "action_market_public_split",
             "market_pick_alignment",
             "action_market_pick_alignment"
+          ],
+          "details": [
+            {
+              "label": "Money vs bets",
+              "explanation": "17% of money vs 21% of bets favor St. Louis Cardinals moneyline."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on St. Louis Cardinals moneyline."
+            }
           ],
           "contributionWeight": 5,
           "sourceDimension": "action"
@@ -7846,7 +8360,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "17% of money vs 21% of bets favor St. Louis Cardinals moneyline and 1 tracked pick also land on St. Louis Cardinals moneyline.",
             "summaryText": "money/bets split + pick alignment",
             "components": [
@@ -7854,6 +8368,16 @@
               "action_market_public_split",
               "market_pick_alignment",
               "action_market_pick_alignment"
+            ],
+            "details": [
+              {
+                "label": "Money vs bets",
+                "explanation": "17% of money vs 21% of bets favor St. Louis Cardinals moneyline."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on St. Louis Cardinals moneyline."
+              }
             ],
             "contributionWeight": 5,
             "sourceDimension": "action"
@@ -7955,13 +8479,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": -109,
@@ -8000,7 +8524,7 @@
       "leanRankWithinLane": 9,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -8015,7 +8539,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: public money low, reverse line moves 1, action sharp on side.",
       "signalSummaryLine": "Sharp market support favors Seattle Mariners moneyline.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -8072,7 +8596,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "2 sharp signals align on Seattle Mariners moneyline, line movement leans toward Seattle Mariners moneyline, 1 steam move hit Seattle Mariners moneyline, and 11% of money vs 32% of bets favor Seattle Mariners moneyline.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split",
           "components": [
@@ -8083,6 +8607,24 @@
             "action_market_sharp_money",
             "market_steam_moves",
             "action_market_steam_moves"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "2 sharp signals align on Seattle Mariners moneyline."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Seattle Mariners moneyline."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "1 steam move hit Seattle Mariners moneyline."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "11% of money vs 32% of bets favor Seattle Mariners moneyline."
+            }
           ],
           "contributionWeight": 7,
           "sourceDimension": "action"
@@ -8294,7 +8836,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "2 sharp signals align on Seattle Mariners moneyline, line movement leans toward Seattle Mariners moneyline, 1 steam move hit Seattle Mariners moneyline, and 11% of money vs 32% of bets favor Seattle Mariners moneyline.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split",
             "components": [
@@ -8305,6 +8847,24 @@
               "action_market_sharp_money",
               "market_steam_moves",
               "action_market_steam_moves"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "2 sharp signals align on Seattle Mariners moneyline."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Seattle Mariners moneyline."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "1 steam move hit Seattle Mariners moneyline."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "11% of money vs 32% of bets favor Seattle Mariners moneyline."
+              }
             ],
             "contributionWeight": 7,
             "sourceDimension": "action"
@@ -8456,13 +9016,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -8501,7 +9061,7 @@
       "leanRankWithinLane": 10,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -8516,7 +9076,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: reverse line moves 2 plus, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Sharp market support favors Under 9.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -8573,7 +9133,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "5 sharp signals align on Under 9.5, line movement leans toward Under 9.5, 2 steam moves hit Under 9.5, and 31% of money vs 32% of bets favor Under 9.5.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split",
           "components": [
@@ -8582,6 +9142,24 @@
             "market_reverse_line_movement",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "5 sharp signals align on Under 9.5."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 9.5."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "2 steam moves hit Under 9.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "31% of money vs 32% of bets favor Under 9.5."
+            }
           ],
           "contributionWeight": 5,
           "sourceDimension": "action"
@@ -8804,7 +9382,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "5 sharp signals align on Under 9.5, line movement leans toward Under 9.5, 2 steam moves hit Under 9.5, and 31% of money vs 32% of bets favor Under 9.5.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split",
             "components": [
@@ -8813,6 +9391,24 @@
               "market_reverse_line_movement",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "5 sharp signals align on Under 9.5."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 9.5."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "2 steam moves hit Under 9.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "31% of money vs 32% of bets favor Under 9.5."
+              }
             ],
             "contributionWeight": 5,
             "sourceDimension": "action"
@@ -8968,13 +9564,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -9013,7 +9609,7 @@
       "leanRankWithinLane": 11,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 3,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -9028,7 +9624,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: reverse line moves 2 plus, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Sharp market support favors Under 8.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -9085,7 +9681,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "2 sharp signals align on Under 8, line movement leans toward Under 8, and 29% of money vs 26% of bets favor Under 8.",
           "summaryText": "sharp market support + line movement + money/bets split",
           "components": [
@@ -9094,6 +9690,20 @@
             "market_reverse_line_movement",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "2 sharp signals align on Under 8."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 8."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "29% of money vs 26% of bets favor Under 8."
+            }
           ],
           "contributionWeight": 5,
           "sourceDimension": "action"
@@ -9293,7 +9903,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "2 sharp signals align on Under 8, line movement leans toward Under 8, and 29% of money vs 26% of bets favor Under 8.",
             "summaryText": "sharp market support + line movement + money/bets split",
             "components": [
@@ -9302,6 +9912,20 @@
               "market_reverse_line_movement",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "2 sharp signals align on Under 8."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 8."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "29% of money vs 26% of bets favor Under 8."
+              }
             ],
             "contributionWeight": 5,
             "sourceDimension": "action"
@@ -9448,13 +10072,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -9493,7 +10117,7 @@
       "leanRankWithinLane": 12,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -9508,7 +10132,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: reverse line moves 2 plus, action sharp on side, sharp on side + totals.",
       "signalSummaryLine": "Sharp market support favors Under 8.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -9565,7 +10189,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "3 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 32% of money vs 30% of bets favor Under 8.5, and 1 tracked pick also land on Under 8.5.",
           "summaryText": "sharp market support + line movement + money/bets split + pick alignment",
           "components": [
@@ -9574,6 +10198,24 @@
             "market_reverse_line_movement",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "3 sharp signals align on Under 8.5."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 8.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "32% of money vs 30% of bets favor Under 8.5."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Under 8.5."
+            }
           ],
           "contributionWeight": 5,
           "sourceDimension": "action"
@@ -9773,7 +10415,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "3 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 32% of money vs 30% of bets favor Under 8.5, and 1 tracked pick also land on Under 8.5.",
             "summaryText": "sharp market support + line movement + money/bets split + pick alignment",
             "components": [
@@ -9782,6 +10424,24 @@
               "market_reverse_line_movement",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "3 sharp signals align on Under 8.5."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 8.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "32% of money vs 30% of bets favor Under 8.5."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Under 8.5."
+              }
             ],
             "contributionWeight": 5,
             "sourceDimension": "action"
@@ -9928,13 +10588,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -9973,7 +10633,7 @@
       "leanRankWithinLane": 13,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
       "leadSupportFamily": "action",
@@ -9988,7 +10648,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_only support, led by action evidence: steam moves 1, reverse line moves 2 plus, action sharp on side.",
       "signalSummaryLine": "Sharp market support favors Under 8.5.",
-      "driverSummary": "Driven primarily by market pressure.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -10045,7 +10705,7 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "4 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 1 steam move hit Under 8.5, and 14% of money vs 15% of bets favor Under 8.5.",
           "summaryText": "sharp market support + line movement + steam activity + money/bets split",
           "components": [
@@ -10056,6 +10716,24 @@
             "action_market_steam_moves",
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Sharp money",
+              "explanation": "4 sharp signals align on Under 8.5."
+            },
+            {
+              "label": "Reverse line movement",
+              "explanation": "Line movement leans toward Under 8.5."
+            },
+            {
+              "label": "Steam activity",
+              "explanation": "1 steam move hit Under 8.5."
+            },
+            {
+              "label": "Money vs bets",
+              "explanation": "14% of money vs 15% of bets favor Under 8.5."
+            }
           ],
           "contributionWeight": 7,
           "sourceDimension": "action"
@@ -10313,7 +10991,7 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "4 sharp signals align on Under 8.5, line movement leans toward Under 8.5, 1 steam move hit Under 8.5, and 14% of money vs 15% of bets favor Under 8.5.",
             "summaryText": "sharp market support + line movement + steam activity + money/bets split",
             "components": [
@@ -10324,6 +11002,24 @@
               "action_market_steam_moves",
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Sharp money",
+                "explanation": "4 sharp signals align on Under 8.5."
+              },
+              {
+                "label": "Reverse line movement",
+                "explanation": "Line movement leans toward Under 8.5."
+              },
+              {
+                "label": "Steam activity",
+                "explanation": "1 steam move hit Under 8.5."
+              },
+              {
+                "label": "Money vs bets",
+                "explanation": "14% of money vs 15% of bets favor Under 8.5."
+              }
             ],
             "contributionWeight": 7,
             "sourceDimension": "action"
@@ -10495,13 +11191,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -10854,7 +11550,7 @@
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     },
     {
       "currentOdds": null,
@@ -10893,7 +11589,7 @@
       "leanRankWithinLane": 15,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
-      "signalCount": 1,
+      "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "baseball",
@@ -10908,7 +11604,7 @@
       "contrarianOrConflictFlag": false,
       "explanationText": "exploratory lean with action_plus_baseball support, led by baseball evidence: weather condition clear, money minus bets bets gt money, public money low.",
       "signalSummaryLine": "Market support favors Under 10.",
-      "driverSummary": "Driven primarily by market pressure and wind or weather conditions.",
+      "driverSummary": "Driven primarily by Action-market pressure and wind or weather conditions.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -10965,12 +11661,22 @@
           "canonicalSignalKey": "market_bundle",
           "family": "market",
           "tier": "SUPPORTING",
-          "label": "Market support",
+          "label": "Action signals",
           "explanation": "24% of money vs 39% of bets favor Under 10 and 1 tracked pick also land on Under 10.",
           "summaryText": "money/bets split + pick alignment",
           "components": [
             "market_public_split",
             "action_market_public_split"
+          ],
+          "details": [
+            {
+              "label": "Money vs bets",
+              "explanation": "24% of money vs 39% of bets favor Under 10."
+            },
+            {
+              "label": "Picks alignment",
+              "explanation": "1 tracked pick also land on Under 10."
+            }
           ],
           "contributionWeight": 1,
           "sourceDimension": "action"
@@ -11112,12 +11818,22 @@
             "canonicalSignalKey": "market_bundle",
             "family": "market",
             "tier": "SUPPORTING",
-            "label": "Market support",
+            "label": "Action signals",
             "explanation": "24% of money vs 39% of bets favor Under 10 and 1 tracked pick also land on Under 10.",
             "summaryText": "money/bets split + pick alignment",
             "components": [
               "market_public_split",
               "action_market_public_split"
+            ],
+            "details": [
+              {
+                "label": "Money vs bets",
+                "explanation": "24% of money vs 39% of bets favor Under 10."
+              },
+              {
+                "label": "Picks alignment",
+                "explanation": "1 tracked pick also land on Under 10."
+              }
             ],
             "contributionWeight": 1,
             "sourceDimension": "action"
@@ -11241,13 +11957,13 @@
             "exists": true,
             "count": 1,
             "labels": [
-              "Market support"
+              "Action signals"
             ],
             "representedViaMarketBundle": true
           }
         }
       },
-      "updatedAt": "2026-03-30T22:47:55.723Z"
+      "updatedAt": "2026-03-30T23:41:10.840Z"
     }
   ]
 }
