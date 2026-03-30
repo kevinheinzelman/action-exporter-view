@@ -102,7 +102,7 @@ export default function MlbDailyLeansPage() {
           </div>
           <div className="metric">
             <label>Last Refresh</label>
-            <strong>{formatDateTime(status.lastLeanUpdateAt ?? data.generatedAt)}</strong>
+            <strong>{formatDateTime(data.generatedAt ?? status.lastLeanUpdateAt)}</strong>
           </div>
         </div>
       </section>
@@ -641,3 +641,4 @@ function iconForFamily(family: string, label: string): string {
   if (lowerFamily.includes('market')) return '📉';
   return '•';
 }
+
