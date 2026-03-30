@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { fetchPublicJson } from '../../lib/data';
-import type { MlbDailyLeanRow, MlbDailyLeansPayload, MlbLeansStatusPayload, MlbPerformanceRow, MlbPerformanceRowsPayload } from '../../lib/mlb';
-import { formatAmericanOdds, formatMarketTypeLabel, summarizePerformanceRows } from '../../lib/mlb';
+import type { MlbDailyLeanRow, MlbDailyLeansPayload, MlbLeansStatusPayload } from '../../lib/mlb';
+import { formatAmericanOdds, formatMarketTypeLabel } from '../../lib/mlb';
 
 const EMPTY_DAILY: MlbDailyLeansPayload = {
   generatedAt: null,
@@ -29,14 +29,6 @@ const EMPTY_STATUS: MlbLeansStatusPayload = {
   note: null
 };
 
-const EMPTY_PERFORMANCE: MlbPerformanceRowsPayload = {
-  generatedAt: null,
-  trackingStartDate: null,
-  rowCount: 0,
-  settledRowCount: 0,
-  rows: []
-};
-
 type CompositeContext = {
   headline: string;
   detail: string;
@@ -56,7 +48,6 @@ type DisplaySignal = {
 export default function MlbDailyLeansPage() {
   const [data, setData] = useState<MlbDailyLeansPayload>(EMPTY_DAILY);
   const [status, setStatus] = useState<MlbLeansStatusPayload>(EMPTY_STATUS);
-  const [performance, setPerformance] = useState<MlbPerformanceRowsPayload>(EMPTY_PERFORMANCE);
   const [confidenceFilter, setConfidenceFilter] = useState('all');
   const [marketFilter, setMarketFilter] = useState('all');
   const [expandedKeys, setExpandedKeys] = useState<Record<string, boolean>>({});
@@ -64,7 +55,6 @@ export default function MlbDailyLeansPage() {
   useEffect(() => {
     fetchPublicJson('/data/mlb_daily_leans.json', EMPTY_DAILY).then(setData);
     fetchPublicJson('/data/mlb_leans_status.json', EMPTY_STATUS).then(setStatus);
-    fetchPublicJson('/data/mlb_leans_performance_rows.json', EMPTY_PERFORMANCE).then(setPerformance);
   }, []);
 
   const rows = data.rows ?? [];
@@ -179,7 +169,6 @@ export default function MlbDailyLeansPage() {
         title="Core Leans"
         subtitle="Stronger, more trusted daily plays."
         rows={coreRows}
-        historyRows={performance.rows}
         expandedKeys={expandedKeys}
         onToggle={(key) => setExpandedKeys((current) => ({ ...current, [key]: !current[key] }))}
       />
@@ -188,7 +177,6 @@ export default function MlbDailyLeansPage() {
         title="Exploratory Leans"
         subtitle="Lower-threshold ideas still worth tracking, but less trusted than core."
         rows={exploratoryRows}
-        historyRows={performance.rows}
         expandedKeys={expandedKeys}
         onToggle={(key) => setExpandedKeys((current) => ({ ...current, [key]: !current[key] }))}
       />
@@ -200,14 +188,12 @@ function LeanSection({
   title,
   subtitle,
   rows,
-  historyRows,
   expandedKeys,
   onToggle
 }: {
   title: string;
   subtitle: string;
   rows: MlbDailyLeanRow[];
-  historyRows: MlbPerformanceRow[];
   expandedKeys: Record<string, boolean>;
   onToggle: (key: string) => void;
 }) {
@@ -227,7 +213,7 @@ function LeanSection({
           const displaySignals = buildDisplaySignals(row);
           const visibleSignals = expanded ? displaySignals : displaySignals.slice(0, 4);
           const hiddenCount = Math.max(0, displaySignals.length - visibleSignals.length);
-          const context = describeCompositeContext(row, historyRows);
+          const context = describeCompositeContext(row);
           const maturity = getMarketMaturity(row);
           const maturityLabel = getMarketMaturityLabel(maturity);
 
@@ -325,31 +311,19 @@ function buildReadableExplanation(row: MlbDailyLeanRow): string {
   return `${signals.join(' ')}.`;
 }
 
-function describeCompositeContext(row: MlbDailyLeanRow, historyRows: MlbPerformanceRow[]): CompositeContext {
-  const exact = historyRows.filter(
-    (historyRow) =>
-      historyRow.marketType === row.marketType &&
-      (historyRow.leanLane ?? 'unknown') === row.leanLane &&
-      historyRow.confidenceTier === row.confidenceTier &&
-      (historyRow.supportProfile ?? 'unknown') === row.supportProfile
-  );
-  const fallback = historyRows.filter(
-    (historyRow) => historyRow.marketType === row.marketType && (historyRow.leanLane ?? 'unknown') === row.leanLane
-  );
-  const chosen = exact.length >= 5 ? exact : fallback;
-  const summary = summarizePerformanceRows(chosen.filter((historyRow) => historyRow.result !== null));
-  if (!chosen.length || summary.roi == null) {
+function describeCompositeContext(row: MlbDailyLeanRow): CompositeContext {
+  const evidence = row.historicalEvidenceSummary;
+  if (evidence?.available && evidence.headline) {
     return {
-      headline: 'Limited tracked history for this profile',
-      detail: 'Using lane and market context only until more of this support mix is logged.'
+      headline: evidence.headline,
+      detail:
+        evidence.detail ??
+        'Historical signal evaluation drives this context. Live tracked performance is shown on the Performance page instead.'
     };
   }
   return {
-    headline: `Similar support has returned ${formatPctNumber(summary.roi)} ROI over ${summary.pricedBets} priced plays`,
-    detail:
-      exact.length >= 5
-        ? 'Matched on market, lean type, confidence tier, and support profile.'
-        : 'Closest available match uses the same market and lean type rather than a single signal.'
+    headline: 'Historical signal base is limited for this lean',
+    detail: 'This context uses governed historical signal evaluation only. Live tracked performance is intentionally excluded here.'
   };
 }
 

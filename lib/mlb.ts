@@ -5,11 +5,13 @@ export type MlbDailyLeanRow = {
   marketType: string;
   marketSide: string;
   selectionLabel: string;
+  pickLabel?: string | null;
   currentOdds?: number | null;
   currentLine?: number | null;
   scheduledStartTime?: string | null;
   snapshotCapturedAt?: string | null;
   minutesBeforeStart?: number | null;
+  maturityLabel?: string | null;
   lineValue?: number | null;
   priceAmerican?: number | null;
   openingLineValue?: number | null;
@@ -46,6 +48,15 @@ export type MlbDailyLeanRow = {
   actionSupportScore: number;
   contrarianOrConflictFlag: boolean;
   explanationText: string;
+  historicalEvidenceSummary?: {
+    evidenceBase?: string | null;
+    available?: boolean;
+    weightedRoi?: number | null;
+    representativeSample?: number | null;
+    contributingSignalCount?: number | null;
+    headline?: string | null;
+    detail?: string | null;
+  } | null;
   topSupportingSignals: Array<Record<string, unknown>>;
   triggeredSignals: Array<Record<string, unknown>>;
   supportingFamilies: string[];
