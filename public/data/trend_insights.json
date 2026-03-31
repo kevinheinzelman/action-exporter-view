@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T00:08:20.361Z",
+  "generatedAt": "2026-03-31T01:41:36.630Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 7,
   "rows": [
@@ -204,6 +204,46 @@
       }
     },
     {
+      "insightId": "mlb:7:moneyline:favorite:1-3:all-picks:all-money",
+      "league": "mlb",
+      "timeframeDays": 7,
+      "startDate": "2026-03-24",
+      "endDate": "2026-03-30",
+      "market": "moneyline",
+      "marketSide": "favorite",
+      "sharpsBucket": "1-3",
+      "picksBucket": null,
+      "moneyDeltaBucket": null,
+      "label": "Moneyline favorites with 1-3 sharps are working",
+      "sampleSize": 10,
+      "wins": 6,
+      "losses": 4,
+      "pushes": 0,
+      "winRate": 0.6,
+      "roi": -0.049569497310598766,
+      "summaryText": "MLB | last 7 days | 60.0% | 6-4 | across 10 plays",
+      "score": 12,
+      "scoreComponents": {
+        "sample": 1,
+        "edge": 8,
+        "roi": 0,
+        "recency": 3
+      },
+      "dimensionType": "sharps",
+      "angleCardId": "sharps-1-3",
+      "drilldown": {
+        "league": "mlb",
+        "market": "moneyline",
+        "marketSide": "favorite",
+        "startDate": "2026-03-24",
+        "endDate": "2026-03-30",
+        "sharpsBucket": "1-3",
+        "picksBucket": null,
+        "moneyDeltaBucket": null,
+        "angleCardId": "sharps-1-3"
+      }
+    },
+    {
       "insightId": "ncaab:30:moneyline:favorite:all-sharps:1-3:all-money",
       "league": "ncaab",
       "timeframeDays": 30,
@@ -241,46 +281,6 @@
         "picksBucket": "1-3",
         "moneyDeltaBucket": null,
         "angleCardId": "picks-1-3"
-      }
-    },
-    {
-      "insightId": "ncaab:14:spread:favorite:all-sharps:all-picks:all-money",
-      "league": "ncaab",
-      "timeframeDays": 14,
-      "startDate": "2026-03-17",
-      "endDate": "2026-03-30",
-      "market": "spread",
-      "marketSide": "favorite",
-      "sharpsBucket": null,
-      "picksBucket": null,
-      "moneyDeltaBucket": null,
-      "label": "Spread favorites have been strong",
-      "sampleSize": 30,
-      "wins": 17,
-      "losses": 13,
-      "pushes": 0,
-      "winRate": 0.5666666666666667,
-      "roi": null,
-      "summaryText": "NCAAB | last 14 days | 56.7% | 17-13 | across 30 plays",
-      "score": 9.667,
-      "scoreComponents": {
-        "sample": 3,
-        "edge": 4.667,
-        "roi": 0,
-        "recency": 2
-      },
-      "dimensionType": "baseline",
-      "angleCardId": null,
-      "drilldown": {
-        "league": "ncaab",
-        "market": "spread",
-        "marketSide": "favorite",
-        "startDate": "2026-03-17",
-        "endDate": "2026-03-30",
-        "sharpsBucket": null,
-        "picksBucket": null,
-        "moneyDeltaBucket": null,
-        "angleCardId": null
       }
     }
   ]
