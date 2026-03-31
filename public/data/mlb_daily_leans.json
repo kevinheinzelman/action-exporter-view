@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T23:41:23.325Z",
+  "generatedAt": "2026-03-31T00:08:20.361Z",
   "requestedDate": "2026-03-30",
   "rowCount": 24,
   "countsByLane": {
@@ -54,7 +54,19 @@
       "leanRankForDay": 1,
       "leanRankWithinLane": 1,
       "confidenceTier": "very_strong",
-      "displayConfidenceTier": "strong",
+      "displayConfidenceTier": "very_strong",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "very_strong",
+        "displayConfidenceTier": "very_strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.615,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 2,
+        "visiblePrimaryCount": 1
+      },
       "signalCount": 6,
       "supportingFamilyCount": 2,
       "supportProfile": "action_plus_baseball",
@@ -672,6 +684,18 @@
       "leanRankWithinLane": 2,
       "confidenceTier": "strong",
       "displayConfidenceTier": "strong",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.5,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
@@ -1337,6 +1361,18 @@
       "leanRankWithinLane": 3,
       "confidenceTier": "strong",
       "displayConfidenceTier": "strong",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.533,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
@@ -2058,6 +2094,18 @@
       "leanRankWithinLane": 4,
       "confidenceTier": "strong",
       "displayConfidenceTier": "strong",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.5,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
@@ -2627,6 +2675,18 @@
       "leanRankWithinLane": 5,
       "confidenceTier": "strong",
       "displayConfidenceTier": "strong",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.583,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
@@ -3250,7 +3310,19 @@
       "leanRankForDay": 6,
       "leanRankWithinLane": 6,
       "confidenceTier": "strong",
-      "displayConfidenceTier": "moderate",
+      "displayConfidenceTier": "strong",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.429,
+        "coverageStatus": "limited",
+        "coverageNote": "Visible card reasons explain only part of the modeled support.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
@@ -3720,8 +3792,20 @@
       "leanRankWithinLane": 7,
       "confidenceTier": "strong",
       "displayConfidenceTier": "strong",
-      "signalCount": 2,
-      "supportingFamilyCount": 2,
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 1,
+        "coverageStatus": "fully_explained",
+        "coverageNote": "Visible card reasons cover most of the modeled support.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
+      "signalCount": 1,
+      "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "mixed",
       "actionDominantFlag": false,
@@ -3734,8 +3818,8 @@
       "actionSupportScore": 2,
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by mixed evidence: public money low, bullpen workload matchup light vs light.",
-      "signalSummaryLine": "Market support and bullpen edge favor Chicago Cubs run line -1.5.",
-      "driverSummary": "Driven primarily by Action-market pressure and bullpen context.",
+      "signalSummaryLine": "Market support favors Chicago Cubs run line -1.5.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -3787,23 +3871,10 @@
           ],
           "contributionWeight": 2,
           "sourceDimension": "action"
-        },
-        {
-          "canonicalSignalKey": "bullpen_edge",
-          "family": "bullpen",
-          "tier": "SUPPORTING",
-          "label": "Bullpen edge",
-          "explanation": "Los Angeles Angels bullpen 4.45 ERA vs Chicago Cubs 3.98 ERA to date, which supports Chicago Cubs run line -1.5.",
-          "summaryText": "Bullpen: 4.45 vs 3.98 ERA",
-          "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-          "rawLabel": "bullpen workload matchup light vs light",
-          "contributionWeight": 2,
-          "sourceDimension": "baseball"
         }
       ],
       "supportingFamilies": [
-        "market",
-        "bullpen"
+        "market"
       ],
       "marketState": {
         "state": "confirmed",
@@ -3851,18 +3922,6 @@
             "rawLabel": "public money low",
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "label": "Bullpen edge",
-            "explanation": "Los Angeles Angels bullpen 4.45 ERA vs Chicago Cubs 3.98 ERA to date, which supports Chicago Cubs run line -1.5.",
-            "summaryText": "Bullpen: 4.45 vs 3.98 ERA",
-            "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "scoringSignalsUsed": [
@@ -3875,16 +3934,6 @@
             "tier": "SUPPORTING",
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "signalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "rawFamily": "bullpen",
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "visibleSignalsDisplayed": [
@@ -3907,21 +3956,16 @@
             ],
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "label": "Bullpen edge",
-            "explanation": "Los Angeles Angels bullpen 4.45 ERA vs Chicago Cubs 3.98 ERA to date, which supports Chicago Cubs run line -1.5.",
-            "summaryText": "Bullpen: 4.45 vs 3.98 ERA",
-            "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "hiddenSignalsDropped": [
+          {
+            "signalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
+            "rawLabel": "bullpen workload matchup light vs light",
+            "rawFamily": "bullpen",
+            "canonicalSignalKey": null,
+            "reason": "too_generic_for_display"
+          },
           {
             "signalId": "standalone|action_sentiment|run_line|home|public_money:low",
             "rawLabel": "public money low",
@@ -3931,8 +3975,7 @@
           }
         ],
         "supportFamiliesUsed": [
-          "market",
-          "bullpen"
+          "market"
         ],
         "marketState": {
           "state": "confirmed",
@@ -3940,8 +3983,7 @@
           "reason": "38% of money vs 71% of bets favor Chicago Cubs run line -1.5."
         },
         "explanationSummaryInputs": [
-          "money/bets split",
-          "Bullpen: 4.45 vs 3.98 ERA"
+          "money/bets split"
         ],
         "scoreContributionByCanonicalSignal": [
           {
@@ -3949,29 +3991,19 @@
             "family": "market",
             "sourceDimension": "action",
             "contribution": 2
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "sourceDimension": "baseball",
-            "contribution": 2
           }
         ],
         "scoreContributionByFamily": [
           {
             "family": "market",
             "contribution": 2
-          },
-          {
-            "family": "bullpen",
-            "contribution": 2
           }
         ],
         "visibleReasonOrder": [
-          "market_bundle",
-          "bullpen_edge"
+          "market_bundle"
         ],
         "hiddenReasonOrder": [
+          "too_generic_for_display:bullpen workload matchup light vs light",
           "lower_weight_than_representative:market_public_split"
         ],
         "actionContributionMaterial": true,
@@ -4059,8 +4091,20 @@
       "leanRankWithinLane": 8,
       "confidenceTier": "strong",
       "displayConfidenceTier": "strong",
-      "signalCount": 2,
-      "supportingFamilyCount": 2,
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.5,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
+      "signalCount": 1,
+      "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "mixed",
       "actionDominantFlag": false,
@@ -4073,8 +4117,8 @@
       "actionSupportScore": 2,
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by mixed evidence: public money low, public bets low, bullpen workload matchup light vs light.",
-      "signalSummaryLine": "Market support and bullpen edge favor St. Louis Cardinals run line +1.5.",
-      "driverSummary": "Driven primarily by Action-market pressure and bullpen context.",
+      "signalSummaryLine": "Market support favors St. Louis Cardinals run line +1.5.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -4136,23 +4180,10 @@
           ],
           "contributionWeight": 2,
           "sourceDimension": "action"
-        },
-        {
-          "canonicalSignalKey": "bullpen_edge",
-          "family": "bullpen",
-          "tier": "SUPPORTING",
-          "label": "Bullpen edge",
-          "explanation": "New York Mets bullpen 3.99 ERA vs St. Louis Cardinals 3.90 ERA to date, which supports St. Louis Cardinals run line +1.5.",
-          "summaryText": "Bullpen: 3.99 vs 3.90 ERA",
-          "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-          "rawLabel": "bullpen workload matchup light vs light",
-          "contributionWeight": 2,
-          "sourceDimension": "baseball"
         }
       ],
       "supportingFamilies": [
-        "market",
-        "bullpen"
+        "market"
       ],
       "marketState": {
         "state": "confirmed",
@@ -4213,18 +4244,6 @@
             "rawLabel": "public money low",
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "label": "Bullpen edge",
-            "explanation": "New York Mets bullpen 3.99 ERA vs St. Louis Cardinals 3.90 ERA to date, which supports St. Louis Cardinals run line +1.5.",
-            "summaryText": "Bullpen: 3.99 vs 3.90 ERA",
-            "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "scoringSignalsUsed": [
@@ -4247,16 +4266,6 @@
             "tier": "SUPPORTING",
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "signalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "rawFamily": "bullpen",
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "visibleSignalsDisplayed": [
@@ -4279,18 +4288,6 @@
             ],
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "label": "Bullpen edge",
-            "explanation": "New York Mets bullpen 3.99 ERA vs St. Louis Cardinals 3.90 ERA to date, which supports St. Louis Cardinals run line +1.5.",
-            "summaryText": "Bullpen: 3.99 vs 3.90 ERA",
-            "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "hiddenSignalsDropped": [
@@ -4302,6 +4299,13 @@
             "reason": "duplicate_canonical_signal"
           },
           {
+            "signalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
+            "rawLabel": "bullpen workload matchup light vs light",
+            "rawFamily": "bullpen",
+            "canonicalSignalKey": null,
+            "reason": "too_generic_for_display"
+          },
+          {
             "signalId": "standalone|action_sentiment|run_line|home|public_money:low",
             "rawLabel": "public money low",
             "rawFamily": "market",
@@ -4310,8 +4314,7 @@
           }
         ],
         "supportFamiliesUsed": [
-          "market",
-          "bullpen"
+          "market"
         ],
         "marketState": {
           "state": "confirmed",
@@ -4319,8 +4322,7 @@
           "reason": "18% of money vs 23% of bets favor St. Louis Cardinals run line +1.5."
         },
         "explanationSummaryInputs": [
-          "money/bets split",
-          "Bullpen: 3.99 vs 3.90 ERA"
+          "money/bets split"
         ],
         "scoreContributionByCanonicalSignal": [
           {
@@ -4328,30 +4330,20 @@
             "family": "market",
             "sourceDimension": "action",
             "contribution": 4
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "sourceDimension": "baseball",
-            "contribution": 2
           }
         ],
         "scoreContributionByFamily": [
           {
             "family": "market",
             "contribution": 4
-          },
-          {
-            "family": "bullpen",
-            "contribution": 2
           }
         ],
         "visibleReasonOrder": [
-          "market_bundle",
-          "bullpen_edge"
+          "market_bundle"
         ],
         "hiddenReasonOrder": [
           "duplicate_canonical_signal:market_public_split",
+          "too_generic_for_display:bullpen workload matchup light vs light",
           "lower_weight_than_representative:market_public_split"
         ],
         "actionContributionMaterial": true,
@@ -4441,8 +4433,20 @@
       "leanRankWithinLane": 9,
       "confidenceTier": "strong",
       "displayConfidenceTier": "strong",
-      "signalCount": 2,
-      "supportingFamilyCount": 2,
+      "confidenceTransparency": {
+        "modelConfidenceTier": "strong",
+        "displayConfidenceTier": "strong",
+        "displayDiffers": false,
+        "explainedCoverage": 0.5,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
+      "signalCount": 1,
+      "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
       "leadSupportFamily": "mixed",
       "actionDominantFlag": false,
@@ -4455,8 +4459,8 @@
       "actionSupportScore": 2,
       "contrarianOrConflictFlag": false,
       "explanationText": "core lean with action_plus_baseball support, led by mixed evidence: public money low, public bets low, bullpen workload matchup light vs light.",
-      "signalSummaryLine": "Market support and bullpen edge favor Seattle Mariners run line +1.5.",
-      "driverSummary": "Driven primarily by Action-market pressure and bullpen context.",
+      "signalSummaryLine": "Market support favors Seattle Mariners run line +1.5.",
+      "driverSummary": "Driven primarily by Action-market pressure.",
       "historicalEvidenceSummary": {
         "evidenceBase": "historical_signal_evaluation",
         "available": true,
@@ -4518,23 +4522,10 @@
           ],
           "contributionWeight": 2,
           "sourceDimension": "action"
-        },
-        {
-          "canonicalSignalKey": "bullpen_edge",
-          "family": "bullpen",
-          "tier": "SUPPORTING",
-          "label": "Bullpen edge",
-          "explanation": "New York Yankees bullpen 3.57 ERA vs Seattle Mariners 3.65 ERA to date, which supports Seattle Mariners run line +1.5.",
-          "summaryText": "Bullpen: 3.57 vs 3.65 ERA",
-          "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-          "rawLabel": "bullpen workload matchup light vs light",
-          "contributionWeight": 2,
-          "sourceDimension": "baseball"
         }
       ],
       "supportingFamilies": [
-        "market",
-        "bullpen"
+        "market"
       ],
       "marketState": {
         "state": "confirmed",
@@ -4595,18 +4586,6 @@
             "rawLabel": "public money low",
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "label": "Bullpen edge",
-            "explanation": "New York Yankees bullpen 3.57 ERA vs Seattle Mariners 3.65 ERA to date, which supports Seattle Mariners run line +1.5.",
-            "summaryText": "Bullpen: 3.57 vs 3.65 ERA",
-            "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "scoringSignalsUsed": [
@@ -4629,16 +4608,6 @@
             "tier": "SUPPORTING",
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "signalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "rawFamily": "bullpen",
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "visibleSignalsDisplayed": [
@@ -4661,18 +4630,6 @@
             ],
             "contributionWeight": 2,
             "sourceDimension": "action"
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "tier": "SUPPORTING",
-            "label": "Bullpen edge",
-            "explanation": "New York Yankees bullpen 3.57 ERA vs Seattle Mariners 3.65 ERA to date, which supports Seattle Mariners run line +1.5.",
-            "summaryText": "Bullpen: 3.57 vs 3.65 ERA",
-            "rawSignalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
-            "rawLabel": "bullpen workload matchup light vs light",
-            "contributionWeight": 2,
-            "sourceDimension": "baseball"
           }
         ],
         "hiddenSignalsDropped": [
@@ -4684,6 +4641,13 @@
             "reason": "duplicate_canonical_signal"
           },
           {
+            "signalId": "standalone|bullpen|run_line|home|bullpen_workload_matchup:light_vs_light",
+            "rawLabel": "bullpen workload matchup light vs light",
+            "rawFamily": "bullpen",
+            "canonicalSignalKey": null,
+            "reason": "too_generic_for_display"
+          },
+          {
             "signalId": "standalone|action_sentiment|run_line|home|public_money:low",
             "rawLabel": "public money low",
             "rawFamily": "market",
@@ -4692,8 +4656,7 @@
           }
         ],
         "supportFamiliesUsed": [
-          "market",
-          "bullpen"
+          "market"
         ],
         "marketState": {
           "state": "confirmed",
@@ -4701,8 +4664,7 @@
           "reason": "35% of money vs 34% of bets favor Seattle Mariners run line +1.5."
         },
         "explanationSummaryInputs": [
-          "money/bets split",
-          "Bullpen: 3.57 vs 3.65 ERA"
+          "money/bets split"
         ],
         "scoreContributionByCanonicalSignal": [
           {
@@ -4710,30 +4672,20 @@
             "family": "market",
             "sourceDimension": "action",
             "contribution": 4
-          },
-          {
-            "canonicalSignalKey": "bullpen_edge",
-            "family": "bullpen",
-            "sourceDimension": "baseball",
-            "contribution": 2
           }
         ],
         "scoreContributionByFamily": [
           {
             "family": "market",
             "contribution": 4
-          },
-          {
-            "family": "bullpen",
-            "contribution": 2
           }
         ],
         "visibleReasonOrder": [
-          "market_bundle",
-          "bullpen_edge"
+          "market_bundle"
         ],
         "hiddenReasonOrder": [
           "duplicate_canonical_signal:market_public_split",
+          "too_generic_for_display:bullpen workload matchup light vs light",
           "lower_weight_than_representative:market_public_split"
         ],
         "actionContributionMaterial": true,
@@ -4823,6 +4775,18 @@
       "leanRankWithinLane": 1,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.563,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -5522,6 +5486,18 @@
       "leanRankWithinLane": 2,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.5,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 5,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -6166,6 +6142,18 @@
       "leanRankWithinLane": 3,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.455,
+        "coverageStatus": "limited",
+        "coverageNote": "Visible card reasons explain only part of the modeled support.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 3,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -6710,6 +6698,18 @@
       "leanRankWithinLane": 4,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 1,
+        "coverageStatus": "fully_explained",
+        "coverageNote": "Visible card reasons cover most of the modeled support.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 1
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_market",
@@ -7051,6 +7051,18 @@
       "leanRankWithinLane": 5,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 1,
+        "coverageStatus": "fully_explained",
+        "coverageNote": "Visible card reasons cover most of the modeled support.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 1
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_market",
@@ -7392,6 +7404,18 @@
       "leanRankWithinLane": 6,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.75,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -7764,6 +7788,18 @@
       "leanRankWithinLane": 7,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.571,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -8195,6 +8231,18 @@
       "leanRankWithinLane": 8,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 1,
+        "coverageStatus": "fully_explained",
+        "coverageNote": "Visible card reasons cover most of the modeled support.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -8524,6 +8572,18 @@
       "leanRankWithinLane": 9,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.778,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -9061,6 +9121,18 @@
       "leanRankWithinLane": 10,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.5,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -9609,6 +9681,18 @@
       "leanRankWithinLane": 11,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.556,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 3,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -10117,6 +10201,18 @@
       "leanRankWithinLane": 12,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.556,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -10633,6 +10729,18 @@
       "leanRankWithinLane": 13,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.583,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 4,
       "supportingFamilyCount": 1,
       "supportProfile": "action_only",
@@ -11236,6 +11344,18 @@
       "leanRankWithinLane": 14,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.667,
+        "coverageStatus": "partial",
+        "coverageNote": "Some model support is not shown on the card.",
+        "reasonCodes": [],
+        "actionContributionMaterial": false,
+        "visibleSignalCount": 2,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 2,
       "supportingFamilyCount": 2,
       "supportProfile": "baseball_only",
@@ -11589,6 +11709,18 @@
       "leanRankWithinLane": 15,
       "confidenceTier": "moderate",
       "displayConfidenceTier": "moderate",
+      "confidenceTransparency": {
+        "modelConfidenceTier": "moderate",
+        "displayConfidenceTier": "moderate",
+        "displayDiffers": false,
+        "explainedCoverage": 0.2,
+        "coverageStatus": "limited",
+        "coverageNote": "Visible card reasons explain only part of the modeled support.",
+        "reasonCodes": [],
+        "actionContributionMaterial": true,
+        "visibleSignalCount": 1,
+        "visiblePrimaryCount": 0
+      },
       "signalCount": 2,
       "supportingFamilyCount": 1,
       "supportProfile": "action_plus_baseball",
