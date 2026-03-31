@@ -208,6 +208,7 @@ function LeanSection({
           const maturityLabel = getMarketMaturityLabel(row);
           const marketState = row.marketState ?? { state: 'neutral', label: 'No market movement yet', reason: 'No meaningful aligned market signal is visible yet.' };
           const displayConfidence = row.displayConfidenceTier ?? row.confidenceTier;
+          const transparency = row.confidenceTransparency;
           const baseballFactorLabel = getVisibleBaseballFactorLabel(displaySignals);
           const startTime = formatStartTimeEastern(row.scheduledStartTime);
 
@@ -290,6 +291,11 @@ function LeanSection({
 
               <div className="mlb-lean-footer">
                 {row.driverSummary ? <span className="subtle">{row.driverSummary}</span> : null}
+                {transparency?.coverageStatus && transparency.coverageStatus !== 'fully_explained' ? (
+                  <span className="subtle">
+                    {transparency.coverageStatus === 'partial' ? 'Partial explanation:' : 'Limited explanation:'} {transparency.coverageNote}
+                  </span>
+                ) : null}
                 <span className="subtle">{marketState.reason}</span>
               </div>
             </article>

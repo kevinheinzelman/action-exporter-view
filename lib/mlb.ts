@@ -35,6 +35,18 @@ export type MlbDailyLeanRow = {
   leanRankWithinLane: number;
   confidenceTier: string;
   displayConfidenceTier?: string | null;
+  confidenceTransparency?: {
+    modelConfidenceTier?: string | null;
+    displayConfidenceTier?: string | null;
+    displayDiffers?: boolean;
+    explainedCoverage?: number | null;
+    coverageStatus?: string | null;
+    coverageNote?: string | null;
+    reasonCodes?: string[];
+    actionContributionMaterial?: boolean;
+    visibleSignalCount?: number | null;
+    visiblePrimaryCount?: number | null;
+  } | null;
   signalCount: number;
   supportingFamilyCount: number;
   supportProfile: string;
