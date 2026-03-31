@@ -1441,7 +1441,18 @@ th {
 }
 
 .mlb-reason-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   min-width: 0;
+}
+
+.mlb-reason-icon {
+  display: inline-flex;
+  width: 14px;
+  justify-content: center;
+  opacity: 0.9;
+  font-size: 0.86rem;
 }
 
 .mlb-reason-value {

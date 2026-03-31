@@ -30,8 +30,8 @@ const EMPTY_STATUS: MlbLeansStatusPayload = {
 };
 
 type CompositeContext = {
-  headline: string;
-  detail: string;
+  roiText: string;
+  metaText: string;
 };
 
 type DisplaySignal = {
@@ -202,8 +202,6 @@ function LeanSection({
       <div className="mlb-lean-grid">
         {rows.map((row) => {
           const displaySignals = buildDisplaySignals(row);
-          const familyCount = new Set(displaySignals.map((signal) => signal.family)).size;
-          const signalCount = countRenderedSignals(displaySignals);
           const context = describeCompositeContext(row);
           const maturityLabel = getMarketMaturityLabel(row);
           const marketState = row.marketState ?? { state: 'neutral', label: 'No market movement yet', reason: 'No meaningful aligned market signal is visible yet.' };
@@ -212,6 +210,9 @@ function LeanSection({
           const baseballFactorLabel = getVisibleBaseballFactorLabel(displaySignals);
           const startTime = formatStartTimeEastern(row.scheduledStartTime);
           const reasonSections = buildReasonSections(displaySignals, row);
+          const displayedReasons = [...reasonSections.primary, ...reasonSections.supporting];
+          const familyCount = new Set(displayedReasons.map((reason) => reason.family)).size;
+          const signalCount = displayedReasons.length;
 
           return (
             <article className="mlb-lean-card mlb-lean-card-emphasis" key={`${row.gameId}:${row.marketType}:${row.marketSide}`}>
@@ -246,9 +247,9 @@ function LeanSection({
 
               <div className="mlb-lean-metrics">
                 <div className="metric">
-                  <label>Context</label>
-                  <strong>{context.headline}</strong>
-                  <div className="subtle">{context.detail}</div>
+                  <label>Historical edge</label>
+                  <strong>{context.roiText}</strong>
+                  <div className="subtle">{context.metaText}</div>
                 </div>
                 <div className="metric">
                   <label>Support</label>
@@ -266,7 +267,12 @@ function LeanSection({
                     <ul className="mlb-reason-list mlb-reason-list-primary">
                       {reasonSections.primary.map((reason) => (
                         <li key={reason.key}>
-                          <span className="mlb-reason-label">{reason.label}</span>
+                          <span className="mlb-reason-label">
+                            <span className="mlb-reason-icon" aria-hidden="true">
+                              {reason.icon}
+                            </span>
+                            {reason.label}
+                          </span>
                           {reason.value ? <span className="mlb-reason-value">{reason.value}</span> : null}
                         </li>
                       ))}
@@ -280,7 +286,12 @@ function LeanSection({
                     <ul className="mlb-reason-list">
                       {reasonSections.supporting.map((reason) => (
                         <li key={reason.key}>
-                          <span className="mlb-reason-label">{reason.label}</span>
+                          <span className="mlb-reason-label">
+                            <span className="mlb-reason-icon" aria-hidden="true">
+                              {reason.icon}
+                            </span>
+                            {reason.label}
+                          </span>
                           {reason.value ? <span className="mlb-reason-value">{reason.value}</span> : null}
                         </li>
                       ))}
@@ -290,8 +301,12 @@ function LeanSection({
 
                 {transparency?.coverageStatus && transparency.coverageStatus !== 'fully_explained' ? (
                   <div className="mlb-transparency-note">
-                    <strong>{transparency.coverageStatus === 'partial' ? 'Partial explanation' : 'Limited explanation'}</strong>
-                    <span>{transparency.coverageStatus === 'partial' ? 'Some model support not shown' : 'Model detail is limited here'}</span>
+                    <strong>{transparency.coverageStatus === 'partial' ? 'Additional signals' : 'Extra model detail'}</strong>
+                    <span>
+                      {transparency.coverageStatus === 'partial'
+                        ? 'Additional supporting signals not shown for clarity'
+                        : 'Model uses additional minor signals not listed here'}
+                    </span>
                   </div>
                 ) : null}
               </div>
@@ -331,17 +346,19 @@ function buildReadableExplanation(row: MlbDailyLeanRow): string {
 
 function describeCompositeContext(row: MlbDailyLeanRow): CompositeContext {
   const evidence = row.historicalEvidenceSummary;
-  if (evidence?.available && evidence.headline) {
+  if (evidence?.available) {
+    const roiText = typeof evidence.weightedRoi === 'number' ? `ROI: ${formatPercent(evidence.weightedRoi)}` : 'ROI: limited';
+    const sampleText =
+      typeof evidence.representativeSample === 'number' ? `Sample: ${evidence.representativeSample.toLocaleString()} rows` : 'Sample: limited';
+    const signalType = buildHistoricalSignalType(row);
     return {
-      headline: evidence.headline,
-      detail:
-        evidence.detail ??
-        'Historical signal evaluation drives this context. Live tracked performance is shown on the Performance page instead.'
+      roiText,
+      metaText: `${sampleText}${signalType ? ` • ${signalType}` : ''}`
     };
   }
   return {
-    headline: 'Historical signal base is limited for this lean',
-    detail: 'This context uses governed historical signal evaluation only. Live tracked performance is intentionally excluded here.'
+    roiText: 'ROI: limited',
+    metaText: 'Sample: limited'
   };
 }
 
@@ -364,14 +381,15 @@ type CardReason = {
   family: DisplaySignal['family'];
   tier: DisplaySignal['tier'];
   order: number;
+  icon: string;
 };
 
 function buildReasonSections(
   displaySignals: DisplaySignal[],
   row: MlbDailyLeanRow
 ): { primary: CardReason[]; supporting: CardReason[] } {
-  const reasons = flattenCardReasons(displaySignals, row);
-  const hiddenContributorReasons = buildHiddenContributorReasons(row, reasons);
+  const reasons = dedupeCardReasons(flattenCardReasons(displaySignals, row));
+  const hiddenContributorReasons = dedupeCardReasons(buildHiddenContributorReasons(row, reasons), reasons);
   if (!reasons.length) {
     return { primary: hiddenContributorReasons.slice(0, 1), supporting: hiddenContributorReasons.slice(1) };
   }
@@ -435,7 +453,8 @@ function buildCompactReason(
       value: typeof row.sharpCount === 'number' && row.sharpCount > 0 ? String(row.sharpCount) : null,
       family: signal.family,
       tier: signal.tier,
-      order
+      order,
+      icon: '🔪'
     };
   }
 
@@ -446,7 +465,8 @@ function buildCompactReason(
       value: typeof row.reverseLineMoves === 'number' && row.reverseLineMoves > 0 ? String(row.reverseLineMoves) : null,
       family: signal.family,
       tier: signal.tier,
-      order
+      order,
+      icon: '🔄'
     };
   }
 
@@ -457,7 +477,8 @@ function buildCompactReason(
       value: typeof row.steamMoves === 'number' && row.steamMoves > 0 ? String(row.steamMoves) : null,
       family: signal.family,
       tier: signal.tier,
-      order
+      order,
+      icon: '📈'
     };
   }
 
@@ -470,18 +491,20 @@ function buildCompactReason(
       value: money && bets ? `${money} / ${bets}` : null,
       family: signal.family,
       tier: signal.tier,
-      order
+      order,
+      icon: '💰'
     };
   }
 
   if (label.includes('pick')) {
     return {
       key: `${signal.canonicalSignalKey}:${label}:${order}`,
-      label: 'Picks aligned',
+      label: 'Picks',
       value: typeof row.pickCount === 'number' && row.pickCount > 0 ? String(row.pickCount) : null,
       family: signal.family,
       tier: signal.tier,
-      order
+      order,
+      icon: '👥'
     };
   }
 
@@ -500,21 +523,20 @@ function buildCompactReason(
       value: windMatch ? `${windMatch[1]} mph` : null,
       family: signal.family,
       tier: signal.tier,
-      order
+      order,
+      icon: '💨'
     };
   }
 
   if (label.includes('bullpen')) {
-    if (!/(workload|rest|fatigue|usage)/i.test(rawExplanation)) {
-      return null;
-    }
     return {
       key: `${signal.canonicalSignalKey}:${label}:${order}`,
-      label: 'Bullpen workload',
-      value: compactReasonValue(rawExplanation),
+      label: 'Bullpen edge',
+      value: buildBullpenValue(rawExplanation, signal, row),
       family: signal.family,
       tier: signal.tier,
-      order
+      order,
+      icon: '🧯'
     };
   }
 
@@ -524,7 +546,8 @@ function buildCompactReason(
     value: compactReasonValue(rawExplanation),
     family: signal.family,
     tier: signal.tier,
-    order
+    order,
+    icon: iconForReason(signal.family, rawLabel)
   };
 }
 
@@ -582,14 +605,14 @@ function buildHiddenContributorReasons(row: MlbDailyLeanRow, existingReasons: Ca
     let reason: CardReason | null = null;
 
     if (family === 'bullpen') {
-      const workloadLabel = label.replace(/^bullpen workload matchup\s*/i, '').trim();
       reason = {
         key: `hidden:${signalId ?? index}`,
-        label: 'Bullpen workload',
-        value: workloadLabel ? `${workloadLabel}${sampleSize && sampleSize < 250 ? ' (limited)' : ''}` : sampleSize && sampleSize < 250 ? 'limited sample' : 'in play',
+        label: 'Bullpen edge',
+        value: buildBullpenSignalValue(label, sampleSize),
         family,
         tier: 'SUPPORTING',
-        order: 200 + index
+        order: 200 + index,
+        icon: '🧯'
       };
     } else if (family === 'pitcher') {
       reason = {
@@ -598,7 +621,8 @@ function buildHiddenContributorReasons(row: MlbDailyLeanRow, existingReasons: Ca
         value: sampleSize && sampleSize < 250 ? 'limited sample' : 'supporting edge',
         family,
         tier: 'SUPPORTING',
-        order: 200 + index
+        order: 200 + index,
+        icon: '⚾'
       };
     } else if (family === 'weather' || family === 'game_environment' || family === 'team_context') {
       const compactLabel = titleizeCompactLabel(asStringOrNull(signal.label) ?? 'Supporting factor');
@@ -608,7 +632,8 @@ function buildHiddenContributorReasons(row: MlbDailyLeanRow, existingReasons: Ca
         value: sampleSize && sampleSize < 250 ? 'limited sample' : null,
         family,
         tier: 'SUPPORTING',
-        order: 200 + index
+        order: 200 + index,
+        icon: iconForReason(family, compactLabel)
       };
     }
 
@@ -658,6 +683,95 @@ function titleizeCompactLabel(value: string): string {
     .filter(Boolean)
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(' ');
+}
+
+function dedupeCardReasons(reasons: CardReason[], existing: CardReason[] = []): CardReason[] {
+  const existingKeys = new Set(existing.map((reason) => `${reason.family}:${reason.label.toLowerCase()}`));
+  const bestByKey = new Map<string, CardReason>();
+
+  reasons.forEach((reason) => {
+    const key = `${reason.family}:${reason.label.toLowerCase()}`;
+    if (existingKeys.has(key)) {
+      return;
+    }
+    const current = bestByKey.get(key);
+    if (!current || reason.tier === 'PRIMARY' || (!!reason.value && !current.value) || reason.order < current.order) {
+      bestByKey.set(key, reason);
+    }
+  });
+
+  return Array.from(bestByKey.values()).sort((left, right) => left.order - right.order);
+}
+
+function buildBullpenValue(rawExplanation: string, signal: DisplaySignal, row: MlbDailyLeanRow): string {
+  if (/(fatigue|more rested|rest advantage)/i.test(rawExplanation)) {
+    return /(strong|clear)/i.test(rawExplanation) ? 'rest advantage (strong)' : 'rest advantage';
+  }
+  return buildBullpenSignalValue(signal.label.toLowerCase(), findSampleSizeForSignal(row, signal));
+}
+
+function buildBullpenSignalValue(label: string, sampleSize: number | null): string {
+  if (label.includes('light_vs_light')) {
+    return sampleSize && sampleSize < 250 ? 'small edge (limited)' : 'small edge';
+  }
+  if (label.includes('light_vs_heavy') || label.includes('rested_vs_tired')) {
+    return 'rest advantage (moderate)';
+  }
+  if (label.includes('heavy_vs_light') || label.includes('tired_vs_rested')) {
+    return 'rest disadvantage';
+  }
+  return sampleSize && sampleSize < 250 ? 'bullpen context (limited)' : 'bullpen context';
+}
+
+function findSampleSizeForSignal(row: MlbDailyLeanRow, signal: DisplaySignal): number | null {
+  const topSignals = Array.isArray(row.topSupportingSignals) ? row.topSupportingSignals : [];
+  const match = topSignals.find((item) => {
+    const obj = asObjectRecord(item);
+    if (!obj) return false;
+    return asStringOrNull(obj.signalId) === (signal as DisplaySignal & { rawSignalId?: string }).rawSignalId;
+  });
+  const obj = asObjectRecord(match);
+  return obj ? asNumberOrNull(obj.sampleSize) : null;
+}
+
+function iconForReason(family: DisplaySignal['family'] | string, label: string): string {
+  const lower = label.toLowerCase();
+  if (lower.includes('sharp')) return '🔪';
+  if (lower.includes('wind')) return '💨';
+  if (lower.includes('steam')) return '📈';
+  if (lower.includes('reverse')) return '🔄';
+  if (lower.includes('pick')) return '👥';
+  if (lower.includes('money') || lower.includes('bets')) return '💰';
+  if (String(family).includes('bullpen')) return '🧯';
+  if (String(family).includes('pitcher')) return '⚾';
+  return '•';
+}
+
+function buildHistoricalSignalType(row: MlbDailyLeanRow): string | null {
+  const topSignals = Array.isArray(row.topSupportingSignals) ? row.topSupportingSignals : [];
+  const families = Array.from(
+    new Set(
+      topSignals
+        .map((item) => asStringOrNull(asObjectRecord(item)?.family))
+        .filter((family): family is string => Boolean(family))
+    )
+  );
+  if (!families.length) {
+    return null;
+  }
+  const labels = families.slice(0, 2).map((family) => {
+    if (family.includes('action')) return 'Action';
+    if (family.includes('wind') || family.includes('weather')) return 'Weather';
+    if (family.includes('bullpen')) return 'Bullpen';
+    if (family.includes('pitcher')) return 'Pitcher';
+    if (family.includes('baseball')) return 'Baseball';
+    return titleizeCompactLabel(family);
+  });
+  return `Type: ${labels.join(' + ')}`;
+}
+
+function formatPercent(value: number): string {
+  return `${(value * 100).toFixed(1)}%`;
 }
 
 function buildSelectionAnchor(row: MlbDailyLeanRow): string {
