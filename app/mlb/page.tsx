@@ -211,6 +211,7 @@ function LeanSection({
           const transparency = row.confidenceTransparency;
           const baseballFactorLabel = getVisibleBaseballFactorLabel(displaySignals);
           const startTime = formatStartTimeEastern(row.scheduledStartTime);
+          const reasonSections = buildReasonSections(displaySignals, row);
 
           return (
             <article className="mlb-lean-card mlb-lean-card-emphasis" key={`${row.gameId}:${row.marketType}:${row.marketSide}`}>
@@ -259,44 +260,40 @@ function LeanSection({
               </div>
 
               <div className="mlb-signal-block">
-                <strong>Why it's here</strong>
-                <div className="mlb-signal-chip-wrap">
-                  {displaySignals.map((signal) => (
-                    <span
-                      className={`mlb-signal-chip mlb-signal-chip-${signal.tier === 'PRIMARY' ? 'primary' : 'supportive'}`}
-                      key={signal.canonicalSignalKey}
-                    >
-                      <span className="mlb-signal-chip-icon">{iconForFamily(signal.family, signal.label)}</span>
-                      <span>{signal.label}</span>
-                    </span>
-                  ))}
-                </div>
-                <div className="summary-list">
-                  {displaySignals.map((signal) => (
-                    <div className="summary-item" key={`${signal.canonicalSignalKey}:detail`}>
-                      <strong>{signal.label}</strong>
-                      {Array.isArray(signal.details) && signal.details.length ? (
-                        <div className="subtle">
-                          {signal.details.map((detail) => (
-                            <div key={`${signal.canonicalSignalKey}:${detail.label}`}>• {detail.label}: {detail.explanation}</div>
-                          ))}
-                        </div>
-                      ) : (
-                        <span className="subtle">• {signal.explanation}</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mlb-lean-footer">
-                {row.driverSummary ? <span className="subtle">{row.driverSummary}</span> : null}
-                {transparency?.coverageStatus && transparency.coverageStatus !== 'fully_explained' ? (
-                  <span className="subtle">
-                    {transparency.coverageStatus === 'partial' ? 'Partial explanation:' : 'Limited explanation:'} {transparency.coverageNote}
-                  </span>
+                {reasonSections.primary.length ? (
+                  <div className="mlb-reason-section">
+                    <strong>Primary drivers</strong>
+                    <ul className="mlb-reason-list mlb-reason-list-primary">
+                      {reasonSections.primary.map((reason) => (
+                        <li key={reason.key}>
+                          <span className="mlb-reason-label">{reason.label}</span>
+                          {reason.value ? <span className="mlb-reason-value">{reason.value}</span> : null}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ) : null}
-                <span className="subtle">{marketState.reason}</span>
+
+                {reasonSections.supporting.length ? (
+                  <div className="mlb-reason-section">
+                    <strong>Supporting evidence</strong>
+                    <ul className="mlb-reason-list">
+                      {reasonSections.supporting.map((reason) => (
+                        <li key={reason.key}>
+                          <span className="mlb-reason-label">{reason.label}</span>
+                          {reason.value ? <span className="mlb-reason-value">{reason.value}</span> : null}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+
+                {transparency?.coverageStatus && transparency.coverageStatus !== 'fully_explained' ? (
+                  <div className="mlb-transparency-note">
+                    <strong>{transparency.coverageStatus === 'partial' ? 'Partial explanation' : 'Limited explanation'}</strong>
+                    <span>{transparency.coverageStatus === 'partial' ? 'Some model support not shown' : 'Model detail is limited here'}</span>
+                  </div>
+                ) : null}
               </div>
             </article>
           );
@@ -358,6 +355,309 @@ function buildSignalSummaryLine(row: MlbDailyLeanRow, displaySignals: DisplaySig
   }
   const familyCount = new Set(displaySignals.map((signal) => signal.family)).size;
   return `${familyCount} families / ${countRenderedSignals(displaySignals)} signals`;
+}
+
+type CardReason = {
+  key: string;
+  label: string;
+  value: string | null;
+  family: DisplaySignal['family'];
+  tier: DisplaySignal['tier'];
+  order: number;
+};
+
+function buildReasonSections(
+  displaySignals: DisplaySignal[],
+  row: MlbDailyLeanRow
+): { primary: CardReason[]; supporting: CardReason[] } {
+  const reasons = flattenCardReasons(displaySignals, row);
+  const hiddenContributorReasons = buildHiddenContributorReasons(row, reasons);
+  if (!reasons.length) {
+    return { primary: hiddenContributorReasons.slice(0, 1), supporting: hiddenContributorReasons.slice(1) };
+  }
+
+  const primary: CardReason[] = [];
+  const supporting: CardReason[] = [];
+  const primaryFamilies = new Set<string>();
+
+  for (const reason of reasons) {
+    if (primary.length < 2 && !primaryFamilies.has(reason.family)) {
+      primary.push(reason);
+      primaryFamilies.add(reason.family);
+      continue;
+    }
+    if (primary.length < 2 && reason.tier === 'PRIMARY') {
+      primary.push(reason);
+      primaryFamilies.add(reason.family);
+      continue;
+    }
+    supporting.push(reason);
+  }
+
+  if (!primary.length && supporting.length) {
+    primary.push(supporting.shift()!);
+  }
+
+  return {
+    primary: primary.slice(0, 3),
+    supporting: [...supporting, ...hiddenContributorReasons]
+  };
+}
+
+function flattenCardReasons(displaySignals: DisplaySignal[], row: MlbDailyLeanRow): CardReason[] {
+  return displaySignals.flatMap((signal, signalIndex) => {
+    if (Array.isArray(signal.details) && signal.details.length) {
+      return signal.details
+        .map((detail, detailIndex) => buildCompactReason(signal, row, detail.label, detail.explanation, signalIndex, detailIndex))
+        .filter((reason): reason is CardReason => Boolean(reason));
+    }
+
+    const compact = buildCompactReason(signal, row, signal.label, signal.explanation, signalIndex, 0);
+    return compact ? [compact] : [];
+  });
+}
+
+function buildCompactReason(
+  signal: DisplaySignal,
+  row: MlbDailyLeanRow,
+  rawLabel: string,
+  rawExplanation: string,
+  signalIndex: number,
+  detailIndex: number
+): CardReason | null {
+  const label = rawLabel.toLowerCase();
+  const order = signalIndex * 10 + detailIndex;
+
+  if (label.includes('sharp')) {
+    return {
+      key: `${signal.canonicalSignalKey}:${label}:${order}`,
+      label: 'Sharp signals',
+      value: typeof row.sharpCount === 'number' && row.sharpCount > 0 ? String(row.sharpCount) : null,
+      family: signal.family,
+      tier: signal.tier,
+      order
+    };
+  }
+
+  if (label.includes('reverse line')) {
+    return {
+      key: `${signal.canonicalSignalKey}:${label}:${order}`,
+      label: 'Reverse line movement',
+      value: typeof row.reverseLineMoves === 'number' && row.reverseLineMoves > 0 ? String(row.reverseLineMoves) : null,
+      family: signal.family,
+      tier: signal.tier,
+      order
+    };
+  }
+
+  if (label.includes('steam')) {
+    return {
+      key: `${signal.canonicalSignalKey}:${label}:${order}`,
+      label: 'Steam moves',
+      value: typeof row.steamMoves === 'number' && row.steamMoves > 0 ? String(row.steamMoves) : null,
+      family: signal.family,
+      tier: signal.tier,
+      order
+    };
+  }
+
+  if (label.includes('money') && label.includes('bets')) {
+    const money = typeof row.publicMoneyPct === 'number' ? `${Math.round(row.publicMoneyPct)}%` : null;
+    const bets = typeof row.publicBetsPct === 'number' ? `${Math.round(row.publicBetsPct)}%` : null;
+    return {
+      key: `${signal.canonicalSignalKey}:${label}:${order}`,
+      label: 'Money vs bets',
+      value: money && bets ? `${money} / ${bets}` : null,
+      family: signal.family,
+      tier: signal.tier,
+      order
+    };
+  }
+
+  if (label.includes('pick')) {
+    return {
+      key: `${signal.canonicalSignalKey}:${label}:${order}`,
+      label: 'Picks aligned',
+      value: typeof row.pickCount === 'number' && row.pickCount > 0 ? String(row.pickCount) : null,
+      family: signal.family,
+      tier: signal.tier,
+      order
+    };
+  }
+
+  if (label.includes('wind')) {
+    const windMatch = rawExplanation.match(/(\d+(?:\.\d+)?)\s?mph/i) ?? rawExplanation.match(/(\d+(?:\.\d+)?)mph/i);
+    const directionMatch = rawExplanation.toLowerCase().includes('blowing in')
+      ? 'in'
+      : rawExplanation.toLowerCase().includes('blowing out')
+        ? 'out'
+        : rawExplanation.toLowerCase().includes('crosswind')
+          ? 'crosswind'
+          : null;
+    return {
+      key: `${signal.canonicalSignalKey}:${label}:${order}`,
+      label: directionMatch ? `Wind ${directionMatch}` : 'Wind',
+      value: windMatch ? `${windMatch[1]} mph` : null,
+      family: signal.family,
+      tier: signal.tier,
+      order
+    };
+  }
+
+  if (label.includes('bullpen')) {
+    if (!/(workload|rest|fatigue|usage)/i.test(rawExplanation)) {
+      return null;
+    }
+    return {
+      key: `${signal.canonicalSignalKey}:${label}:${order}`,
+      label: 'Bullpen workload',
+      value: compactReasonValue(rawExplanation),
+      family: signal.family,
+      tier: signal.tier,
+      order
+    };
+  }
+
+  return {
+    key: `${signal.canonicalSignalKey}:${label}:${order}`,
+    label: rawLabel,
+    value: compactReasonValue(rawExplanation),
+    family: signal.family,
+    tier: signal.tier,
+    order
+  };
+}
+
+function compactReasonValue(explanation: string): string | null {
+  const cleaned = explanation
+    .replace(/\.$/, '')
+    .replace(/^Line moved\s+/i, '')
+    .replace(/^Tracked picks are\s+/i, '')
+    .replace(/^Bet and money splits are\s+/i, '')
+    .trim();
+
+  if (!cleaned) {
+    return null;
+  }
+
+  if (cleaned.length <= 36) {
+    return cleaned;
+  }
+
+  return `${cleaned.slice(0, 33).trimEnd()}...`;
+}
+
+function buildHiddenContributorReasons(row: MlbDailyLeanRow, existingReasons: CardReason[]): CardReason[] {
+  const existingKeys = new Set(existingReasons.map((reason) => `${reason.family}:${reason.label}`));
+  const hiddenSignalIds = new Set(
+    Array.isArray(row.reconciliationDebug?.hiddenSignalsDropped)
+      ? row.reconciliationDebug!.hiddenSignalsDropped
+          .map((item) => (item && typeof item === 'object' && 'signalId' in item ? String((item as { signalId?: unknown }).signalId ?? '') : ''))
+          .filter(Boolean)
+      : []
+  );
+
+  const topSignals = Array.isArray(row.topSupportingSignals) ? row.topSupportingSignals : [];
+  const hiddenReasons: CardReason[] = [];
+
+  topSignals.forEach((item, index) => {
+    const signal = asObjectRecord(item);
+    if (!signal) {
+      return;
+    }
+
+    const signalId = asStringOrNull(signal.signalId);
+    const family = mapSupportingFamily(asStringOrNull(signal.family));
+    const label = asStringOrNull(signal.label)?.toLowerCase() ?? '';
+    const effectiveWeight = asNumberOrNull(signal.effectiveWeight) ?? 0;
+    const sampleSize = asNumberOrNull(signal.sampleSize);
+
+    if (effectiveWeight <= 0) {
+      return;
+    }
+    if (signalId && hiddenSignalIds.size && !hiddenSignalIds.has(signalId)) {
+      return;
+    }
+
+    let reason: CardReason | null = null;
+
+    if (family === 'bullpen') {
+      const workloadLabel = label.replace(/^bullpen workload matchup\s*/i, '').trim();
+      reason = {
+        key: `hidden:${signalId ?? index}`,
+        label: 'Bullpen workload',
+        value: workloadLabel ? `${workloadLabel}${sampleSize && sampleSize < 250 ? ' (limited)' : ''}` : sampleSize && sampleSize < 250 ? 'limited sample' : 'in play',
+        family,
+        tier: 'SUPPORTING',
+        order: 200 + index
+      };
+    } else if (family === 'pitcher') {
+      reason = {
+        key: `hidden:${signalId ?? index}`,
+        label: 'Pitcher context',
+        value: sampleSize && sampleSize < 250 ? 'limited sample' : 'supporting edge',
+        family,
+        tier: 'SUPPORTING',
+        order: 200 + index
+      };
+    } else if (family === 'weather' || family === 'game_environment' || family === 'team_context') {
+      const compactLabel = titleizeCompactLabel(asStringOrNull(signal.label) ?? 'Supporting factor');
+      reason = {
+        key: `hidden:${signalId ?? index}`,
+        label: compactLabel,
+        value: sampleSize && sampleSize < 250 ? 'limited sample' : null,
+        family,
+        tier: 'SUPPORTING',
+        order: 200 + index
+      };
+    }
+
+    if (!reason) {
+      return;
+    }
+
+    const dedupeKey = `${reason.family}:${reason.label}`;
+    if (existingKeys.has(dedupeKey)) {
+      return;
+    }
+
+    existingKeys.add(dedupeKey);
+    hiddenReasons.push(reason);
+  });
+
+  return hiddenReasons;
+}
+
+function mapSupportingFamily(family: string | null): DisplaySignal['family'] {
+  if (!family) {
+    return 'team_context';
+  }
+  if (family.includes('bullpen')) return 'bullpen';
+  if (family.includes('pitcher')) return 'pitcher';
+  if (family.includes('wind') || family.includes('weather')) return 'weather';
+  if (family.includes('environment') || family.includes('park')) return 'game_environment';
+  return 'team_context';
+}
+
+function asObjectRecord(value: unknown): Record<string, unknown> | null {
+  return value && typeof value === 'object' && !Array.isArray(value) ? (value as Record<string, unknown>) : null;
+}
+
+function asStringOrNull(value: unknown): string | null {
+  return typeof value === 'string' ? value : null;
+}
+
+function asNumberOrNull(value: unknown): number | null {
+  return typeof value === 'number' && Number.isFinite(value) ? value : null;
+}
+
+function titleizeCompactLabel(value: string): string {
+  return value
+    .replace(/_/g, ' ')
+    .split(' ')
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
 }
 
 function buildSelectionAnchor(row: MlbDailyLeanRow): string {

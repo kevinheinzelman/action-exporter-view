@@ -1404,44 +1404,66 @@ th {
 
 .mlb-signal-block {
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
-.mlb-signal-chip-wrap {
-  display: flex;
-  flex-wrap: wrap;
+.mlb-reason-section {
+  display: grid;
+  gap: 6px;
+}
+
+.mlb-reason-section strong {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mlb-reason-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 5px;
+  color: var(--text-soft);
+}
+
+.mlb-reason-list li {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
   gap: 8px;
+  align-items: baseline;
+  font-size: 0.92rem;
 }
 
-.mlb-signal-chip {
-  display: inline-flex;
+.mlb-reason-list-primary li {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.mlb-reason-label {
+  min-width: 0;
+}
+
+.mlb-reason-value {
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.mlb-transparency-note {
+  display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 10px;
-  border-radius: 12px;
-  background: rgba(248, 250, 252, 0.92);
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  color: var(--text-soft);
-  font-size: 0.85rem;
-  line-height: 1.35;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: var(--text-muted);
+  font-size: 0.82rem;
 }
 
-.mlb-signal-chip-primary {
-  background: rgba(239, 246, 255, 0.94);
-  border-color: rgba(37, 99, 235, 0.22);
-  color: #1e3a8a;
-}
-
-.mlb-signal-chip-cautious {
-  background: rgba(255, 247, 237, 0.94);
-  border-color: rgba(249, 115, 22, 0.22);
-  color: #9a3412;
-}
-
-.mlb-signal-chip-icon {
-  display: inline-flex;
-  width: 16px;
-  justify-content: center;
+.mlb-transparency-note strong {
+  color: var(--text);
+  font-size: 0.8rem;
 }
 
 .mlb-trend-chart {
@@ -1505,17 +1527,6 @@ th {
   gap: 6px;
 }
 
-.mlb-lean-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: center;
-}
-
-.mlb-lean-footer .subtle {
-  font-size: 0.84rem;
-}
-
 @media (max-width: 768px) {
   .mlb-hero,
   .mlb-lean-card {
@@ -1536,8 +1547,4 @@ th {
     align-items: flex-start;
   }
 
-  .mlb-lean-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
