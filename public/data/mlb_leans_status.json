@@ -1,25 +1,13 @@
 {
-  "generatedAt": "2026-03-31T03:05:38.958Z",
-  "boardDate": "2026-03-30",
-  "lastLeanUpdateAt": "2026-03-31T03:05:14.369Z",
-  "currentBoardRowCount": 24,
-  "countsByLane": {
-    "core": 9,
-    "exploratory": 15
-  },
-  "countsByConfidenceTier": {
-    "very_strong": 1,
-    "strong": 8,
-    "moderate": 15
-  },
-  "countsBySupportProfile": {
-    "action_plus_baseball": 10,
-    "action_only": 11,
-    "action_plus_market": 2,
-    "baseball_only": 1
-  },
+  "generatedAt": "2026-03-31T04:13:06.776Z",
+  "boardDate": "2026-03-31",
+  "lastLeanUpdateAt": null,
+  "currentBoardRowCount": 0,
+  "countsByLane": {},
+  "countsByConfidenceTier": {},
+  "countsBySupportProfile": {},
   "historyRowCount": 71,
   "settledHistoryRowCount": 53,
   "pendingHistoryRowCount": 18,
-  "note": "MLB daily leans export generated from mlb_daily_leans_v2."
+  "note": "No MLB daily leans rows were available for today at export time."
 }

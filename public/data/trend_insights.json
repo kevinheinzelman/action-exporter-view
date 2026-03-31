@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T03:05:38.958Z",
+  "generatedAt": "2026-03-31T04:13:06.776Z",
   "basis": "analysis_rows_latest_available_actionable_recent_windows",
   "rowCount": 7,
   "rows": [
@@ -55,17 +55,17 @@
       "picksBucket": null,
       "moneyDeltaBucket": null,
       "label": "Unders have been strong",
-      "sampleSize": 16,
-      "wins": 10,
+      "sampleSize": 18,
+      "wins": 12,
       "losses": 5,
       "pushes": 1,
-      "winRate": 0.6666666666666666,
+      "winRate": 0.7058823529411765,
       "roi": null,
-      "summaryText": "NBA | last 7 days | 66.7% | 10-5-1 | across 16 plays",
-      "score": 19.267,
+      "summaryText": "NBA | last 7 days | 70.6% | 12-5-1 | across 18 plays",
+      "score": 23.388,
       "scoreComponents": {
-        "sample": 1.6,
-        "edge": 14.667,
+        "sample": 1.8,
+        "edge": 18.588,
         "roi": 0,
         "recency": 3
       },
